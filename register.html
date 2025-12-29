@@ -123,6 +123,36 @@
   </style>
 </head>
 
+<script>
+document.getElementById("registrationForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const formData = {
+    name: document.querySelector('[name="name"]').value,
+    age: document.querySelector('[name="age"]').value,
+    gender: document.querySelector('[name="gender"]').value,
+    email: document.querySelector('[name="email"]').value,
+    phone: document.querySelector('[name="phone"]').value,
+    whatsapp: document.querySelector('[name="whatsapp"]').value,
+    city: document.querySelector('[name="city"]').value,
+    category: document.querySelector('[name="category"]').value
+  };
+
+  fetch("https://script.google.com/macros/s/AKfycbwJ-P-CIeE5FbD50mCZTjura9NPe9c-B7HOA7s25kuclnpLsi5jpBMVPYdgr4JyVwWP/exec, {
+    method: "POST",
+    body: JSON.stringify(formData),
+    headers: { "Content-Type": "application/json" }
+  })
+  .then(() => {
+    const query = new URLSearchParams(formData).toString();
+    window.location.href = "thankyou.html?" + query;
+  })
+  .catch(err => {
+    alert("Submission failed. Please try again.");
+  });
+});
+</script>
+  
 <body>
 
 <div class="form-wrapper">
@@ -186,3 +216,4 @@
 
 </body>
 </html>
+
