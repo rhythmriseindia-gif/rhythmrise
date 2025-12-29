@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Register – Rhythm Rise</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:#000;
+  color:#fff;
+}
+header{
+  padding:20px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header h1{ color:#f5c400; margin:0; }
+nav a{
+  color:#fff;
+  margin-left:20px;
+  text-decoration:none;
+}
+.container{
+  max-width:520px;
+  margin:60px auto;
+  background:#141414;
+  padding:40px;
+  border-radius:14px;
+}
+label{ display:block; margin-top:18px; }
+input, select{
+  width:100%;
+  padding:12px;
+  border-radius:6px;
+  border:none;
+  margin-top:6px;
+}
+button{
+  margin-top:30px;
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:30px;
+  background:#f5c400;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+footer{
+  text-align:center;
+  margin-top:50px;
+  font-size:13px;
+  color:#888;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Rhythm Rise</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/founder.html">Founder</a>
+    <a href="/journey.html">Journey</a>
+    <a href="/register.html">Register</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2 style="color:#f5c400;text-align:center;">Register for Rhythm Rise</h2>
+
+  <!-- ✅ NETLIFY FORM (CORRECT & FINAL) -->
+  <form
+    name="rhythm-rise-registration"
+    method="POST"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+    onsubmit="handleSubmit(event)"
+  >
+
+    <!-- Required hidden input -->
+    <input type="hidden" name="form-name" value="rhythm-rise-registration">
+
+    <!-- Honeypot -->
+    <p style="display:none;">
+      <label>Don’t fill this out:
+        <input name="bot-field">
+      </label>
+    </p>
+
+    <label>Full Name</label>
+    <input type="text" name="name" required>
+
+    <label>Email Address</label>
+    <input type="email" name="email" required>
+
+    <label>Phone Number</label>
+    <input type="tel" name="phone" required>
+
+    <label>Select Category</label>
+    <select name="category" required>
+      <option value="">-- Select --</option>
+      <option value="Singing">Singing</option>
+      <option value="Dance">Dance</option>
+    </select>
+
+    <button type="submit">Submit Registration</button>
+  </form>
+</div>
+
+<footer>
+© 2025 Rhythm Rise | Powered by Doha Music Lovers
+</footer>
+
+<script>
+function handleSubmit(e){
+  e.preventDefault();
+  const form = e.target;
+
+  fetch("/", {
+    method: "POST",
+    body: new FormData(form)
+  })
+  .then(() => {
+    window.location.href = "/thankyou.html";
+  })
+  .catch(() => alert("Submission failed. Please try again."));
+}
+</script>
+
+</body>
+</html>
