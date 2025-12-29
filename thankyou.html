@@ -2,32 +2,70 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Registration Successful</title>
+<title>Registration Successful | Rhythm Rise</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+/* ===== PAGE BACKGROUND ===== */
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #11998e, #38ef7d);
   margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* ===== CARD ===== */
 .container {
   max-width: 600px;
-  background: #fff;
-  margin: 60px auto;
-  padding: 40px;
-  border-radius: 10px;
+  background: #111;
+  padding: 45px 40px;
+  border-radius: 16px;
   text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,193,7,0.25);
 }
+
+/* ===== SUCCESS TITLE ===== */
+.success-title {
+  color: #ffc107; /* Rhythm Rise Yellow */
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+/* ===== MESSAGE TEXT ===== */
+#message {
+  color: #ddd;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
+
+/* ===== WHATSAPP BUTTON ===== */
 .whatsapp-btn {
   display: inline-block;
-  margin-top: 25px;
-  padding: 14px 24px;
+  padding: 15px 28px;
   background: #25D366;
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-size: 18px;
-  border-radius: 6px;
+  font-weight: 700;
+  border-radius: 50px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37,211,102,0.45);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  margin-top: 28px;
+  font-size: 13px;
+  color: #777;
 }
 </style>
 </head>
@@ -36,15 +74,14 @@ body {
 
 <div class="container">
   <h1 class="success-title">Registration Successful</h1>
+
   <p id="message"></p>
 
   <a id="whatsappBtn" class="whatsapp-btn" target="_blank">
     📲 Confirm via WhatsApp
   </a>
 
-  <p style="margin-top:20px;font-size:13px;">
-    © Rhythm Rise
-  </p>
+  <div class="footer">© Rhythm Rise</div>
 </div>
 
 <script>
@@ -57,7 +94,7 @@ I am ${name}.%0A
 I have successfully registered for the ${category} category.%0A
 Please confirm my registration.`;
 
-  const whatsappNumber = "919030140600"; // 🔴 CHANGE THIS
+  const whatsappNumber = "919030140600"; // ✅ Your WhatsApp number
 
   const whatsappURL = `https://wa.me/${whatsappNumber}?text=${text}`;
 
@@ -66,7 +103,7 @@ Please confirm my registration.`;
 
   document.getElementById("whatsappBtn").href = whatsappURL;
 
-  // 🔥 Auto open WhatsApp after 1.5 seconds
+  /* Auto open WhatsApp after 1.5 seconds */
   setTimeout(() => {
     window.open(whatsappURL, "_blank");
   }, 1500);
@@ -74,4 +111,3 @@ Please confirm my registration.`;
 
 </body>
 </html>
-
