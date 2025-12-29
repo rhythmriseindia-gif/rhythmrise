@@ -1,32 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="UTF-8">
   <title>About Rhythm Rise</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+      color: #ffffff;
+      line-height: 1.7;
+    }
+
+    .page-wrapper {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 25px;
+    }
+
+    .card {
+      background: #111;
+      border-radius: 18px;
+      padding: 45px;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.7);
+      border: 1px solid rgba(255,193,7,0.25);
+    }
+
+    h1 {
+      font-size: 40px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h1 span {
+      color: #ffc107;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #ccc;
+      font-size: 17px;
+      margin-bottom: 45px;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-top: 45px;
+      margin-bottom: 15px;
+      color: #ffc107;
+    }
+
+    p {
+      font-size: 16px;
+      color: #e0e0e0;
+      margin-bottom: 18px;
+    }
+
+    .highlight {
+      color: #ffc107;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 25px;
+    }
+
+    .box {
+      background: #1a1a1a;
+      border-radius: 14px;
+      padding: 25px;
+      border: 1px solid #2a2a2a;
+    }
+
+    .box h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #ffc107;
+      font-size: 20px;
+    }
+
+    .cta {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 16px 40px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #ffc107, #ff9800);
+      color: #000;
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 13px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        padding: 30px 22px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<nav class="nav container">
-  <a href="index.html" class="logo">Rhythm Rise</a>
-  <ul class="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="founder.html">Founder</a></li>
-    <li><a href="journey.html">Journey</a></li>
-    <li><a href="register.html">Register</a></li>
-  </ul>
-</nav>
+  <div class="page-wrapper">
+    <div class="card">
 
-<section class="container">
-  <h1>About Rhythm Rise</h1>
-  <p>Rhythm Rise is an initiative of Doha Music Lovers — created to discover, uplift and promote singing & dance talent across the globe. We celebrate creativity, culture and diversity through music and movement.</p>
-</section>
+      <h1>About <span>Rhythm Rise</span></h1>
+      <div class="subtitle">
+        A Global Platform for Singing & Dance Talent
+      </div>
 
-<footer class="footer container">
-  <p>© 2025 Rhythm Rise</p>
-</footer>
+      <p>
+        <span class="highlight">Rhythm Rise</span> is a global talent initiative dedicated to discovering,
+        nurturing, and celebrating excellence in <span class="highlight">singing and dance</span>.
+        Born as an initiative of <span class="highlight">Doha Music Lovers Group</span>, based in Doha, Qatar,
+        Rhythm Rise was created with a singular vision—to give passionate performers a professional,
+        respectful, and inspiring platform to rise through rhythm.
+      </p>
+
+      <p>
+        Rooted in the belief that <span class="highlight">talent knows no boundaries</span>, Rhythm Rise
+        brings together artists from diverse cultures, backgrounds, and age groups. Through thoughtfully
+        curated competitions, expert mentorship, and transparent judging processes, we aim to spotlight
+        genuine talent while preserving the richness of artistic traditions.
+      </p>
+
+      <p>
+        At Rhythm Rise, music and movement are more than performances—they are
+        <span class="highlight">stories, emotions, and identities</span>. Every participant is encouraged
+        to express themselves freely, confidently, and creatively, while being evaluated by experienced
+        local and international judges who value authenticity and artistry.
+      </p>
+
+      <p>
+        We are committed to maintaining <span class="highlight">fairness, inclusivity, and professionalism</span>
+        at every stage—from auditions to finals—ensuring that every performer feels respected, motivated,
+        and proud to be part of the Rhythm Rise journey.
+      </p>
+
+      <h2>Our Vision</h2>
+      <p>
+        To become a <span class="highlight">globally recognized talent platform</span> that empowers singers
+        and dancers to showcase their abilities, gain confidence, and pursue artistic excellence—while
+        fostering cultural harmony through the universal language of music and dance.
+      </p>
+
+      <h2>Our Mission</h2>
+      <div class="grid">
+        <div class="box">Provide a transparent, high-quality competition platform.</div>
+        <div class="box">Identify and nurture emerging talent at all levels.</div>
+        <div class="box">Promote cultural diversity and artistic integrity.</div>
+        <div class="box">Connect performers with renowned judges and mentors.</div>
+        <div class="box">Inspire future artists through fair recognition.</div>
+      </div>
+
+      <h2>What Makes Rhythm Rise Different</h2>
+      <div class="grid">
+        <div class="box">
+          <h3>Expert Judges</h3>
+          Local and international judges offering balanced and fair evaluation.
+        </div>
+        <div class="box">
+          <h3>Global Reach</h3>
+          Online and offline participation expanding opportunities worldwide.
+        </div>
+        <div class="box">
+          <h3>Artist-First</h3>
+          Respect, encouragement, and growth-focused feedback.
+        </div>
+        <div class="box">
+          <h3>Professional Standards</h3>
+          Transparent criteria and stage-quality event management.
+        </div>
+      </div>
+
+      <h2>Our Roots</h2>
+      <p>
+        Rhythm Rise is proudly powered by the legacy of <span class="highlight">Doha Music Lovers Group</span>,
+        known for organizing successful cultural and musical events that unite communities and celebrate
+        talent. Building on this strong foundation, Rhythm Rise expands the vision to a larger,
+        international stage.
+      </p>
+
+      <div class="cta">
+        <a href="register.html">Register Now</a>
+      </div>
+
+      <div class="footer">
+        © 2025 Rhythm Rise
+      </div>
+
+    </div>
+  </div>
 
 </body>
 </html>
