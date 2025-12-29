@@ -1,37 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Founder - Syed Rafi</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="UTF-8">
+  <title>Founder | Rhythm Rise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: radial-gradient(circle at top, #1a1a1a, #000);
+      color: #ffffff;
+    }
+
+    /* ================= HEADER ================= */
+    header {
+      background: rgba(0,0,0,0.95);
+      border-bottom: 1px solid rgba(255,193,7,0.25);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      color: #ffc107;
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 22px;
+      text-decoration: none;
+      color: #ddd;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ffc107;
+    }
+
+    /* ================= CONTENT ================= */
+    .page-wrapper {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 25px;
+    }
+
+    .card {
+      background: #111;
+      border-radius: 18px;
+      padding: 50px;
+      box-shadow: 0 25px 70px rgba(0,0,0,0.7);
+      border: 1px solid rgba(255,193,7,0.25);
+    }
+
+    h1 {
+      font-size: 40px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    h1 span {
+      color: #ffc107;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #ccc;
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 26px;
+      color: #ffc107;
+      margin-top: 45px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #e0e0e0;
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+
+    .highlight {
+      color: #ffc107;
+      font-weight: 600;
+    }
+
+    .tagline {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 15px;
+      color: #bbb;
+      font-style: italic;
+    }
+
+    .achievement {
+      background: #1a1a1a;
+      border-left: 4px solid #ffc107;
+      padding: 20px 25px;
+      border-radius: 10px;
+      margin-top: 25px;
+    }
+
+    .cta {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 16px 42px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #ffc107, #ff9800);
+      color: #000;
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        margin-left: 14px;
+        font-size: 14px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .card {
+        padding: 32px 24px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<nav class="nav container">
-  <a href="index.html" class="logo">Rhythm Rise</a>
-  <ul class="menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="founder.html">Founder</a></li>
-    <li><a href="journey.html">Journey</a></li>
-    <li><a href="register.html">Register</a></li>
-  </ul>
-</nav>
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="nav-container">
+    <a href="index.html" class="logo">Rhythm Rise</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="founder.html" class="active">Founder</a>
+      <a href="journey.html">Journey</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </div>
+</header>
 
-<section class="container">
-  <h1>About Syed Rafi</h1>
+<!-- ================= CONTENT ================= -->
+<div class="page-wrapper">
+  <div class="card">
 
-  <p>Syed Rafi has an extensive background in business and media, having worked with top organizations in India including Tata Group, BK Group and Titan Industries. Abroad, he has contributed to global companies including Jacky Electronics, Al Jazeera TV Channel and BeIN Sports.</p>
+    <h1>Founder – <span>Syed Rafi</span></h1>
+    <div class="subtitle">Visionary Leader Behind Rhythm Rise</div>
+    <div class="tagline">
+      Entrepreneur | Media Professional | Community Leader | Cultural Visionary
+    </div>
 
-  <p>In Doha, Syed held honorary positions such as Vice President of Film Club under Indian Cultural Centre and Vice President of the Central Indian Association (CIA). He is the founder of <strong>CricQatar.com</strong> — a cricket community with over 900 registered teams, organizing free weekly matches for the Asian expatriate community.</p>
+    <p>
+      <span class="highlight">Syed Rafi</span> is a dynamic entrepreneur, media professional, and community
+      leader with an extensive track record spanning business, media, sports, culture, and social service
+      across India and the Middle East.
+    </p>
 
-  <p>He is the founder and president of Humanity Cares — a nonprofit charity initiative — and also the founder and president of <strong>Doha Music Lovers Group</strong>. He runs a job portal social media platform called <strong>Qatar Job Opportunities</strong> with over 130,000 followers.</p>
-</section>
+    <p>
+      He began his professional journey in India, working with some of the country’s most respected
+      corporate brands, including <span class="highlight">Tata Retail Group, BK Group, and Titan Industries</span>.
+      His experience in these organizations helped him develop strong expertise in operations, branding,
+      and large-scale organizational management.
+    </p>
 
-<footer class="footer container">
-  <p>© 2025 Rhythm Rise</p>
-</footer>
+    <p>
+      Expanding his career internationally, Syed Rafi worked with globally renowned media organizations
+      such as <span class="highlight">Al Jazeera TV Channel</span> and <span class="highlight">BeIN Sports</span>,
+      gaining valuable exposure to international broadcasting standards and multicultural media environments.
+    </p>
+
+    <p>
+      In Doha, Qatar, Syed has actively contributed to community leadership and cultural development.
+      He served as <span class="highlight">Vice President of the Film Club under the Indian Cultural Centre (ICC)</span>
+      and <span class="highlight">Vice President of the Central Indian Association (CIA)</span>,
+      supporting cultural exchange and community engagement among expatriates.
+    </p>
+
+    <p>
+      A passionate sports enthusiast, Syed is the founder of <span class="highlight">CricQatar.com</span>,
+      one of Qatar’s largest cricket communities with over <span class="highlight">900 registered teams</span>.
+      The platform organizes free weekly cricket matches, promoting unity, sportsmanship, and healthy recreation
+      within the Asian expatriate community.
+    </p>
+
+    <p>
+      His commitment to social responsibility is reflected through <span class="highlight">Humanity Cares</span>,
+      a nonprofit charitable initiative where he serves as Founder and President. He is also the
+      Founder and President of <span class="highlight">Doha Music Lovers Group</span>,
+      a vibrant cultural platform celebrating music and artistic talent.
+    </p>
+
+    <p>
+      Syed also manages a powerful employment-focused digital initiative,
+      <span class="highlight">Qatar Job Opportunities</span>, which has grown to a community of over
+      <span class="highlight">130,000 followers</span>, providing job alerts and career support to thousands
+      of job seekers.
+    </p>
+
+    <div class="achievement">
+      🏆 <strong>SIGTA Awards – South Icon Telangana</strong><br>
+      Honored in Doha, December 2024, in recognition of outstanding leadership,
+      community service, and cultural contribution.
+    </div>
+
+    <p>
+      Through <span class="highlight">Rhythm Rise</span>, Syed Rafi brings together corporate discipline,
+      global media experience, and community-driven vision to create a transparent, professional, and
+      inspiring platform for singers and dancers—empowering talent to rise and shine on a global stage.
+    </p>
+
+    <div class="cta">
+      <a href="about.html">Learn More About Rhythm Rise</a>
+    </div>
+
+    <div class="footer">
+      © 2025 Rhythm Rise
+    </div>
+
+  </div>
+</div>
 
 </body>
 </html>
