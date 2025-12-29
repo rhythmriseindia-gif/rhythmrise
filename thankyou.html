@@ -1,61 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Registration Successful</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Registration Successful – Rhythm Rise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-  margin:0;
-  background:#000;
-  color:#fff;
-  font-family:Segoe UI, Arial, sans-serif;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-}
-.card{
-  background:#141414;
-  padding:40px;
-  border-radius:14px;
-  text-align:center;
-  max-width:420px;
-}
-h1{ color:#f5c400; }
-a{
-  display:inline-block;
-  margin-top:25px;
-  padding:12px 30px;
-  background:#f5c400;
-  color:#000;
-  text-decoration:none;
-  border-radius:25px;
-  font-weight:bold;
-}
-.footer{
-  margin-top:25px;
-  font-size:13px;
-  color:#888;
-}
-</style>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #11998e, #38ef7d);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      background: #fff;
+      margin: 60px auto;
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      color: #2e7d32;
+    }
+
+    p {
+      font-size: 16px;
+      margin-top: 10px;
+      color: #333;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 24px;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .whatsapp-btn:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #555;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="card">
-  <h1>🎉 Registration Successful!</h1>
+<div class="container">
+  <h1>✅ Registration Successful!</h1>
+
   <p>
-    Thank you for registering with <strong>Rhythm Rise</strong>.<br>
-    Our team will contact you shortly with audition and event details.
+    Thank you for registering for <strong>Rhythm Rise</strong>.
   </p>
 
-  <a href="/">Back to Home</a>
+  <p>
+    Please confirm your registration by sending us a WhatsApp message.
+  </p>
 
-  <div class="footer">
-    © 2025 Rhythm Rise | Powered by Doha Music Lovers
-  </div>
+  <!-- 🔥 WhatsApp Confirmation Button -->
+  <a 
+    class="whatsapp-btn"
+    href="https://wa.me/919030140600?text=Hello%20Rhythm%20Rise%20Team%2C%20I%20have%20successfully%20registered%20for%20the%20Singing%2FDance%20competition.%20Please%20confirm%20my%20registration."
+    target="_blank"
+  >
+    📲 Confirm via WhatsApp
+  </a>
+
+  <footer>
+    © Rhythm Rise
+  </footer>
 </div>
 
 </body>
