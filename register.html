@@ -1,90 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Rhythm Rise – Registration</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- LINK CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #2b5876, #4e4376);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      background: #ffffff;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background: #6a11cb;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #eee;
+      font-size: 13px;
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Rhythm Rise</h1>
-    <p>Singing & Dance Competition Registration</p>
-  </header>
+<div class="container">
+  <h1>Rhythm Rise</h1>
+  <p style="text-align:center;">Singing & Dance Competition Registration</p>
 
-  <!-- REGISTRATION FORM -->
-  <main>
-    <h2>Participant Registration</h2>
+  <h2>Participant Registration</h2>
 
-    <!-- IMPORTANT:
-         action="thankyou.html" (RELATIVE PATH – CORRECT FOR GITHUB PAGES)
-    -->
-    <form action="thankyou.html" method="POST">
+  <!-- ✅ FORM USING FORMSPREE -->
+  <form 
+    action="https://formspree.io/f/xwvkaneo"
+    method="POST"
+  >
 
-      <!-- Participant Name -->
-      <label>
-        Participant Name:
-        <input type="text" name="participant_name" required />
-      </label>
+    <label>Participant Name</label>
+    <input type="text" name="name" required>
 
-      <!-- Age -->
-      <label>
-        Age:
-        <input type="number" name="age" required />
-      </label>
+    <label>Age</label>
+    <input type="number" name="age" required>
 
-      <!-- Gender -->
-      <label>
-        Gender:
-        <select name="gender" required>
-          <option value="">Select</option>
-          <option>Male</option>
-          <option>Female</option>
-          <option>Other</option>
-        </select>
-      </label>
+    <label>Gender</label>
+    <select name="gender" required>
+      <option value="">Select</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
 
-      <!-- Email -->
-      <label>
-        Email:
-        <input type="email" name="email" required />
-      </label>
+    <label>Email</label>
+    <input type="email" name="email" required>
 
-      <!-- Phone -->
-      <label>
-        Mobile Number:
-        <input type="tel" name="phone" required />
-      </label>
+    <label>Mobile Number</label>
+    <input type="tel" name="phone" required>
 
-      <!-- City -->
-      <label>
-        City:
-        <input type="text" name="city" required />
-      </label>
+    <label>City</label>
+    <input type="text" name="city" required>
 
-      <!-- Category -->
-      <label>
-        Category:
-        <select name="category" required>
-          <option value="">Select</option>
-          <option>Singing</option>
-          <option>Dance</option>
-        </select>
-      </label>
+    <label>Category</label>
+    <select name="category" required>
+      <option value="">Select</option>
+      <option>Singing</option>
+      <option>Dance</option>
+    </select>
 
-      <!-- Submit -->
-      <button type="submit">Submit Registration</button>
+    <!-- Redirect after submit -->
+    <input type="hidden" name="_next" value="thankyou.html">
 
-    </form>
-  </main>
+    <!-- Disable captcha -->
+    <input type="hidden" name="_captcha" value="false">
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© Rhythm Rise</p>
-  </footer>
+    <button type="submit">Submit Registration</button>
+
+  </form>
+</div>
+
+<footer>
+  © Rhythm Rise
+</footer>
 
 </body>
 </html>
