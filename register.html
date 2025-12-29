@@ -76,10 +76,6 @@
       font-size: 15px;
     }
 
-    input::placeholder {
-      color: #666;
-    }
-
     input:focus, select:focus {
       outline: none;
       border-color: #ffc107;
@@ -97,12 +93,6 @@
       cursor: pointer;
       background: linear-gradient(135deg, #ffc107, #ff9800);
       color: #000;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .submit-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(255,193,7,0.4);
     }
 
     .footer {
@@ -123,36 +113,6 @@
   </style>
 </head>
 
-<script>
-document.getElementById("registrationForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const formData = {
-    name: document.querySelector('[name="name"]').value,
-    age: document.querySelector('[name="age"]').value,
-    gender: document.querySelector('[name="gender"]').value,
-    email: document.querySelector('[name="email"]').value,
-    phone: document.querySelector('[name="phone"]').value,
-    whatsapp: document.querySelector('[name="whatsapp"]').value,
-    city: document.querySelector('[name="city"]').value,
-    category: document.querySelector('[name="category"]').value
-  };
-
-  action="https://script.google.com/macros/s/AKfycbwX6NnnJcuvkFF-CELwzmdAPFMEnuFuJU_vfoMX7oywv7Bt8IEC1EypY1toayTDDJ9h/exec, {
-    method: "POST",
-    body: JSON.stringify(formData),
-    headers: { "Content-Type": "application/json" }
-  })
-  .then(() => {
-    const query = new URLSearchParams(formData).toString();
-    window.location.href = "thankyou.html?" + query;
-  })
-  .catch(err => {
-    alert("Submission failed. Please try again.");
-  });
-});
-</script>
-  
 <body>
 
 <div class="form-wrapper">
@@ -160,7 +120,7 @@ document.getElementById("registrationForm").addEventListener("submit", function(
     <h1>Rhythm <span>Rise</span></h1>
     <div class="subtitle">Singing & Dance Competition Registration</div>
 
-    <form id="registrationForm" action="thankyou.html" method="GET">
+    <form id="registrationForm">
 
       <div class="full">
         <label>Participant Name</label>
@@ -192,6 +152,11 @@ document.getElementById("registrationForm").addEventListener("submit", function(
       </div>
 
       <div>
+        <label>WhatsApp Number</label>
+        <input type="tel" name="whatsapp" required>
+      </div>
+
+      <div class="full">
         <label>City</label>
         <input type="text" name="city" required>
       </div>
@@ -214,8 +179,24 @@ document.getElementById("registrationForm").addEventListener("submit", function(
   </div>
 </div>
 
+<script>
+document.getElementById("registrationForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const data = Object.fromEntries(new FormData(this));
+
+  fetch("https://script.google.com/macros/s/AKfycbwX6NnnJcuvkFF-CELwzmdAPFMEnuFuJU_vfoMX7oywv7Bt8IEC1EypY1toayTDDJ9h/exec", {
+    method: "POST",
+    body: new URLSearchParams(data)
+  })
+  .then(() => {
+    window.location.href = "thankyou.html?" + new URLSearchParams(data).toString();
+  })
+  .catch(() => {
+    alert("Submission failed. Please try again.");
+  });
+});
+</script>
+
 </body>
 </html>
-
-
-
