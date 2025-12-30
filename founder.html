@@ -6,17 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    /* ================= BASE ================= */
     body {
       margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: radial-gradient(circle at top, #1a1a1a, #000);
-      color: #ffffff;
+      background: #121212;            /* soft dark */
+      color: #e6e6e6;                 /* off-white */
+      line-height: 1.7;
     }
 
     /* ================= HEADER ================= */
     header {
-      background: rgba(0,0,0,0.95);
-      border-bottom: 1px solid rgba(255,193,7,0.25);
+      background: #0e0e0e;
+      border-bottom: 1px solid rgba(245,197,66,0.25);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -34,21 +36,22 @@
     .logo {
       font-size: 22px;
       font-weight: 800;
-      color: #ffc107;
+      color: #f5c542;                 /* soft gold */
       text-decoration: none;
+      letter-spacing: 1px;
     }
 
     nav a {
       margin-left: 22px;
       text-decoration: none;
-      color: #ddd;
+      color: #cccccc;
       font-size: 15px;
       font-weight: 500;
     }
 
     nav a:hover,
     nav a.active {
-      color: #ffc107;
+      color: #f5c542;
     }
 
     /* ================= CONTENT ================= */
@@ -59,101 +62,90 @@
     }
 
     .card {
-      background: #111;
+      background: #181818;
       border-radius: 18px;
       padding: 50px;
-      box-shadow: 0 25px 70px rgba(0,0,0,0.7);
-      border: 1px solid rgba(255,193,7,0.25);
+      border: 1px solid rgba(245,197,66,0.2);
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 36px;
       font-weight: 800;
       text-align: center;
       margin-bottom: 8px;
-    }
-
-    h1 span {
-      color: #ffc107;
+      color: #f5c542;
     }
 
     .subtitle {
       text-align: center;
-      color: #ccc;
-      font-size: 16px;
+      color: #bdbdbd;
+      font-size: 15px;
       margin-bottom: 40px;
-    }
-
-    h2 {
-      font-size: 26px;
-      color: #ffc107;
-      margin-top: 45px;
-      margin-bottom: 15px;
+      font-style: italic;
     }
 
     p {
       font-size: 16px;
       color: #e0e0e0;
       margin-bottom: 18px;
-      line-height: 1.7;
     }
 
     .highlight {
-      color: #ffc107;
+      color: #f5c542;
       font-weight: 600;
     }
 
-    .tagline {
-      text-align: center;
-      margin-top: 10px;
-      font-size: 15px;
-      color: #bbb;
-      font-style: italic;
+    h2 {
+      font-size: 24px;
+      margin-top: 45px;
+      margin-bottom: 15px;
+      color: #f5c542;
     }
 
     .achievement {
-      background: #1a1a1a;
-      border-left: 4px solid #ffc107;
-      padding: 20px 25px;
-      border-radius: 10px;
-      margin-top: 25px;
+      background: #202020;
+      border-left: 4px solid #f5c542;
+      padding: 22px 25px;
+      border-radius: 12px;
+      margin-top: 30px;
+      color: #dedede;
     }
 
     .cta {
-      margin-top: 50px;
+      margin-top: 55px;
       text-align: center;
     }
 
     .cta a {
       display: inline-block;
-      padding: 16px 42px;
+      padding: 15px 38px;
       border-radius: 50px;
-      background: linear-gradient(135deg, #ffc107, #ff9800);
+      background: linear-gradient(135deg, #f5c542, #e0b13a);
       color: #000;
       font-weight: 700;
-      font-size: 18px;
+      font-size: 17px;
       text-decoration: none;
     }
 
     .footer {
-      margin-top: 50px;
       text-align: center;
+      margin-top: 50px;
       font-size: 13px;
-      color: #777;
+      color: #888;
     }
 
     @media (max-width: 768px) {
-      nav a {
-        margin-left: 14px;
-        font-size: 14px;
+      .card {
+        padding: 32px 24px;
       }
 
       h1 {
-        font-size: 32px;
+        font-size: 28px;
       }
 
-      .card {
-        padding: 32px 24px;
+      nav a {
+        margin-left: 14px;
+        font-size: 14px;
       }
     }
   </style>
@@ -179,69 +171,69 @@
 <div class="page-wrapper">
   <div class="card">
 
-    <h1>Founder – <span>Syed Rafi</span></h1>
-    <div class="subtitle">Visionary Leader Behind Rhythm Rise</div>
-    <div class="tagline">
-      Entrepreneur | Media Professional | Community Leader | Cultural Visionary
+    <h1>Founder – Syed Rafi</h1>
+    <div class="subtitle">
+      Entrepreneur • Media Professional • Community Leader • Cultural Visionary
     </div>
 
     <p>
-      <span class="highlight">Syed Rafi</span> is a dynamic entrepreneur, media professional, and community
-      leader with an extensive track record spanning business, media, sports, culture, and social service
-      across India and the Middle East.
+      <span class="highlight">Syed Rafi</span> is a visionary entrepreneur, media professional, and
+      community leader with an extensive background spanning business, media, sports, culture,
+      and social service across India and the Middle East.
     </p>
 
     <p>
-      He began his professional journey in India, working with some of the country’s most respected
-      corporate brands, including <span class="highlight">Tata Retail Group, BK Group, and Titan Industries</span>.
-      His experience in these organizations helped him develop strong expertise in operations, branding,
-      and large-scale organizational management.
+      He began his professional journey in India with leading corporate organizations such as
+      <span class="highlight">Tata Retail Group</span>, <span class="highlight">BK Group</span>,
+      and <span class="highlight">Titan Industries</span>, where he gained strong expertise in
+      operations, branding, and large-scale organizational management.
     </p>
 
     <p>
-      Expanding his career internationally, Syed Rafi worked with globally renowned media organizations
-      such as <span class="highlight">Al Jazeera TV Channel</span> and <span class="highlight">BeIN Sports</span>,
-      gaining valuable exposure to international broadcasting standards and multicultural media environments.
+      Internationally, Syed Rafi contributed to globally respected media organizations including
+      <span class="highlight">Al Jazeera TV Channel</span> and <span class="highlight">BeIN Sports</span>,
+      gaining valuable exposure to international broadcast standards and multicultural audiences.
     </p>
 
     <p>
-      In Doha, Qatar, Syed has actively contributed to community leadership and cultural development.
-      He served as <span class="highlight">Vice President of the Film Club under the Indian Cultural Centre (ICC)</span>
+      In Doha, Qatar, he held honorary leadership roles as
+      <span class="highlight">Vice President of the Film Club under the Indian Cultural Centre (ICC)</span>
       and <span class="highlight">Vice President of the Central Indian Association (CIA)</span>,
-      supporting cultural exchange and community engagement among expatriates.
+      actively supporting cultural engagement and community development.
     </p>
 
     <p>
-      A passionate sports enthusiast, Syed is the founder of <span class="highlight">CricQatar.com</span>,
-      one of Qatar’s largest cricket communities with over <span class="highlight">900 registered teams</span>.
-      The platform organizes free weekly cricket matches, promoting unity, sportsmanship, and healthy recreation
-      within the Asian expatriate community.
+      A passionate sports organizer, Syed Rafi is the founder of
+      <span class="highlight">CricQatar.com</span>, a cricket community with over
+      <span class="highlight">900 registered teams</span>, organizing free weekly matches that promote
+      unity, sportsmanship, and healthy recreation among the Asian expatriate community.
     </p>
 
     <p>
-      His commitment to social responsibility is reflected through <span class="highlight">Humanity Cares</span>,
-      a nonprofit charitable initiative where he serves as Founder and President. He is also the
-      Founder and President of <span class="highlight">Doha Music Lovers Group</span>,
-      a vibrant cultural platform celebrating music and artistic talent.
+      His commitment to social impact is reflected through
+      <span class="highlight">Humanity Cares</span>, a nonprofit charitable initiative where he serves
+      as Founder and President. He is also the Founder and President of
+      <span class="highlight">Doha Music Lovers Group</span>, a cultural platform celebrating musical
+      talent and artistic collaboration.
     </p>
 
     <p>
-      Syed also manages a powerful employment-focused digital initiative,
-      <span class="highlight">Qatar Job Opportunities</span>, which has grown to a community of over
-      <span class="highlight">130,000 followers</span>, providing job alerts and career support to thousands
-      of job seekers.
+      He also manages <span class="highlight">Qatar Job Opportunities</span>, a highly impactful
+      employment-focused social media platform with over
+      <span class="highlight">130,000 followers</span>, providing job alerts and career guidance to
+      thousands of job seekers.
     </p>
 
     <div class="achievement">
       🏆 <strong>SIGTA Awards – South Icon Telangana</strong><br>
-      Honored in Doha, December 2024, in recognition of outstanding leadership,
-      community service, and cultural contribution.
+      Honored in Doha, December 2024, for outstanding leadership, community service,
+      and cultural contribution.
     </div>
 
     <p>
       Through <span class="highlight">Rhythm Rise</span>, Syed Rafi brings together corporate discipline,
-      global media experience, and community-driven vision to create a transparent, professional, and
-      inspiring platform for singers and dancers—empowering talent to rise and shine on a global stage.
+      global media exposure, and community-driven vision to create a transparent, professional, and
+      inspiring platform for singers and dancers worldwide.
     </p>
 
     <div class="cta">
