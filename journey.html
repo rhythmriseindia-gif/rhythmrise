@@ -1,141 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Journey | Rhythm Rise</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Journey | Rhythm Rise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle at top, #181818, #0b0b0b 70%);
-  color: #e6e6e6;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-/* HEADER */
-header {
-  background: rgba(0,0,0,0.85);
-  padding: 14px 40px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+    body {
+      background: radial-gradient(circle at top, #151515, #000);
+      color: #eaeaea;
+      line-height: 1.7;
+    }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    /* ---------- HEADER ---------- */
+    header {
+      background: rgba(0,0,0,0.9);
+      border-bottom: 1px solid rgba(255,204,0,0.15);
+      padding: 14px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-nav h1 {
-  color: #f5c400;
-  font-size: 22px;
-}
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 24px;
-}
+    nav h1 {
+      color: #ffcc00;
+      font-size: 22px;
+      font-weight: 700;
+    }
 
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-}
+    nav ul {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
 
-nav ul li a.active,
-nav ul li a:hover {
-  color: #f5c400;
-}
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
 
-/* PAGE */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 20px;
-}
+    nav ul li a.active,
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
 
-.page-title {
-  text-align: center;
-  margin-bottom: 60px;
-}
+    /* ---------- PAGE WRAPPER ---------- */
+    .page {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 30px;
+    }
 
-.page-title h2 {
-  color: #f5c400;
-  font-size: 34px;
-  margin-bottom: 12px;
-}
+    .page-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
 
-.page-title p {
-  color: #bdbdbd;
-  max-width: 700px;
-  margin: auto;
-  font-size: 15px;
-  line-height: 1.7;
-}
+    .page-title h2 {
+      font-size: 38px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
 
-/* JOURNEY CARD */
-.journey-card {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 30px;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(245,196,0,0.15);
-  border-radius: 16px;
-  padding: 30px;
-  margin-bottom: 30px;
-}
+    .page-title h2 span {
+      color: #ffcc00;
+    }
 
-.logo-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #111;
-  border-radius: 12px;
-  border: 1px dashed rgba(245,196,0,0.3);
-  color: #777;
-  font-size: 13px;
-  text-align: center;
-  padding: 10px;
-}
+    .page-title p {
+      color: #cfcfcf;
+      font-size: 16px;
+      max-width: 760px;
+      margin: auto;
+    }
 
-.journey-content h3 {
-  margin: 0 0 8px;
-  color: #f5c400;
-  font-size: 22px;
-}
+    /* ---------- JOURNEY ITEM ---------- */
+    .journey-item {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 35px;
+      padding: 35px;
+      margin-bottom: 35px;
+      background: linear-gradient(180deg, #111, #0b0b0b);
+      border-radius: 18px;
+      border-left: 4px solid #ffcc00;
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    }
 
-.journey-content span {
-  color: #9a9a9a;
-  font-size: 13px;
-}
+    .journey-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.journey-content p {
-  margin-top: 14px;
-  line-height: 1.8;
-  font-size: 14.5px;
-  color: #e0e0e0;
-}
+    .journey-logo img {
+      max-width: 120px;
+      max-height: 120px;
+      filter: drop-shadow(0 0 12px rgba(255,204,0,0.25));
+    }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px;
-  color: #888;
-  font-size: 13px;
-}
+    .journey-content h3 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #ffcc00;
+    }
 
-@media (max-width: 768px) {
-  .journey-card {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-}
-</style>
+    .journey-content span {
+      font-size: 13px;
+      color: #aaa;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .journey-content p {
+      font-size: 15px;
+      color: #ddd;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      font-size: 13px;
+      color: #888;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    @media(max-width: 768px) {
+      .journey-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .journey-logo img {
+        margin-bottom: 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -147,110 +164,119 @@ footer {
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="founder.html">Founder</a></li>
-      <li><a class="active" href="journey.html">Journey</a></li>
+      <li><a href="journey.html" class="active">Journey</a></li>
       <li><a href="register.html">Register</a></li>
     </ul>
   </nav>
 </header>
 
-<div class="container">
+<div class="page">
 
   <div class="page-title">
-    <h2>The Journey So Far</h2>
+    <h2>The <span>Journey</span></h2>
     <p>
-      Rhythm Rise is built on years of experience in organizing, curating, and promoting
-      high-impact cultural and community platforms across music, dance, and sports.
-      Each initiative reflects a commitment to talent, professionalism, and inclusivity.
+      Rhythm Rise stands on a strong foundation of successful cultural, musical,
+      and sporting initiatives conducted across Doha and online platforms.
+      Each program represents our commitment to quality, inclusivity,
+      and global community engagement.
     </p>
   </div>
 
   <!-- SUPER DANCER -->
-  <div class="journey-card">
-    <div class="logo-box">SUPER DANCER<br>LOGO</div>
+  <div class="journey-item">
+    <div class="journey-logo">
+      <img src="images/logos/super-dancer-doha.png" alt="Super Dancer Doha">
+    </div>
     <div class="journey-content">
-      <h3>Super Dancer</h3>
-      <span>Doha, Qatar</span>
+      <h3>Super Dancer — Doha, Qatar</h3>
+      <span>Flagship Dance Competition</span>
       <p>
-        Super Dancer emerged as one of Doha’s most celebrated dance talent platforms,
-        providing young and passionate performers a professionally managed stage to
-        showcase classical, contemporary, folk, and fusion dance forms.
-        The event gained strong community participation and recognition for its transparent
-        judging standards and high production quality.
+        Super Dancer marked the beginning of a large-scale dance platform in Doha,
+        bringing together performers across age groups and styles.
+        The event celebrated classical, contemporary, and fusion dance forms,
+        judged by experienced local and international experts.
       </p>
     </div>
   </div>
 
   <!-- SUPER DANCER SEASON 2 -->
-  <div class="journey-card">
-    <div class="logo-box">SUPER DANCER<br>SEASON 2</div>
+  <div class="journey-item">
+    <div class="journey-logo">
+      <img src="images/logos/super-dancer-season-2-doha.png" alt="Super Dancer Season 2">
+    </div>
     <div class="journey-content">
       <h3>Super Dancer – Season 2</h3>
-      <span>Doha, Qatar</span>
+      <span>Expanded Participation & Higher Standards</span>
       <p>
-        Building on the success of the inaugural season, Super Dancer Season 2 expanded
-        its reach with increased participation, enhanced stage presentation, and
-        broader cultural representation. The season further strengthened trust among
-        performers, parents, and dance institutions across the region.
+        Season 2 raised the bar with enhanced production quality,
+        refined judging parameters, and a larger talent pool.
+        The competition strengthened its reputation as one of Doha’s
+        most credible dance platforms.
       </p>
     </div>
   </div>
 
   <!-- SUPER DANCER SEASON 3 -->
-  <div class="journey-card">
-    <div class="logo-box">SUPER DANCER<br>SEASON 3</div>
+  <div class="journey-item">
+    <div class="journey-logo">
+      <img src="images/logos/super-dancer-season-3-doha.png" alt="Super Dancer Season 3">
+    </div>
     <div class="journey-content">
       <h3>Super Dancer – Season 3</h3>
-      <span>Doha, Qatar</span>
+      <span>International Reach & Digital Integration</span>
       <p>
-        Season 3 marked a new benchmark in scale and execution, integrating refined
-        audition processes, experienced judging panels, and a strong emphasis on
-        artistic discipline. The platform continued to empower dancers while celebrating
-        cultural diversity through movement.
+        Season 3 introduced international judges through online evaluations,
+        enabling global participation while maintaining fairness and transparency.
+        This season set the foundation for Rhythm Rise’s international vision.
       </p>
     </div>
   </div>
 
   <!-- SUPER SINGER -->
-  <div class="journey-card">
-    <div class="logo-box">SUPER SINGER</div>
+  <div class="journey-item">
+    <div class="journey-logo">
+      <img src="images/logos/super-singer-doha.png" alt="Super Singer Doha">
+    </div>
     <div class="journey-content">
-      <h3>Super Singer</h3>
-      <span>Doha, Qatar</span>
+      <h3>Super Singer — Doha, Qatar</h3>
+      <span>Vocal Excellence Platform</span>
       <p>
-        Super Singer provided a dedicated stage for vocal talent across multiple genres,
+        Super Singer provided a professional stage for vocal talent across genres,
         including classical, semi-classical, film, and contemporary music.
-        The competition focused on voice quality, technique, and expression,
-        offering participants valuable exposure and professional feedback.
+        The competition emphasized voice quality, expression, and stage presence.
       </p>
     </div>
   </div>
 
   <!-- VOICE OF WORLD -->
-  <div class="journey-card">
-    <div class="logo-box">VOICE OF WORLD</div>
+  <div class="journey-item">
+    <div class="journey-logo">
+      <img src="images/logos/voice-of-world-online.png" alt="Voice of World">
+    </div>
     <div class="journey-content">
       <h3>Voice of World</h3>
-      <span>Online Singing Contest</span>
+      <span>Global Online Singing Contest</span>
       <p>
-        Voice of World was conceptualized as a borderless singing competition,
-        enabling participants from different countries to perform and compete online.
-        The initiative successfully connected global talent, proving that geography
-        should never limit artistic expression.
+        Voice of World connected singers from multiple countries through a fully
+        online competition format. It demonstrated the power of digital platforms
+        in discovering global talent beyond geographical boundaries.
       </p>
     </div>
   </div>
 
   <!-- CRIC QATAR -->
-  <div class="journey-card">
-    <div class="logo-box">CRIC QATAR</div>
+  <div class="journey-item">
+    <div class="journey-logo">
+      <img src="images/logos/cric-qatar.png" alt="Cric Qatar">
+    </div>
     <div class="journey-content">
       <h3>Cric Qatar</h3>
-      <span>Community Sports Platform</span>
+      <span>Community Cricket Platform</span>
       <p>
-        Cric Qatar is a pioneering community cricket platform with over 900 registered teams,
-        organizing structured and free weekly matches for the Asian expatriate community.
-        Beyond sports, Cric Qatar fostered unity, discipline, and social engagement,
-        becoming one of the most impactful grassroots sports initiatives in the region.
+        Cric Qatar is one of the largest cricket communities in the region,
+        with over 900 registered teams.
+        The platform organizes free weekly matches and fosters sportsmanship,
+        community bonding, and youth engagement among expatriates.
       </p>
     </div>
   </div>
