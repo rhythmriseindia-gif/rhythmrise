@@ -1,182 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Rhythm Rise | Mega Talent Hunt</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Rhythm Rise | Mega Talent Hunt</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #000;
-      color: #fff;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #000;
+  color: #fff;
+}
 
-    /* ================= HEADER ================= */
-    header {
-      background: rgba(0,0,0,0.95);
-      border-bottom: 1px solid rgba(255,193,7,0.25);
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-    }
+/* HEADER */
+header {
+  background: rgba(0,0,0,0.9);
+  border-bottom: 1px solid rgba(255,193,7,0.25);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
-    .nav-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 15px 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-      color: #ffc107;
-      text-decoration: none;
-    }
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffc107;
+  text-decoration: none;
+}
 
-    nav a {
-      margin-left: 22px;
-      text-decoration: none;
-      color: #fff;
-      font-size: 15px;
-      font-weight: 500;
-    }
+nav a {
+  margin-left: 22px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+}
 
-    nav a:hover {
-      color: #ffc107;
-    }
+nav a:hover {
+  color: #ffc107;
+}
 
-    /* ================= HERO ================= */
-    .hero {
-      height: 100vh;
-      background:
-        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-        url("images/mic-bg.jpg") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0 20px;
-    }
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding-top: 120px;
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+    url("https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-    .hero-content {
-      max-width: 900px;
-      margin-top: 80px;
-    }
+.hero-content {
+  max-width: 900px;
+  padding: 20px;
+}
 
-    .hero h1 {
-      font-size: 64px;
-      font-weight: 900;
-      margin-bottom: 20px;
-      letter-spacing: 2px;
-    }
+.hero h1 {
+  font-size: 64px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
 
-    .brand-rhythm {
-      color: #ffc107;
-    }
+.brand-rhythm { color: #ffc107; }
+.brand-rise { color: #ffffff; }
 
-    .brand-rise {
-      color: #ffffff;
-    }
+.hero p {
+  font-size: 20px;
+  color: #ddd;
+  margin-bottom: 35px;
+}
 
-    .hero p {
-      font-size: 20px;
-      color: #ddd;
-      margin-bottom: 35px;
-      line-height: 1.6;
-    }
+.hero a {
+  padding: 16px 42px;
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+  color: #000;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+}
 
-    .hero a {
-      display: inline-block;
-      padding: 16px 42px;
-      background: linear-gradient(135deg, #ffc107, #ff9800);
-      color: #000;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 700;
-      border-radius: 50px;
-    }
+/* SECTION */
+.section {
+  padding: 90px 25px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
 
-    /* ================= SECTIONS ================= */
-    .section {
-      padding: 90px 25px;
-      max-width: 1200px;
-      margin: auto;
-    }
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 60px;
+}
 
-    .section-title {
-      text-align: center;
-      font-size: 36px;
-      font-weight: 800;
-      margin-bottom: 60px;
-    }
+.section h2 span {
+  color: #ffc107;
+}
 
-    .section-title span {
-      color: #ffc107;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 40px;
-    }
+.card {
+  background: #111;
+  padding: 35px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,193,7,0.25);
+}
 
-    .card {
-      background: #111;
-      padding: 35px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,193,7,0.25);
-      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-    }
+.card h3 {
+  color: #ffc107;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
 
-    .card h3 {
-      font-size: 26px;
-      margin-bottom: 15px;
-      color: #ffc107;
-    }
+.card p {
+  color: #ddd;
+  line-height: 1.7;
+}
 
-    .card p {
-      font-size: 16px;
-      color: #ddd;
-      line-height: 1.7;
-    }
-
-    /* ================= FOOTER ================= */
-    footer {
-      background: #000;
-      border-top: 1px solid rgba(255,193,7,0.25);
-      text-align: center;
-      padding: 25px;
-      font-size: 13px;
-      color: #777;
-    }
-
-    /* ================= RESPONSIVE ================= */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 42px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
-      nav a {
-        margin-left: 14px;
-        font-size: 14px;
-      }
-    }
-  </style>
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid rgba(255,193,7,0.25);
+  color: #777;
+}
+</style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
 <header>
   <div class="nav-container">
     <a href="index.html" class="logo">Rhythm Rise</a>
@@ -190,7 +160,6 @@
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-content">
     <h1>
@@ -199,45 +168,38 @@
     </h1>
 
     <p>
-      A global Singing & Dance Talent Platform empowering performers to rise,
-      shine, and reach international recognition.
+      A global Singing & Dance Talent Platform empowering performers
+      to rise, shine, and reach international recognition.
     </p>
 
     <a href="register.html">Register Now</a>
   </div>
 </section>
 
-<!-- ================= TALENT SECTIONS ================= -->
 <section class="section">
-  <h2 class="section-title">Our <span>Talent Categories</span></h2>
+  <h2>Choose Your <span>Talent</span></h2>
 
   <div class="grid">
     <div class="card">
-      <h3>Singing</h3>
+      <h3>🎤 Singing</h3>
       <p>
-        Rhythm Rise provides a professional platform for vocalists across genres
-        to showcase their talent. From classical and semi-classical to film,
-        folk, western, and contemporary styles, singers are evaluated by
-        experienced judges based on voice quality, rhythm, expression,
-        and stage presence.
+        Solo, duet, and group singing competitions judged by industry
+        experts across classical, film, folk, and contemporary genres.
       </p>
     </div>
 
     <div class="card">
-      <h3>Dance</h3>
+      <h3>💃 Dance</h3>
       <p>
-        Dancers of all forms are welcome at Rhythm Rise. Classical, semi-classical,
-        folk, contemporary, western, and fusion styles are celebrated with a
-        strong focus on technique, expression, creativity, musicality,
-        and overall performance impact.
+        Classical, western, folk, contemporary, and fusion dance formats
+        evaluated on technique, expression, and stage presence.
       </p>
     </div>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer>
-  © 2025 Rhythm Rise
+  © 2025 Rhythm Rise | Initiative of Doha Music Lovers
 </footer>
 
 </body>
