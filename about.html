@@ -6,17 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    /* ================= BASE ================= */
     body {
       margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: radial-gradient(circle at top, #1a1a1a, #000);
-      color: #ffffff;
+      background: #121212;              /* soft dark */
+      color: #e6e6e6;                   /* off-white text */
+      line-height: 1.7;
     }
 
     /* ================= HEADER ================= */
     header {
-      background: #000;
-      border-bottom: 1px solid rgba(255,193,7,0.25);
+      background: #0e0e0e;
+      border-bottom: 1px solid rgba(245,197,66,0.25);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -34,58 +36,50 @@
     .logo {
       font-size: 22px;
       font-weight: 800;
-      color: #ffc107;
+      color: #f5c542;                   /* soft gold */
       text-decoration: none;
       letter-spacing: 1px;
-    }
-
-    .logo span {
-      color: #fff;
     }
 
     nav a {
       margin-left: 22px;
       text-decoration: none;
-      color: #ddd;
+      color: #cccccc;
       font-size: 15px;
       font-weight: 500;
     }
 
     nav a:hover,
     nav a.active {
-      color: #ffc107;
+      color: #f5c542;
     }
 
     /* ================= CONTENT ================= */
     .page-wrapper {
       max-width: 1100px;
       margin: auto;
-      padding: 60px 25px;
+      padding: 70px 25px;
     }
 
     .card {
-      background: #111;
+      background: #181818;              /* softer than pure black */
       border-radius: 18px;
-      padding: 45px;
-      box-shadow: 0 25px 70px rgba(0,0,0,0.7);
-      border: 1px solid rgba(255,193,7,0.25);
+      padding: 50px;
+      border: 1px solid rgba(245,197,66,0.2);
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 38px;
       font-weight: 800;
       text-align: center;
       margin-bottom: 10px;
-    }
-
-    h1 span {
-      color: #ffc107;
+      color: #f5c542;
     }
 
     .subtitle {
       text-align: center;
-      color: #ccc;
-      font-size: 17px;
+      color: #bdbdbd;
+      font-size: 16px;
       margin-bottom: 45px;
     }
 
@@ -93,19 +87,18 @@
       font-size: 16px;
       color: #e0e0e0;
       margin-bottom: 18px;
-      line-height: 1.7;
     }
 
     .highlight {
-      color: #ffc107;
+      color: #f5c542;
       font-weight: 600;
     }
 
     h2 {
-      font-size: 26px;
+      font-size: 24px;
       margin-top: 45px;
       margin-bottom: 15px;
-      color: #ffc107;
+      color: #f5c542;
     }
 
     .grid {
@@ -116,25 +109,26 @@
     }
 
     .box {
-      background: #1a1a1a;
+      background: #202020;
       border-radius: 14px;
       padding: 25px;
       border: 1px solid #2a2a2a;
+      color: #dcdcdc;
     }
 
     .cta {
-      margin-top: 50px;
+      margin-top: 55px;
       text-align: center;
     }
 
     .cta a {
       display: inline-block;
-      padding: 16px 40px;
+      padding: 15px 38px;
       border-radius: 50px;
-      background: linear-gradient(135deg, #ffc107, #ff9800);
+      background: linear-gradient(135deg, #f5c542, #e0b13a);
       color: #000;
       font-weight: 700;
-      font-size: 18px;
+      font-size: 17px;
       text-decoration: none;
     }
 
@@ -142,21 +136,21 @@
       text-align: center;
       margin-top: 50px;
       font-size: 13px;
-      color: #777;
+      color: #888;
     }
 
     @media (max-width: 768px) {
-      nav a {
-        margin-left: 14px;
-        font-size: 14px;
+      .card {
+        padding: 32px 24px;
       }
 
       h1 {
-        font-size: 32px;
+        font-size: 30px;
       }
 
-      .card {
-        padding: 30px 22px;
+      nav a {
+        margin-left: 14px;
+        font-size: 14px;
       }
     }
   </style>
@@ -167,13 +161,13 @@
 <!-- ================= HEADER ================= -->
 <header>
   <div class="nav-container">
-    <a href="index.html" class="logo">RHYTHM <span>RISE</span></a>
+    <a href="index.html" class="logo">Rhythm Rise</a>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
+      <a href="founder.html">Founder</a>
       <a href="journey.html">Journey</a>
       <a href="register.html">Register</a>
-      <a href="founder.html">Founder</a>
     </nav>
   </div>
 </header>
@@ -182,41 +176,33 @@
 <div class="page-wrapper">
   <div class="card">
 
-    <h1>About <span>Rhythm Rise</span></h1>
+    <h1>About Rhythm Rise</h1>
     <div class="subtitle">A Global Platform for Singing & Dance Talent</div>
 
     <p>
       <span class="highlight">Rhythm Rise</span> is a global talent initiative dedicated to discovering,
-      nurturing, and celebrating excellence in <span class="highlight">singing and dance</span>.
-      Born as an initiative of <span class="highlight">Doha Music Lovers Group</span>, based in Doha, Qatar,
-      Rhythm Rise was created with a singular vision—to give passionate performers a professional,
-      respectful, and inspiring platform to rise through rhythm.
+      nurturing, and celebrating excellence in singing and dance. Born as an initiative of
+      <span class="highlight">Doha Music Lovers Group</span>, based in Doha, Qatar, Rhythm Rise was created
+      to provide passionate performers with a professional and inspiring platform.
     </p>
 
     <p>
       Rooted in the belief that <span class="highlight">talent knows no boundaries</span>, Rhythm Rise
-      brings together artists from diverse cultures, backgrounds, and age groups. Through thoughtfully
-      curated competitions, expert mentorship, and transparent judging processes, we aim to spotlight
-      genuine talent while preserving the richness of artistic traditions.
+      brings together artists from diverse cultures and backgrounds. Through carefully curated
+      competitions and transparent evaluation, we spotlight genuine talent while honoring artistic
+      traditions.
     </p>
 
     <p>
-      At Rhythm Rise, music and movement are more than performances—they are
-      <span class="highlight">stories, emotions, and identities</span>. Every participant is encouraged
-      to express themselves freely, confidently, and creatively, while being evaluated by experienced
-      local and international judges who value authenticity and artistry.
-    </p>
-
-    <p>
-      We are committed to maintaining <span class="highlight">fairness, inclusivity, and professionalism</span>
-      at every stage—from auditions to finals—ensuring that every performer feels respected, motivated,
-      and proud to be part of the Rhythm Rise journey.
+      At Rhythm Rise, music and movement are more than performances — they are expressions of identity,
+      emotion, and creativity. Participants are encouraged to perform with confidence while being
+      evaluated by experienced local and international judges.
     </p>
 
     <h2>Our Vision</h2>
     <p>
-      To become a globally recognized talent platform that empowers singers and dancers to showcase
-      their abilities while fostering cultural harmony through music and dance.
+      To become a globally recognized platform that empowers singers and dancers to showcase their
+      abilities, gain confidence, and achieve artistic excellence.
     </p>
 
     <h2>Our Mission</h2>
@@ -224,7 +210,7 @@
       <div class="box">Provide a transparent and professional competition platform</div>
       <div class="box">Identify and nurture emerging talent</div>
       <div class="box">Promote cultural diversity and artistic integrity</div>
-      <div class="box">Connect artists with renowned judges and mentors</div>
+      <div class="box">Connect performers with renowned judges and mentors</div>
     </div>
 
     <div class="cta">
