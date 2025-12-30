@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* ================= BASE ================= */
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -14,7 +13,7 @@ body {
   color: #e6e6e6;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 header {
   background: rgba(14,14,14,0.95);
   border-bottom: 1px solid rgba(245,197,66,0.25);
@@ -51,7 +50,7 @@ nav a:hover {
   color: #f5c542;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 .hero {
   min-height: 100vh;
   padding-top: 120px;
@@ -83,14 +82,14 @@ nav a:hover {
 .hero p {
   font-size: 20px;
   color: #dddddd;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
-/* ================= INTERNATIONAL JURY BADGE ================= */
+/* INTERNATIONAL JURY BADGE */
 .jury-wrapper {
   position: relative;
   display: inline-block;
-  margin: 8px auto 32px;
+  margin: 10px auto 10px;
 }
 
 .jury-badge {
@@ -104,8 +103,6 @@ nav a:hover {
   color: #f5c542;
   font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0.4px;
-  cursor: default;
   animation: softPulse 3.5s ease-in-out infinite;
 }
 
@@ -114,10 +111,9 @@ nav a:hover {
   letter-spacing: 4px;
 }
 
-/* Tooltip */
 .jury-tooltip {
   position: absolute;
-  bottom: -48px;
+  bottom: -46px;
   left: 50%;
   transform: translateX(-50%);
   background: #1e1e1e;
@@ -128,7 +124,6 @@ nav a:hover {
   border: 1px solid rgba(245,197,66,0.25);
   white-space: nowrap;
   opacity: 0;
-  pointer-events: none;
   transition: opacity 0.3s ease;
 }
 
@@ -136,16 +131,19 @@ nav a:hover {
   opacity: 1;
 }
 
-/* Animation */
 @keyframes softPulse {
-  0%, 100% {
-    box-shadow: 0 0 0 rgba(245,197,66,0);
-  }
-  50% {
-    box-shadow: 0 0 18px rgba(245,197,66,0.25);
-  }
+  0%, 100% { box-shadow: 0 0 0 rgba(245,197,66,0); }
+  50% { box-shadow: 0 0 18px rgba(245,197,66,0.25); }
 }
 
+/* HYBRID JUDGING TEXT */
+.hybrid-text {
+  font-size: 14.5px;
+  color: #cfcfcf;
+  margin: 10px 0 30px;
+}
+
+/* CTA */
 .hero a {
   padding: 16px 42px;
   background: linear-gradient(135deg, #f5c542, #e0b13a);
@@ -155,7 +153,7 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* ================= CONTENT SECTIONS ================= */
+/* SECTIONS */
 .section {
   padding: 90px 25px;
   max-width: 1200px;
@@ -174,7 +172,7 @@ nav a:hover {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
 }
 
@@ -189,7 +187,6 @@ nav a:hover {
 .card h3 {
   color: #f5c542;
   font-size: 24px;
-  margin-bottom: 15px;
 }
 
 .card p {
@@ -198,7 +195,44 @@ nav a:hover {
   font-size: 15.5px;
 }
 
-/* ================= FOOTER ================= */
+/* JUDGES PREVIEW */
+.judges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.judge-card {
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid rgba(245,197,66,0.18);
+}
+
+.judge-avatar {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f5c542, #e0b13a);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.judge-card h4 {
+  color: #f5c542;
+  margin-bottom: 8px;
+}
+
+.judge-card p {
+  font-size: 14.5px;
+  color: #d0d0d0;
+}
+
+/* FOOTER */
 footer {
   background: #0e0e0e;
   border-top: 1px solid rgba(245,197,66,0.25);
@@ -208,32 +242,15 @@ footer {
   color: #8e8e8e;
 }
 
-/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 42px;
-  }
-
-  .hero p {
-    font-size: 17px;
-  }
-
-  nav a {
-    margin-left: 14px;
-    font-size: 14px;
-  }
-
-  .jury-tooltip {
-    bottom: -56px;
-    font-size: 12.5px;
-  }
+  .hero h1 { font-size: 42px; }
+  .hero p { font-size: 17px; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
 <header>
   <div class="nav-container">
     <a href="index.html" class="logo">Rhythm Rise</a>
@@ -247,60 +264,79 @@ footer {
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="hero-content">
-    <h1>
-      <span class="brand-rhythm">RHYTHM</span>
-      <span class="brand-rise">RISE</span>
-    </h1>
+    <h1><span class="brand-rhythm">RHYTHM</span> <span class="brand-rise">RISE</span></h1>
 
-    <p>
-      A global Singing & Dance Talent Platform empowering performers
-      to rise, shine, and reach international recognition.
-    </p>
+    <p>A global Singing & Dance Talent Platform empowering performers to rise and shine.</p>
 
-    <!-- INTERNATIONAL JURY BADGE -->
     <div class="jury-wrapper">
       <div class="jury-badge">
-        🌍 International Jury
-        <span class="flags">🇺🇸 🇶🇦 🇬🇧 🇮🇪</span>
+        🌍 International Jury <span class="flags">🇺🇸 🇶🇦 🇬🇧 🇮🇪</span>
       </div>
       <div class="jury-tooltip">
         Auditions evaluated online by international experts
       </div>
     </div>
 
+    <div class="hybrid-text">
+      Auditions judged by local experts on stage and international judges online
+    </div>
+
     <a href="register.html">Register Now</a>
   </div>
 </section>
 
-<!-- ================= TALENT CATEGORIES ================= -->
 <section class="section">
   <h2 class="section-title">Choose Your <span>Talent</span></h2>
-
   <div class="grid">
     <div class="card">
       <h3>🎤 Singing</h3>
-      <p>
-        Rhythm Rise offers a professional stage for vocalists across classical,
-        film, folk, western, and contemporary genres. Performers are evaluated
-        on voice quality, rhythm, expression, and stage presence.
-      </p>
+      <p>Professional platform for vocalists across classical, film, folk, western and contemporary genres.</p>
     </div>
-
     <div class="card">
       <h3>💃 Dance</h3>
-      <p>
-        Dancers from all backgrounds are welcome — classical, folk, contemporary,
-        western, and fusion styles. Judging focuses on technique, expression,
-        creativity, musicality, and performance impact.
-      </p>
+      <p>Classical, folk, contemporary, western and fusion styles judged by experts.</p>
     </div>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<section class="section">
+  <h2 class="section-title">Meet Our <span>International Judges</span></h2>
+
+  <p style="max-width:720px;margin:0 auto 40px;color:#d6d6d6;">
+    Rhythm Rise follows a hybrid judging system where audition performances are evaluated live by
+    local judges and simultaneously reviewed online by international judges to ensure fairness
+    and global standards.
+  </p>
+
+  <div class="judges-grid">
+    <div class="judge-card">
+      <div class="judge-avatar">USA</div>
+      <h4>Performance Specialist</h4>
+      <p>Internationally experienced music professional.</p>
+    </div>
+
+    <div class="judge-card">
+      <div class="judge-avatar">QTR</div>
+      <h4>Cultural Arts Expert</h4>
+      <p>Recognized contributor to stage and cultural arts.</p>
+    </div>
+
+    <div class="judge-card">
+      <div class="judge-avatar">UK</div>
+      <h4>Music & Dance Evaluator</h4>
+      <p>Experienced adjudicator across multiple performance styles.</p>
+    </div>
+
+    <div class="judge-card">
+      <div class="judge-avatar">IRL</div>
+      <h4>Creative Arts Professional</h4>
+      <p>Specialist in artistic excellence and performance standards.</p>
+    </div>
+  </div>
+</section>
+
 <footer>
   © 2025 Rhythm Rise | Initiative of Doha Music Lovers
 </footer>
