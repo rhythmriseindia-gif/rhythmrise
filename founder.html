@@ -1,255 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Founder | Rhythm Rise</title>
-  <div class="founder-photo">
-  <img src="images/founder-syed-rafi.jpg" alt="Founder – Syed Rafi">
-</div>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Founder | Rhythm Rise</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    /* ================= BASE ================= */
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #121212;            /* soft dark */
-      color: #e6e6e6;                 /* off-white */
-      line-height: 1.7;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    /* ================= HEADER ================= */
-    header {
-      background: #0e0e0e;
-      border-bottom: 1px solid rgba(245,197,66,0.25);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-    .nav-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 15px 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+body {
+  background: radial-gradient(circle at top, #1b1b1b, #0b0b0b);
+  color: #e6e6e6;
+}
 
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-      color: #f5c542;                 /* soft gold */
-      text-decoration: none;
-      letter-spacing: 1px;
-    }
+/* HEADER */
+header {
+  background: rgba(0,0,0,0.9);
+  padding: 16px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,193,7,0.15);
+}
 
-    nav a {
-      margin-left: 22px;
-      text-decoration: none;
-      color: #cccccc;
-      font-size: 15px;
-      font-weight: 500;
-    }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    nav a:hover,
-    nav a.active {
-      color: #f5c542;
-    }
+nav h1 {
+  color: #ffc107;
+  font-size: 22px;
+  font-weight: 700;
+}
 
-    /* ================= CONTENT ================= */
-    .page-wrapper {
-      max-width: 1100px;
-      margin: auto;
-      padding: 70px 25px;
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+}
 
-    .card {
-      background: #181818;
-      border-radius: 18px;
-      padding: 50px;
-      border: 1px solid rgba(245,197,66,0.2);
-    }
+nav ul li a {
+  text-decoration: none;
+  color: #eaeaea;
+  font-size: 14.5px;
+}
 
-    h1 {
-      font-size: 36px;
-      font-weight: 800;
-      text-align: center;
-      margin-bottom: 8px;
-      color: #f5c542;
-    }
+nav ul li a:hover,
+nav ul li a.active {
+  color: #ffc107;
+}
 
-    .subtitle {
-      text-align: center;
-      color: #bdbdbd;
-      font-size: 15px;
-      margin-bottom: 40px;
-      font-style: italic;
-    }
+/* MAIN SECTION */
+.founder-wrapper {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
 
-    p {
-      font-size: 16px;
-      color: #e0e0e0;
-      margin-bottom: 18px;
-    }
+.founder-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 40px;
+  background: #141414;
+  border-radius: 18px;
+  padding: 45px;
+  border: 1px solid rgba(255,193,7,0.15);
+  box-shadow: 0 25px 70px rgba(0,0,0,0.65);
+}
 
-    .highlight {
-      color: #f5c542;
-      font-weight: 600;
-    }
+/* PHOTO */
+.founder-photo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 
-    h2 {
-      font-size: 24px;
-      margin-top: 45px;
-      margin-bottom: 15px;
-      color: #f5c542;
-    }
+.founder-photo img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #ffc107;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+}
 
-    .achievement {
-      background: #202020;
-      border-left: 4px solid #f5c542;
-      padding: 22px 25px;
-      border-radius: 12px;
-      margin-top: 30px;
-      color: #dedede;
-    }
+/* CONTENT */
+.founder-content h2 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
 
-    .cta {
-      margin-top: 55px;
-      text-align: center;
-    }
+.founder-content h2 span {
+  color: #ffc107;
+}
 
-    .cta a {
-      display: inline-block;
-      padding: 15px 38px;
-      border-radius: 50px;
-      background: linear-gradient(135deg, #f5c542, #e0b13a);
-      color: #000;
-      font-weight: 700;
-      font-size: 17px;
-      text-decoration: none;
-    }
+.founder-content h4 {
+  font-weight: 400;
+  color: #bfbfbf;
+  margin-bottom: 22px;
+  font-size: 14.5px;
+}
 
-    .footer {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 13px;
-      color: #888;
-    }
+.founder-content p {
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: #d6d6d6;
+  margin-bottom: 18px;
+}
 
-    @media (max-width: 768px) {
-      .card {
-        padding: 32px 24px;
-      }
+/* AWARD BOX */
+.award-box {
+  margin-top: 25px;
+  padding: 18px;
+  background: #1c1c1c;
+  border-left: 4px solid #ffc107;
+  border-radius: 8px;
+  font-size: 14.5px;
+}
 
-      h1 {
-        font-size: 28px;
-      }
+/* FOOTER */
+footer {
+  margin-top: 80px;
+  padding: 30px;
+  text-align: center;
+  color: #888;
+  font-size: 13.5px;
+}
 
-      nav a {
-        margin-left: 14px;
-        font-size: 14px;
-      }
-    }
-  </style>
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .founder-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .founder-photo {
+    margin-bottom: 30px;
+  }
+
+  .founder-photo img {
+    width: 200px;
+    height: 200px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
 <header>
-  <div class="nav-container">
-    <a href="index.html" class="logo">Rhythm Rise</a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="founder.html" class="active">Founder</a>
-      <a href="journey.html">Journey</a>
-      <a href="register.html">Register</a>
-    </nav>
-  </div>
+  <nav>
+    <h1>Rhythm Rise</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="founder.html" class="active">Founder</a></li>
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+  </nav>
 </header>
 
-<!-- ================= CONTENT ================= -->
-<div class="page-wrapper">
-  <div class="card">
+<section class="founder-wrapper">
+  <div class="founder-card">
 
-    <h1>Founder – Syed Rafi</h1>
-    <div class="subtitle">
-      Entrepreneur • Media Professional • Community Leader • Cultural Visionary
+    <!-- PHOTO -->
+    <div class="founder-photo">
+      <img src="images/founder-syed-rafi.jpg" alt="Founder – Syed Rafi">
     </div>
 
-    <p>
-      <span class="highlight">Syed Rafi</span> is a visionary entrepreneur, media professional, and
-      community leader with an extensive background spanning business, media, sports, culture,
-      and social service across India and the Middle East.
-    </p>
+    <!-- CONTENT -->
+    <div class="founder-content">
+      <h2>Founder – <span>Syed Rafi</span></h2>
+      <h4>Entrepreneur | Media Professional | Community Leader | Cultural Visionary</h4>
 
-    <p>
-      He began his professional journey in India with leading corporate organizations such as
-      <span class="highlight">Tata Retail Group</span>, <span class="highlight">BK Group</span>,
-      and <span class="highlight">Titan Industries</span>, where he gained strong expertise in
-      operations, branding, and large-scale organizational management.
-    </p>
+      <p>
+        Syed Rafi has an extensive background spanning business, media, sports, and social initiatives.
+        In India, he has worked with leading organizations including Tata Retail Group, BK Group,
+        and Titan Industries, gaining strong expertise in operations, branding, and large-scale
+        organizational management.
+      </p>
 
-    <p>
-      Internationally, Syed Rafi contributed to globally respected media organizations including
-      <span class="highlight">Al Jazeera TV Channel</span> and <span class="highlight">BeIN Sports</span>,
-      gaining valuable exposure to international broadcast standards and multicultural audiences.
-    </p>
+      <p>
+        Internationally, he has contributed to globally respected media networks such as Al Jazeera
+        TV Channel and BeIN Sports, gaining valuable exposure to international broadcast standards
+        and multicultural audiences.
+      </p>
 
-    <p>
-      In Doha, Qatar, he held honorary leadership roles as
-      <span class="highlight">Vice President of the Film Club under the Indian Cultural Centre (ICC)</span>
-      and <span class="highlight">Vice President of the Central Indian Association (CIA)</span>,
-      actively supporting cultural engagement and community development.
-    </p>
+      <p>
+        In Doha, Syed Rafi has held honorary leadership roles including Vice President of the Film Club
+        under the Indian Cultural Centre (ICC) and Vice President of the Central Indian Association (CIA),
+        actively supporting cultural engagement and community development.
+      </p>
 
-    <p>
-      A passionate sports organizer, Syed Rafi is the founder of
-      <span class="highlight">CricQatar.com</span>, a cricket community with over
-      <span class="highlight">900 registered teams</span>, organizing free weekly matches that promote
-      unity, sportsmanship, and healthy recreation among the Asian expatriate community.
-    </p>
+      <p>
+        He is the Founder and President of Humanity Cares, a nonprofit charity initiative, and also the
+        Founder and President of Doha Music Lovers Group. He additionally runs Qatar Job Opportunities,
+        a highly impactful employment-focused social media platform with over 130,000 followers.
+      </p>
 
-    <p>
-      His commitment to social impact is reflected through
-      <span class="highlight">Humanity Cares</span>, a nonprofit charitable initiative where he serves
-      as Founder and President. He is also the Founder and President of
-      <span class="highlight">Doha Music Lovers Group</span>, a cultural platform celebrating musical
-      talent and artistic collaboration.
-    </p>
+      <div class="award-box">
+        🏆 <strong>SIGTA Awards – South Icon Telangana</strong><br>
+        Honored in Doha, December 2024, for outstanding leadership, community service,
+        and cultural contribution.
+      </div>
 
-    <p>
-      He also manages <span class="highlight">Qatar Job Opportunities</span>, a highly impactful
-      employment-focused social media platform with over
-      <span class="highlight">130,000 followers</span>, providing job alerts and career guidance to
-      thousands of job seekers.
-    </p>
-
-    <div class="achievement">
-      🏆 <strong>SIGTA Awards – South Icon Telangana</strong><br>
-      Honored in Doha, December 2024, for outstanding leadership, community service,
-      and cultural contribution.
-    </div>
-
-    <p>
-      Through <span class="highlight">Rhythm Rise</span>, Syed Rafi brings together corporate discipline,
-      global media exposure, and community-driven vision to create a transparent, professional, and
-      inspiring platform for singers and dancers worldwide.
-    </p>
-
-    <div class="cta">
-      <a href="about.html">Learn More About Rhythm Rise</a>
-    </div>
-
-    <div class="footer">
-      © 2025 Rhythm Rise
     </div>
 
   </div>
-</div>
+</section>
+
+<footer>
+  © 2025 Rhythm Rise | Initiative of Doha Music Lovers Group
+</footer>
 
 </body>
 </html>
-
