@@ -152,6 +152,32 @@ nav ul li a.active {
   50% { box-shadow: 0 0 18px rgba(245,196,0,0.35); }
   100% { box-shadow: 0 0 0 rgba(245,196,0,0.0); }
 }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  background: #000;
+  border-bottom: 1px solid #222;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-wrap img {
+  height: 42px;
+  width: auto;
+}
+
+.logo-wrap span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f5b301; /* Rhythm Rise gold */
+  letter-spacing: 0.5px;
+}
 
 /* FOOTER */
 footer {
@@ -178,16 +204,18 @@ footer {
 
 <body>
 
-<header>
+<header class="header">
+  <div class="logo-wrap">
+    <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
+    <span>Rhythm Rise</span>
+  </div>
+
   <nav>
-    <h1>Rhythm Rise</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="founder.html" class="active">Founder</a></li>
-      <li><a href="journey.html">Journey</a></li>
-      <li><a href="register.html">Register</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="founder.html">Founder</a>
+    <a href="journey.html">Journey</a>
+    <a href="register.html">Register</a>
   </nav>
 </header>
 
@@ -247,3 +275,4 @@ footer {
 
 </body>
 </html>
+
