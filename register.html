@@ -8,152 +8,51 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:radial-gradient(circle at top,#1a1a1a,#000);color:#fff}
 
-body {
-  background: radial-gradient(circle at top, #1a1a1a, #000);
-  color: #fff;
-  min-height: 100vh;
-}
+/* HEADER */
+.site-header{position:fixed;top:0;width:100%;height:72px;background:rgba(0,0,0,.96);border-bottom:1px solid rgba(245,197,66,.25);z-index:1000}
+.nav-container{max-width:1200px;height:72px;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:42px}
+.logo span{font-size:22px;font-weight:800;color:#f5c542;line-height:1.1}
+.main-nav{display:flex;gap:26px}
+.main-nav a{text-decoration:none;color:#ccc;font-size:14.5px;font-weight:500}
+.main-nav a:hover,.main-nav a.active{color:#f5c542}
 
-/* ================= HEADER ================= */
-.site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 72px;
-  background: rgba(0,0,0,0.96);
-  border-bottom: 1px solid rgba(245,197,66,0.25);
-  z-index: 1000;
-}
+/* FORM */
+.form-wrapper{max-width:860px;margin:auto;padding:130px 25px 90px}
+.form-card{background:#111;border-radius:18px;padding:40px;border:1px solid rgba(245,197,66,.25);box-shadow:0 20px 60px rgba(0,0,0,.6)}
+h1{text-align:center;font-size:36px;font-weight:800}
+h1 span{color:#f5c542}
+.subtitle{text-align:center;color:#ccc;margin-bottom:35px;font-size:16px}
 
-.nav-container {
-  max-width: 1200px;
-  height: 72px;
-  margin: auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+form{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.full{grid-column:span 3}
+label{font-size:13px;color:#bbb;margin-bottom:6px;display:block}
+input,select{width:100%;padding:14px;border-radius:10px;border:1px solid #333;background:#1c1c1c;color:#fff;font-size:15px}
+input:focus,select:focus{outline:none;border-color:#f5c542;box-shadow:0 0 0 2px rgba(245,197,66,.25)}
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+.agree-box{grid-column:span 3;font-size:14px;color:#cfcfcf}
+.agree-box input{margin-right:8px;accent-color:#f5c542}
+.agree-box a{color:#f5c542;text-decoration:underline}
 
-.logo img {
-  height: 42px;
-}
+.submit-btn{grid-column:span 3;padding:16px;font-size:18px;font-weight:700;border-radius:50px;border:none;cursor:pointer;background:linear-gradient(135deg,#f5c542,#e0b13a);color:#000}
 
-.logo span {
-  font-size: 22px;
-  font-weight: 800;
-  color: #f5c542;
-  line-height: 1.1;
-}
-
-/* ================= FORM ================= */
-.form-wrapper {
-  max-width: 860px;
-  margin: auto;
-  padding: 130px 25px 90px;
-}
-
-.form-card {
-  background: #111;
-  border-radius: 18px;
-  padding: 40px;
-  border: 1px solid rgba(245,197,66,0.25);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-}
-
-h1 {
-  text-align: center;
-  font-size: 36px;
-  font-weight: 800;
-}
-
-h1 span { color: #f5c542; }
-
-.subtitle {
-  text-align: center;
-  color: #ccc;
-  margin-bottom: 35px;
-  font-size: 16px;
-}
-
-form {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.full { grid-column: span 3; }
-
-label {
-  font-size: 13px;
-  color: #bbb;
-  margin-bottom: 6px;
-  display: block;
-}
-
-input, select {
-  width: 100%;
-  padding: 14px;
-  border-radius: 10px;
-  border: 1px solid #333;
-  background: #1c1c1c;
-  color: #fff;
-  font-size: 15px;
-}
-
-input:focus, select:focus {
-  outline: none;
-  border-color: #f5c542;
-  box-shadow: 0 0 0 2px rgba(245,197,66,0.25);
-}
-
-/* TERMS */
-.agree-box {
-  grid-column: span 3;
-  font-size: 14px;
-  color: #cfcfcf;
-}
-
-.agree-box input {
-  margin-right: 8px;
-  accent-color: #f5c542;
-}
-
-.agree-box a {
-  color: #f5c542;
-  text-decoration: underline;
-}
-
-/* SUBMIT */
-.submit-btn {
-  grid-column: span 3;
-  padding: 16px;
-  font-size: 18px;
-  font-weight: 700;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  background: linear-gradient(135deg, #f5c542, #e0b13a);
-  color: #000;
-}
+/* FOOTER */
+footer{background:#0e0e0e;border-top:1px solid rgba(245,197,66,.25);padding:50px 20px;color:#bbb}
+.footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:35px}
+footer h3,footer h4{color:#f5c542;margin-bottom:12px}
+footer a{color:#bbb;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.footer-bottom{text-align:center;margin-top:40px;font-size:13px;color:#777}
 
 /* MOBILE */
-@media (max-width: 768px) {
-  form { grid-template-columns: 1fr; }
-  .full, .submit-btn, .agree-box { grid-column: span 1; }
+@media(max-width:768px){
+form{grid-template-columns:1fr}
+.full,.submit-btn,.agree-box{grid-column:span 1}
+.main-nav{gap:18px}
 }
 </style>
 </head>
@@ -166,12 +65,18 @@ input:focus, select:focus {
       <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
       <span>Rhythm<br>Rise</span>
     </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="founder.html">Founder</a>
+      <a href="journey.html">Journey</a>
+      <a href="register.html" class="active">Register</a>
+    </nav>
   </div>
 </header>
 
 <div class="form-wrapper">
   <div class="form-card">
-
     <h1>Rhythm <span>Rise</span></h1>
     <div class="subtitle">Singing & Dance Competition Registration</div>
 
@@ -182,56 +87,33 @@ input:focus, select:focus {
         <input type="text" name="name" required>
       </div>
 
-      <div>
-        <label>Email</label>
-        <input type="email" name="email" required>
-      </div>
-
-      <div>
-        <label>Mobile Number</label>
-        <input type="tel" name="phone" required>
-      </div>
-
-      <div>
-        <label>WhatsApp Number</label>
-        <input type="tel" name="whatsapp" required>
-      </div>
+      <div><label>Email</label><input type="email" name="email" required></div>
+      <div><label>Mobile Number</label><input type="tel" name="phone" required></div>
+      <div><label>WhatsApp Number</label><input type="tel" name="whatsapp" required></div>
 
       <div>
         <label>Age</label>
         <select name="age" required>
           <option value="">Select</option>
-          <option>5–8 years</option>
-          <option>9–12 years</option>
-          <option>13–16 years</option>
-          <option>17–20 years</option>
-          <option>21–25 years</option>
-          <option>26+ years</option>
+          <option>5–8 years</option><option>9–12 years</option><option>13–16 years</option>
+          <option>17–20 years</option><option>21–25 years</option><option>26+ years</option>
         </select>
       </div>
-      
+
       <div>
-  <label>Gender</label>
-  <select name="gender" required>
-    <option value="">Select</option>
-    <option>Male</option>
-    <option>Female</option>
-    <option>Other</option>
-  </select>
-   </div>
+        <label>Gender</label>
+        <select name="gender" required>
+          <option value="">Select</option><option>Male</option><option>Female</option><option>Other</option>
+        </select>
+      </div>
 
       <div>
         <label>Audition City</label>
         <select name="city" required>
           <option value="">Select</option>
-          <option>Karimnagar</option>
-          <option>Khammam</option>
-          <option>Kurnool</option>
-          <option>Nizamabad</option>
-          <option>Warangal</option>
-          <option>Hyderabad</option>
-          <option>Vijayawada</option>
-          <option>Vizag</option>
+          <option>Karimnagar</option><option>Khammam</option><option>Kurnool</option>
+          <option>Nizamabad</option><option>Warangal</option><option>Hyderabad</option>
+          <option>Vijayawada</option><option>Vizag</option>
         </select>
       </div>
 
@@ -244,24 +126,18 @@ input:focus, select:focus {
         </select>
       </div>
 
-      <!-- SINGING OPTIONS -->
       <div class="full" id="singingOptions" style="display:none;">
         <label>Singing Language Preference</label>
         <select name="singing_language">
           <option value="">Select</option>
-          <option>Hindi</option>
-          <option>Telugu</option>
-          <option>English</option>
+          <option>Hindi</option><option>Telugu</option><option>English</option>
         </select>
       </div>
 
-      <!-- DANCE OPTIONS -->
       <div class="full" id="danceOptions" style="display:none;">
         <label>Dance Format</label>
         <select name="dance_format">
-          <option value="">Select</option>
-          <option>Solo</option>
-          <option>Group</option>
+          <option value="">Select</option><option>Solo</option><option>Group</option>
         </select>
       </div>
 
@@ -269,11 +145,8 @@ input:focus, select:focus {
         <label>Dance Style</label>
         <select name="dance_style">
           <option value="">Select</option>
-          <option>Classical Dance</option>
-          <option>Semi-classical Dance</option>
-          <option>Folk Dance</option>
-          <option>Cinematic Dance</option>
-          <option>Western Dance</option>
+          <option>Classical Dance</option><option>Semi-classical Dance</option>
+          <option>Folk Dance</option><option>Cinematic Dance</option><option>Western Dance</option>
         </select>
       </div>
 
@@ -287,50 +160,55 @@ input:focus, select:focus {
       <button class="submit-btn" type="submit">Submit Registration</button>
 
     </form>
-
   </div>
 </div>
 
-<script>
-const category = document.getElementById("category");
-const singing = document.getElementById("singingOptions");
-const dance = document.getElementById("danceOptions");
-const danceStyle = document.getElementById("danceStyle");
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h3>Rhythm Rise</h3>
+      <p>A global singing & dance talent platform empowering performers worldwide.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>
+        📧 <a href="mailto:contact@rhythmrise.in">contact@rhythmrise.in</a><br>
+        📲 <a href="https://wa.me/919030140600" target="_blank">+91 90301 40600</a>
+      </p>
+    </div>
+    <div>
+      <h4>Follow Us</h4>
+      <p>
+        📸 <a href="https://instagram.com/rhythmriseindia" target="_blank">Instagram</a><br>
+        ❌ <a href="https://x.com/rhythmriseindia" target="_blank">X (Twitter)</a>
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
+  </div>
+</footer>
 
-category.addEventListener("change", function () {
-  if (this.value === "Singing") {
-    singing.style.display = "block";
-    dance.style.display = "none";
-    danceStyle.style.display = "none";
-  } else if (this.value === "Dance") {
-    singing.style.display = "none";
-    dance.style.display = "block";
-    danceStyle.style.display = "block";
-  } else {
-    singing.style.display = "none";
-    dance.style.display = "none";
-    danceStyle.style.display = "none";
-  }
+<script>
+const category=document.getElementById("category"),
+singing=document.getElementById("singingOptions"),
+dance=document.getElementById("danceOptions"),
+danceStyle=document.getElementById("danceStyle");
+
+category.addEventListener("change",function(){
+  singing.style.display=this.value==="Singing"?"block":"none";
+  dance.style.display=this.value==="Dance"?"block":"none";
+  danceStyle.style.display=this.value==="Dance"?"block":"none";
 });
 
-document.getElementById("registrationForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  const data = Object.fromEntries(new FormData(this));
-
-  fetch("https://script.google.com/macros/s/AKfycbwX6NnnJcuvkFF-CELwzmdAPFMEnuFuJU_vfoMX7oywv7Bt8IEC1EypY1toayTDDJ9h/exec", {
-    method: "POST",
-    body: new URLSearchParams(data)
-  })
-  .then(() => {
-    window.location.href = "thankyou.html?" + new URLSearchParams(data).toString();
-  })
-  .catch(() => {
-    alert("Submission failed. Please try again.");
-  });
+document.getElementById("registrationForm").addEventListener("submit",function(e){
+e.preventDefault();
+const data=Object.fromEntries(new FormData(this));
+fetch("https://script.google.com/macros/s/AKfycbwX6NnnJcuvkFF-CELwzmdAPFMEnuFuJU_vfoMX7oywv7Bt8IEC1EypY1toayTDDJ9h/exec",{method:"POST",body:new URLSearchParams(data)})
+.then(()=>{window.location.href="thankyou.html?"+new URLSearchParams(data).toString()})
+.catch(()=>alert("Submission failed. Please try again."));
 });
 </script>
 
 </body>
 </html>
-
-
