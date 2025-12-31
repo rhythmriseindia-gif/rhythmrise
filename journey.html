@@ -48,7 +48,6 @@ body {
   font-size: 22px;
   font-weight: 700;
   color: #f5b301;
-  letter-spacing: 0.5px;
 }
 
 .header nav {
@@ -60,13 +59,12 @@ body {
   text-decoration: none;
   font-size: 14.5px;
   font-weight: 500;
-  color: #ffffff;
+  color: #fff;
   transition: color 0.3s ease;
 }
 
-/* prevent purple visited links */
 .header nav a:visited {
-  color: #ffffff;
+  color: #fff;
 }
 
 .header nav a:hover,
@@ -83,7 +81,7 @@ body {
 
 .page-title {
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 80px;
 }
 
 .page-title h2 {
@@ -103,19 +101,58 @@ body {
   margin: auto;
 }
 
-/* ================= JOURNEY ITEM ================= */
-.journey-item {
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 35px;
-  padding: 38px;
-  margin-bottom: 40px;
-  background: linear-gradient(180deg, #121212, #0b0b0b);
-  border-radius: 18px;
-  border-left: 4px solid #f5b301;
-  box-shadow: 0 0 45px rgba(0,0,0,0.55);
+/* ================= TIMELINE ================= */
+.timeline {
+  position: relative;
+  padding-left: 50px;
 }
 
+/* vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #f5b301, transparent);
+}
+
+/* ================= JOURNEY ITEM ================= */
+.journey-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 30px;
+  padding: 36px;
+  margin-bottom: 50px;
+  background: linear-gradient(180deg, #121212, #0b0b0b);
+  border-radius: 18px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.55);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* timeline dot */
+.journey-item::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background: #f5b301;
+  border-radius: 50%;
+  box-shadow: 0 0 18px rgba(245,179,1,0.6);
+}
+
+/* hover animation */
+.journey-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.75);
+}
+
+/* LOGO */
 .journey-logo {
   display: flex;
   align-items: center;
@@ -123,12 +160,13 @@ body {
 }
 
 .journey-logo img {
-  max-width: 120px;
-  max-height: 120px;
+  max-width: 110px;
+  max-height: 110px;
   object-fit: contain;
   filter: drop-shadow(0 0 12px rgba(245,179,1,0.25));
 }
 
+/* CONTENT */
 .journey-content h3 {
   font-size: 22px;
   font-weight: 600;
@@ -160,9 +198,21 @@ footer {
 
 /* ================= RESPONSIVE ================= */
 @media(max-width: 768px) {
+  .timeline {
+    padding-left: 0;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
   .journey-item {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .journey-item::before {
+    display: none;
   }
 
   .header nav {
@@ -195,124 +245,113 @@ footer {
     <h2>The <span>Journey</span></h2>
     <p>
       Rhythm Rise is built on years of cultural leadership, community engagement,
-      and successful large-scale talent platforms across Doha and online.
+      and successful talent platforms across Doha and beyond.
     </p>
   </div>
 
-  <!-- DOHA MUSIC LOVERS -->
-  <div class="journey-item">
-    <div class="journey-logo">
-      <img src="images/logos/doha-music-lovers.png" alt="Doha Music Lovers">
-    </div>
-    <div class="journey-content">
-      <h3>Doha Music Lovers</h3>
-      <span>Cultural & Music Community Platform — Doha, Qatar</span>
-      <p>
-        Founded by Syed Rafi, Doha Music Lovers emerged as a vibrant cultural platform
-        dedicated to nurturing upcoming artists and promoting artistic collaboration
-        within the expatriate community of Qatar.
-      </p>
-      <p>
-        The initiative provided a respected stage for singers and performers from
-        Bangladesh, Nepal, Pakistan, and Sri Lanka, encouraging multicultural unity.
-      </p>
-      <p>
-        Doha Music Lovers laid the foundation for multiple large-scale competitions
-        and directly shaped the vision behind Rhythm Rise.
-      </p>
-    </div>
-  </div>
+  <div class="timeline">
 
-  <!-- SUPER DANCER S1 -->
-  <div class="journey-item">
-    <div class="journey-logo">
-      <img src="images/logos/super-dancer-doha.png" alt="Super Dancer Doha">
+    <!-- DOHA MUSIC LOVERS -->
+    <div class="journey-item">
+      <div class="journey-logo">
+        <img src="images/logos/doha-music-lovers.png" alt="Doha Music Lovers">
+      </div>
+      <div class="journey-content">
+        <h3>Doha Music Lovers</h3>
+        <span>Cultural & Music Community Platform — Doha, Qatar</span>
+        <p>
+          Founded by Syed Rafi, Doha Music Lovers provided a respected stage for
+          emerging artists and promoted multicultural participation across Asian communities.
+        </p>
+      </div>
     </div>
-    <div class="journey-content">
-      <h3>Super Dancer — Doha, Qatar</h3>
-      <span>Season 1 | Flagship Dance Competition</span>
-      <p>
-        A professionally structured dance competition featuring classical,
-        contemporary, and fusion styles judged by experienced experts.
-      </p>
-    </div>
-  </div>
 
-  <!-- SUPER DANCER S2 -->
-  <div class="journey-item">
-    <div class="journey-logo">
-      <img src="images/logos/super-dancer-season-2-doha.png" alt="Super Dancer Season 2">
+    <!-- SUPER DANCER S1 -->
+    <div class="journey-item">
+      <div class="journey-logo">
+        <img src="images/logos/super-dancer-doha.png" alt="Super Dancer Doha">
+      </div>
+      <div class="journey-content">
+        <h3>Super Dancer — Season 1</h3>
+        <span>Flagship Dance Competition — Doha</span>
+        <p>
+          A professionally structured dance platform showcasing classical,
+          contemporary, and fusion styles.
+        </p>
+      </div>
     </div>
-    <div class="journey-content">
-      <h3>Super Dancer — Season 2</h3>
-      <span>Expanded Scale & Higher Standards</span>
-      <p>
-        Increased participation, enhanced production quality, and refined judging
-        parameters strengthened the platform’s credibility.
-      </p>
-    </div>
-  </div>
 
-  <!-- SUPER DANCER S3 -->
-  <div class="journey-item">
-    <div class="journey-logo">
-      <img src="images/logos/super-dancer-season-3-doha.png" alt="Super Dancer Season 3">
+    <!-- SUPER DANCER S2 -->
+    <div class="journey-item">
+      <div class="journey-logo">
+        <img src="images/logos/super-dancer-season-2-doha.png" alt="Super Dancer Season 2">
+      </div>
+      <div class="journey-content">
+        <h3>Super Dancer — Season 2</h3>
+        <span>Expanded Scale & Higher Standards</span>
+        <p>
+          Increased participation and refined judging elevated the competition’s reputation.
+        </p>
+      </div>
     </div>
-    <div class="journey-content">
-      <h3>Super Dancer — Season 3</h3>
-      <span>Established & Recognized Platform</span>
-      <p>
-        Season 3 reinforced Super Dancer as one of Doha’s most trusted dance
-        competitions with strong audience engagement.
-      </p>
-    </div>
-  </div>
 
-  <!-- SUPER SINGER -->
-  <div class="journey-item">
-    <div class="journey-logo">
-      <img src="images/logos/super-singer-doha.png" alt="Super Singer Doha">
+    <!-- SUPER DANCER S3 -->
+    <div class="journey-item">
+      <div class="journey-logo">
+        <img src="images/logos/super-dancer-season-3-doha.png" alt="Super Dancer Season 3">
+      </div>
+      <div class="journey-content">
+        <h3>Super Dancer — Season 3</h3>
+        <span>Established & Recognized Platform</span>
+        <p>
+          Reinforced as one of Doha’s most trusted dance competitions.
+        </p>
+      </div>
     </div>
-    <div class="journey-content">
-      <h3>Super Singer — Doha, Qatar</h3>
-      <span>Vocal Talent Platform</span>
-      <p>
-        A transparent and professional singing platform focused on musicality,
-        voice control, and expressive performance.
-      </p>
-    </div>
-  </div>
 
-  <!-- VOICE OF WORLD -->
-  <div class="journey-item">
-    <div class="journey-logo">
-      <img src="images/logos/voice-of-world-online.png" alt="Voice of World">
+    <!-- SUPER SINGER -->
+    <div class="journey-item">
+      <div class="journey-logo">
+        <img src="images/logos/super-singer-doha.png" alt="Super Singer Doha">
+      </div>
+      <div class="journey-content">
+        <h3>Super Singer</h3>
+        <span>Vocal Talent Platform — Doha</span>
+        <p>
+          A transparent platform focused on musicality, voice control, and performance.
+        </p>
+      </div>
     </div>
-    <div class="journey-content">
-      <h3>Voice of World</h3>
-      <span>Global Online Singing Contest</span>
-      <p>
-        An online-first format connecting singers across countries, enabling
-        global participation and recognition.
-      </p>
-    </div>
-  </div>
 
-  <!-- CRIC QATAR -->
-  <div class="journey-item">
-    <div class="journey-logo">
-      <img src="images/logos/cric-qatar.png" alt="Cric Qatar">
+    <!-- VOICE OF WORLD -->
+    <div class="journey-item">
+      <div class="journey-logo">
+        <img src="images/logos/voice-of-world-online.png" alt="Voice of World">
+      </div>
+      <div class="journey-content">
+        <h3>Voice of World</h3>
+        <span>Global Online Singing Contest</span>
+        <p>
+          Connecting singers globally through a digital-first competition format.
+        </p>
+      </div>
     </div>
-    <div class="journey-content">
-      <h3>Cric Qatar</h3>
-      <span>Community Cricket Platform</span>
-      <p>
-        A leading community cricket initiative supporting tournaments, team
-        engagement, and sporting excellence across Qatar.
-      </p>
-    </div>
-  </div>
 
+    <!-- CRIC QATAR -->
+    <div class="journey-item">
+      <div class="journey-logo">
+        <img src="images/logos/cric-qatar.png" alt="Cric Qatar">
+      </div>
+      <div class="journey-content">
+        <h3>Cric Qatar</h3>
+        <span>Community Cricket Platform</span>
+        <p>
+          Supporting structured tournaments and sporting excellence across Qatar.
+        </p>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <footer>
