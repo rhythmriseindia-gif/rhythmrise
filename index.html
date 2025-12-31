@@ -7,221 +7,65 @@
 
 <meta name="description" content="Rhythm Rise is a premier singing and dance competition platform connecting talent with national and international judges.">
 
+<!-- Open Graph / Social Sharing -->
+<meta property="og:title" content="Rhythm Rise | Singing & Dance Talent Platform">
+<meta property="og:description" content="Registrations open for global singing & dance competitions with international jury.">
+<meta property="og:image" content="https://rhythmrise.in/images/rhythmrise-og.jpg">
+<meta property="og:url" content="https://rhythmrise.in">
+<meta property="og:type" content="website">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#121212;color:#e6e6e6}
 
-body {
-  background: #121212;
-  color: #e6e6e6;
-}
+/* HEADER */
+.site-header{position:fixed;top:0;width:100%;height:72px;background:rgba(0,0,0,.96);border-bottom:1px solid rgba(245,197,66,.25);z-index:1000}
+.nav-container{max-width:1200px;height:72px;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:42px}
+.logo span{font-size:22px;font-weight:800;color:#f5c542;line-height:1.1}
+.main-nav{display:flex;gap:26px}
+.main-nav a{text-decoration:none;color:#ccc;font-size:14.5px;font-weight:500}
+.main-nav a:hover,.main-nav a.active{color:#f5c542}
 
-/* ================= HEADER ================= */
-.site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 72px;
-  background: rgba(0,0,0,0.96);
-  border-bottom: 1px solid rgba(245,197,66,0.25);
-  z-index: 1000;
-}
+/* HERO */
+.hero{min-height:100vh;padding-top:120px;background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.9)),url("https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1600&q=80");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero-content{max-width:900px;padding:20px}
+.hero h1{font-size:64px;font-weight:900;margin-bottom:20px}
+.hero h1 span{color:#f5c542}
+.hero p{font-size:20px;color:#ddd;margin-bottom:20px}
+.jury-badge{display:inline-block;margin:15px 0 30px;padding:12px 26px;border-radius:40px;background:rgba(245,197,66,.12);border:1px solid rgba(245,197,66,.35);color:#f5c542;font-size:14px;font-weight:600}
+.hero a{padding:16px 42px;background:linear-gradient(135deg,#f5c542,#e0b13a);color:#000;font-weight:700;border-radius:50px;text-decoration:none}
 
-.nav-container {
-  max-width: 1200px;
-  height: 72px;
-  margin: auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  height: 42px;
-}
-
-.logo span {
-  font-size: 22px;
-  font-weight: 800;
-  color: #f5c542;
-  line-height: 1.1;
-}
-
-.main-nav {
-  display: flex;
-  gap: 26px;
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: #cccccc;
-  font-size: 14.5px;
-  font-weight: 500;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-  color: #f5c542;
-}
-
-/* ================= HERO ================= */
-.hero {
-  min-height: 100vh;
-  padding-top: 120px;
-  background:
-    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
-    url("https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1600&q=80");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-content {
-  max-width: 900px;
-  padding: 20px;
-}
-
-.hero h1 {
-  font-size: 64px;
-  font-weight: 900;
-  margin-bottom: 20px;
-}
-
-.hero h1 span {
-  color: #f5c542;
-}
-
-.hero p {
-  font-size: 20px;
-  color: #dddddd;
-  margin-bottom: 20px;
-}
-
-.jury-badge {
-  display: inline-block;
-  margin: 15px 0 30px;
-  padding: 12px 26px;
-  border-radius: 40px;
-  background: rgba(245,197,66,0.12);
-  border: 1px solid rgba(245,197,66,0.35);
-  color: #f5c542;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.hero a {
-  padding: 16px 42px;
-  background: linear-gradient(135deg, #f5c542, #e0b13a);
-  color: #000;
-  font-weight: 700;
-  border-radius: 50px;
-  text-decoration: none;
-}
-
-/* ================= SECTIONS ================= */
-.section {
-  padding: 90px 25px;
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 34px;
-  margin-bottom: 50px;
-}
-
-.section-title span {
-  color: #f5c542;
-}
-
-.section p {
-  max-width: 850px;
-  margin: 0 auto 40px;
-  color: #cccccc;
-  font-size: 16px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 35px;
-}
-
-/* CARDS */
-.card {
-  background: #181818;
-  padding: 35px;
-  border-radius: 18px;
-  border: 1px solid rgba(245,197,66,0.18);
-}
-
-.card h3 {
-  color: #f5c542;
-  margin-bottom: 12px;
-}
+/* SECTIONS */
+.section{padding:90px 25px;max-width:1200px;margin:auto;text-align:center}
+.section-title{font-size:34px;margin-bottom:50px}
+.section-title span{color:#f5c542}
+.section p{max-width:850px;margin:0 auto 40px;color:#ccc;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:35px}
+.card{background:#181818;padding:35px;border-radius:18px;border:1px solid rgba(245,197,66,.18)}
+.card h3{color:#f5c542;margin-bottom:12px}
 
 /* CTA */
-.cta {
-  background: linear-gradient(180deg, #181818, #101010);
-  padding: 90px 25px;
-  text-align: center;
-}
-
-.cta h2 {
-  font-size: 36px;
-  margin-bottom: 15px;
-}
-
-.cta p {
-  color: #ccc;
-  margin-bottom: 30px;
-}
-
-.cta a {
-  padding: 16px 46px;
-  background: linear-gradient(135deg, #f5c542, #e0b13a);
-  color: #000;
-  font-weight: 800;
-  border-radius: 50px;
-  text-decoration: none;
-}
+.cta{background:linear-gradient(180deg,#181818,#101010);padding:90px 25px;text-align:center}
+.cta h2{font-size:36px;margin-bottom:15px}
+.cta p{color:#ccc;margin-bottom:30px}
+.cta a{padding:16px 46px;background:linear-gradient(135deg,#f5c542,#e0b13a);color:#000;font-weight:800;border-radius:50px;text-decoration:none}
 
 /* FOOTER */
-footer {
-  background: #0e0e0e;
-  border-top: 1px solid rgba(245,197,66,0.25);
-  text-align: center;
-  padding: 28px;
-  font-size: 13px;
-  color: #8e8e8e;
-}
+footer{background:#0e0e0e;border-top:1px solid rgba(245,197,66,.25);padding:50px 20px;color:#bbb}
+.footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:35px}
+footer h3,footer h4{color:#f5c542;margin-bottom:12px}
+footer a{color:#bbb;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.footer-bottom{text-align:center;margin-top:40px;font-size:13px;color:#777}
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 42px;
-  }
-
-  .main-nav {
-    gap: 18px;
-  }
+@media(max-width:768px){
+.hero h1{font-size:42px}
+.main-nav{gap:18px}
 }
 </style>
 </head>
@@ -234,7 +78,6 @@ footer {
       <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
       <span>Rhythm<br>Rise</span>
     </div>
-
     <nav class="main-nav">
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
@@ -249,11 +92,7 @@ footer {
   <div class="hero-content">
     <h1>RHYTHM <span>RISE</span></h1>
     <p>A global singing & dance talent platform empowering performers to rise and shine.</p>
-
-    <div class="jury-badge">
-      🌍 International Jury | India • Qatar • UK • USA
-    </div>
-
+    <div class="jury-badge">🌍 International Jury | India • Qatar • UK • USA</div>
     <a href="register.html">Register Now</a>
   </div>
 </section>
@@ -261,53 +100,39 @@ footer {
 <section class="section">
   <h2 class="section-title">About <span>Rhythm Rise</span></h2>
   <p>
-    Rhythm Rise is a professional singing and dance competition platform created to
-    identify, nurture, and celebrate genuine talent. Backed by years of cultural
-    leadership and transparent judging, we provide performers a stage to shine.
+    Rhythm Rise is a professional singing and dance competition platform created to identify,
+    nurture, and celebrate genuine talent through transparent judging and global exposure.
   </p>
 </section>
 
 <section class="section">
   <h2 class="section-title">Singing & <span>Dance</span> Categories</h2>
-
   <div class="grid">
     <div class="card">
       <h3>Singing</h3>
-      <p>
-        Open to multiple languages and styles, evaluated on voice quality,
-        rhythm, expression, and overall performance.
-      </p>
+      <p>Multiple languages and styles evaluated on voice, rhythm, expression, and performance.</p>
     </div>
-
     <div class="card">
       <h3>Dance</h3>
-      <p>
-        Classical, folk, cinematic, semi-classical, and western styles judged by
-        experienced choreographers and cultural experts.
-      </p>
+      <p>Classical, semi-classical, folk, cinematic, and western dance styles.</p>
     </div>
   </div>
 </section>
 
 <section class="section">
   <h2 class="section-title">Why Choose <span>Rhythm Rise</span></h2>
-
   <div class="grid">
-    <div class="card">
-      <h3>Transparent Judging</h3>
-      <p>Clear criteria and professional evaluation at every stage.</p>
-    </div>
-
-    <div class="card">
-      <h3>International Exposure</h3>
-      <p>Hybrid judging model with global experts and mentors.</p>
-    </div>
-
-    <div class="card">
-      <h3>Inclusive Platform</h3>
-      <p>Open to all age groups with structured categories.</p>
-    </div>
+    <div class="card"><h3>Transparent Judging</h3><p>Clear criteria and professional evaluation.</p></div>
+    <div class="card"><h3>International Exposure</h3><p>Hybrid judging with global experts.</p></div>
+    <div class="card"><h3>Inclusive Platform</h3><p>Open to all age groups and backgrounds.</p></div>
   </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Trusted by <span>Artists & Communities</span></h2>
+  <p>
+    Built on years of cultural leadership and successful talent platforms across India and Qatar.
+  </p>
 </section>
 
 <section class="cta">
@@ -317,8 +142,41 @@ footer {
 </section>
 
 <footer>
-  © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
+  <div class="footer-grid">
+    <div>
+      <h3>Rhythm Rise</h3>
+      <p>A global singing & dance talent platform empowering performers worldwide.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p>
+        <a href="index.html">Home</a><br>
+        <a href="about.html">About</a><br>
+        <a href="journey.html">Journey</a><br>
+        <a href="register.html">Register</a><br>
+        <a href="rules.html">Rules & Regulations</a>
+      </p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>
+        📧 <a href="mailto:contact@rhythmrise.in">contact@rhythmrise.in</a><br>
+        📲 <a href="https://wa.me/919030140600" target="_blank">+91 90301 40600</a>
+      </p>
+    </div>
+    <div>
+      <h4>Follow Us</h4>
+      <p>
+        📸 <a href="https://instagram.com/rhythmriseindia" target="_blank">Instagram</a><br>
+        ❌ <a href="https://x.com/rhythmriseindia" target="_blank">X (Twitter)</a>
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
+  </div>
 </footer>
 
 </body>
 </html>
+
