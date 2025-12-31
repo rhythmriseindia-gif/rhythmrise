@@ -5,65 +5,127 @@
 <title>Registration Successful | Rhythm Rise</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-/* ===== PAGE BACKGROUND ===== */
-body {
+* {
   margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
   background: radial-gradient(circle at top, #1a1a1a, #000);
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* ================= HEADER ================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 72px;
+  background: rgba(0,0,0,0.96);
+  border-bottom: 1px solid rgba(245,197,66,0.25);
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  height: 72px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 42px;
+}
+
+.logo span {
+  font-size: 22px;
+  font-weight: 800;
+  color: #f5c542;
+  line-height: 1.1;
+}
+
+/* ================= CARD ================= */
+.wrapper {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 130px 20px 40px;
 }
 
-/* ===== CARD ===== */
 .container {
   max-width: 600px;
   background: #111;
   padding: 45px 40px;
-  border-radius: 16px;
+  border-radius: 18px;
   text-align: center;
   box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-  border: 1px solid rgba(255,193,7,0.25);
+  border: 1px solid rgba(245,197,66,0.25);
 }
 
-/* ===== SUCCESS TITLE ===== */
+/* ================= CONTENT ================= */
 .success-title {
-  color: #ffc107; /* Rhythm Rise Yellow */
-  font-size: 36px;
+  color: #f5c542;
+  font-size: 34px;
   font-weight: 800;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
-/* ===== MESSAGE TEXT ===== */
 #message {
   color: #ddd;
-  font-size: 17px;
-  margin-bottom: 30px;
+  font-size: 16px;
+  margin-bottom: 28px;
+  line-height: 1.6;
 }
 
-/* ===== WHATSAPP BUTTON ===== */
+/* ================= BUTTONS ================= */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
 .whatsapp-btn {
   display: inline-block;
   padding: 15px 28px;
   background: #25D366;
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   border-radius: 50px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.whatsapp-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(37,211,102,0.45);
+.secondary-btn {
+  display: inline-block;
+  padding: 14px 26px;
+  background: transparent;
+  border: 1px solid rgba(245,197,66,0.4);
+  color: #f5c542;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
 }
 
-/* ===== FOOTER ===== */
+/* ================= FOOTER ================= */
 .footer {
-  margin-top: 28px;
+  margin-top: 26px;
   font-size: 13px;
   color: #777;
 }
@@ -72,41 +134,54 @@ body {
 
 <body>
 
-<div class="container">
-  <h1 class="success-title">Registration Successful</h1>
+<header class="site-header">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
+      <span>Rhythm<br>Rise</span>
+    </div>
+  </div>
+</header>
 
-  <p id="message"></p>
+<div class="wrapper">
+  <div class="container">
 
-  <a id="whatsappBtn" class="whatsapp-btn" target="_blank">
-    📲 Confirm via WhatsApp
-  </a>
+    <h1 class="success-title">Registration Successful 🎉</h1>
 
-  <div class="footer">© Rhythm Rise</div>
+    <p id="message"></p>
+
+    <div class="actions">
+      <a id="whatsappBtn" class="whatsapp-btn" target="_blank">
+        📲 Confirm via WhatsApp
+      </a>
+
+      <a href="index.html" class="secondary-btn">
+        ⬅ Back to Home
+      </a>
+    </div>
+
+    <div class="footer">© 2026 Rhythm Rise</div>
+  </div>
 </div>
 
 <script>
-  const params = new URLSearchParams(window.location.search);
-  const name = params.get("name") || "Participant";
-  const category = params.get("category") || "Event";
+const params = new URLSearchParams(window.location.search);
+const name = params.get("name") || "Participant";
+const category = params.get("category") || "Event";
 
-  const text = `Hello Rhythm Rise Team,%0A
+const text = `Hello Rhythm Rise Team,%0A
 I am ${name}.%0A
 I have successfully registered for the ${category} category.%0A
 Please confirm my registration.`;
 
-  const whatsappNumber = "919030140600"; // ✅ Your WhatsApp number
+const whatsappNumber = "919030140600"; // Your WhatsApp number
+const whatsappURL = `https://wa.me/${whatsappNumber}?text=${text}`;
 
-  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${text}`;
+document.getElementById("message").innerHTML =
+  `Thank you <strong>${name}</strong> for registering in <strong>${category}</strong>.<br>
+   Our team will contact you shortly with further details.`;
 
-  document.getElementById("message").innerHTML =
-    `Thank you <strong>${name}</strong> for registering in <strong>${category}</strong>.`;
-
-  document.getElementById("whatsappBtn").href = whatsappURL;
-
-  /* Auto open WhatsApp after 1.5 seconds */
-  setTimeout(() => {
-    window.open(whatsappURL, "_blank");
-  }, 1500);
+document.getElementById("whatsappBtn").href = whatsappURL;
 </script>
 
 </body>
