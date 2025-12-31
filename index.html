@@ -5,52 +5,78 @@
 <title>Rhythm Rise | Singing & Dance Talent Platform</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-body {
+* {
   margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
   background: #121212;
   color: #e6e6e6;
 }
 
-/* HEADER */
-header {
-  background: rgba(14,14,14,0.95);
-  border-bottom: 1px solid rgba(245,197,66,0.25);
+/* ================= HEADER ================= */
+.header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
+  background: rgba(14,14,14,0.95);
+  border-bottom: 1px solid rgba(245,197,66,0.25);
 }
 
-.nav-container {
+.header-inner {
   max-width: 1200px;
   margin: auto;
-  padding: 15px 25px;
+  padding: 14px 28px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-.logo {
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-wrap img {
+  height: 42px;
+}
+
+.logo-wrap span {
   font-size: 22px;
   font-weight: 800;
   color: #f5c542;
-  text-decoration: none;
 }
 
-nav a {
-  margin-left: 22px;
+/* NAV */
+.header nav {
+  display: flex;
+  gap: 26px;
+  flex-wrap: nowrap;
+}
+
+.header nav a {
   text-decoration: none;
   color: #cccccc;
-  font-size: 15px;
+  font-size: 14.5px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.3s ease;
 }
 
-nav a:hover {
+.header nav a:hover,
+.header nav a.active {
   color: #f5c542;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
   min-height: 100vh;
   padding-top: 120px;
@@ -85,11 +111,10 @@ nav a:hover {
   margin-bottom: 14px;
 }
 
-/* INTERNATIONAL JURY BADGE */
+/* INTERNATIONAL JURY */
 .jury-wrapper {
-  position: relative;
   display: inline-block;
-  margin: 10px auto 10px;
+  margin: 12px auto;
 }
 
 .jury-badge {
@@ -105,35 +130,10 @@ nav a:hover {
   font-weight: 600;
 }
 
-.jury-badge .flags {
-  font-size: 16px;
-  letter-spacing: 4px;
-}
-
-.jury-tooltip {
-  position: absolute;
-  bottom: -46px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #1e1e1e;
-  color: #e6e6e6;
-  padding: 8px 14px;
-  font-size: 13px;
-  border-radius: 8px;
-  border: 1px solid rgba(245,197,66,0.25);
-  white-space: nowrap;
-  opacity: 0;
-}
-
-.jury-wrapper:hover .jury-tooltip {
-  opacity: 1;
-}
-
-/* HYBRID TEXT */
 .hybrid-text {
   font-size: 14.5px;
   color: #cfcfcf;
-  margin: 10px 0 30px;
+  margin: 12px 0 30px;
 }
 
 .hero a {
@@ -145,7 +145,7 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 .section {
   padding: 90px 25px;
   max-width: 1200px;
@@ -169,55 +169,19 @@ nav a:hover {
 }
 
 /* CARDS */
-.card {
+.card, .why-card, .judge-card {
   background: #181818;
   padding: 35px;
   border-radius: 18px;
   border: 1px solid rgba(245,197,66,0.18);
-  text-align: left;
 }
 
-.card h3 {
+.card h3, .why-card h4 {
   color: #f5c542;
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
-.card p {
-  color: #d6d6d6;
-  line-height: 1.7;
-  font-size: 15.5px;
-}
-
-/* WHY RHYTHM RISE */
-.why-card {
-  background: #1a1a1a;
-  padding: 30px;
-  border-radius: 16px;
-  border: 1px solid rgba(245,197,66,0.18);
-  text-align: left;
-}
-
-.why-card h4 {
-  color: #f5c542;
-  font-size: 18px;
   margin-bottom: 10px;
 }
 
-.why-card p {
-  font-size: 15px;
-  color: #d6d6d6;
-  line-height: 1.6;
-}
-
-/* JUDGES PREVIEW */
-.judge-card {
-  background: #1a1a1a;
-  padding: 28px;
-  border-radius: 16px;
-  border: 1px solid rgba(245,197,66,0.18);
-}
-
+/* JUDGE */
 .judge-avatar {
   width: 70px;
   height: 70px;
@@ -231,33 +195,7 @@ nav a:hover {
   font-weight: 800;
 }
 
-  .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 28px;
-  background: #000;
-  border-bottom: 1px solid #222;
-}
-
-.logo-wrap {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-wrap img {
-  height: 42px;
-  width: auto;
-}
-
-.logo-wrap span {
-  font-size: 22px;
-  font-weight: 700;
-  color: #f5b301; /* Rhythm Rise gold */
-  letter-spacing: 0.5px;
-}
-
+/* ================= FOOTER ================= */
 footer {
   background: #0e0e0e;
   border-top: 1px solid rgba(245,197,66,0.25);
@@ -267,39 +205,36 @@ footer {
   color: #8e8e8e;
 }
 
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  .hero h1 { font-size: 42px; }
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .header nav {
+    gap: 18px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="nav-container">
-    <a href="index.html" class="logo">Rhythm Rise</a>
+<header class="header">
+  <div class="header-inner">
+    <div class="logo-wrap">
+      <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
+      <span>Rhythm Rise</span>
+    </div>
+
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="founder.html">Founder</a>
       <a href="journey.html">Journey</a>
       <a href="register.html">Register</a>
     </nav>
-  </div>  
-  
-</header><header class="header">
-  <div class="logo-wrap">
-    <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
-    <span>Rhythm Rise</span>
   </div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="founder.html">Founder</a>
-    <a href="journey.html">Journey</a>
-    <a href="register.html">Register</a>
-  </nav>
 </header>
 
 <section class="hero">
@@ -309,9 +244,8 @@ footer {
 
     <div class="jury-wrapper">
       <div class="jury-badge">
-        🌍 International Jury <span class="flags">🇺🇸 🇶🇦 🇬🇧 🇮🇪</span>
+        🌍 International Jury 🇺🇸 🇶🇦 🇬🇧 🇮🇪
       </div>
-      <div class="jury-tooltip">Auditions evaluated online by international experts</div>
     </div>
 
     <div class="hybrid-text">
@@ -322,73 +256,9 @@ footer {
   </div>
 </section>
 
-<!-- TALENT -->
-<section class="section">
-  <h2 class="section-title">Choose Your <span>Talent</span></h2>
-  <div class="grid">
-    <div class="card">
-      <h3>🎤 Singing</h3>
-      <p>Professional platform for vocalists across classical, film, folk and contemporary genres.</p>
-    </div>
-    <div class="card">
-      <h3>💃 Dance</h3>
-      <p>Classical, folk, contemporary, western and fusion styles judged by experts.</p>
-    </div>
-  </div>
-</section>
-
-<!-- WHY RHYTHM RISE -->
-<section class="section">
-  <h2 class="section-title">Why <span>Rhythm Rise?</span></h2>
-  <div class="grid">
-    <div class="why-card">
-      <h4>🌍 Global Exposure</h4>
-      <p>Performers are evaluated by international experts, bringing global standards and visibility.</p>
-    </div>
-    <div class="why-card">
-      <h4>⚖️ Transparent Judging</h4>
-      <p>Hybrid judging ensures fair evaluation by local and international professionals.</p>
-    </div>
-    <div class="why-card">
-      <h4>🎭 Artist-First Platform</h4>
-      <p>A safe, respectful and professional environment for performers of all ages.</p>
-    </div>
-    <div class="why-card">
-      <h4>🏆 Meaningful Recognition</h4>
-      <p>Titles, certificates and recognition that add value to artistic journeys.</p>
-    </div>
-  </div>
-</section>
-
-<!-- JUDGES PREVIEW -->
-<section class="section">
-  <h2 class="section-title">Meet Our <span>International Judges</span></h2>
-  <div class="grid">
-    <div class="judge-card">
-      <div class="judge-avatar">USA</div>
-      <p>Performance Specialist</p>
-    </div>
-    <div class="judge-card">
-      <div class="judge-avatar">QTR</div>
-      <p>Cultural Arts Expert</p>
-    </div>
-    <div class="judge-card">
-      <div class="judge-avatar">UK</div>
-      <p>Music & Dance Evaluator</p>
-    </div>
-    <div class="judge-card">
-      <div class="judge-avatar">IRL</div>
-      <p>Creative Arts Professional</p>
-    </div>
-  </div>
-</section>
-
 <footer>
   © 2026 Rhythm Rise | Initiative of Doha Music Lovers
 </footer>
 
 </body>
 </html>
-
-
-
