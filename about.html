@@ -138,6 +138,32 @@
       font-size: 13px;
       color: #888;
     }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  background: #000;
+  border-bottom: 1px solid #222;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-wrap img {
+  height: 42px;
+  width: auto;
+}
+
+.logo-wrap span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f5b301; /* Rhythm Rise gold */
+  letter-spacing: 0.5px;
+}
 
     @media (max-width: 768px) {
       .card {
@@ -159,17 +185,19 @@
 <body>
 
 <!-- ================= HEADER ================= -->
-<header>
-  <div class="nav-container">
-    <a href="index.html" class="logo">Rhythm Rise</a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="founder.html">Founder</a>
-      <a href="journey.html">Journey</a>
-      <a href="register.html">Register</a>
-    </nav>
+<header class="header">
+  <div class="logo-wrap">
+    <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
+    <span>Rhythm Rise</span>
   </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="founder.html">Founder</a>
+    <a href="journey.html">Journey</a>
+    <a href="register.html">Register</a>
+  </nav>
 </header>
 
 <!-- ================= CONTENT ================= -->
@@ -226,3 +254,4 @@
 
 </body>
 </html>
+
