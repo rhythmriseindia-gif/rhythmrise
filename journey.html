@@ -143,6 +143,33 @@
       border-top: 1px solid rgba(255,255,255,0.08);
     }
 
+    .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  background: #000;
+  border-bottom: 1px solid #222;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-wrap img {
+  height: 42px;
+  width: auto;
+}
+
+.logo-wrap span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f5b301; /* Rhythm Rise gold */
+  letter-spacing: 0.5px;
+}
+
     @media(max-width: 768px) {
       .journey-item {
         grid-template-columns: 1fr;
@@ -154,16 +181,18 @@
 
 <body>
 
-<header>
+<header class="header">
+  <div class="logo-wrap">
+    <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
+    <span>Rhythm Rise</span>
+  </div>
+
   <nav>
-    <h1>Rhythm Rise</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="founder.html">Founder</a></li>
-      <li><a href="journey.html" class="active">Journey</a></li>
-      <li><a href="register.html">Register</a></li>
-    </ul>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="founder.html">Founder</a>
+    <a href="journey.html">Journey</a>
+    <a href="register.html">Register</a>
   </nav>
 </header>
 
@@ -302,3 +331,4 @@
 
 </body>
 </html>
+
