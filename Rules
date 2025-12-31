@@ -16,87 +16,73 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #161616, #000);
-      color: #e8e8e8;
+      background: radial-gradient(circle at top, #151515, #000);
+      color: #eaeaea;
       line-height: 1.8;
     }
 
     header {
       background: rgba(0,0,0,0.92);
+      padding: 16px 40px;
       border-bottom: 1px solid rgba(255,204,0,0.15);
-      padding: 14px 40px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav h1 {
+    header h1 {
       color: #ffcc00;
       font-size: 22px;
       font-weight: 700;
     }
 
-    nav ul {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    nav ul li a:hover {
-      color: #ffcc00;
-    }
-
-    .page {
-      max-width: 900px;
+    .container {
+      max-width: 950px;
       margin: auto;
-      padding: 70px 25px;
+      padding: 70px 30px;
     }
 
-    .page h2 {
-      font-size: 34px;
+    h2 {
       color: #ffcc00;
-      text-align: center;
+      font-size: 34px;
       margin-bottom: 10px;
     }
 
-    .page .subtitle {
-      text-align: center;
+    .intro {
       color: #ccc;
       font-size: 15px;
-      margin-bottom: 50px;
-    }
-
-    .rule-section {
       margin-bottom: 40px;
+      max-width: 850px;
     }
 
-    .rule-section h3 {
-      font-size: 20px;
+    h3 {
       color: #ffcc00;
+      margin-top: 35px;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #ddd;
       margin-bottom: 12px;
     }
 
-    .rule-section p,
-    .rule-section li {
+    ul {
+      margin-left: 20px;
+      margin-bottom: 10px;
+    }
+
+    li {
       font-size: 15px;
       color: #ddd;
       margin-bottom: 8px;
     }
 
-    ul {
-      padding-left: 20px;
+    .note {
+      background: rgba(255,204,0,0.08);
+      border-left: 4px solid #ffcc00;
+      padding: 15px 18px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #eee;
     }
 
     footer {
@@ -106,88 +92,150 @@
       color: #888;
       border-top: 1px solid rgba(255,255,255,0.08);
     }
-
-    @media(max-width: 768px) {
-      .page h2 {
-        font-size: 28px;
-      }
-    }
   </style>
 </head>
 
 <body>
 
 <header>
-  <nav>
-    <h1>Rhythm Rise</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="founder.html">Founder</a></li>
-      <li><a href="journey.html">Journey</a></li>
-      <li><a href="register.html">Register</a></li>
-    </ul>
-  </nav>
+  <h1>Rhythm Rise</h1>
 </header>
 
-<div class="page">
+<div class="container">
 
   <h2>Rules & Regulations</h2>
-  <div class="subtitle">
-    Applicable for Free Auditions & Advanced Rounds
+  <p class="intro">
+    Rhythm Rise is a professional singing and dance talent platform designed to
+    discover, nurture, and promote talent through a transparent and structured process.
+    All participants are requested to read and understand the following rules carefully
+    before registering.
+  </p>
+
+  <h3>1. Competition Structure</h3>
+  <ul>
+    <li>The competition is conducted in multiple stages.</li>
+    <li>Stage 1: <strong>Free Auditions</strong></li>
+    <li>Stage 2: <strong>District Finals</strong></li>
+    <li>Further rounds may be conducted as required.</li>
+  </ul>
+
+  <h3>2. Audition Format (FREE – Short Format)</h3>
+  <ul>
+    <li><strong>Dance (Solo / Group):</strong> Maximum 2 minutes</li>
+    <li><strong>Singing:</strong> Maximum 1 minute 30 seconds</li>
+    <li>Auditions are designed to evaluate core talent, rhythm, expression, and stage presence.</li>
+    <li>Judges reserve the right to stop a performance once sufficient evaluation is completed.</li>
+    <li>In case of high participation, audition duration may be adjusted to ensure smooth conduct.</li>
+  </ul>
+
+  <div class="note">
+    Auditions focus on identifying potential, not on perfection or elaborate presentation.
   </div>
 
-  <div class="rule-section">
-    <h3>1. Competition Structure</h3>
-    <p>Rhythm Rise is conducted in multiple stages including Free Auditions, District Finals, and further advanced rounds.</p>
-  </div>
+  <h3>3. District Finals – Performance Duration</h3>
+  <ul>
+    <li><strong>Solo Dance:</strong> Maximum 3 minutes</li>
+    <li><strong>Classical Dance / Group Dance:</strong> Maximum 4 minutes</li>
+    <li><strong>Singing:</strong> Maximum 3 minutes</li>
+    <li>Exceeding the time limit may result in deduction of marks.</li>
+  </ul>
 
-  <div class="rule-section">
-    <h3>2. Performance Duration</h3>
-    <p><strong>Auditions (Free – Short Format)</strong></p>
-    <ul>
-      <li>Dance: Maximum 2 minutes</li>
-      <li>Singing: Maximum 1 minute 30 seconds</li>
-      <li>Judges may stop a performance once sufficient evaluation is completed</li>
-    </ul>
+  <h3>4. Music & Song Selection</h3>
+  <ul>
+    <li>Allowed music genres: Cinematic, Western, Foreign Language, Classical, Folk.</li>
+    <li>Devotional songs are permitted only for Classical performances.</li>
+    <li>Songs containing vulgar, offensive, violent, or inappropriate content are strictly prohibited.</li>
+  </ul>
 
-    <p><strong>District Finals</strong></p>
-    <ul>
-      <li>Solo Dance: Maximum 3 minutes</li>
-      <li>Classical & Group Dance: Maximum 4 minutes</li>
-      <li>Singing: Maximum 3 minutes</li>
-    </ul>
-  </div>
+  <h3>5. Genre Compliance</h3>
+  <ul>
+    <li>Western dance must use Western or foreign music.</li>
+    <li>Classical dance must use classical music only.</li>
+    <li>Folk performances must use folk music.</li>
+    <li>Incorrect genre selection may lead to loss of marks.</li>
+  </ul>
 
-  <div class="rule-section">
-    <h3>3. Music & Genre</h3>
-    <p>Participants must select music matching their chosen category. Vulgar or inappropriate content is strictly prohibited.</p>
-  </div>
+  <h3>6. Group Dance Criteria</h3>
+  <ul>
+    <li>Minimum participants: 4</li>
+    <li>Maximum participants: 15</li>
+  </ul>
 
-  <div class="rule-section">
-    <h3>4. Costumes & Makeup</h3>
-    <ul>
-      <li>Auditions: Costumes and makeup are optional</li>
-      <li>Finals: Costumes and makeup are mandatory</li>
-    </ul>
-  </div>
+  <h3>7. Props & Safety</h3>
+  <ul>
+    <li>Fire, sharp objects, weapons, or hazardous materials are strictly prohibited.</li>
+    <li>Religious idols, framed pictures, or sensitive symbols are not allowed.</li>
+    <li>All props are subject to venue safety rules and organizer approval.</li>
+  </ul>
 
-  <div class="rule-section">
-    <h3>5. Selection & Registration</h3>
-    <p>Selection is based solely on judges’ evaluation. Participation in advanced rounds is optional and may involve a registration fee communicated after selection.</p>
-  </div>
+  <h3>8. Costumes</h3>
+  <ul>
+    <li>Auditions: Costumes are optional; decent attire is mandatory.</li>
+    <li>District Finals: Costumes are mandatory.</li>
+    <li>Indecent or culturally inappropriate costumes are not permitted.</li>
+  </ul>
 
-  <div class="rule-section">
-    <h3>6. Judges’ Decision</h3>
-    <p>Judges’ decisions are final and binding. Rhythm Rise Management Committee holds final authority.</p>
-  </div>
+  <h3>9. Makeup</h3>
+  <ul>
+    <li>Auditions: Makeup is optional and does not affect scoring.</li>
+    <li>District Finals: Makeup is mandatory and contributes to presentation score.</li>
+  </ul>
+
+  <h3>10. Audio Tracks</h3>
+  <ul>
+    <li>Audio must be pre-edited to the specified duration.</li>
+    <li>Accepted format: MP3.</li>
+    <li>Audio must be carried on a USB drive (one track only) or shared digitally if instructed.</li>
+    <li>Late or incorrect audio submission may affect participation.</li>
+  </ul>
+
+  <h3>11. Selection & Advancement</h3>
+  <ul>
+    <li>Selection is based purely on judges’ evaluation.</li>
+    <li>Selected participants will be informed privately.</li>
+    <li>Participation in District Finals is optional.</li>
+    <li>Advanced rounds may involve a registration fee, communicated after selection.</li>
+  </ul>
+
+  <h3>12. Judging Criteria</h3>
+  <ul>
+    <li>Technique & control</li>
+    <li>Rhythm & timing</li>
+    <li>Expression & confidence</li>
+    <li>Stage presence</li>
+    <li>Overall impact</li>
+  </ul>
+
+  <h3>13. Schedule & Discipline</h3>
+  <ul>
+    <li>Time slots will not be changed.</li>
+    <li>Participants must report as per instructions.</li>
+    <li>Late arrival or absence may result in disqualification.</li>
+  </ul>
+
+  <h3>14. Photography & Media</h3>
+  <ul>
+    <li>Photography or videography in front of the stage is prohibited.</li>
+    <li>Rhythm Rise reserves the right to use photos and videos for promotional purposes.</li>
+  </ul>
+
+  <h3>15. Code of Conduct</h3>
+  <ul>
+    <li>All participants and accompanying persons must maintain discipline.</li>
+    <li>Any misconduct or illegal activity will result in immediate disqualification.</li>
+  </ul>
+
+  <h3>16. Final Authority</h3>
+  <p>
+    All decisions taken by the Rhythm Rise Management Committee are final and binding.
+    Rhythm Rise reserves the right to amend rules, schedule, or format if required.
+  </p>
 
 </div>
 
 <footer>
-  © 2025 Rhythm Rise | Initiative of Doha Music Lovers Group
+  © 2025 Rhythm Rise
 </footer>
 
 </body>
 </html>
-
