@@ -21,59 +21,69 @@ body {
 }
 
 /* ================= HEADER ================= */
-.header {
+.site-header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
-  background: rgba(14,14,14,0.95);
+  height: 72px; /* 🔒 LOCKED HEIGHT */
+  background: rgba(14,14,14,0.96);
   border-bottom: 1px solid rgba(245,197,66,0.25);
+  z-index: 1000;
 }
 
-.header-inner {
+.nav-container {
   max-width: 1200px;
+  height: 72px;
   margin: auto;
-  padding: 14px 28px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.logo-wrap {
+/* LOGO */
+.logo {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.logo-wrap img {
+.logo img {
   height: 42px;
 }
 
-.logo-wrap span {
+.logo span {
   font-size: 22px;
   font-weight: 800;
   color: #f5c542;
+  line-height: 1.1;
 }
 
 /* NAV */
-.header nav {
+.main-nav {
   display: flex;
   gap: 26px;
-  flex-wrap: nowrap;
 }
 
-.header nav a {
+.main-nav a {
   text-decoration: none;
   color: #cccccc;
   font-size: 14.5px;
   font-weight: 500;
-  white-space: nowrap;
   transition: color 0.3s ease;
 }
 
-.header nav a:hover,
-.header nav a.active {
+.main-nav a:hover,
+.main-nav a.active {
   color: #f5c542;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: #f5c542;
+  cursor: pointer;
 }
 
 /* ================= HERO ================= */
@@ -112,11 +122,6 @@ body {
 }
 
 /* INTERNATIONAL JURY */
-.jury-wrapper {
-  display: inline-block;
-  margin: 12px auto;
-}
-
 .jury-badge {
   display: inline-flex;
   align-items: center;
@@ -128,12 +133,13 @@ body {
   color: #f5c542;
   font-size: 14px;
   font-weight: 600;
+  margin: 14px 0;
 }
 
 .hybrid-text {
   font-size: 14.5px;
   color: #cfcfcf;
-  margin: 12px 0 30px;
+  margin-bottom: 30px;
 }
 
 .hero a {
@@ -143,56 +149,6 @@ body {
   font-weight: 700;
   border-radius: 50px;
   text-decoration: none;
-}
-
-/* ================= SECTIONS ================= */
-.section {
-  padding: 90px 25px;
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 34px;
-  margin-bottom: 50px;
-}
-
-.section-title span {
-  color: #f5c542;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 35px;
-}
-
-/* CARDS */
-.card, .why-card, .judge-card {
-  background: #181818;
-  padding: 35px;
-  border-radius: 18px;
-  border: 1px solid rgba(245,197,66,0.18);
-}
-
-.card h3, .why-card h4 {
-  color: #f5c542;
-  margin-bottom: 10px;
-}
-
-/* JUDGE */
-.judge-avatar {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 12px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #f5c542, #e0b13a);
-  color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
 }
 
 /* ================= FOOTER ================= */
@@ -205,14 +161,31 @@ footer {
   color: #8e8e8e;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 42px;
   }
 
-  .header nav {
+  .main-nav {
+    position: absolute;
+    top: 72px;
+    right: 0;
+    width: 100%;
+    background: #0e0e0e;
+    flex-direction: column;
+    align-items: center;
     gap: 18px;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .main-nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 }
 </style>
@@ -220,20 +193,24 @@ footer {
 
 <body>
 
-<header class="header">
-  <div class="header-inner">
-    <div class="logo-wrap">
+<header class="site-header">
+  <div class="nav-container">
+
+    <div class="logo">
       <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
-      <span>Rhythm Rise</span>
+      <span>Rhythm<br>Rise</span>
     </div>
 
-    <nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav class="main-nav" id="navMenu">
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="founder.html">Founder</a>
       <a href="journey.html">Journey</a>
       <a href="register.html">Register</a>
     </nav>
+
   </div>
 </header>
 
@@ -242,10 +219,8 @@ footer {
     <h1><span class="brand-rhythm">RHYTHM</span> <span class="brand-rise">RISE</span></h1>
     <p>A global Singing & Dance Talent Platform empowering performers to rise and shine.</p>
 
-    <div class="jury-wrapper">
-      <div class="jury-badge">
-        🌍 International Jury 🇺🇸 🇶🇦 🇬🇧 🇮🇪
-      </div>
+    <div class="jury-badge">
+      🌍 International Jury 🇺🇸 🇶🇦 🇬🇧 🇮🇪
     </div>
 
     <div class="hybrid-text">
@@ -259,6 +234,12 @@ footer {
 <footer>
   © 2026 Rhythm Rise | Initiative of Doha Music Lovers
 </footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
