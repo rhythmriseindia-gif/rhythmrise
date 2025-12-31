@@ -40,7 +40,7 @@ input:focus,select:focus{outline:none;border-color:#f5c542;box-shadow:0 0 0 2px 
 
 .submit-btn{grid-column:span 3;padding:16px;font-size:18px;font-weight:700;border-radius:50px;border:none;cursor:pointer;background:linear-gradient(135deg,#f5c542,#e0b13a);color:#000}
 
-/* FOOTER */
+/* FOOTER – SAME AS INDEX */
 footer{background:#0e0e0e;border-top:1px solid rgba(245,197,66,.25);padding:50px 20px;color:#bbb}
 .footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:35px}
 footer h3,footer h4{color:#f5c542;margin-bottom:12px}
@@ -95,15 +95,22 @@ form{grid-template-columns:1fr}
         <label>Age</label>
         <select name="age" required>
           <option value="">Select</option>
-          <option>5–8 years</option><option>9–12 years</option><option>13–16 years</option>
-          <option>17–20 years</option><option>21–25 years</option><option>26+ years</option>
+          <option>5–8 years</option>
+          <option>9–12 years</option>
+          <option>13–16 years</option>
+          <option>17–20 years</option>
+          <option>21–25 years</option>
+          <option>26+ years</option>
         </select>
       </div>
 
       <div>
         <label>Gender</label>
         <select name="gender" required>
-          <option value="">Select</option><option>Male</option><option>Female</option><option>Other</option>
+          <option value="">Select</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
         </select>
       </div>
 
@@ -111,9 +118,14 @@ form{grid-template-columns:1fr}
         <label>Audition City</label>
         <select name="city" required>
           <option value="">Select</option>
-          <option>Karimnagar</option><option>Khammam</option><option>Kurnool</option>
-          <option>Nizamabad</option><option>Warangal</option><option>Hyderabad</option>
-          <option>Vijayawada</option><option>Vizag</option>
+          <option>Karimnagar</option>
+          <option>Khammam</option>
+          <option>Kurnool</option>
+          <option>Nizamabad</option>
+          <option>Warangal</option>
+          <option>Hyderabad</option>
+          <option>Vijayawada</option>
+          <option>Vizag</option>
         </select>
       </div>
 
@@ -130,14 +142,18 @@ form{grid-template-columns:1fr}
         <label>Singing Language Preference</label>
         <select name="singing_language">
           <option value="">Select</option>
-          <option>Hindi</option><option>Telugu</option><option>English</option>
+          <option>Hindi</option>
+          <option>Telugu</option>
+          <option>English</option>
         </select>
       </div>
 
       <div class="full" id="danceOptions" style="display:none;">
         <label>Dance Format</label>
         <select name="dance_format">
-          <option value="">Select</option><option>Solo</option><option>Group</option>
+          <option value="">Select</option>
+          <option>Solo</option>
+          <option>Group</option>
         </select>
       </div>
 
@@ -145,8 +161,11 @@ form{grid-template-columns:1fr}
         <label>Dance Style</label>
         <select name="dance_style">
           <option value="">Select</option>
-          <option>Classical Dance</option><option>Semi-classical Dance</option>
-          <option>Folk Dance</option><option>Cinematic Dance</option><option>Western Dance</option>
+          <option>Classical Dance</option>
+          <option>Semi-classical Dance</option>
+          <option>Folk Dance</option>
+          <option>Cinematic Dance</option>
+          <option>Western Dance</option>
         </select>
       </div>
 
@@ -167,8 +186,23 @@ form{grid-template-columns:1fr}
   <div class="footer-grid">
     <div>
       <h3>Rhythm Rise</h3>
-      <p>A global singing & dance talent platform empowering performers worldwide.</p>
+      <p>
+        A global singing & dance talent platform empowering performers to rise and shine
+        through transparent judging and international exposure.
+      </p>
     </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p>
+        <a href="index.html">Home</a><br>
+        <a href="about.html">About</a><br>
+        <a href="journey.html">Journey</a><br>
+        <a href="register.html">Register</a><br>
+        <a href="rules.html">Rules & Regulations</a>
+      </p>
+    </div>
+
     <div>
       <h4>Contact</h4>
       <p>
@@ -176,6 +210,7 @@ form{grid-template-columns:1fr}
         📲 <a href="https://wa.me/919030140600" target="_blank">+91 90301 40600</a>
       </p>
     </div>
+
     <div>
       <h4>Follow Us</h4>
       <p>
@@ -184,6 +219,7 @@ form{grid-template-columns:1fr}
       </p>
     </div>
   </div>
+
   <div class="footer-bottom">
     © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
   </div>
