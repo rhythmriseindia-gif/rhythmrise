@@ -5,6 +5,8 @@
 <title>Rhythm Rise | Singing & Dance Talent Platform</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="description" content="Rhythm Rise is a premier singing and dance competition platform connecting talent with national and international judges.">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -25,8 +27,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 72px; /* 🔒 LOCKED HEIGHT */
-  background: rgba(14,14,14,0.96);
+  height: 72px;
+  background: rgba(0,0,0,0.96);
   border-bottom: 1px solid rgba(245,197,66,0.25);
   z-index: 1000;
 }
@@ -41,7 +43,6 @@ body {
   justify-content: space-between;
 }
 
-/* LOGO */
 .logo {
   display: flex;
   align-items: center;
@@ -59,7 +60,6 @@ body {
   line-height: 1.1;
 }
 
-/* NAV */
 .main-nav {
   display: flex;
   gap: 26px;
@@ -70,20 +70,11 @@ body {
   color: #cccccc;
   font-size: 14.5px;
   font-weight: 500;
-  transition: color 0.3s ease;
 }
 
 .main-nav a:hover,
 .main-nav a.active {
   color: #f5c542;
-}
-
-/* HAMBURGER */
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  color: #f5c542;
-  cursor: pointer;
 }
 
 /* ================= HERO ================= */
@@ -112,34 +103,26 @@ body {
   margin-bottom: 20px;
 }
 
-.brand-rhythm { color: #f5c542; }
-.brand-rise { color: #ffffff; }
+.hero h1 span {
+  color: #f5c542;
+}
 
 .hero p {
   font-size: 20px;
   color: #dddddd;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
-/* INTERNATIONAL JURY */
 .jury-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 24px;
+  display: inline-block;
+  margin: 15px 0 30px;
+  padding: 12px 26px;
   border-radius: 40px;
   background: rgba(245,197,66,0.12);
   border: 1px solid rgba(245,197,66,0.35);
   color: #f5c542;
   font-size: 14px;
   font-weight: 600;
-  margin: 14px 0;
-}
-
-.hybrid-text {
-  font-size: 14.5px;
-  color: #cfcfcf;
-  margin-bottom: 30px;
 }
 
 .hero a {
@@ -151,7 +134,76 @@ body {
   text-decoration: none;
 }
 
-/* ================= FOOTER ================= */
+/* ================= SECTIONS ================= */
+.section {
+  padding: 90px 25px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 34px;
+  margin-bottom: 50px;
+}
+
+.section-title span {
+  color: #f5c542;
+}
+
+.section p {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  color: #cccccc;
+  font-size: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+/* CARDS */
+.card {
+  background: #181818;
+  padding: 35px;
+  border-radius: 18px;
+  border: 1px solid rgba(245,197,66,0.18);
+}
+
+.card h3 {
+  color: #f5c542;
+  margin-bottom: 12px;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(180deg, #181818, #101010);
+  padding: 90px 25px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.cta a {
+  padding: 16px 46px;
+  background: linear-gradient(135deg, #f5c542, #e0b13a);
+  color: #000;
+  font-weight: 800;
+  border-radius: 50px;
+  text-decoration: none;
+}
+
+/* FOOTER */
 footer {
   background: #0e0e0e;
   border-top: 1px solid rgba(245,197,66,0.25);
@@ -161,31 +213,14 @@ footer {
   color: #8e8e8e;
 }
 
-/* ================= MOBILE ================= */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 42px;
   }
 
   .main-nav {
-    position: absolute;
-    top: 72px;
-    right: 0;
-    width: 100%;
-    background: #0e0e0e;
-    flex-direction: column;
-    align-items: center;
     gap: 18px;
-    padding: 20px 0;
-    display: none;
-  }
-
-  .main-nav.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
   }
 }
 </style>
@@ -195,51 +230,95 @@ footer {
 
 <header class="site-header">
   <div class="nav-container">
-
     <div class="logo">
       <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
       <span>Rhythm<br>Rise</span>
     </div>
 
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-    <nav class="main-nav" id="navMenu">
+    <nav class="main-nav">
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="founder.html">Founder</a>
       <a href="journey.html">Journey</a>
       <a href="register.html">Register</a>
     </nav>
-
   </div>
 </header>
 
 <section class="hero">
   <div class="hero-content">
-    <h1><span class="brand-rhythm">RHYTHM</span> <span class="brand-rise">RISE</span></h1>
-    <p>A global Singing & Dance Talent Platform empowering performers to rise and shine.</p>
+    <h1>RHYTHM <span>RISE</span></h1>
+    <p>A global singing & dance talent platform empowering performers to rise and shine.</p>
 
     <div class="jury-badge">
-      🌍 International Jury 🇺🇸 🇶🇦 🇬🇧 🇮🇪
-    </div>
-
-    <div class="hybrid-text">
-      Auditions judged by local experts on stage and international judges online
+      🌍 International Jury | India • Qatar • UK • USA
     </div>
 
     <a href="register.html">Register Now</a>
   </div>
 </section>
 
-<footer>
-  © 2026 Rhythm Rise | Initiative of Doha Music Lovers
-</footer>
+<section class="section">
+  <h2 class="section-title">About <span>Rhythm Rise</span></h2>
+  <p>
+    Rhythm Rise is a professional singing and dance competition platform created to
+    identify, nurture, and celebrate genuine talent. Backed by years of cultural
+    leadership and transparent judging, we provide performers a stage to shine.
+  </p>
+</section>
 
-<script>
-function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("show");
-}
-</script>
+<section class="section">
+  <h2 class="section-title">Singing & <span>Dance</span> Categories</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Singing</h3>
+      <p>
+        Open to multiple languages and styles, evaluated on voice quality,
+        rhythm, expression, and overall performance.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Dance</h3>
+      <p>
+        Classical, folk, cinematic, semi-classical, and western styles judged by
+        experienced choreographers and cultural experts.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Why Choose <span>Rhythm Rise</span></h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Transparent Judging</h3>
+      <p>Clear criteria and professional evaluation at every stage.</p>
+    </div>
+
+    <div class="card">
+      <h3>International Exposure</h3>
+      <p>Hybrid judging model with global experts and mentors.</p>
+    </div>
+
+    <div class="card">
+      <h3>Inclusive Platform</h3>
+      <p>Open to all age groups with structured categories.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to Take the Stage?</h2>
+  <p>Registrations are now open. Limited slots available.</p>
+  <a href="register.html">Register Today</a>
+</section>
+
+<footer>
+  © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
+</footer>
 
 </body>
 </html>
