@@ -240,7 +240,7 @@ category.addEventListener("change",function(){
 document.getElementById("registrationForm").addEventListener("submit",function(e){
 e.preventDefault();
 const data=Object.fromEntries(new FormData(this));
-fetch("https://script.google.com/macros/s/AKfycbwX6NnnJcuvkFF-CELwzmdAPFMEnuFuJU_vfoMX7oywv7Bt8IEC1EypY1toayTDDJ9h/exec",{method:"POST",body:new URLSearchParams(data)})
+fetch("https://script.google.com/macros/s/AKfycbxgxSCC83aqZHHktJFBt_8IWV6GBKTAv3HhjkTHYDUeT4FqGS8R3kIKUUbA3AHXNZsy/exec",{method:"POST",body:new URLSearchParams(data)})
 .then(()=>{window.location.href="thankyou.html?"+new URLSearchParams(data).toString()})
 .catch(()=>alert("Submission failed. Please try again."));
 });
@@ -248,3 +248,4 @@ fetch("https://script.google.com/macros/s/AKfycbwX6NnnJcuvkFF-CELwzmdAPFMEnuFuJU
 
 </body>
 </html>
+
