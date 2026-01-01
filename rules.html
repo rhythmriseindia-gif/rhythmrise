@@ -8,167 +8,43 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:radial-gradient(circle at top,#151515,#000);color:#eaeaea;line-height:1.8}
 
-body {
-  background: radial-gradient(circle at top, #151515, #000);
-  color: #eaeaea;
-  line-height: 1.8;
-}
+/* HEADER */
+.site-header{position:fixed;top:0;width:100%;height:72px;background:rgba(0,0,0,.96);border-bottom:1px solid rgba(245,197,66,.25);z-index:1000}
+.nav-container{max-width:1200px;height:72px;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:42px}
+.logo span{font-size:22px;font-weight:800;color:#f5c542;line-height:1.1}
+.main-nav{display:flex;gap:26px}
+.main-nav a{text-decoration:none;color:#ccc;font-size:14.5px;font-weight:500}
+.main-nav a:hover{color:#f5c542}
+.menu-toggle{display:none;font-size:26px;color:#f5c542;cursor:pointer}
 
-/* ================= HEADER ================= */
-.site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 72px;
-  background: rgba(0,0,0,0.96);
-  border-bottom: 1px solid rgba(245,197,66,0.25);
-  z-index: 1000;
-}
+/* CONTENT */
+.container{max-width:950px;margin:auto;padding:130px 30px 90px}
+h2{color:#f5c542;font-size:34px;margin-bottom:10px}
+.intro{color:#ccc;font-size:15px;margin-bottom:40px;max-width:850px}
+h3{color:#f5c542;margin-top:35px;margin-bottom:10px;font-size:20px}
+p{font-size:15px;color:#ddd;margin-bottom:12px}
+ul{margin-left:20px;margin-bottom:10px}
+li{font-size:15px;color:#ddd;margin-bottom:8px}
+.note{background:rgba(245,197,66,.08);border-left:4px solid #f5c542;padding:15px 18px;margin:20px 0;font-size:14px;color:#eee}
 
-.nav-container {
-  max-width: 1200px;
-  height: 72px;
-  margin: auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+/* FOOTER – SAME AS INDEX */
+footer{background:#0e0e0e;border-top:1px solid rgba(245,197,66,.25);padding:50px 20px;color:#bbb;margin-top:80px}
+.footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:35px}
+footer h3,footer h4{color:#f5c542;margin-bottom:12px}
+footer a{color:#bbb;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.footer-bottom{text-align:center;margin-top:40px;font-size:13px;color:#777}
 
-/* LOGO */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  height: 42px;
-}
-
-.logo span {
-  font-size: 22px;
-  font-weight: 800;
-  color: #f5c542;
-  line-height: 1.1;
-}
-
-/* NAV */
-.main-nav {
-  display: flex;
-  gap: 26px;
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: #cccccc;
-  font-size: 14.5px;
-  font-weight: 500;
-}
-
-.main-nav a:hover {
-  color: #f5c542;
-}
-
-/* HAMBURGER */
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  color: #f5c542;
-  cursor: pointer;
-}
-
-/* ================= CONTENT ================= */
-.container {
-  max-width: 950px;
-  margin: auto;
-  padding: 130px 30px 90px;
-}
-
-h2 {
-  color: #f5c542;
-  font-size: 34px;
-  margin-bottom: 10px;
-}
-
-.intro {
-  color: #ccc;
-  font-size: 15px;
-  margin-bottom: 40px;
-  max-width: 850px;
-}
-
-h3 {
-  color: #f5c542;
-  margin-top: 35px;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-p {
-  font-size: 15px;
-  color: #ddd;
-  margin-bottom: 12px;
-}
-
-ul {
-  margin-left: 20px;
-  margin-bottom: 10px;
-}
-
-li {
-  font-size: 15px;
-  color: #ddd;
-  margin-bottom: 8px;
-}
-
-.note {
-  background: rgba(245,197,66,0.08);
-  border-left: 4px solid #f5c542;
-  padding: 15px 18px;
-  margin: 20px 0;
-  font-size: 14px;
-  color: #eee;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  text-align: center;
-  padding: 35px 20px;
-  font-size: 13px;
-  color: #888;
-  border-top: 1px solid rgba(255,255,255,0.08);
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .main-nav {
-    position: absolute;
-    top: 72px;
-    right: 0;
-    width: 100%;
-    background: #0e0e0e;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    padding: 20px 0;
-    display: none;
-  }
-
-  .main-nav.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
+/* MOBILE */
+@media(max-width:768px){
+.main-nav{position:absolute;top:72px;right:0;width:100%;background:#0e0e0e;flex-direction:column;align-items:center;gap:18px;padding:20px 0;display:none}
+.main-nav.show{display:flex}
+.menu-toggle{display:block}
 }
 </style>
 </head>
@@ -177,7 +53,6 @@ footer {
 
 <header class="site-header">
   <div class="nav-container">
-
     <div class="logo">
       <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
       <span>Rhythm<br>Rise</span>
@@ -192,7 +67,6 @@ footer {
       <a href="journey.html">Journey</a>
       <a href="register.html">Register</a>
     </nav>
-
   </div>
 </header>
 
@@ -206,9 +80,7 @@ footer {
     before registering.
   </p>
 
-  <!-- 🔽 CONTENT UNCHANGED (AS PROVIDED) -->
-
-  <!-- (All your sections remain exactly the same below this point) -->
+  <!-- RULES CONTENT (UNCHANGED) -->
 
   <h3>1. Competition Structure</h3>
   <ul>
@@ -232,16 +104,53 @@ footer {
     Auditions focus on identifying potential, not on perfection or elaborate presentation.
   </div>
 
-  <!-- (Remaining sections continue exactly as you provided) -->
+  <!-- (All remaining rule sections stay exactly as you already have) -->
 
 </div>
 
 <footer>
-  © 2026 Rhythm Rise
+  <div class="footer-grid">
+    <div>
+      <h3>Rhythm Rise</h3>
+      <p>A global singing & dance talent platform empowering performers through transparency and international exposure.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p>
+        <a href="index.html">Home</a><br>
+        <a href="about.html">About</a><br>
+        <a href="founder.html">Founder</a><br>
+        <a href="journey.html">Journey</a><br>
+        <a href="register.html">Register</a><br>
+        <a href="rules.html">Rules & Regulations</a>
+      </p>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>
+        📧 <a href="mailto:contact@rhythmrise.in">contact@rhythmrise.in</a><br>
+        📲 <a href="https://wa.me/919030140600" target="_blank">+91 90301 40600</a>
+      </p>
+    </div>
+
+    <div>
+      <h4>Follow Us</h4>
+      <p>
+        📸 <a href="https://instagram.com/rhythmriseindia" target="_blank">Instagram</a><br>
+        ❌ <a href="https://x.com/rhythmriseindia" target="_blank">X (Twitter)</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
+  </div>
 </footer>
 
 <script>
-function toggleMenu() {
+function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("show");
 }
 </script>
