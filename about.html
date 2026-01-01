@@ -8,201 +8,50 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#121212;color:#e6e6e6;line-height:1.7}
 
-body {
-  background: #121212;
-  color: #e6e6e6;
-  line-height: 1.7;
-}
+/* HEADER */
+.site-header{position:fixed;top:0;width:100%;height:72px;background:rgba(14,14,14,.96);border-bottom:1px solid rgba(245,197,66,.25);z-index:1000}
+.nav-container{max-width:1200px;height:72px;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:42px}
+.logo span{font-size:22px;font-weight:800;color:#f5c542;line-height:1.1}
+.main-nav{display:flex;gap:26px}
+.main-nav a{text-decoration:none;color:#ccc;font-size:14.5px;font-weight:500}
+.main-nav a:hover,.main-nav a.active{color:#f5c542}
 
-/* ================= HEADER ================= */
-.site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 72px;
-  background: rgba(14,14,14,0.96);
-  border-bottom: 1px solid rgba(245,197,66,0.25);
-  z-index: 1000;
-}
+/* MOBILE MENU */
+.menu-toggle{display:none;font-size:26px;color:#f5c542;cursor:pointer}
 
-.nav-container {
-  max-width: 1200px;
-  height: 72px;
-  margin: auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+/* PAGE */
+.page-wrapper{max-width:1100px;margin:auto;padding:130px 25px 90px}
+.card{background:#181818;border-radius:18px;padding:50px;border:1px solid rgba(245,197,66,.2)}
+h1{text-align:center;font-size:38px;font-weight:800;color:#f5c542;margin-bottom:10px}
+.subtitle{text-align:center;color:#bdbdbd;font-size:16px;margin-bottom:45px}
+p{font-size:16px;color:#e0e0e0;margin-bottom:18px}
+.highlight{color:#f5c542;font-weight:600}
+h2{font-size:24px;margin-top:45px;margin-bottom:15px;color:#f5c542}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;margin-top:25px}
+.box{background:#202020;border-radius:14px;padding:25px;border:1px solid #2a2a2a;color:#dcdcdc}
+.cta{text-align:center;margin-top:55px}
+.cta a{padding:15px 38px;border-radius:50px;background:linear-gradient(135deg,#f5c542,#e0b13a);color:#000;font-weight:700;text-decoration:none}
 
-/* LOGO */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+/* FOOTER – SAME AS INDEX */
+footer{background:#0e0e0e;border-top:1px solid rgba(245,197,66,.25);padding:50px 20px;color:#bbb;margin-top:80px}
+.footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:35px}
+footer h3,footer h4{color:#f5c542;margin-bottom:12px}
+footer a{color:#bbb;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.footer-bottom{text-align:center;margin-top:40px;font-size:13px;color:#777}
 
-.logo img {
-  height: 42px;
-}
-
-.logo span {
-  font-size: 22px;
-  font-weight: 800;
-  color: #f5c542;
-  line-height: 1.1;
-}
-
-/* NAV */
-.main-nav {
-  display: flex;
-  gap: 26px;
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: #cccccc;
-  font-size: 14.5px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-  color: #f5c542;
-}
-
-/* HAMBURGER */
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  color: #f5c542;
-  cursor: pointer;
-}
-
-/* ================= PAGE CONTENT ================= */
-.page-wrapper {
-  max-width: 1100px;
-  margin: auto;
-  padding: 130px 25px 90px;
-}
-
-.card {
-  background: #181818;
-  border-radius: 18px;
-  padding: 50px;
-  border: 1px solid rgba(245,197,66,0.2);
-}
-
-h1 {
-  font-size: 38px;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 10px;
-  color: #f5c542;
-}
-
-.subtitle {
-  text-align: center;
-  color: #bdbdbd;
-  font-size: 16px;
-  margin-bottom: 45px;
-}
-
-p {
-  font-size: 16px;
-  color: #e0e0e0;
-  margin-bottom: 18px;
-}
-
-.highlight {
-  color: #f5c542;
-  font-weight: 600;
-}
-
-h2 {
-  font-size: 24px;
-  margin-top: 45px;
-  margin-bottom: 15px;
-  color: #f5c542;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 25px;
-}
-
-.box {
-  background: #202020;
-  border-radius: 14px;
-  padding: 25px;
-  border: 1px solid #2a2a2a;
-  color: #dcdcdc;
-}
-
-.cta {
-  margin-top: 55px;
-  text-align: center;
-}
-
-.cta a {
-  display: inline-block;
-  padding: 15px 38px;
-  border-radius: 50px;
-  background: linear-gradient(135deg, #f5c542, #e0b13a);
-  color: #000;
-  font-weight: 700;
-  font-size: 17px;
-  text-decoration: none;
-}
-
-/* FOOTER */
-.footer {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 13px;
-  color: #888;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .card {
-    padding: 32px 24px;
-  }
-
-  h1 {
-    font-size: 30px;
-  }
-
-  .main-nav {
-    position: absolute;
-    top: 72px;
-    right: 0;
-    width: 100%;
-    background: #0e0e0e;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    padding: 20px 0;
-    display: none;
-  }
-
-  .main-nav.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
+/* MOBILE */
+@media(max-width:768px){
+.card{padding:32px 24px}
+h1{font-size:30px}
+.main-nav{position:absolute;top:72px;right:0;width:100%;background:#0e0e0e;flex-direction:column;align-items:center;gap:18px;padding:20px 0;display:none}
+.main-nav.show{display:flex}
+.menu-toggle{display:block}
 }
 </style>
 </head>
@@ -245,21 +94,19 @@ h2 {
 
     <p>
       Rooted in the belief that <span class="highlight">talent knows no boundaries</span>, Rhythm Rise
-      brings together artists from diverse cultures and backgrounds. Through carefully curated
-      competitions and transparent evaluation, we spotlight genuine talent while honoring artistic
-      traditions.
+      brings together artists from diverse cultures and backgrounds through transparent and
+      professionally curated competitions.
     </p>
 
     <p>
-      At Rhythm Rise, music and movement are more than performances — they are expressions of identity,
-      emotion, and creativity. Participants are encouraged to perform with confidence while being
-      evaluated by experienced local and international judges.
+      At Rhythm Rise, music and movement are expressions of identity, emotion, and creativity.
+      Participants are evaluated by experienced local and international judges.
     </p>
 
     <h2>Our Vision</h2>
     <p>
       To become a globally recognized platform that empowers singers and dancers to showcase their
-      abilities, gain confidence, and achieve artistic excellence.
+      abilities and achieve artistic excellence.
     </p>
 
     <h2>Our Mission</h2>
@@ -274,15 +121,54 @@ h2 {
       <a href="register.html">Register Now</a>
     </div>
 
-    <div class="footer">
-      © 2026 Rhythm Rise
-    </div>
-
   </div>
 </div>
 
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h3>Rhythm Rise</h3>
+      <p>
+        A global singing & dance talent platform empowering performers to rise and shine
+        through transparent judging and international exposure.
+      </p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p>
+        <a href="index.html">Home</a><br>
+        <a href="about.html">About</a><br>
+        <a href="journey.html">Journey</a><br>
+        <a href="register.html">Register</a><br>
+        <a href="rules.html">Rules & Regulations</a>
+      </p>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>
+        📧 <a href="mailto:contact@rhythmrise.in">contact@rhythmrise.in</a><br>
+        📲 <a href="https://wa.me/919030140600" target="_blank">+91 90301 40600</a>
+      </p>
+    </div>
+
+    <div>
+      <h4>Follow Us</h4>
+      <p>
+        📸 <a href="https://instagram.com/rhythmriseindia" target="_blank">Instagram</a><br>
+        ❌ <a href="https://x.com/rhythmriseindia" target="_blank">X (Twitter)</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
+  </div>
+</footer>
+
 <script>
-function toggleMenu() {
+function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("show");
 }
 </script>
