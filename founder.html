@@ -8,219 +8,51 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:radial-gradient(circle at top,#1e1e1e,#0c0c0c);color:#e0e0e0}
+
+/* HEADER */
+.site-header{position:fixed;top:0;width:100%;height:72px;background:rgba(0,0,0,.96);border-bottom:1px solid rgba(245,197,66,.25);z-index:1000}
+.nav-container{max-width:1200px;height:72px;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:42px}
+.logo span{font-size:22px;font-weight:800;color:#f5c400;line-height:1.1}
+.main-nav{display:flex;gap:26px}
+.main-nav a{text-decoration:none;font-size:14.5px;font-weight:500;color:#ccc}
+.main-nav a:hover,.main-nav a.active{color:#f5c400}
+.menu-toggle{display:none;font-size:26px;color:#f5c400;cursor:pointer}
+
+/* MAIN */
+.founder-wrapper{max-width:1100px;margin:auto;padding:130px 20px 90px}
+.founder-card{display:grid;grid-template-columns:300px 1fr;gap:45px;background:#141414;border-radius:18px;padding:45px;border:1px solid rgba(245,197,66,.15);box-shadow:0 25px 60px rgba(0,0,0,.65)}
+.founder-photo{display:flex;justify-content:center}
+.founder-photo img{width:210px;height:210px;object-fit:cover;border-radius:50%;border:5px solid #f5c400;box-shadow:0 16px 35px rgba(0,0,0,.7)}
+.founder-content h2{font-size:28px;font-weight:600;margin-bottom:6px}
+.founder-content h2 span{color:#f5c400}
+.signature{font-size:15px;color:#c9c9c9;margin-bottom:22px;font-style:italic}
+.signature::before{content:"— ";color:#f5c400}
+.founder-content p{font-size:15.4px;line-height:1.85;color:#d4d4d4;margin-bottom:18px}
+.award-box{margin-top:28px;padding:20px;background:#1b1b1b;border-left:4px solid #f5c400;border-radius:10px;display:flex;gap:16px;align-items:center}
+.award-box img{width:56px}
+.award-box p{font-size:14.8px;color:#e5e5e5}
+
+/* FOOTER – SAME AS INDEX */
+footer{background:#0e0e0e;border-top:1px solid rgba(245,197,66,.25);padding:50px 20px;color:#bbb;margin-top:80px}
+.footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:35px}
+footer h3,footer h4{color:#f5c400;margin-bottom:12px}
+footer a{color:#bbb;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.footer-bottom{text-align:center;margin-top:40px;font-size:13px;color:#777}
+
+/* MOBILE */
+@media(max-width:900px){
+.founder-card{grid-template-columns:1fr;text-align:center}
+.founder-photo{margin-bottom:25px}
 }
-
-body {
-  background: radial-gradient(circle at top, #1e1e1e, #0c0c0c);
-  color: #e0e0e0;
-}
-
-/* ================= HEADER ================= */
-.site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 72px;
-  background: rgba(0,0,0,0.96);
-  border-bottom: 1px solid rgba(245,197,66,0.25);
-  z-index: 1000;
-}
-
-.nav-container {
-  max-width: 1200px;
-  height: 72px;
-  margin: auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* LOGO */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  height: 42px;
-}
-
-.logo span {
-  font-size: 22px;
-  font-weight: 800;
-  color: #f5c400;
-  line-height: 1.1;
-}
-
-/* NAV */
-.main-nav {
-  display: flex;
-  gap: 26px;
-}
-
-.main-nav a {
-  text-decoration: none;
-  font-size: 14.5px;
-  font-weight: 500;
-  color: #cccccc;
-  transition: color 0.3s ease;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-  color: #f5c400;
-}
-
-/* HAMBURGER */
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  color: #f5c400;
-  cursor: pointer;
-}
-
-/* ================= MAIN ================= */
-.founder-wrapper {
-  max-width: 1100px;
-  margin: auto;
-  padding: 130px 20px 90px;
-}
-
-.founder-card {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 45px;
-  background: #141414;
-  border-radius: 18px;
-  padding: 45px;
-  border: 1px solid rgba(245,197,66,0.15);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.65);
-}
-
-/* PHOTO */
-.founder-photo {
-  display: flex;
-  justify-content: center;
-}
-
-.founder-photo img {
-  width: 210px;
-  height: 210px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid #f5c400;
-  box-shadow: 0 16px 35px rgba(0,0,0,0.7);
-}
-
-/* CONTENT */
-.founder-content h2 {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-.founder-content h2 span {
-  color: #f5c400;
-}
-
-/* SIGNATURE */
-.signature {
-  font-size: 15px;
-  color: #c9c9c9;
-  margin-bottom: 22px;
-  font-style: italic;
-}
-
-.signature::before {
-  content: "— ";
-  color: #f5c400;
-}
-
-/* TEXT */
-.founder-content p {
-  font-size: 15.4px;
-  line-height: 1.85;
-  color: #d4d4d4;
-  margin-bottom: 18px;
-}
-
-/* AWARD */
-.award-box {
-  margin-top: 28px;
-  padding: 20px;
-  background: #1b1b1b;
-  border-left: 4px solid #f5c400;
-  border-radius: 10px;
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  animation: glow 3s ease-in-out infinite;
-}
-
-.award-box img {
-  width: 56px;
-}
-
-.award-box p {
-  font-size: 14.8px;
-  color: #e5e5e5;
-}
-
-@keyframes glow {
-  0% { box-shadow: 0 0 0 rgba(245,196,0,0); }
-  50% { box-shadow: 0 0 18px rgba(245,196,0,0.35); }
-  100% { box-shadow: 0 0 0 rgba(245,196,0,0); }
-}
-
-/* FOOTER */
-footer {
-  margin-top: 80px;
-  padding: 30px;
-  text-align: center;
-  color: #888;
-  font-size: 13.5px;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 900px) {
-  .founder-card {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .founder-photo {
-    margin-bottom: 25px;
-  }
-}
-
-@media (max-width: 768px) {
-  .main-nav {
-    position: absolute;
-    top: 72px;
-    right: 0;
-    width: 100%;
-    background: #0e0e0e;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    padding: 20px 0;
-    display: none;
-  }
-
-  .main-nav.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
+@media(max-width:768px){
+.main-nav{position:absolute;top:72px;right:0;width:100%;background:#0e0e0e;flex-direction:column;align-items:center;gap:18px;padding:20px 0;display:none}
+.main-nav.show{display:flex}
+.menu-toggle{display:block}
 }
 </style>
 </head>
@@ -229,7 +61,6 @@ footer {
 
 <header class="site-header">
   <div class="nav-container">
-
     <div class="logo">
       <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
       <span>Rhythm<br>Rise</span>
@@ -244,7 +75,6 @@ footer {
       <a href="journey.html">Journey</a>
       <a href="register.html">Register</a>
     </nav>
-
   </div>
 </header>
 
@@ -257,52 +87,64 @@ footer {
 
     <div class="founder-content">
       <h2>Founder – <span>Syed Rafi</span></h2>
-      <div class="signature">
-        Entrepreneur • Media Professional • Community Leader • Cultural Visionary
-      </div>
+      <div class="signature">Entrepreneur • Media Professional • Community Leader • Cultural Visionary</div>
 
-      <p>
-        Syed Rafi has an extensive background spanning business, media, sports, and community-driven initiatives.
-        In India, he has worked with leading organizations including Tata Retail Group, BK Group, and Titan Industries,
-        gaining strong expertise in operations, branding, and large-scale organizational leadership.
-      </p>
-
-      <p>
-        Internationally, he has contributed to globally respected media organizations such as Al Jazeera TV Channel
-        and BeIN Sports, gaining valuable exposure to international broadcast standards and multicultural audiences.
-      </p>
-
-      <p>
-        In Doha, he has served in honorary leadership roles including Vice President of the Film Club under the
-        Indian Cultural Centre (ICC) and Vice President of the Central Indian Association (CIA),
-        actively supporting cultural engagement and community development.
-      </p>
-
-      <p>
-        He is the Founder and President of Humanity Cares, a nonprofit charity initiative, and also the Founder
-        and President of Doha Music Lovers Group. He runs Qatar Job Opportunities, a highly impactful employment-focused
-        platform with over 130,000 followers.
-      </p>
+      <p>Syed Rafi has an extensive background spanning business, media, sports, and community-driven initiatives.</p>
+      <p>Internationally, he has contributed to globally respected media organizations such as Al Jazeera TV Channel and BeIN Sports.</p>
+      <p>In Doha, he has served in honorary leadership roles under the Indian Cultural Centre and Central Indian Association.</p>
+      <p>He is also the Founder & President of Humanity Cares and Doha Music Lovers Group.</p>
 
       <div class="award-box">
         <img src="images/sigta-awards-2024.png" alt="SIGTA Awards">
-        <p>
-          <strong>SIGTA Awards – South Icon Telangana</strong><br>
-          Honored in Doha, December 2024, for outstanding leadership, community service,
-          and cultural contribution.
-        </p>
+        <p><strong>SIGTA Awards – South Icon Telangana</strong><br>Honored in Doha, December 2024</p>
       </div>
-
     </div>
+
   </div>
 </section>
 
 <footer>
-  © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
+  <div class="footer-grid">
+    <div>
+      <h3>Rhythm Rise</h3>
+      <p>A global singing & dance talent platform empowering performers through transparency and international exposure.</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p>
+        <a href="index.html">Home</a><br>
+        <a href="about.html">About</a><br>
+        <a href="journey.html">Journey</a><br>
+        <a href="register.html">Register</a><br>
+        <a href="rules.html">Rules & Regulations</a>
+      </p>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>
+        📧 <a href="mailto:contact@rhythmrise.in">contact@rhythmrise.in</a><br>
+        📲 <a href="https://wa.me/919030140600" target="_blank">+91 90301 40600</a>
+      </p>
+    </div>
+
+    <div>
+      <h4>Follow Us</h4>
+      <p>
+        📸 <a href="https://instagram.com/rhythmriseindia" target="_blank">Instagram</a><br>
+        ❌ <a href="https://x.com/rhythmriseindia" target="_blank">X (Twitter)</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
+  </div>
 </footer>
 
 <script>
-function toggleMenu() {
+function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("show");
 }
 </script>
