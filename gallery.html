@@ -1,1 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Journey & Events | Rhythm Rise</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Explore the journey and legacy of Rhythm Rise through our past cultural and talent events including Super Dancer, Super Singer, and Doha Music Lovers.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #161616, #000);
+  color: #e8e8e8;
+}
+
+/* HEADER */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 72px;
+  background: rgba(0,0,0,0.96);
+  border-bottom: 1px solid rgba(245,197,66,0.25);
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  height: 72px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img { height: 42px; }
+
+.logo span {
+  font-size: 22px;
+  font-weight: 800;
+  color: #f5c542;
+}
+
+.main-nav {
+  display: flex;
+  gap: 26px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 14.5px;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: #f5c542;
+}
+
+/* PAGE */
+.page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 130px 25px 90px;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.page-title h1 {
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.page-title h1 span {
+  color: #f5c542;
+}
+
+.page-title p {
+  color: #cfcfcf;
+  max-width: 800px;
+  margin: 15px auto 0;
+  font-size: 16px;
+}
+
+/* SECTION */
+.section {
+  margin-bottom: 80px;
+}
+
+.section h2 {
+  color: #f5c542;
+  margin-bottom: 25px;
+  font-size: 26px;
+}
+
+/* GALLERY GRID */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(245,197,66,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  font-size: 13px;
+  color: #888;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
+      <span>Rhythm Rise</span>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="founder.html">Founder</a>
+      <a href="journey.html">Journey</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page">
+
+  <div class="page-title">
+    <h1>Our <span>Journey & Events</span></h1>
+    <p>
+      Rhythm Rise is built on a strong foundation of successfully conducted cultural
+      and talent platforms across Doha and beyond. These moments reflect our journey,
+      experience, and commitment to artistic excellence.
+    </p>
+  </div>
+
+  <!-- DOHA MUSIC LOVERS -->
+  <div class="section">
+    <h2>Doha Music Lovers</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery/doha-music-lovers-1.jpg" alt="Doha Music Lovers live performance">
+      <img src="images/gallery/doha-music-lovers-2.jpg" alt="Doha Music Lovers stage event">
+      <img src="images/gallery/doha-music-lovers-3.jpg" alt="Doha Music Lovers artists and audience">
+    </div>
+  </div>
+
+  <!-- SUPER DANCER -->
+  <div class="section">
+    <h2>Super Dancer – Doha</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery/super-dancer-doha-1.jpg" alt="Super Dancer Doha performance">
+      <img src="images/gallery/super-dancer-doha-2.jpg" alt="Super Dancer judges panel">
+      <img src="images/gallery/super-dancer-doha-3.jpg" alt="Super Dancer winners">
+      <img src="images/gallery/super-dancer-doha-4.jpg" alt="Super Dancer stage show">
+    </div>
+  </div>
+
+  <!-- SUPER SINGER -->
+  <div class="section">
+    <h2>Super Singer – Doha</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery/super-singer-doha-1.jpg" alt="Super Singer live performance">
+      <img src="images/gallery/super-singer-doha-2.jpg" alt="Super Singer judging moment">
+      <img src="images/gallery/super-singer-doha-3.jpg" alt="Super Singer finalists">
+    </div>
+  </div>
+
+  <!-- VOICE OF WORLD -->
+  <div class="section">
+    <h2>Voice of World (Online)</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery/voice-of-world-1.jpg" alt="Voice of World online singing contest">
+      <img src="images/gallery/voice-of-world-2.jpg" alt="Voice of World winners announcement">
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
+</footer>
+
+</body>
+</html>
 
