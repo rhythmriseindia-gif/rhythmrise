@@ -32,16 +32,19 @@ body{background:radial-gradient(circle at top,#161616,#000);color:#e8e8e8;line-h
 /* TIMELINE */
 .timeline{position:relative;padding-left:50px}
 .timeline::before{content:"";position:absolute;left:18px;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,#f5b301,transparent)}
+
 .journey-item{position:relative;display:grid;grid-template-columns:140px 1fr;gap:30px;padding:36px;margin-bottom:50px;background:linear-gradient(180deg,#121212,#0b0b0b);border-radius:18px;box-shadow:0 0 40px rgba(0,0,0,.55);transition:.35s}
 .journey-item::before{content:"";position:absolute;left:-50px;top:50%;transform:translateY(-50%);width:18px;height:18px;background:#f5b301;border-radius:50%;box-shadow:0 0 18px rgba(245,179,1,.6)}
 .journey-item:hover{transform:translateY(-6px);box-shadow:0 25px 60px rgba(0,0,0,.75)}
+
 .journey-logo{display:flex;align-items:center;justify-content:center}
 .journey-logo img{max-width:110px;max-height:110px;object-fit:contain;filter:drop-shadow(0 0 12px rgba(245,179,1,.25))}
+
 .journey-content h3{font-size:22px;font-weight:600;margin-bottom:6px;color:#f5b301}
 .journey-content span{font-size:13px;color:#aaa;display:block;margin-bottom:14px}
 .journey-content p{font-size:15px;color:#ddd}
 
-/* FOOTER – SAME AS INDEX */
+/* FOOTER */
 footer{background:#0e0e0e;border-top:1px solid rgba(245,179,1,.25);padding:50px 20px;color:#bbb;margin-top:80px}
 .footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:35px}
 footer h3,footer h4{color:#f5b301;margin-bottom:12px}
@@ -84,15 +87,117 @@ footer a:hover{text-decoration:underline}
 </header>
 
 <div class="page">
+
   <div class="page-title">
     <h2>The <span>Journey</span></h2>
-    <p>Rhythm Rise is built on years of cultural leadership, community engagement, and successful talent platforms across Doha and beyond.</p>
+    <p>
+      Rhythm Rise is built on years of cultural leadership, community engagement,
+      and successful talent platforms across Doha and beyond.
+    </p>
   </div>
 
   <div class="timeline">
-    <!-- items unchanged -->
-    <!-- (your journey items remain exactly the same) -->
-    <!-- Doha Music Lovers, Super Dancer S1–S3, Super Singer, Voice of World, Cric Qatar -->
+
+    <!-- DOHA MUSIC LOVERS -->
+    <div class="journey-item">
+      <div class="journey-logo">
+        <img src="images/logos/doha-music-lovers.png" alt="Doha Music Lovers">
+      </div>
+      <div class="journey-content">
+        <h3>Doha Music Lovers</h3>
+        <span>Cultural & Music Community Platform — Doha, Qatar</span>
+        <p>
+          Founded by Syed Rafi, Doha Music Lovers provided a respected stage for
+          emerging artists and promoted multicultural participation across Asian communities.
+        </p>
+      </div>
+    </div>
+
+    <!-- SUPER DANCER S1 -->
+    <div class="journey-item">
+      <div class="journey-logo">
+        <img src="images/logos/super-dancer-doha.png" alt="Super Dancer Doha">
+      </div>
+      <div class="journey-content">
+        <h3>Super Dancer — Season 1</h3>
+        <span>Flagship Dance Competition — Doha</span>
+        <p>
+          A professionally structured dance platform showcasing classical,
+          contemporary, and fusion styles.
+        </p>
+      </div>
+    </div>
+
+    <!-- SUPER DANCER S2 -->
+    <div class="journey-item">
+      <div class="journey-logo">
+        <img src="images/logos/super-dancer-season-2-doha.png" alt="Super Dancer Season 2">
+      </div>
+      <div class="journey-content">
+        <h3>Super Dancer — Season 2</h3>
+        <span>Expanded Scale & Higher Standards</span>
+        <p>
+          Increased participation and refined judging elevated the competition’s reputation.
+        </p>
+      </div>
+    </div>
+
+    <!-- SUPER DANCER S3 -->
+    <div class="journey-item">
+      <div class="journey-logo">
+        <img src="images/logos/super-dancer-season-3-doha.png" alt="Super Dancer Season 3">
+      </div>
+      <div class="journey-content">
+        <h3>Super Dancer — Season 3</h3>
+        <span>Established & Recognized Platform</span>
+        <p>
+          Reinforced as one of Doha’s most trusted dance competitions.
+        </p>
+      </div>
+    </div>
+
+    <!-- SUPER SINGER -->
+    <div class="journey-item">
+      <div class="journey-logo">
+        <img src="images/logos/super-singer-doha.png" alt="Super Singer Doha">
+      </div>
+      <div class="journey-content">
+        <h3>Super Singer</h3>
+        <span>Vocal Talent Platform — Doha</span>
+        <p>
+          A transparent platform focused on musicality, voice control, and performance.
+        </p>
+      </div>
+    </div>
+
+    <!-- VOICE OF WORLD -->
+    <div class="journey-item">
+      <div class="journey-logo">
+        <img src="images/logos/voice-of-world-online.png" alt="Voice of World">
+      </div>
+      <div class="journey-content">
+        <h3>Voice of World</h3>
+        <span>Global Online Singing Contest</span>
+        <p>
+          Connecting singers globally through a digital-first competition format.
+        </p>
+      </div>
+    </div>
+
+    <!-- CRIC QATAR -->
+    <div class="journey-item">
+      <div class="journey-logo">
+        <img src="images/logos/cric-qatar.png" alt="Cric Qatar">
+      </div>
+      <div class="journey-content">
+        <h3>Cric Qatar</h3>
+        <span>Community Cricket Platform</span>
+        <p>
+          Supporting structured tournaments and sporting excellence across Qatar.
+        </p>
+      </div>
+    </div>
+
   </div>
 </div>
 
