@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5VYQEK3S2"></script>
 <script>
@@ -9,12 +11,13 @@
   gtag('config', 'G-T5VYQEK3S2');
 </script>
 
-<head>
 <meta charset="UTF-8">
-<title>About Rhythm Rise</title>
+<title>About Us | Rhythm Rise</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="description" content="Learn about Rhythm Rise, our vision, mission, and the founder behind one of the most trusted singing and dance platforms.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
@@ -29,25 +32,37 @@ body{background:#121212;color:#e6e6e6;line-height:1.7}
 .main-nav{display:flex;gap:26px}
 .main-nav a{text-decoration:none;color:#ccc;font-size:14.5px;font-weight:500}
 .main-nav a:hover,.main-nav a.active{color:#f5c542}
-
-/* MOBILE MENU */
 .menu-toggle{display:none;font-size:26px;color:#f5c542;cursor:pointer}
 
 /* PAGE */
-.page-wrapper{max-width:1100px;margin:auto;padding:130px 25px 90px}
-.card{background:#181818;border-radius:18px;padding:50px;border:1px solid rgba(245,197,66,.2)}
-h1{text-align:center;font-size:38px;font-weight:800;color:#f5c542;margin-bottom:10px}
-.subtitle{text-align:center;color:#bdbdbd;font-size:16px;margin-bottom:45px}
-p{font-size:16px;color:#e0e0e0;margin-bottom:18px}
-.highlight{color:#f5c542;font-weight:600}
-h2{font-size:24px;margin-top:45px;margin-bottom:15px;color:#f5c542}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;margin-top:25px}
-.box{background:#202020;border-radius:14px;padding:25px;border:1px solid #2a2a2a;color:#dcdcdc}
-.cta{text-align:center;margin-top:55px}
-.cta a{padding:15px 38px;border-radius:50px;background:linear-gradient(135deg,#f5c542,#e0b13a);color:#000;font-weight:700;text-decoration:none}
+.page{max-width:1100px;margin:auto;padding:130px 25px 90px}
 
-/* FOOTER – SAME AS INDEX */
-footer{background:#0e0e0e;border-top:1px solid rgba(245,197,66,.25);padding:50px 20px;color:#bbb;margin-top:80px}
+/* SECTIONS */
+.section{margin-bottom:80px}
+.section h1,.section h2{color:#f5c542;margin-bottom:12px}
+.section h1{font-size:38px;text-align:center}
+.section h2{font-size:28px}
+.section p{color:#ddd;font-size:16px;margin-bottom:16px}
+.center{text-align:center}
+.highlight{color:#f5c542;font-weight:600}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;margin-top:30px}
+.card{background:#181818;border-radius:18px;padding:30px;border:1px solid rgba(245,197,66,.18)}
+.card h3{color:#f5c542;margin-bottom:8px}
+
+/* FOUNDER */
+.founder{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:center}
+.founder img{width:220px;height:220px;border-radius:50%;object-fit:cover;border:5px solid #f5c542}
+.signature{font-style:italic;color:#bbb;margin-bottom:15px}
+
+/* CTA */
+.cta{text-align:center;background:linear-gradient(180deg,#181818,#101010);padding:70px 25px;border-radius:18px}
+.cta h2{font-size:34px}
+.cta a{display:inline-block;margin-top:25px;padding:16px 46px;border-radius:50px;background:linear-gradient(135deg,#f5c542,#e0b13a);color:#000;font-weight:800;text-decoration:none}
+
+/* FOOTER */
+footer{background:#0e0e0e;border-top:1px solid rgba(245,197,66,.25);padding:50px 20px;color:#bbb}
 .footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:35px}
 footer h3,footer h4{color:#f5c542;margin-bottom:12px}
 footer a{color:#bbb;text-decoration:none}
@@ -55,9 +70,11 @@ footer a:hover{text-decoration:underline}
 .footer-bottom{text-align:center;margin-top:40px;font-size:13px;color:#777}
 
 /* MOBILE */
+@media(max-width:900px){
+.founder{grid-template-columns:1fr;text-align:center}
+.founder img{margin:auto}
+}
 @media(max-width:768px){
-.card{padding:32px 24px}
-h1{font-size:30px}
 .main-nav{position:absolute;top:72px;right:0;width:100%;background:#0e0e0e;flex-direction:column;align-items:center;gap:18px;padding:20px 0;display:none}
 .main-nav.show{display:flex}
 .menu-toggle{display:block}
@@ -69,86 +86,114 @@ h1{font-size:30px}
 
 <header class="site-header">
   <div class="nav-container">
-
     <div class="logo">
       <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
       <span>Rhythm<br>Rise</span>
     </div>
-
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
     <nav class="main-nav" id="navMenu">
       <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="founder.html">Founder</a>
+      <a href="about.html" class="active">About Us</a>
       <a href="journey.html">Journey</a>
+      <a href="gallery.html">Gallery</a>
       <a href="register.html">Register</a>
     </nav>
-
   </div>
 </header>
 
-<div class="page-wrapper">
-  <div class="card">
+<div class="page">
 
-    <h1>About Rhythm Rise</h1>
-    <div class="subtitle">A Global Platform for Singing & Dance Talent</div>
-
-    <p>
-      <span class="highlight">Rhythm Rise</span> is a global talent initiative dedicated to discovering,
-      nurturing, and celebrating excellence in singing and dance. Born as an initiative of
-      <span class="highlight">Doha Music Lovers Group</span>, based in Doha, Qatar, Rhythm Rise was created
-      to provide passionate performers with a professional and inspiring platform.
+  <!-- ABOUT -->
+  <section class="section">
+    <h1>About <span class="highlight">Rhythm Rise</span></h1>
+    <p class="center">
+      Rhythm Rise is a professional singing and dance talent platform created to discover,
+      nurture, and celebrate genuine performers through transparency, structure, and global exposure.
     </p>
+  </section>
 
-    <p>
-      Rooted in the belief that <span class="highlight">talent knows no boundaries</span>, Rhythm Rise
-      brings together artists from diverse cultures and backgrounds through transparent and
-      professionally curated competitions.
-    </p>
-
-    <p>
-      At Rhythm Rise, music and movement are expressions of identity, emotion, and creativity.
-      Participants are evaluated by experienced local and international judges.
-    </p>
-
-    <h2>Our Vision</h2>
-    <p>
-      To become a globally recognized platform that empowers singers and dancers to showcase their
-      abilities and achieve artistic excellence.
-    </p>
-
-    <h2>Our Mission</h2>
+  <!-- VISION & MISSION -->
+  <section class="section">
     <div class="grid">
-      <div class="box">Provide a transparent and professional competition platform</div>
-      <div class="box">Identify and nurture emerging talent</div>
-      <div class="box">Promote cultural diversity and artistic integrity</div>
-      <div class="box">Connect performers with renowned judges and mentors</div>
+      <div class="card">
+        <h3>Our Vision</h3>
+        <p>
+          To become a globally respected platform that empowers singers and dancers
+          to showcase talent, build confidence, and achieve artistic excellence.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>
+          To provide transparent competitions, professional judging,
+          and opportunities that connect performers with national and international mentors.
+        </p>
+      </div>
+      <div class="card">
+        <h3>What Makes Us Different</h3>
+        <p>
+          Hybrid judging, clear scoring criteria, ethical conduct,
+          and a strong foundation built on real community platforms.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <div class="cta">
-      <a href="register.html">Register Now</a>
+  <!-- FOUNDER -->
+  <section class="section">
+    <h2>The Founder</h2>
+
+    <div class="founder">
+      <img src="images/founder-syed-rafi.jpg" alt="Founder – Syed Rafi">
+
+      <div>
+        <h3>Syed Rafi</h3>
+        <div class="signature">
+          Entrepreneur • Media Professional • Community Leader • Cultural Visionary
+        </div>
+
+        <p>
+          Syed Rafi brings extensive experience across business, media, sports,
+          and community leadership. In India, he has worked with Tata Retail Group,
+          BK Group, and Titan Industries.
+        </p>
+
+        <p>
+          Internationally, he has contributed to globally respected media organizations
+          such as Al Jazeera and beIN Sports, gaining exposure to international standards.
+        </p>
+
+        <p>
+          He is also the Founder & President of Humanity Cares and Doha Music Lovers Group,
+          initiatives known for ethical leadership and large-scale community impact.
+        </p>
+      </div>
     </div>
+  </section>
 
-  </div>
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Be a Part of Rhythm Rise</h2>
+    <p>Registrations are open. Take the stage and let your talent rise.</p>
+    <a href="register.html">Register Now</a>
+  </section>
+
 </div>
 
 <footer>
   <div class="footer-grid">
     <div>
       <h3>Rhythm Rise</h3>
-      <p>
-        A global singing & dance talent platform empowering performers to rise and shine
-        through transparent judging and international exposure.
-      </p>
+      <p>A global singing & dance talent platform empowering performers through transparency and international exposure.</p>
     </div>
 
     <div>
       <h4>Quick Links</h4>
       <p>
         <a href="index.html">Home</a><br>
-        <a href="about.html">About</a><br>
+        <a href="about.html">About Us</a><br>
         <a href="journey.html">Journey</a><br>
+        <a href="gallery.html">Gallery</a><br>
         <a href="register.html">Register</a><br>
         <a href="rules.html">Rules & Regulations</a>
       </p>
@@ -184,4 +229,3 @@ function toggleMenu(){
 
 </body>
 </html>
-
