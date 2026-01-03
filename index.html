@@ -19,7 +19,32 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://rhythmrise.in/">
 
+<!-- Open Graph -->
+<meta property="og:title" content="Rhythm Rise | Singing & Dance Talent Platform">
+<meta property="og:description" content="Registrations open for global singing & dance competitions with international jury.">
+<meta property="og:image" content="https://rhythmrise.in/images/rhythmrise-og.jpg">
+<meta property="og:url" content="https://rhythmrise.in">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Rhythm Rise",
+  "url": "https://rhythmrise.in",
+  "logo": "https://rhythmrise.in/images/rhythmrise-logo.png",
+  "sameAs": [
+    "https://instagram.com/rhythmriseindia",
+    "https://x.com/rhythmriseindia"
+  ]
+}
+</script>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
@@ -27,129 +52,125 @@ body{background:#121212;color:#e6e6e6}
 
 /* HEADER */
 .site-header{
-  position:fixed;
-  top:0;
-  width:100%;
-  height:72px;
+  position:fixed;top:0;width:100%;height:72px;
   background:rgba(0,0,0,.96);
   border-bottom:1px solid rgba(245,197,66,.25);
-  z-index:1000;
+  z-index:1000
 }
 .nav-container{
-  max-width:1200px;
-  height:72px;
-  margin:auto;
-  padding:0 20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+  max-width:1200px;height:72px;margin:auto;padding:0 20px;
+  display:flex;align-items:center;justify-content:space-between
 }
 .logo{display:flex;align-items:center;gap:10px}
 .logo img{height:42px}
-.logo span{font-size:22px;font-weight:800;color:#f5c542;line-height:1.1}
-.main-nav{display:flex;gap:26px}
-.main-nav a{text-decoration:none;color:#ccc;font-size:14.5px;font-weight:500}
-.main-nav a:hover,.main-nav a.active{color:#f5c542}
+.logo span{font-size:22px;font-weight:800;color:#f5c542}
 
-/* ================= HERO (FACE SAFE) ================= */
+/* ================= HERO VIDEO (SAFE CINEMA) ================= */
 .hero-video{
   position:relative;
   width:100%;
-  height:520px;           /* FIXED SAFE HEIGHT */
-  margin-top:72px;
-  background:#000;
+  height:110vh;
+  padding-top:72px;
   overflow:hidden;
+  background:#000;
 }
 
 .hero-video video{
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
   width:100%;
   height:100%;
-  object-fit:contain;     /* 🔑 NO CROPPING */
-  background:#000;
+  object-fit:cover;
+  object-position:center top;
+  z-index:1;
 }
 
 .hero-overlay{
   position:absolute;
   inset:0;
-  background:linear-gradient(
-    rgba(0,0,0,.35),
-    rgba(0,0,0,.85)
-  );
+  background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.85));
+  z-index:2;
 }
 
 .hero-content{
-  position:absolute;
-  inset:0;
+  position:relative;
+  z-index:3;
+  max-width:900px;
+  margin:auto;
+  height:100%;
+  padding:100px 20px 0;
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:center;
   text-align:center;
-  padding:0 20px;
+  animation:fadeUp 1.1s ease-out both;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
 }
 
 .hero-content h1{
-  font-size:56px;
+  font-size:64px;
   font-weight:900;
-  margin-bottom:16px;
+  margin-bottom:20px;
 }
 .hero-content h1 span{color:#f5c542}
-
 .hero-content p{
-  font-size:18px;
+  font-size:20px;
   color:#ddd;
-  margin-bottom:18px;
+  margin-bottom:20px;
 }
 
 .jury-badge{
-  margin-bottom:26px;
-  padding:10px 24px;
+  margin-bottom:30px;
+  padding:12px 26px;
   border-radius:40px;
   background:rgba(245,197,66,.12);
   border:1px solid rgba(245,197,66,.35);
   color:#f5c542;
-  font-size:13px;
+  font-size:14px;
   font-weight:600;
 }
 
 .hero-btn{
-  padding:14px 38px;
+  padding:16px 42px;
   background:linear-gradient(135deg,#f5c542,#e0b13a);
   color:#000;
   font-weight:700;
   border-radius:50px;
   text-decoration:none;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.hero-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 30px rgba(245,197,66,.4);
 }
 
-/* CONTENT */
-.section{
-  padding:90px 25px;
-  max-width:1200px;
-  margin:auto;
-  text-align:center;
-}
-.section-title{
-  font-size:34px;
-  margin-bottom:40px;
-}
+/* SECTIONS */
+.section{padding:90px 25px;max-width:1200px;margin:auto;text-align:center}
+.section-title{font-size:34px;margin-bottom:40px}
 .section-title span{color:#f5c542}
-.section p{
-  max-width:850px;
-  margin:0 auto 40px;
-  color:#ccc;
-  font-size:16px;
-}
+.section p{max-width:850px;margin:0 auto 40px;color:#ccc;font-size:16px}
 
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:35px;
+  gap:35px
 }
 .card{
   background:#181818;
   padding:35px;
   border-radius:18px;
   border:1px solid rgba(245,197,66,.18);
+  transition:transform .25s ease,box-shadow .25s ease
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 45px rgba(0,0,0,.6)
 }
 .card h3{color:#f5c542;margin-bottom:12px}
 
@@ -157,7 +178,7 @@ body{background:#121212;color:#e6e6e6}
 .cta{
   background:linear-gradient(180deg,#181818,#101010);
   padding:90px 25px;
-  text-align:center;
+  text-align:center
 }
 .cta h2{font-size:36px;margin-bottom:15px}
 .cta p{color:#ccc;margin-bottom:30px}
@@ -167,7 +188,7 @@ body{background:#121212;color:#e6e6e6}
   color:#000;
   font-weight:800;
   border-radius:50px;
-  text-decoration:none;
+  text-decoration:none
 }
 
 /* FOOTER */
@@ -175,30 +196,25 @@ footer{
   background:#0e0e0e;
   border-top:1px solid rgba(245,197,66,.25);
   padding:50px 20px;
-  color:#bbb;
+  color:#bbb
 }
 .footer-grid{
-  max-width:1200px;
-  margin:auto;
+  max-width:1200px;margin:auto;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:35px;
+  gap:35px
 }
 footer h3,footer h4{color:#f5c542;margin-bottom:12px}
 footer a{color:#bbb;text-decoration:none}
 footer a:hover{text-decoration:underline}
-.footer-bottom{
-  text-align:center;
-  margin-top:40px;
-  font-size:13px;
-  color:#777;
-}
+.footer-bottom{text-align:center;margin-top:40px;font-size:13px;color:#777}
 
 /* MOBILE */
 @media(max-width:768px){
-  .hero-video{height:380px;}
-  .hero-content h1{font-size:38px}
-  .hero-content p{font-size:15px}
+  .hero-video{height:90vh}
+  .hero-video video{object-position:center 10%}
+  .hero-content h1{font-size:40px}
+  .hero-content p{font-size:16px}
 }
 </style>
 </head>
@@ -208,15 +224,9 @@ footer a:hover{text-decoration:underline}
 <header class="site-header">
   <div class="nav-container">
     <div class="logo">
-      <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
-      <span>Rhythm<br>Rise</span>
+      <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo" loading="lazy">
+      <span>Rhythm Rise</span>
     </div>
-    <nav class="main-nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="journey.html">Journey</a>
-      <a href="register.html">Register</a>
-    </nav>
   </div>
 </header>
 
@@ -268,27 +278,10 @@ footer a:hover{text-decoration:underline}
       <p>A global singing & dance talent platform empowering performers worldwide.</p>
     </div>
     <div>
-      <h4>Quick Links</h4>
-      <p>
-        <a href="index.html">Home</a><br>
-        <a href="about.html">About</a><br>
-        <a href="journey.html">Journey</a><br>
-        <a href="register.html">Register</a><br>
-        <a href="rules.html">Rules & Regulations</a>
-      </p>
-    </div>
-    <div>
       <h4>Contact</h4>
       <p>
         📧 <a href="mailto:contact@rhythmrise.in">contact@rhythmrise.in</a><br>
         📲 <a href="https://wa.me/919030140600" target="_blank">+91 90301 40600</a>
-      </p>
-    </div>
-    <div>
-      <h4>Follow Us</h4>
-      <p>
-        📸 <a href="https://instagram.com/rhythmriseindia" target="_blank">Instagram</a><br>
-        ❌ <a href="https://x.com/rhythmriseindia" target="_blank">X (Twitter)</a>
       </p>
     </div>
   </div>
