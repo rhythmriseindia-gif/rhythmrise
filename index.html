@@ -1,174 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T5VYQEK3S2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-T5VYQEK3S2');
-</script>
-
 <head>
-<meta charset="UTF-8">
-<title>Rhythm Rise | Singing & Dance Talent Platform</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5VYQEK3S2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T5VYQEK3S2');
+  </script>
 
-<meta name="description" content="Rhythm Rise is a premier singing and dance competition platform connecting talent with national and international judges.">
+  <meta charset="UTF-8">
+  <title>Rhythm Rise | Singing & Dance Talent Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Rhythm Rise | Singing & Dance Talent Platform">
-<meta property="og:description" content="Registrations open for global singing & dance competitions with international jury.">
-<meta property="og:image" content="https://rhythmrise.in/images/rhythmrise-og.jpg">
-<meta property="og:url" content="https://rhythmrise.in">
-<meta property="og:type" content="website">
+  <meta name="description" content="Rhythm Rise is a premier singing and dance competition platform connecting talent with national and international judges.">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rhythm Rise | Singing & Dance Talent Platform">
+  <meta property="og:description" content="Registrations open for global singing & dance competitions with international jury.">
+  <meta property="og:image" content="https://rhythmrise.in/images/rhythmrise-og.jpg">
+  <meta property="og:url" content="https://rhythmrise.in">
+  <meta property="og:type" content="website">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#121212;color:#e6e6e6}
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-/* ================= HEADER ================= */
-.site-header{
-  position:fixed;top:0;width:100%;height:72px;
-  background:rgba(0,0,0,.96);
-  border-bottom:1px solid rgba(245,197,66,.25);
-  z-index:1000
-}
-.nav-container{
-  max-width:1200px;height:72px;margin:auto;padding:0 20px;
-  display:flex;align-items:center;justify-content:space-between
-}
-.logo{display:flex;align-items:center;gap:10px}
-.logo img{height:42px}
-.logo span{font-size:22px;font-weight:800;color:#f5c542;line-height:1.1}
-.main-nav{display:flex;gap:26px}
-.main-nav a{text-decoration:none;color:#ccc;font-size:14.5px;font-weight:500}
-.main-nav a:hover,.main-nav a.active{color:#f5c542}
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:#121212;color:#e6e6e6}
 
-/* ================= HERO VIDEO ================= */
-.hero-video{
-  position:relative;
-  width:100%;
-  height:100vh;
-  overflow:hidden;
-  background:#000;
-  padding-top:72px;
-}
+    /* ================= HEADER ================= */
+    .site-header{
+      position:fixed;top:0;width:100%;height:72px;
+      background:rgba(0,0,0,.96);
+      border-bottom:1px solid rgba(245,197,66,.25);
+      z-index:1000
+    }
+    .nav-container{
+      max-width:1200px;height:72px;margin:auto;padding:0 20px;
+      display:flex;align-items:center;justify-content:space-between
+    }
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo img{height:42px}
+    .logo span{font-size:22px;font-weight:800;color:#f5c542;line-height:1.1}
+    .main-nav{display:flex;gap:26px}
+    .main-nav a{text-decoration:none;color:#ccc;font-size:14.5px;font-weight:500}
+    .main-nav a:hover,.main-nav a.active{color:#f5c542}
 
-.hero-video video{
-  position:absolute;
-  top:50%;left:50%;
-  min-width:100%;
-  min-height:100%;
-  transform:translate(-50%,-50%);
-  object-fit:cover;
-  z-index:1;
-}
+    /* ================= HERO VIDEO ================= */
+    .hero-video{
+      position:relative;
+      width:100%;
+      height:100vh;
+      overflow:hidden;
+      background:#000;
+      padding-top:72px;
+    }
 
-.hero-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.8));
-  z-index:2;
-}
+    .hero-video video{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center 20%; /* FIX: keeps heads inside frame */
+      z-index:1;
+    }
 
-.hero-content{
-  position:relative;
-  z-index:3;
-  max-width:900px;
-  margin:auto;
-  height:100%;
-  padding:0 20px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
+    .hero-overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.8));
+      z-index:2;
+    }
 
-.hero-content h1{
-  font-size:64px;
-  font-weight:900;
-  margin-bottom:20px;
-}
-.hero-content h1 span{color:#f5c542}
-.hero-content p{
-  font-size:20px;
-  color:#ddd;
-  margin-bottom:20px;
-}
-.jury-badge{
-  margin-bottom:30px;
-  padding:12px 26px;
-  border-radius:40px;
-  background:rgba(245,197,66,.12);
-  border:1px solid rgba(245,197,66,.35);
-  color:#f5c542;
-  font-size:14px;
-  font-weight:600;
-}
-.hero-btn{
-  padding:16px 42px;
-  background:linear-gradient(135deg,#f5c542,#e0b13a);
-  color:#000;
-  font-weight:700;
-  border-radius:50px;
-  text-decoration:none;
-}
+    .hero-content{
+      position:relative;
+      z-index:3;
+      max-width:900px;
+      margin:auto;
+      height:100%;
+      padding:0 20px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
 
-/* ================= SECTIONS ================= */
-.section{padding:90px 25px;max-width:1200px;margin:auto;text-align:center}
-.section-title{font-size:34px;margin-bottom:50px}
-.section-title span{color:#f5c542}
-.section p{max-width:850px;margin:0 auto 40px;color:#ccc;font-size:16px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:35px}
-.card{background:#181818;padding:35px;border-radius:18px;border:1px solid rgba(245,197,66,.18)}
-.card h3{color:#f5c542;margin-bottom:12px}
+    .hero-content h1{
+      font-size:64px;
+      font-weight:900;
+      margin-bottom:20px;
+    }
+    .hero-content h1 span{color:#f5c542}
+    .hero-content p{
+      font-size:20px;
+      color:#ddd;
+      margin-bottom:20px;
+    }
+    .jury-badge{
+      margin-bottom:30px;
+      padding:12px 26px;
+      border-radius:40px;
+      background:rgba(245,197,66,.12);
+      border:1px solid rgba(245,197,66,.35);
+      color:#f5c542;
+      font-size:14px;
+      font-weight:600;
+    }
+    .hero-btn{
+      padding:16px 42px;
+      background:linear-gradient(135deg,#f5c542,#e0b13a);
+      color:#000;
+      font-weight:700;
+      border-radius:50px;
+      text-decoration:none;
+    }
 
-/* CTA */
-.cta{
-  background:linear-gradient(180deg,#181818,#101010);
-  padding:90px 25px;text-align:center
-}
-.cta h2{font-size:36px;margin-bottom:15px}
-.cta p{color:#ccc;margin-bottom:30px}
-.cta a{
-  padding:16px 46px;
-  background:linear-gradient(135deg,#f5c542,#e0b13a);
-  color:#000;font-weight:800;
-  border-radius:50px;text-decoration:none
-}
+    /* ================= SECTIONS ================= */
+    .section{padding:90px 25px;max-width:1200px;margin:auto;text-align:center}
+    .section-title{font-size:34px;margin-bottom:50px}
+    .section-title span{color:#f5c542}
+    .section p{max-width:850px;margin:0 auto 40px;color:#ccc;font-size:16px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:35px}
+    .card{background:#181818;padding:35px;border-radius:18px;border:1px solid rgba(245,197,66,.18)}
+    .card h3{color:#f5c542;margin-bottom:12px}
 
-/* FOOTER */
-footer{
-  background:#0e0e0e;
-  border-top:1px solid rgba(245,197,66,.25);
-  padding:50px 20px;color:#bbb
-}
-.footer-grid{
-  max-width:1200px;margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:35px
-}
-footer h3,footer h4{color:#f5c542;margin-bottom:12px}
-footer a{color:#bbb;text-decoration:none}
-footer a:hover{text-decoration:underline}
-.footer-bottom{text-align:center;margin-top:40px;font-size:13px;color:#777}
+    /* CTA */
+    .cta{
+      background:linear-gradient(180deg,#181818,#101010);
+      padding:90px 25px;text-align:center
+    }
+    .cta h2{font-size:36px;margin-bottom:15px}
+    .cta p{color:#ccc;margin-bottom:30px}
+    .cta a{
+      padding:16px 46px;
+      background:linear-gradient(135deg,#f5c542,#e0b13a);
+      color:#000;font-weight:800;
+      border-radius:50px;text-decoration:none
+    }
 
-/* MOBILE */
-@media(max-width:768px){
-.hero-content h1{font-size:42px}
-.hero-content p{font-size:16px}
-.hero-video video{display:none}
-.hero-video{
-  background:url("videos/hero-poster.jpg") center/cover no-repeat;
-}
-}
-</style>
+    /* FOOTER */
+    footer{
+      background:#0e0e0e;
+      border-top:1px solid rgba(245,197,66,.25);
+      padding:50px 20px;color:#bbb
+    }
+    .footer-grid{
+      max-width:1200px;margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:35px
+    }
+    footer h3,footer h4{color:#f5c542;margin-bottom:12px}
+    footer a{color:#bbb;text-decoration:none}
+    footer a:hover{text-decoration:underline}
+    .footer-bottom{text-align:center;margin-top:40px;font-size:13px;color:#777}
+
+    /* MOBILE */
+    @media(max-width:768px){
+      .hero-content h1{font-size:42px}
+      .hero-content p{font-size:16px}
+      .hero-video video{display:none}
+      .hero-video{
+        background:url("videos/hero-poster.jpg") center/cover no-repeat;
+      }
+    }
+  </style>
 </head>
 
 <body>
