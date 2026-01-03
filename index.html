@@ -25,7 +25,7 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#121212;color:#e6e6e6}
 
-/* ================= HEADER ================= */
+/* HEADER */
 .site-header{
   position:fixed;
   top:0;
@@ -51,28 +51,21 @@ body{background:#121212;color:#e6e6e6}
 .main-nav a{text-decoration:none;color:#ccc;font-size:14.5px;font-weight:500}
 .main-nav a:hover,.main-nav a.active{color:#f5c542}
 
-/* ================= HERO VIDEO (HEAD-SAFE) ================= */
+/* ================= HERO (FACE SAFE) ================= */
 .hero-video{
   position:relative;
   width:100%;
-  height:88vh;              /* 🔑 NOT 100vh */
-  padding-top:72px;
-  overflow:hidden;
+  height:520px;           /* FIXED SAFE HEIGHT */
+  margin-top:72px;
   background:#000;
+  overflow:hidden;
 }
 
 .hero-video video{
-  position:absolute;
-  inset:0;
   width:100%;
   height:100%;
-
-  object-fit:cover;
-
-  /* 🔑 CRITICAL HEAD-SAFE SETTINGS */
-  object-position:50% 22%;
-  transform:scale(0.94);    /* zoom OUT slightly */
-  z-index:1;
+  object-fit:contain;     /* 🔑 NO CROPPING */
+  background:#000;
 }
 
 .hero-overlay{
@@ -82,49 +75,45 @@ body{background:#121212;color:#e6e6e6}
     rgba(0,0,0,.35),
     rgba(0,0,0,.85)
   );
-  z-index:2;
 }
 
 .hero-content{
-  position:relative;
-  z-index:3;
-  max-width:900px;
-  margin:auto;
-  height:100%;
-  padding:0 20px;
+  position:absolute;
+  inset:0;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
   text-align:center;
+  padding:0 20px;
 }
 
 .hero-content h1{
-  font-size:64px;
+  font-size:56px;
   font-weight:900;
-  margin-bottom:20px;
+  margin-bottom:16px;
 }
 .hero-content h1 span{color:#f5c542}
 
 .hero-content p{
-  font-size:20px;
+  font-size:18px;
   color:#ddd;
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 .jury-badge{
-  margin-bottom:30px;
-  padding:12px 26px;
+  margin-bottom:26px;
+  padding:10px 24px;
   border-radius:40px;
   background:rgba(245,197,66,.12);
   border:1px solid rgba(245,197,66,.35);
   color:#f5c542;
-  font-size:14px;
+  font-size:13px;
   font-weight:600;
 }
 
 .hero-btn{
-  padding:16px 42px;
+  padding:14px 38px;
   background:linear-gradient(135deg,#f5c542,#e0b13a);
   color:#000;
   font-weight:700;
@@ -132,7 +121,7 @@ body{background:#121212;color:#e6e6e6}
   text-decoration:none;
 }
 
-/* ================= SECTIONS ================= */
+/* CONTENT */
 .section{
   padding:90px 25px;
   max-width:1200px;
@@ -141,7 +130,7 @@ body{background:#121212;color:#e6e6e6}
 }
 .section-title{
   font-size:34px;
-  margin-bottom:50px;
+  margin-bottom:40px;
 }
 .section-title span{color:#f5c542}
 .section p{
@@ -205,17 +194,11 @@ footer a:hover{text-decoration:underline}
   color:#777;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 @media(max-width:768px){
-  .hero-video{
-    height:78vh;
-  }
-  .hero-video video{
-    object-position:50% 18%;
-    transform:scale(0.96);
-  }
-  .hero-content h1{font-size:42px}
-  .hero-content p{font-size:16px}
+  .hero-video{height:380px;}
+  .hero-content h1{font-size:38px}
+  .hero-content p{font-size:15px}
 }
 </style>
 </head>
@@ -237,7 +220,6 @@ footer a:hover{text-decoration:underline}
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero-video">
   <video autoplay muted loop playsinline preload="metadata" poster="videos/hero-poster.jpg">
     <source src="videos/rhythmrise-hero.mp4" type="video/mp4">
