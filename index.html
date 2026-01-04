@@ -38,41 +38,7 @@
   "@type":"Organization",
   "name":"Rhythm Rise",
   "url":"https://rhythmrise.in",
-  "logo":"https://rhythmrise.in/images/rhythmrise-logo.png",
-  "sameAs":[
-    "https://instagram.com/rhythmriseindia",
-    "https://x.com/rhythmriseindia"
-  ]
-}
-</script>
-
-<!-- ================= SCHEMA : EVENT ================= -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Event",
-  "name":"Rhythm Rise – Mega Talent Hunt",
-  "eventStatus":"https://schema.org/EventScheduled",
-  "eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode",
-  "organizer":{
-    "@type":"Organization",
-    "name":"Rhythm Rise",
-    "url":"https://rhythmrise.in"
-  }
-}
-</script>
-
-<!-- ================= SCHEMA : BREADCRUMB ================= -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  "itemListElement":[{
-    "@type":"ListItem",
-    "position":1,
-    "name":"Home",
-    "item":"https://rhythmrise.in/"
-  }]
+  "logo":"https://rhythmrise.in/images/rhythmrise-logo.png"
 }
 </script>
 
@@ -80,7 +46,7 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#121212;color:#e6e6e6}
 
-/* ================= HEADER ================= */
+/* HEADER */
 .site-header{
   position:fixed;top:0;width:100%;height:72px;
   background:rgba(0,0,0,.95);
@@ -95,138 +61,117 @@ body{background:#121212;color:#e6e6e6}
 .logo{display:flex;align-items:center;gap:10px}
 .logo img{height:40px}
 .logo span{font-size:22px;font-weight:800;color:#f5c542}
-
-nav a{
-  margin-left:22px;
-  color:#e6e6e6;
-  text-decoration:none;
-  font-weight:500;
-}
+nav a{margin-left:22px;color:#e6e6e6;text-decoration:none}
 nav a:hover{color:#f5c542}
 
-/* ================= HERO ================= */
+/* HERO */
 .hero-video{
-  position:relative;
-  height:100vh;
-  padding-top:72px;
-  overflow:hidden;
+  position:relative;height:100vh;padding-top:72px;overflow:hidden;
 }
 .hero-video video{
-  position:absolute;inset:0;
-  width:100%;height:100%;
-  object-fit:cover;
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
 }
 .hero-overlay{
   position:absolute;inset:0;
-  background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.85));
+  background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.85));
 }
 .hero-content{
   position:relative;z-index:2;
-  max-width:900px;
-  margin:auto;
-  padding-top:140px;
-  text-align:center;
+  max-width:900px;margin:auto;padding-top:140px;text-align:center;
 }
-.hero-content h1{
-  font-size:64px;font-weight:900;
-}
+.hero-content h1{font-size:64px;font-weight:900}
 .hero-content h1 span{color:#f5c542}
-.hero-content p{
-  font-size:20px;margin:18px 0;color:#ddd;
-}
+.hero-content p{font-size:20px;margin:18px 0;color:#ddd}
 .jury-badge{
-  display:inline-block;
-  margin:20px 0 30px;
-  padding:12px 26px;
-  border-radius:40px;
+  display:inline-block;margin:20px 0 30px;
+  padding:12px 26px;border-radius:40px;
   background:rgba(245,197,66,.15);
   border:1px solid rgba(245,197,66,.4);
-  color:#f5c542;
-  font-size:14px;font-weight:600;
+  color:#f5c542;font-size:14px;font-weight:600;
 }
 .btn-primary{
   padding:16px 42px;
   background:linear-gradient(135deg,#f5c542,#e0b13a);
-  color:#000;
-  font-weight:800;
-  border-radius:50px;
+  color:#000;font-weight:800;border-radius:50px;
   text-decoration:none;
 }
 
-/* ================= SECTIONS ================= */
-.section{
-  padding:90px 25px;
-  max-width:1200px;
-  margin:auto;
-  text-align:center;
-}
-.section-title{
-  font-size:36px;
-  margin-bottom:40px;
-}
+/* SECTIONS */
+.section{padding:90px 25px;max-width:1200px;margin:auto;text-align:center}
+.section-title{font-size:36px;margin-bottom:40px}
 .section-title span{color:#f5c542}
-.section p{
-  max-width:850px;
-  margin:auto;
-  color:#ccc;
-  font-size:16px;
-}
+.section p{max-width:850px;margin:auto;color:#ccc;font-size:16px}
 
-/* ================= CATEGORIES ================= */
+/* CATEGORIES */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:35px;
 }
 .card{
-  background:#181818;
-  padding:35px;
-  border-radius:18px;
-  border:1px solid rgba(245,197,66,.2);
+  background:#181818;padding:35px;
+  border-radius:18px;border:1px solid rgba(245,197,66,.2);
 }
 .card h3{color:#f5c542;margin-bottom:10px}
 
-/* ================= JUDGES ================= */
+/* JUDGES */
 .judges-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:40px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;margin-top:40px;
 }
 .judge-card{
-  background:#181818;
-  padding:30px;
-  border-radius:20px;
+  background:#181818;padding:30px;
+  border-radius:22px;text-align:center;
+  cursor:pointer;transition:.3s;
+}
+.judge-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,.6);
 }
 .judge-card img{
-  width:120px;height:120px;
-  border-radius:50%;
-  object-fit:cover;
-  border:3px solid #f5c542;
+  width:140px;height:140px;
+  border-radius:50%;object-fit:cover;
+  border:4px solid #f5c542;
   margin-bottom:15px;
 }
 .judge-card h4{color:#f5c542}
 .judge-card p{font-size:14px;color:#ccc}
 
-/* ================= CTA ================= */
-.cta{
-  background:#101010;
-  padding:80px 25px;
-  text-align:center;
+/* MODAL */
+.judge-modal{
+  position:fixed;inset:0;
+  background:rgba(0,0,0,.85);
+  display:none;align-items:center;justify-content:center;
+  z-index:2000;
+}
+.modal-content{
+  background:#111;max-width:520px;
+  padding:40px;border-radius:22px;
+  text-align:center;position:relative;
+}
+.modal-content img{
+  width:160px;height:160px;
+  border-radius:50%;
+  border:4px solid #f5c542;
+  margin-bottom:20px;
+}
+.modal-content h3{color:#f5c542}
+.modal-content h5{color:#ccc;margin-bottom:15px}
+.close{
+  position:absolute;top:15px;right:20px;
+  font-size:28px;color:#f5c542;cursor:pointer;
 }
 
-/* ================= FOOTER ================= */
+/* CTA & FOOTER */
+.cta{background:#101010;padding:80px 25px;text-align:center}
 footer{
-  background:#0e0e0e;
-  padding:40px 20px;
+  background:#0e0e0e;padding:40px 20px;
   border-top:1px solid rgba(245,197,66,.25);
 }
-.footer-bottom{
-  text-align:center;
-  font-size:13px;
-  color:#777;
-}
+.footer-bottom{text-align:center;font-size:13px;color:#777}
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 @media(max-width:768px){
   .hero-content h1{font-size:40px}
   .hero-content p{font-size:16px}
@@ -239,7 +184,7 @@ footer{
 <header class="site-header">
   <div class="nav-container">
     <div class="logo">
-      <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
+      <img src="images/rhythmrise-logo.png">
       <span>Rhythm Rise</span>
     </div>
     <nav>
@@ -249,13 +194,12 @@ footer{
       <a href="gallery.html">Gallery</a>
       <a href="#judges">Judges</a>
       <a href="register.html">Register</a>
-      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <section class="hero-video">
-  <video autoplay muted loop playsinline preload="metadata" poster="videos/hero-poster.jpg">
+  <video autoplay muted loop playsinline>
     <source src="videos/rhythmrise-hero.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
@@ -275,42 +219,14 @@ footer{
   </p>
 </section>
 
-<section class="section">
-  <h2 class="section-title">Singing & <span>Dance</span> Categories</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Singing</h3>
-      <p>Multiple languages and styles evaluated on voice, rhythm, expression, and performance.</p>
-    </div>
-    <div class="card">
-      <h3>Dance</h3>
-      <p>Classical, semi-classical, folk, cinematic, and western dance styles.</p>
-    </div>
-  </div>
-</section>
-
 <section class="section" id="judges">
   <h2 class="section-title">Our <span>International Jury</span></h2>
+
   <div class="judges-grid">
-    <div class="judge-card">
-      <img src="images/judge-india.jpg" alt="Judge India">
-      <h4>Judge – India</h4>
-      <p>Music & Dance Expert</p>
-    </div>
-    <div class="judge-card">
-      <img src="images/judge-qatar.jpg" alt="Judge Qatar">
-      <h4>Judge – Qatar</h4>
-      <p>International Performer</p>
-    </div>
-    <div class="judge-card">
-      <img src="images/judge-uk.jpg" alt="Judge UK">
-      <h4>Judge – UK</h4>
-      <p>Stage & Voice Specialist</p>
-    </div>
-    <div class="judge-card">
-      <img src="images/judge-usa.jpg" alt="Judge USA">
-      <h4>Judge – USA</h4>
-      <p>Global Talent Coach</p>
+    <div class="judge-card" onclick="openJudge('priti')">
+      <img src="images/judges/priti-vikramnath-ireland.png">
+      <h4>Priti Vikramnath</h4>
+      <p>Ireland</p>
     </div>
   </div>
 </section>
@@ -320,12 +236,46 @@ footer{
   <a href="register.html" class="btn-primary">Register Today</a>
 </section>
 
-<footer id="contact">
+<footer>
   <div class="footer-bottom">
     © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
   </div>
 </footer>
 
+<!-- MODAL -->
+<div class="judge-modal" id="judgeModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeJudge()">×</span>
+    <img id="modalImg">
+    <h3 id="modalName"></h3>
+    <h5 id="modalCountry"></h5>
+    <p id="modalBio"></p>
+  </div>
+</div>
+
+<script>
+const judges={
+  priti:{
+    img:"images/judges/priti-vikramnath-ireland.png",
+    name:"Priti Vikramnath",
+    country:"Ireland",
+    bio:`Hindustani Classical Vocalist and Music Educator. 
+Classically trained at Allahabad University and professionally trained in Bollywood music from Saregamapadhanisa Academy, Mumbai.
+
+Judge at The Voice of Qatar. 
+Shared stage with Sonu Nigam, Benny Dayal, Vinod Rathod, Irfan and Shaan.
+Performed at Indian Film Festival Ireland with Javed Jaffrey.`
+  }
+};
+function openJudge(id){
+  modalImg.src=judges[id].img;
+  modalName.innerText=judges[id].name;
+  modalCountry.innerText=judges[id].country;
+  modalBio.innerText=judges[id].bio;
+  judgeModal.style.display="flex";
+}
+function closeJudge(){judgeModal.style.display="none";}
+</script>
+
 </body>
 </html>
-
