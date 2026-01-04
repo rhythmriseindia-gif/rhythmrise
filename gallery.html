@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Gallery | Rhythm Rise</title>
+<title>Event Gallery | Rhythm Rise</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description" content="Explore the journey and legacy of Rhythm Rise through past events, performances, and community platforms.">
@@ -10,181 +10,130 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background: #121212;
-  color: #e6e6e6;
-  line-height: 1.7;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#121212;color:#e6e6e6;line-height:1.7}
 
 /* ================= HEADER ================= */
-.site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 72px;
-  background: rgba(0,0,0,0.96);
-  border-bottom: 1px solid rgba(245,197,66,0.25);
-  z-index: 1000;
+.site-header{
+  position:fixed;top:0;width:100%;height:72px;
+  background:rgba(0,0,0,.96);
+  border-bottom:1px solid rgba(245,197,66,.25);
+  z-index:1000
 }
+.nav-container{
+  max-width:1200px;height:72px;margin:auto;padding:0 20px;
+  display:flex;align-items:center;justify-content:space-between
+}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:42px}
+.logo span{font-size:22px;font-weight:800;color:#f5c542;line-height:1.1}
 
-.nav-container {
-  max-width: 1200px;
-  height: 72px;
-  margin: auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.main-nav{display:flex;gap:26px}
+.main-nav a{
+  text-decoration:none;
+  color:#ccc;
+  font-size:14.5px;
+  font-weight:500
 }
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  height: 42px;
-}
-
-.logo span {
-  font-size: 22px;
-  font-weight: 800;
-  color: #f5c542;
-  line-height: 1.1;
-}
-
-.main-nav {
-  display: flex;
-  gap: 26px;
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: #cccccc;
-  font-size: 14.5px;
-  font-weight: 500;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-  color: #f5c542;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  color: #f5c542;
-  cursor: pointer;
-}
+.main-nav a:hover,.main-nav a.active{color:#f5c542}
+.menu-toggle{display:none;font-size:26px;color:#f5c542;cursor:pointer}
 
 /* ================= PAGE ================= */
-.page {
-  max-width: 1200px;
-  margin: auto;
-  padding: 130px 25px 90px;
+.page{
+  max-width:1200px;
+  margin:auto;
+  padding:130px 25px 90px
+}
+.page-title{text-align:center;margin-bottom:70px}
+.page-title h1{font-size:38px;font-weight:800}
+.page-title h1 span{color:#f5c542}
+.page-title p{
+  max-width:800px;
+  margin:12px auto 0;
+  font-size:16px;
+  color:#ccc
 }
 
-.page-title {
-  text-align: center;
-  margin-bottom: 70px;
+/* ================= EVENTS ================= */
+.event-section{margin-bottom:90px}
+.event-section h2{
+  font-size:26px;
+  margin-bottom:6px;
+  color:#f5c542;
+  text-align:center
+}
+.event-section p{
+  text-align:center;
+  font-size:14.5px;
+  color:#bdbdbd;
+  margin-bottom:35px
 }
 
-.page-title h1 {
-  font-size: 38px;
-  font-weight: 800;
-  margin-bottom: 10px;
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px
+}
+.gallery-grid img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:14px;
+  border:1px solid rgba(245,197,66,.2);
+  cursor:pointer;
+  transition:.3s ease
+}
+.gallery-grid img:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 45px rgba(0,0,0,.6)
 }
 
-.page-title h1 span {
-  color: #f5c542;
+/* ================= LIGHTBOX ================= */
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.92);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:5000
 }
-
-.page-title p {
-  max-width: 800px;
-  margin: auto;
-  font-size: 16px;
-  color: #cccccc;
+.lightbox img{
+  max-width:92%;
+  max-height:92%;
+  border-radius:12px;
+  box-shadow:0 30px 80px rgba(0,0,0,.9)
 }
-
-/* ================= GALLERY ================= */
-.event-section {
-  margin-bottom: 90px;
-}
-
-.event-section h2 {
-  font-size: 26px;
-  margin-bottom: 8px;
-  color: #f5c542;
-  text-align: center;
-}
-
-.event-section p {
-  text-align: center;
-  font-size: 14.5px;
-  color: #bdbdbd;
-  margin-bottom: 35px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 14px;
-  border: 1px solid rgba(245,197,66,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-grid img:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+.lightbox.close{
+  display:none
 }
 
 /* ================= FOOTER ================= */
-footer {
-  background: #0e0e0e;
-  border-top: 1px solid rgba(245,197,66,0.25);
-  text-align: center;
-  padding: 28px;
-  font-size: 13px;
-  color: #8e8e8e;
+footer{
+  background:#0e0e0e;
+  border-top:1px solid rgba(245,197,66,.25);
+  text-align:center;
+  padding:28px;
+  font-size:13px;
+  color:#8e8e8e
 }
 
 /* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .main-nav {
-    position: absolute;
-    top: 72px;
-    right: 0;
-    width: 100%;
-    background: #0e0e0e;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    padding: 20px 0;
-    display: none;
+@media(max-width:768px){
+  .main-nav{
+    position:absolute;
+    top:72px;
+    right:0;
+    width:100%;
+    background:#0e0e0e;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+    padding:20px 0;
+    display:none
   }
-
-  .main-nav.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
+  .main-nav.show{display:flex}
+  .menu-toggle{display:block}
 }
 </style>
 </head>
@@ -205,7 +154,9 @@ footer {
       <a href="about.html">About</a>
       <a href="journey.html">Journey</a>
       <a href="gallery.html" class="active">Gallery</a>
+      <a href="index.html#judges">Judges</a>
       <a href="register.html">Register</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -213,11 +164,8 @@ footer {
 <div class="page">
 
   <div class="page-title">
-    <h1>Our <span>Journey & Legacy</span></h1>
-    <p>
-      A visual glimpse into the platforms, performances, and communities that
-      shaped Rhythm Rise.
-    </p>
+    <h1>Event <span>Gallery</span></h1>
+    <p>A visual glimpse into the platforms, performances, and communities that shaped Rhythm Rise.</p>
   </div>
 
   <!-- DOHA MUSIC LOVERS -->
@@ -225,46 +173,46 @@ footer {
     <h2>Doha Music Lovers</h2>
     <p>Cultural & music community platform – Doha, Qatar</p>
     <div class="gallery-grid">
-      <img src="images/gallery/doha-music-lovers-stage-performance.jpg" alt="Doha Music Lovers stage performance">
-      <img src="images/gallery/doha-music-lovers-live-concert.jpg" alt="Doha Music Lovers live concert">
-      <img src="images/gallery/doha-music-lovers-artists-group.jpg" alt="Doha Music Lovers artists group">
-      <img src="images/gallery/doha-music-lovers-audience-view.jpg" alt="Doha Music Lovers audience view">
+      <img src="images/gallery/doha-music-lovers-stage-performance.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/doha-music-lovers-live-concert.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/doha-music-lovers-artists-group.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/doha-music-lovers-audience-view.jpg" onclick="openLightbox(this)">
     </div>
   </div>
 
-  <!-- SUPER DANCER SEASON 1 -->
+  <!-- SUPER DANCER S1 -->
   <div class="event-section">
     <h2>Super Dancer – Season 1</h2>
     <p>Flagship dance competition – Doha</p>
     <div class="gallery-grid">
-      <img src="images/gallery/super-dancer-season1-doha-performance.jpg" alt="Super Dancer Season 1 performance">
-      <img src="images/gallery/super-dancer-season1-judges-panel.jpg" alt="Super Dancer Season 1 judges panel">
-      <img src="images/gallery/super-dancer-season1-finalists.jpg" alt="Super Dancer Season 1 finalists">
-      <img src="images/gallery/super-dancer-season1-winners.jpg" alt="Super Dancer Season 1 winners">
+      <img src="images/gallery/super-dancer-season1-doha-performance.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/super-dancer-season1-judges-panel.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/super-dancer-season1-finalists.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/super-dancer-season1-winners.jpg" onclick="openLightbox(this)">
     </div>
   </div>
 
-  <!-- SUPER DANCER SEASON 2 -->
+  <!-- SUPER DANCER S2 -->
   <div class="event-section">
     <h2>Super Dancer – Season 2</h2>
     <p>Expanded scale & refined competition</p>
     <div class="gallery-grid">
-      <img src="images/gallery/super-dancer-season2-doha-stage.jpg" alt="Super Dancer Season 2 stage">
-      <img src="images/gallery/super-dancer-season2-competition-moment.jpg" alt="Super Dancer Season 2 competition moment">
-      <img src="images/gallery/super-dancer-season2-judging-session.jpg" alt="Super Dancer Season 2 judging session">
-      <img src="images/gallery/super-dancer-season2-award-ceremony.jpg" alt="Super Dancer Season 2 award ceremony">
+      <img src="images/gallery/super-dancer-season2-doha-stage.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/super-dancer-season2-competition-moment.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/super-dancer-season2-judging-session.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/super-dancer-season2-award-ceremony.jpg" onclick="openLightbox(this)">
     </div>
   </div>
 
-  <!-- SUPER DANCER SEASON 3 -->
+  <!-- SUPER DANCER S3 -->
   <div class="event-section">
     <h2>Super Dancer – Season 3</h2>
     <p>Established & recognized dance platform</p>
     <div class="gallery-grid">
-      <img src="images/gallery/super-dancer-season3-grand-finale.jpg" alt="Super Dancer Season 3 grand finale">
-      <img src="images/gallery/super-dancer-season3-live-performance.jpg" alt="Super Dancer Season 3 live performance">
-      <img src="images/gallery/super-dancer-season3-winner-announcement.jpg" alt="Super Dancer Season 3 winner announcement">
-      <img src="images/gallery/super-dancer-season3-stage-showcase.jpg" alt="Super Dancer Season 3 stage showcase">
+      <img src="images/gallery/super-dancer-season3-grand-finale.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/super-dancer-season3-live-performance.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/super-dancer-season3-winner-announcement.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/super-dancer-season3-stage-showcase.jpg" onclick="openLightbox(this)">
     </div>
   </div>
 
@@ -273,10 +221,10 @@ footer {
     <h2>Super Singer – Doha</h2>
     <p>Vocal talent platform</p>
     <div class="gallery-grid">
-      <img src="images/gallery/super-singer-doha-live-performance.jpg" alt="Super Singer Doha live performance">
-      <img src="images/gallery/super-singer-doha-judges-feedback.jpg" alt="Super Singer Doha judges feedback">
-      <img src="images/gallery/super-singer-doha-finalists.jpg" alt="Super Singer Doha finalists">
-      <img src="images/gallery/super-singer-doha-winner-moment.jpg" alt="Super Singer Doha winner moment">
+      <img src="images/gallery/super-singer-doha-live-performance.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/super-singer-doha-judges-feedback.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/super-singer-doha-finalists.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/super-singer-doha-winner-moment.jpg" onclick="openLightbox(this)">
     </div>
   </div>
 
@@ -285,10 +233,10 @@ footer {
     <h2>Voice of World</h2>
     <p>Global online singing contest</p>
     <div class="gallery-grid">
-      <img src="images/gallery/voice-of-world-online-contest-banner.jpg" alt="Voice of World online contest banner">
-      <img src="images/gallery/voice-of-world-online-participants.jpg" alt="Voice of World participants">
-      <img src="images/gallery/voice-of-world-online-judging.jpg" alt="Voice of World online judging">
-      <img src="images/gallery/voice-of-world-online-winners.jpg" alt="Voice of World winners">
+      <img src="images/gallery/voice-of-world-online-contest-banner.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/voice-of-world-online-participants.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/voice-of-world-online-judging.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/voice-of-world-online-winners.jpg" onclick="openLightbox(this)">
     </div>
   </div>
 
@@ -297,22 +245,34 @@ footer {
     <h2>Cric Qatar</h2>
     <p>Community cricket platform</p>
     <div class="gallery-grid">
-      <img src="images/gallery/cric-qatar-tournament-match.jpg" alt="Cric Qatar tournament match">
-      <img src="images/gallery/cric-qatar-team-lineup.jpg" alt="Cric Qatar team lineup">
-      <img src="images/gallery/cric-qatar-award-ceremony.jpg" alt="Cric Qatar award ceremony">
-      <img src="images/gallery/cric-qatar-community-event.jpg" alt="Cric Qatar community event">
+      <img src="images/gallery/cric-qatar-tournament-match.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/cric-qatar-team-lineup.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/cric-qatar-award-ceremony.jpg" onclick="openLightbox(this)">
+      <img src="images/gallery/cric-qatar-community-event.jpg" onclick="openLightbox(this)">
     </div>
   </div>
 
 </div>
 
-<footer>
+<footer id="contact">
   © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
 </footer>
 
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <img id="lightboxImg">
+</div>
+
 <script>
-function toggleMenu() {
+function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("show");
+}
+function openLightbox(img){
+  document.getElementById("lightboxImg").src = img.src;
+  document.getElementById("lightbox").style.display = "flex";
+}
+function closeLightbox(){
+  document.getElementById("lightbox").style.display = "none";
 }
 </script>
 
