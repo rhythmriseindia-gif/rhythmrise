@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Google Analytics -->
+<!-- ================= GOOGLE ANALYTICS ================= -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5VYQEK3S2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -15,13 +15,13 @@
 <title>Rhythm Rise | Singing & Dance Talent Platform</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Rhythm Rise is a premier singing and dance competition platform connecting talent with national and international judges.">
+<meta name="description" content="Rhythm Rise is a professional singing and dance competition platform connecting talent with international judges from India, Qatar, UK and USA.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://rhythmrise.in/">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Rhythm Rise | Singing & Dance Talent Platform">
-<meta property="og:description" content="Registrations open for global singing & dance competitions with international jury.">
+<meta property="og:description" content="Global singing & dance competitions judged by international experts.">
 <meta property="og:image" content="https://rhythmrise.in/images/rhythmrise-og.jpg">
 <meta property="og:url" content="https://rhythmrise.in">
 <meta property="og:type" content="website">
@@ -31,18 +31,48 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- Schema -->
+<!-- ================= SCHEMA : ORGANIZATION ================= -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Rhythm Rise",
-  "url": "https://rhythmrise.in",
-  "logo": "https://rhythmrise.in/images/rhythmrise-logo.png",
-  "sameAs": [
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Rhythm Rise",
+  "url":"https://rhythmrise.in",
+  "logo":"https://rhythmrise.in/images/rhythmrise-logo.png",
+  "sameAs":[
     "https://instagram.com/rhythmriseindia",
     "https://x.com/rhythmriseindia"
   ]
+}
+</script>
+
+<!-- ================= SCHEMA : EVENT ================= -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Event",
+  "name":"Rhythm Rise – Mega Talent Hunt",
+  "eventStatus":"https://schema.org/EventScheduled",
+  "eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode",
+  "organizer":{
+    "@type":"Organization",
+    "name":"Rhythm Rise",
+    "url":"https://rhythmrise.in"
+  }
+}
+</script>
+
+<!-- ================= SCHEMA : BREADCRUMB ================= -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[{
+    "@type":"ListItem",
+    "position":1,
+    "name":"Home",
+    "item":"https://rhythmrise.in/"
+  }]
 }
 </script>
 
@@ -50,169 +80,154 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#121212;color:#e6e6e6}
 
-/* HEADER */
+/* ================= HEADER ================= */
 .site-header{
   position:fixed;top:0;width:100%;height:72px;
-  background:rgba(0,0,0,.96);
+  background:rgba(0,0,0,.95);
   border-bottom:1px solid rgba(245,197,66,.25);
-  z-index:1000
+  z-index:1000;
 }
 .nav-container{
-  max-width:1200px;height:72px;margin:auto;padding:0 20px;
-  display:flex;align-items:center;justify-content:space-between
+  max-width:1200px;height:72px;margin:auto;
+  padding:0 20px;
+  display:flex;align-items:center;justify-content:space-between;
 }
 .logo{display:flex;align-items:center;gap:10px}
-.logo img{height:42px}
+.logo img{height:40px}
 .logo span{font-size:22px;font-weight:800;color:#f5c542}
 
-/* ================= HERO VIDEO (SAFE CINEMA) ================= */
+nav a{
+  margin-left:22px;
+  color:#e6e6e6;
+  text-decoration:none;
+  font-weight:500;
+}
+nav a:hover{color:#f5c542}
+
+/* ================= HERO ================= */
 .hero-video{
   position:relative;
-  width:100%;
-  height:110vh;
+  height:100vh;
   padding-top:72px;
   overflow:hidden;
-  background:#000;
 }
-
 .hero-video video{
-  position:absolute;
-  top:0;
-  left:50%;
-  transform:translateX(-50%);
-  width:100%;
-  height:100%;
+  position:absolute;inset:0;
+  width:100%;height:100%;
   object-fit:cover;
-  object-position:center top;
-  z-index:1;
 }
-
 .hero-overlay{
-  position:absolute;
-  inset:0;
-  background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.85));
-  z-index:2;
+  position:absolute;inset:0;
+  background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.85));
 }
-
 .hero-content{
-  position:relative;
-  z-index:3;
+  position:relative;z-index:2;
   max-width:900px;
   margin:auto;
-  height:100%;
-  padding:100px 20px 0;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+  padding-top:140px;
   text-align:center;
-  animation:fadeUp 1.1s ease-out both;
 }
-
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
 .hero-content h1{
-  font-size:64px;
-  font-weight:900;
-  margin-bottom:20px;
+  font-size:64px;font-weight:900;
 }
 .hero-content h1 span{color:#f5c542}
 .hero-content p{
-  font-size:20px;
-  color:#ddd;
-  margin-bottom:20px;
+  font-size:20px;margin:18px 0;color:#ddd;
 }
-
 .jury-badge{
-  margin-bottom:30px;
+  display:inline-block;
+  margin:20px 0 30px;
   padding:12px 26px;
   border-radius:40px;
-  background:rgba(245,197,66,.12);
-  border:1px solid rgba(245,197,66,.35);
+  background:rgba(245,197,66,.15);
+  border:1px solid rgba(245,197,66,.4);
   color:#f5c542;
-  font-size:14px;
-  font-weight:600;
+  font-size:14px;font-weight:600;
 }
-
-.hero-btn{
+.btn-primary{
   padding:16px 42px;
   background:linear-gradient(135deg,#f5c542,#e0b13a);
   color:#000;
-  font-weight:700;
+  font-weight:800;
   border-radius:50px;
   text-decoration:none;
-  transition:transform .2s ease,box-shadow .2s ease;
-}
-.hero-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 10px 30px rgba(245,197,66,.4);
 }
 
-/* SECTIONS */
-.section{padding:90px 25px;max-width:1200px;margin:auto;text-align:center}
-.section-title{font-size:34px;margin-bottom:40px}
+/* ================= SECTIONS ================= */
+.section{
+  padding:90px 25px;
+  max-width:1200px;
+  margin:auto;
+  text-align:center;
+}
+.section-title{
+  font-size:36px;
+  margin-bottom:40px;
+}
 .section-title span{color:#f5c542}
-.section p{max-width:850px;margin:0 auto 40px;color:#ccc;font-size:16px}
+.section p{
+  max-width:850px;
+  margin:auto;
+  color:#ccc;
+  font-size:16px;
+}
 
+/* ================= CATEGORIES ================= */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:35px
+  gap:35px;
 }
 .card{
   background:#181818;
   padding:35px;
   border-radius:18px;
-  border:1px solid rgba(245,197,66,.18);
-  transition:transform .25s ease,box-shadow .25s ease
+  border:1px solid rgba(245,197,66,.2);
 }
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 45px rgba(0,0,0,.6)
-}
-.card h3{color:#f5c542;margin-bottom:12px}
+.card h3{color:#f5c542;margin-bottom:10px}
 
-/* CTA */
+/* ================= JUDGES ================= */
+.judges-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:40px;
+}
+.judge-card{
+  background:#181818;
+  padding:30px;
+  border-radius:20px;
+}
+.judge-card img{
+  width:120px;height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #f5c542;
+  margin-bottom:15px;
+}
+.judge-card h4{color:#f5c542}
+.judge-card p{font-size:14px;color:#ccc}
+
+/* ================= CTA ================= */
 .cta{
-  background:linear-gradient(180deg,#181818,#101010);
-  padding:90px 25px;
-  text-align:center
-}
-.cta h2{font-size:36px;margin-bottom:15px}
-.cta p{color:#ccc;margin-bottom:30px}
-.cta a{
-  padding:16px 46px;
-  background:linear-gradient(135deg,#f5c542,#e0b13a);
-  color:#000;
-  font-weight:800;
-  border-radius:50px;
-  text-decoration:none
+  background:#101010;
+  padding:80px 25px;
+  text-align:center;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer{
   background:#0e0e0e;
+  padding:40px 20px;
   border-top:1px solid rgba(245,197,66,.25);
-  padding:50px 20px;
-  color:#bbb
 }
-.footer-grid{
-  max-width:1200px;margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:35px
+.footer-bottom{
+  text-align:center;
+  font-size:13px;
+  color:#777;
 }
-footer h3,footer h4{color:#f5c542;margin-bottom:12px}
-footer a{color:#bbb;text-decoration:none}
-footer a:hover{text-decoration:underline}
-.footer-bottom{text-align:center;margin-top:40px;font-size:13px;color:#777}
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 @media(max-width:768px){
-  .hero-video{height:90vh}
-  .hero-video video{object-position:center 10%}
   .hero-content h1{font-size:40px}
   .hero-content p{font-size:16px}
 }
@@ -224,9 +239,18 @@ footer a:hover{text-decoration:underline}
 <header class="site-header">
   <div class="nav-container">
     <div class="logo">
-      <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo" loading="lazy">
+      <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
       <span>Rhythm Rise</span>
     </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="journey.html">Journey</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="#judges">Judges</a>
+      <a href="register.html">Register</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
 </header>
 
@@ -239,11 +263,11 @@ footer a:hover{text-decoration:underline}
     <h1>RHYTHM <span>RISE</span></h1>
     <p>A global singing & dance talent platform empowering performers to rise and shine.</p>
     <div class="jury-badge">🌍 International Jury | India • Qatar • UK • USA</div>
-    <a href="register.html" class="hero-btn">Register Now</a>
+    <a href="register.html" class="btn-primary">Register Now</a>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="about">
   <h2 class="section-title">About <span>Rhythm Rise</span></h2>
   <p>
     Rhythm Rise is a professional singing and dance competition platform created to identify,
@@ -265,26 +289,38 @@ footer a:hover{text-decoration:underline}
   </div>
 </section>
 
-<section class="cta">
-  <h2>Ready to Take the Stage?</h2>
-  <p>Registrations are now open. Limited slots available.</p>
-  <a href="register.html">Register Today</a>
-</section>
-
-<footer>
-  <div class="footer-grid">
-    <div>
-      <h3>Rhythm Rise</h3>
-      <p>A global singing & dance talent platform empowering performers worldwide.</p>
+<section class="section" id="judges">
+  <h2 class="section-title">Our <span>International Jury</span></h2>
+  <div class="judges-grid">
+    <div class="judge-card">
+      <img src="images/judge-india.jpg" alt="Judge India">
+      <h4>Judge – India</h4>
+      <p>Music & Dance Expert</p>
     </div>
-    <div>
-      <h4>Contact</h4>
-      <p>
-        📧 <a href="mailto:contact@rhythmrise.in">contact@rhythmrise.in</a><br>
-        📲 <a href="https://wa.me/919030140600" target="_blank">+91 90301 40600</a>
-      </p>
+    <div class="judge-card">
+      <img src="images/judge-qatar.jpg" alt="Judge Qatar">
+      <h4>Judge – Qatar</h4>
+      <p>International Performer</p>
+    </div>
+    <div class="judge-card">
+      <img src="images/judge-uk.jpg" alt="Judge UK">
+      <h4>Judge – UK</h4>
+      <p>Stage & Voice Specialist</p>
+    </div>
+    <div class="judge-card">
+      <img src="images/judge-usa.jpg" alt="Judge USA">
+      <h4>Judge – USA</h4>
+      <p>Global Talent Coach</p>
     </div>
   </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to Take the Stage?</h2><br>
+  <a href="register.html" class="btn-primary">Register Today</a>
+</section>
+
+<footer id="contact">
   <div class="footer-bottom">
     © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
   </div>
@@ -292,3 +328,4 @@ footer a:hover{text-decoration:underline}
 
 </body>
 </html>
+
