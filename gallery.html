@@ -10,181 +10,110 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#121212;color:#e6e6e6;line-height:1.7}
+
+/* HEADER */
+.site-header{
+  position:fixed;top:0;width:100%;height:72px;
+  background:rgba(0,0,0,.96);
+  border-bottom:1px solid rgba(245,197,66,.25);
+  z-index:1000
+}
+.nav-container{
+  max-width:1200px;height:72px;margin:auto;padding:0 20px;
+  display:flex;align-items:center;justify-content:space-between
+}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:42px}
+.logo span{font-size:22px;font-weight:800;color:#f5c542;line-height:1.1}
+
+.main-nav{display:flex;gap:26px}
+.main-nav a{
+  text-decoration:none;
+  color:#ccc;
+  font-size:14.5px;
+  font-weight:500
+}
+.main-nav a:hover,.main-nav a.active{color:#f5c542}
+
+.menu-toggle{display:none;font-size:26px;color:#f5c542;cursor:pointer}
+
+/* PAGE */
+.page{
+  max-width:1200px;
+  margin:auto;
+  padding:130px 25px 90px
+}
+.page-title{text-align:center;margin-bottom:70px}
+.page-title h1{font-size:38px;font-weight:800}
+.page-title h1 span{color:#f5c542}
+.page-title p{
+  max-width:800px;
+  margin:12px auto 0;
+  font-size:16px;
+  color:#ccc
 }
 
-body {
-  background: #121212;
-  color: #e6e6e6;
-  line-height: 1.7;
+/* EVENTS */
+.event-section{margin-bottom:90px}
+.event-section h2{
+  font-size:26px;
+  margin-bottom:6px;
+  color:#f5c542;
+  text-align:center
+}
+.event-section p{
+  text-align:center;
+  font-size:14.5px;
+  color:#bdbdbd;
+  margin-bottom:35px
 }
 
-/* ================= HEADER ================= */
-.site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 72px;
-  background: rgba(0,0,0,0.96);
-  border-bottom: 1px solid rgba(245,197,66,0.25);
-  z-index: 1000;
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px
+}
+.gallery-grid img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:14px;
+  border:1px solid rgba(245,197,66,.2);
+  transition:.3s ease
+}
+.gallery-grid img:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 45px rgba(0,0,0,.6)
 }
 
-.nav-container {
-  max-width: 1200px;
-  height: 72px;
-  margin: auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* FOOTER */
+footer{
+  background:#0e0e0e;
+  border-top:1px solid rgba(245,197,66,.25);
+  text-align:center;
+  padding:28px;
+  font-size:13px;
+  color:#8e8e8e
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo img {
-  height: 42px;
-}
-
-.logo span {
-  font-size: 22px;
-  font-weight: 800;
-  color: #f5c542;
-  line-height: 1.1;
-}
-
-.main-nav {
-  display: flex;
-  gap: 26px;
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: #cccccc;
-  font-size: 14.5px;
-  font-weight: 500;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-  color: #f5c542;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  color: #f5c542;
-  cursor: pointer;
-}
-
-/* ================= PAGE ================= */
-.page {
-  max-width: 1200px;
-  margin: auto;
-  padding: 130px 25px 90px;
-}
-
-.page-title {
-  text-align: center;
-  margin-bottom: 70px;
-}
-
-.page-title h1 {
-  font-size: 38px;
-  font-weight: 800;
-  margin-bottom: 10px;
-}
-
-.page-title h1 span {
-  color: #f5c542;
-}
-
-.page-title p {
-  max-width: 800px;
-  margin: auto;
-  font-size: 16px;
-  color: #cccccc;
-}
-
-/* ================= GALLERY ================= */
-.event-section {
-  margin-bottom: 90px;
-}
-
-.event-section h2 {
-  font-size: 26px;
-  margin-bottom: 8px;
-  color: #f5c542;
-  text-align: center;
-}
-
-.event-section p {
-  text-align: center;
-  font-size: 14.5px;
-  color: #bdbdbd;
-  margin-bottom: 35px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 14px;
-  border: 1px solid rgba(245,197,66,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-grid img:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.6);
-}
-
-/* ================= FOOTER ================= */
-footer {
-  background: #0e0e0e;
-  border-top: 1px solid rgba(245,197,66,0.25);
-  text-align: center;
-  padding: 28px;
-  font-size: 13px;
-  color: #8e8e8e;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .main-nav {
-    position: absolute;
-    top: 72px;
-    right: 0;
-    width: 100%;
-    background: #0e0e0e;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    padding: 20px 0;
-    display: none;
+/* MOBILE */
+@media(max-width:768px){
+  .main-nav{
+    position:absolute;
+    top:72px;
+    right:0;
+    width:100%;
+    background:#0e0e0e;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+    padding:20px 0;
+    display:none
   }
-
-  .main-nav.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
+  .main-nav.show{display:flex}
+  .menu-toggle{display:block}
 }
 </style>
 </head>
@@ -216,20 +145,92 @@ footer {
 
   <div class="page-title">
     <h1>Event <span>Gallery</span></h1>
-    <p>
-      A visual glimpse into the platforms, performances, and communities that shaped Rhythm Rise.
-    </p>
+    <p>A visual glimpse into the platforms, performances, and communities that shaped Rhythm Rise.</p>
   </div>
 
-  <!-- ALL YOUR EVENT SECTIONS REMAIN UNCHANGED BELOW -->
-  <!-- Doha Music Lovers -->
-  <!-- Super Dancer Season 1, 2, 3 -->
-  <!-- Super Singer -->
-  <!-- Voice of World -->
-  <!-- Cric Qatar -->
-  <!-- (Your existing image paths stay exactly the same) -->
+  <!-- DOHA MUSIC LOVERS -->
+  <div class="event-section">
+    <h2>Doha Music Lovers</h2>
+    <p>Cultural & music community platform – Doha, Qatar</p>
+    <div class="gallery-grid">
+      <img src="images/gallery/doha-music-lovers-stage-performance.jpg">
+      <img src="images/gallery/doha-music-lovers-live-concert.jpg">
+      <img src="images/gallery/doha-music-lovers-artists-group.jpg">
+      <img src="images/gallery/doha-music-lovers-audience-view.jpg">
+    </div>
+  </div>
 
-  <!-- KEEP YOUR EXISTING EVENT SECTIONS HERE AS-IS -->
+  <!-- SUPER DANCER S1 -->
+  <div class="event-section">
+    <h2>Super Dancer – Season 1</h2>
+    <p>Flagship dance competition – Doha</p>
+    <div class="gallery-grid">
+      <img src="images/gallery/super-dancer-season1-doha-performance.jpg">
+      <img src="images/gallery/super-dancer-season1-judges-panel.jpg">
+      <img src="images/gallery/super-dancer-season1-finalists.jpg">
+      <img src="images/gallery/super-dancer-season1-winners.jpg">
+    </div>
+  </div>
+
+  <!-- SUPER DANCER S2 -->
+  <div class="event-section">
+    <h2>Super Dancer – Season 2</h2>
+    <p>Expanded scale & refined competition</p>
+    <div class="gallery-grid">
+      <img src="images/gallery/super-dancer-season2-doha-stage.jpg">
+      <img src="images/gallery/super-dancer-season2-competition-moment.jpg">
+      <img src="images/gallery/super-dancer-season2-judging-session.jpg">
+      <img src="images/gallery/super-dancer-season2-award-ceremony.jpg">
+    </div>
+  </div>
+
+  <!-- SUPER DANCER S3 -->
+  <div class="event-section">
+    <h2>Super Dancer – Season 3</h2>
+    <p>Established & recognized dance platform</p>
+    <div class="gallery-grid">
+      <img src="images/gallery/super-dancer-season3-grand-finale.jpg">
+      <img src="images/gallery/super-dancer-season3-live-performance.jpg">
+      <img src="images/gallery/super-dancer-season3-winner-announcement.jpg">
+      <img src="images/gallery/super-dancer-season3-stage-showcase.jpg">
+    </div>
+  </div>
+
+  <!-- SUPER SINGER -->
+  <div class="event-section">
+    <h2>Super Singer – Doha</h2>
+    <p>Vocal talent platform</p>
+    <div class="gallery-grid">
+      <img src="images/gallery/super-singer-doha-live-performance.jpg">
+      <img src="images/gallery/super-singer-doha-judges-feedback.jpg">
+      <img src="images/gallery/super-singer-doha-finalists.jpg">
+      <img src="images/gallery/super-singer-doha-winner-moment.jpg">
+    </div>
+  </div>
+
+  <!-- VOICE OF WORLD -->
+  <div class="event-section">
+    <h2>Voice of World</h2>
+    <p>Global online singing contest</p>
+    <div class="gallery-grid">
+      <img src="images/gallery/voice-of-world-online-contest-banner.jpg">
+      <img src="images/gallery/voice-of-world-online-participants.jpg">
+      <img src="images/gallery/voice-of-world-online-judging.jpg">
+      <img src="images/gallery/voice-of-world-online-winners.jpg">
+    </div>
+  </div>
+
+  <!-- CRIC QATAR -->
+  <div class="event-section">
+    <h2>Cric Qatar</h2>
+    <p>Community cricket platform</p>
+    <div class="gallery-grid">
+      <img src="images/gallery/cric-qatar-tournament-match.jpg">
+      <img src="images/gallery/cric-qatar-team-lineup.jpg">
+      <img src="images/gallery/cric-qatar-award-ceremony.jpg">
+      <img src="images/gallery/cric-qatar-community-event.jpg">
+    </div>
+  </div>
 
 </div>
 
@@ -238,7 +239,7 @@ footer {
 </footer>
 
 <script>
-function toggleMenu() {
+function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("show");
 }
 </script>
