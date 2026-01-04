@@ -1,190 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <title>Gallery | Rhythm Rise</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Explore the journey and legacy of Rhythm Rise through past events, performances, and community platforms.">
+<meta name="description" content="Gallery of Rhythm Rise events, performances, auditions and talent showcases across India, Qatar, UK and USA.">
+<link rel="canonical" href="https://rhythmrise.in/gallery.html">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background: #121212;
-  color: #e6e6e6;
-  line-height: 1.7;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#121212;color:#e6e6e6}
 
 /* ================= HEADER ================= */
-.site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 72px;
-  background: rgba(0,0,0,0.96);
-  border-bottom: 1px solid rgba(245,197,66,0.25);
-  z-index: 1000;
+.site-header{
+  position:fixed;top:0;width:100%;height:72px;
+  background:rgba(0,0,0,.95);
+  border-bottom:1px solid rgba(245,197,66,.25);
+  z-index:1000;
 }
-
-.nav-container {
-  max-width: 1200px;
-  height: 72px;
-  margin: auto;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.nav-container{
+  max-width:1200px;height:72px;margin:auto;
+  padding:0 20px;
+  display:flex;align-items:center;justify-content:space-between;
 }
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:40px}
+.logo span{font-size:22px;font-weight:800;color:#f5c542}
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+nav a{
+  margin-left:22px;
+  color:#e6e6e6;
+  text-decoration:none;
+  font-weight:500;
 }
+nav a:hover,
+nav a.active{color:#f5c542}
 
-.logo img {
-  height: 42px;
+/* ================= PAGE HERO ================= */
+.page-hero{
+  padding-top:120px;
+  padding-bottom:70px;
+  text-align:center;
+  background:linear-gradient(180deg,#111,#0b0b0b);
 }
-
-.logo span {
-  font-size: 22px;
-  font-weight: 800;
-  color: #f5c542;
-  line-height: 1.1;
+.page-hero h1{
+  font-size:44px;
+  font-weight:900;
 }
-
-.main-nav {
-  display: flex;
-  gap: 26px;
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: #cccccc;
-  font-size: 14.5px;
-  font-weight: 500;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-  color: #f5c542;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  color: #f5c542;
-  cursor: pointer;
-}
-
-/* ================= PAGE ================= */
-.page {
-  max-width: 1200px;
-  margin: auto;
-  padding: 130px 25px 90px;
-}
-
-.page-title {
-  text-align: center;
-  margin-bottom: 70px;
-}
-
-.page-title h1 {
-  font-size: 38px;
-  font-weight: 800;
-  margin-bottom: 10px;
-}
-
-.page-title h1 span {
-  color: #f5c542;
-}
-
-.page-title p {
-  max-width: 800px;
-  margin: auto;
-  font-size: 16px;
-  color: #cccccc;
+.page-hero h1 span{color:#f5c542}
+.page-hero p{
+  max-width:820px;
+  margin:20px auto 0;
+  font-size:17px;
+  color:#ccc;
 }
 
 /* ================= GALLERY ================= */
-.event-section {
-  margin-bottom: 90px;
+.gallery{
+  max-width:1200px;
+  margin:80px auto;
+  padding:0 20px;
+}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.gallery-item{
+  background:#181818;
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid rgba(245,197,66,.18);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.gallery-item:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(0,0,0,.6);
+}
+.gallery-item img,
+.gallery-item video{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+}
+.gallery-caption{
+  padding:18px;
+  font-size:14px;
+  color:#ccc;
+  text-align:center;
 }
 
-.event-section h2 {
-  font-size: 26px;
-  margin-bottom: 8px;
-  color: #f5c542;
-  text-align: center;
+/* ================= CTA ================= */
+.cta{
+  background:#101010;
+  padding:80px 25px;
+  text-align:center;
 }
-
-.event-section p {
-  text-align: center;
-  font-size: 14.5px;
-  color: #bdbdbd;
-  margin-bottom: 35px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 14px;
-  border: 1px solid rgba(245,197,66,0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-grid img:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+.btn-primary{
+  padding:16px 42px;
+  background:linear-gradient(135deg,#f5c542,#e0b13a);
+  color:#000;
+  font-weight:800;
+  border-radius:50px;
+  text-decoration:none;
 }
 
 /* ================= FOOTER ================= */
-footer {
-  background: #0e0e0e;
-  border-top: 1px solid rgba(245,197,66,0.25);
-  text-align: center;
-  padding: 28px;
-  font-size: 13px;
-  color: #8e8e8e;
+footer{
+  background:#0e0e0e;
+  padding:40px 20px;
+  border-top:1px solid rgba(245,197,66,.25);
+}
+.footer-bottom{
+  text-align:center;
+  font-size:13px;
+  color:#777;
 }
 
 /* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .main-nav {
-    position: absolute;
-    top: 72px;
-    right: 0;
-    width: 100%;
-    background: #0e0e0e;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    padding: 20px 0;
-    display: none;
-  }
-
-  .main-nav.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
+@media(max-width:768px){
+  .page-hero h1{font-size:32px}
+  .gallery-item img,
+  .gallery-item video{height:200px}
 }
 </style>
 </head>
@@ -195,126 +139,68 @@ footer {
   <div class="nav-container">
     <div class="logo">
       <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
-      <span>Rhythm<br>Rise</span>
+      <span>Rhythm Rise</span>
     </div>
-
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-    <nav class="main-nav" id="navMenu">
+    <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="index.html#about">About</a>
       <a href="journey.html">Journey</a>
       <a href="gallery.html" class="active">Gallery</a>
+      <a href="index.html#judges">Judges</a>
       <a href="register.html">Register</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<div class="page">
+<section class="page-hero">
+  <h1>Event <span>Gallery</span></h1>
+  <p>
+    Moments from Rhythm Rise, Super Dancer, Super Singer,
+    Doha Music Lovers and other talent showcases.
+  </p>
+</section>
 
-  <div class="page-title">
-    <h1>Our <span>Journey & Legacy</span></h1>
-    <p>
-      A visual glimpse into the platforms, performances, and communities that
-      shaped Rhythm Rise.
-    </p>
-  </div>
+<section class="gallery">
+  <div class="gallery-grid">
 
-  <!-- DOHA MUSIC LOVERS -->
-  <div class="event-section">
-    <h2>Doha Music Lovers</h2>
-    <p>Cultural & music community platform – Doha, Qatar</p>
-    <div class="gallery-grid">
-      <img src="images/gallery/doha-music-lovers-stage-performance.jpg" alt="Doha Music Lovers stage performance">
-      <img src="images/gallery/doha-music-lovers-live-concert.jpg" alt="Doha Music Lovers live concert">
-      <img src="images/gallery/doha-music-lovers-artists-group.jpg" alt="Doha Music Lovers artists group">
-      <img src="images/gallery/doha-music-lovers-audience-view.jpg" alt="Doha Music Lovers audience view">
+    <!-- IMAGE ITEM -->
+    <div class="gallery-item">
+      <img src="images/gallery/gallery-1.jpg" alt="Rhythm Rise Performance">
+      <div class="gallery-caption">Rhythm Rise – Live Performance</div>
     </div>
-  </div>
 
-  <!-- SUPER DANCER SEASON 1 -->
-  <div class="event-section">
-    <h2>Super Dancer – Season 1</h2>
-    <p>Flagship dance competition – Doha</p>
-    <div class="gallery-grid">
-      <img src="images/gallery/super-dancer-season1-doha-performance.jpg" alt="Super Dancer Season 1 performance">
-      <img src="images/gallery/super-dancer-season1-judges-panel.jpg" alt="Super Dancer Season 1 judges panel">
-      <img src="images/gallery/super-dancer-season1-finalists.jpg" alt="Super Dancer Season 1 finalists">
-      <img src="images/gallery/super-dancer-season1-winners.jpg" alt="Super Dancer Season 1 winners">
+    <div class="gallery-item">
+      <img src="images/gallery/gallery-2.jpg" alt="Dance Competition">
+      <div class="gallery-caption">Super Dancer – Doha</div>
     </div>
-  </div>
 
-  <!-- SUPER DANCER SEASON 2 -->
-  <div class="event-section">
-    <h2>Super Dancer – Season 2</h2>
-    <p>Expanded scale & refined competition</p>
-    <div class="gallery-grid">
-      <img src="images/gallery/super-dancer-season2-doha-stage.jpg" alt="Super Dancer Season 2 stage">
-      <img src="images/gallery/super-dancer-season2-competition-moment.jpg" alt="Super Dancer Season 2 competition moment">
-      <img src="images/gallery/super-dancer-season2-judging-session.jpg" alt="Super Dancer Season 2 judging session">
-      <img src="images/gallery/super-dancer-season2-award-ceremony.jpg" alt="Super Dancer Season 2 award ceremony">
+    <div class="gallery-item">
+      <img src="images/gallery/gallery-3.jpg" alt="Singing Audition">
+      <div class="gallery-caption">Singing Auditions</div>
     </div>
-  </div>
 
-  <!-- SUPER DANCER SEASON 3 -->
-  <div class="event-section">
-    <h2>Super Dancer – Season 3</h2>
-    <p>Established & recognized dance platform</p>
-    <div class="gallery-grid">
-      <img src="images/gallery/super-dancer-season3-grand-finale.jpg" alt="Super Dancer Season 3 grand finale">
-      <img src="images/gallery/super-dancer-season3-live-performance.jpg" alt="Super Dancer Season 3 live performance">
-      <img src="images/gallery/super-dancer-season3-winner-announcement.jpg" alt="Super Dancer Season 3 winner announcement">
-      <img src="images/gallery/super-dancer-season3-stage-showcase.jpg" alt="Super Dancer Season 3 stage showcase">
+    <!-- VIDEO ITEM (OPTIONAL) -->
+    <div class="gallery-item">
+      <video controls preload="metadata">
+        <source src="videos/gallery-performance.mp4" type="video/mp4">
+      </video>
+      <div class="gallery-caption">Stage Performance Highlights</div>
     </div>
+
   </div>
+</section>
 
-  <!-- SUPER SINGER -->
-  <div class="event-section">
-    <h2>Super Singer – Doha</h2>
-    <p>Vocal talent platform</p>
-    <div class="gallery-grid">
-      <img src="images/gallery/super-singer-doha-live-performance.jpg" alt="Super Singer Doha live performance">
-      <img src="images/gallery/super-singer-doha-judges-feedback.jpg" alt="Super Singer Doha judges feedback">
-      <img src="images/gallery/super-singer-doha-finalists.jpg" alt="Super Singer Doha finalists">
-      <img src="images/gallery/super-singer-doha-winner-moment.jpg" alt="Super Singer Doha winner moment">
-    </div>
+<section class="cta">
+  <h2>Want to Perform on This Stage?</h2><br>
+  <a href="register.html" class="btn-primary">Register Now</a>
+</section>
+
+<footer id="contact">
+  <div class="footer-bottom">
+    © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
   </div>
-
-  <!-- VOICE OF WORLD -->
-  <div class="event-section">
-    <h2>Voice of World</h2>
-    <p>Global online singing contest</p>
-    <div class="gallery-grid">
-      <img src="images/gallery/voice-of-world-online-contest-banner.jpg" alt="Voice of World online contest banner">
-      <img src="images/gallery/voice-of-world-online-participants.jpg" alt="Voice of World participants">
-      <img src="images/gallery/voice-of-world-online-judging.jpg" alt="Voice of World online judging">
-      <img src="images/gallery/voice-of-world-online-winners.jpg" alt="Voice of World winners">
-    </div>
-  </div>
-
-  <!-- CRIC QATAR -->
-  <div class="event-section">
-    <h2>Cric Qatar</h2>
-    <p>Community cricket platform</p>
-    <div class="gallery-grid">
-      <img src="images/gallery/cric-qatar-tournament-match.jpg" alt="Cric Qatar tournament match">
-      <img src="images/gallery/cric-qatar-team-lineup.jpg" alt="Cric Qatar team lineup">
-      <img src="images/gallery/cric-qatar-award-ceremony.jpg" alt="Cric Qatar award ceremony">
-      <img src="images/gallery/cric-qatar-community-event.jpg" alt="Cric Qatar community event">
-    </div>
-  </div>
-
-</div>
-
-<footer>
-  © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
 </footer>
-
-<script>
-function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("show");
-}
-</script>
 
 </body>
 </html>
