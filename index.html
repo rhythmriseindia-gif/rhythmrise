@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- ================= GOOGLE ANALYTICS ================= -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T5VYQEK3S2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-T5VYQEK3S2');
-</script>
-
 <head>
 <meta charset="UTF-8">
 <title>Rhythm Rise | Singing & Dance Talent Platform</title>
@@ -19,35 +10,42 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://rhythmrise.in/">
 
-<!-- ================= OPEN GRAPH ================= -->
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T5VYQEK3S2"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-T5VYQEK3S2');
+</script>
+
+<!-- Open Graph -->
 <meta property="og:title" content="Rhythm Rise | Singing & Dance Talent Platform">
 <meta property="og:description" content="Registrations open for global singing & dance competitions with international jury.">
 <meta property="og:image" content="https://rhythmrise.in/images/rhythmrise-og.jpg">
 <meta property="og:url" content="https://rhythmrise.in">
 <meta property="og:type" content="website">
 
-<!-- ================= FONTS ================= -->
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- ================= SCHEMA : ORGANIZATION ================= -->
+<!-- ================= SCHEMA ================= -->
+
+<!-- Organization -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Rhythm Rise",
-  "url": "https://rhythmrise.in",
-  "logo": "https://rhythmrise.in/images/rhythmrise-logo.png",
-  "description": "Global singing and dance talent competition platform",
-  "sameAs": [
-    "https://instagram.com/rhythmriseindia",
-    "https://x.com/rhythmriseindia"
-  ]
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "Rhythm Rise",
+ "url": "https://rhythmrise.in",
+ "logo": "https://rhythmrise.in/images/rhythmrise-logo.png",
+ "description": "Global singing and dance talent competition platform"
 }
 </script>
 
-<!-- ================= SCHEMA : BREADCRUMB ================= -->
+<!-- Breadcrumb -->
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -61,7 +59,7 @@
 }
 </script>
 
-<!-- ================= SCHEMA : MULTIPLE EVENTS ================= -->
+<!-- Events -->
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -73,7 +71,6 @@
    "endDate": "2026-04-30",
    "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
    "eventStatus": "https://schema.org/EventScheduled",
-   "image": "https://rhythmrise.in/videos/hero-poster.jpg",
    "organizer": {
      "@type": "Organization",
      "name": "Rhythm Rise"
@@ -81,21 +78,8 @@
   },
   {
    "@type": "Event",
-   "name": "Rhythm Rise District Auditions",
-   "startDate": "2026-06-01",
-   "endDate": "2026-08-31",
-   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-   "eventStatus": "https://schema.org/EventScheduled",
-   "location": {
-     "@type": "Place",
-     "name": "India"
-   }
-  },
-  {
-   "@type": "Event",
    "name": "Rhythm Rise Grand Finale",
    "startDate": "2026-12-01",
-   "endDate": "2026-12-15",
    "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
    "eventStatus": "https://schema.org/EventScheduled"
   }
@@ -103,90 +87,160 @@
 }
 </script>
 
-<!-- ================= SCHEMA : JUDGES / JURY ================= -->
+<!-- Jury -->
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "PerformingGroup",
  "name": "Rhythm Rise International Jury",
  "member": [
-  { "@type": "Person", "name": "International Judge – India", "jobTitle": "Music & Dance Judge" },
-  { "@type": "Person", "name": "International Judge – Qatar", "jobTitle": "Performance Specialist" },
-  { "@type": "Person", "name": "International Judge – UK", "jobTitle": "Choreography Expert" },
-  { "@type": "Person", "name": "International Judge – USA", "jobTitle": "Talent Mentor" }
+  { "@type": "Person", "name": "Judge – India" },
+  { "@type": "Person", "name": "Judge – Qatar" },
+  { "@type": "Person", "name": "Judge – UK" },
+  { "@type": "Person", "name": "Judge – USA" }
  ]
 }
 </script>
 
-<!-- ================= YOUR EXISTING STYLES (UNCHANGED) ================= -->
+<!-- ================= CSS (FULL – FIXED) ================= -->
 <style>
-/* (YOUR FULL CSS — UNTOUCHED, EXACTLY AS YOU PROVIDED) */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#121212;color:#e6e6e6}
-/* header, hero, sections, CTA, footer — unchanged */
-/* (intentionally preserved to avoid layout break) */
+
+/* HEADER */
+.site-header{
+position:fixed;top:0;width:100%;height:72px;
+background:#000;border-bottom:1px solid rgba(245,197,66,.25);
+z-index:1000
+}
+.nav-container{
+max-width:1200px;height:72px;margin:auto;padding:0 20px;
+display:flex;align-items:center;justify-content:space-between
+}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:42px}
+.logo span{font-size:22px;font-weight:800;color:#f5c542}
+
+/* HERO */
+.hero-video{
+width:100%;
+height:100vh;
+padding-top:72px;
+position:relative;
+overflow:hidden;
+}
+.hero-video video{
+position:absolute;
+top:0;left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+.hero-overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.85));
+}
+.hero-content{
+position:relative;
+z-index:2;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+.hero-content h1{font-size:64px;font-weight:900}
+.hero-content h1 span{color:#f5c542}
+.hero-content p{font-size:20px;margin:20px 0}
+.jury-badge{color:#f5c542;margin-bottom:30px}
+.hero-btn{
+padding:16px 42px;
+background:#f5c542;
+color:#000;
+font-weight:700;
+border-radius:40px;
+text-decoration:none
+}
+
+/* SECTIONS */
+.section{
+max-width:1200px;
+margin:auto;
+padding:90px 25px;
+text-align:center
+}
+.section-title{font-size:36px;margin-bottom:40px}
+.section-title span{color:#f5c542}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:35px
+}
+.card{
+background:#181818;
+padding:30px;
+border-radius:16px
+}
+.card img{
+width:100%;
+border-radius:14px;
+margin-bottom:15px
+}
+
+/* FOOTER */
+footer{
+background:#0e0e0e;
+padding:40px 20px;
+text-align:center;
+color:#888
+}
+
+@media(max-width:768px){
+.hero-content h1{font-size:40px}
+.hero-content p{font-size:16px}
+}
 </style>
 </head>
 
 <body>
 
 <header class="site-header">
-  <div class="nav-container">
-    <div class="logo">
-      <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo" loading="lazy">
-      <span>Rhythm Rise</span>
-    </div>
-  </div>
+<div class="nav-container">
+<div class="logo">
+<img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
+<span>Rhythm Rise</span>
+</div>
+</div>
 </header>
 
 <section class="hero-video">
-  <video autoplay muted loop playsinline preload="metadata" poster="videos/hero-poster.jpg">
-    <source src="videos/rhythmrise-hero.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>RHYTHM <span>RISE</span></h1>
-    <p>A global singing & dance talent platform empowering performers to rise and shine.</p>
-    <div class="jury-badge">🌍 International Jury | India • Qatar • UK • USA</div>
-    <a href="register.html" class="hero-btn">Register Now</a>
-  </div>
+<video autoplay muted loop playsinline>
+<source src="videos/rhythmrise-hero.mp4" type="video/mp4">
+</video>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>RHYTHM <span>RISE</span></h1>
+<p>A global singing & dance talent platform empowering performers to rise and shine.</p>
+<div class="jury-badge">International Jury | India • Qatar • UK • USA</div>
+<a href="register.html" class="hero-btn">Register Now</a>
+</div>
 </section>
 
-<!-- ================= JURY SECTION WITH IMAGE UPDATE OPTION ================= -->
 <section class="section">
-  <h2 class="section-title">Our <span>International Jury</span></h2>
-
-  <div class="grid">
-    <div class="card">
-      <img src="images/judge-india.jpg" alt="Judge India" style="width:100%;border-radius:14px;margin-bottom:15px">
-      <h3>Judge – India</h3>
-      <p>Renowned Music & Dance Expert</p>
-    </div>
-
-    <div class="card">
-      <img src="images/judge-qatar.jpg" alt="Judge Qatar" style="width:100%;border-radius:14px;margin-bottom:15px">
-      <h3>Judge – Qatar</h3>
-      <p>International Performance Specialist</p>
-    </div>
-
-    <div class="card">
-      <img src="images/judge-uk.jpg" alt="Judge UK" style="width:100%;border-radius:14px;margin-bottom:15px">
-      <h3>Judge – UK</h3>
-      <p>Choreography & Stage Expert</p>
-    </div>
-
-    <div class="card">
-      <img src="images/judge-usa.jpg" alt="Judge USA" style="width:100%;border-radius:14px;margin-bottom:15px">
-      <h3>Judge – USA</h3>
-      <p>Global Talent Mentor</p>
-    </div>
-  </div>
+<h2 class="section-title">Our <span>International Jury</span></h2>
+<div class="grid">
+<div class="card"><img src="images/judge-india.jpg"><h3>Judge – India</h3></div>
+<div class="card"><img src="images/judge-qatar.jpg"><h3>Judge – Qatar</h3></div>
+<div class="card"><img src="images/judge-uk.jpg"><h3>Judge – UK</h3></div>
+<div class="card"><img src="images/judge-usa.jpg"><h3>Judge – USA</h3></div>
+</div>
 </section>
 
 <footer>
-  <div class="footer-bottom">
-    © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
-  </div>
+© 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
 </footer>
 
 </body>
