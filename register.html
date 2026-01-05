@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T5VYQEK3S2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-T5VYQEK3S2');
-</script>
-
 <head>
 <meta charset="UTF-8">
 <title>Register | Rhythm Rise</title>
@@ -19,7 +10,7 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:radial-gradient(circle at top,#1a1a1a,#000);color:#fff}
+body{background:#121212;color:#e6e6e6}
 
 /* ================= HEADER ================= */
 .site-header{
@@ -29,13 +20,13 @@ body{background:radial-gradient(circle at top,#1a1a1a,#000);color:#fff}
   z-index:1000
 }
 .nav-container{
-  max-width:1200px;height:72px;
-  margin:auto;padding:0 20px;
+  max-width:1200px;height:72px;margin:auto;
+  padding:0 20px;
   display:flex;align-items:center;justify-content:space-between
 }
 .logo{display:flex;align-items:center;gap:10px}
 .logo img{height:42px}
-.logo span{font-size:22px;font-weight:800;color:#f5c542;line-height:1.1}
+.logo span{font-size:22px;font-weight:800;color:#f5c542}
 
 .main-nav{display:flex;gap:26px}
 .main-nav a{
@@ -44,8 +35,7 @@ body{background:radial-gradient(circle at top,#1a1a1a,#000);color:#fff}
   font-size:14.5px;
   font-weight:500
 }
-.main-nav a:hover,
-.main-nav a.active{color:#f5c542}
+.main-nav a:hover,.main-nav a.active{color:#f5c542}
 
 .menu-toggle{
   display:none;
@@ -55,37 +45,60 @@ body{background:radial-gradient(circle at top,#1a1a1a,#000);color:#fff}
 }
 
 /* ================= FORM ================= */
-.form-wrapper{max-width:860px;margin:auto;padding:130px 25px 90px}
+.form-wrapper{
+  max-width:900px;
+  margin:auto;
+  padding:140px 25px 100px
+}
 .form-card{
-  background:#111;border-radius:18px;
-  padding:40px;border:1px solid rgba(245,197,66,.25);
-  box-shadow:0 20px 60px rgba(0,0,0,.6)
+  background:#111;
+  border-radius:20px;
+  padding:45px;
+  border:1px solid rgba(245,197,66,.25);
+  box-shadow:0 25px 70px rgba(0,0,0,.7)
 }
 h1{text-align:center;font-size:36px;font-weight:800}
 h1 span{color:#f5c542}
-.subtitle{text-align:center;color:#ccc;margin-bottom:35px;font-size:16px}
+.subtitle{text-align:center;color:#ccc;margin:15px 0 40px}
 
-form{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+form{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px
+}
 .full{grid-column:span 3}
+
 label{font-size:13px;color:#bbb;margin-bottom:6px;display:block}
 input,select{
-  width:100%;padding:14px;border-radius:10px;
-  border:1px solid #333;background:#1c1c1c;
-  color:#fff;font-size:15px
+  width:100%;
+  padding:14px;
+  border-radius:10px;
+  border:1px solid #333;
+  background:#1c1c1c;
+  color:#fff;
+  font-size:15px
 }
 input:focus,select:focus{
-  outline:none;border-color:#f5c542;
+  outline:none;
+  border-color:#f5c542;
   box-shadow:0 0 0 2px rgba(245,197,66,.25)
 }
 
-.agree-box{grid-column:span 3;font-size:14px;color:#cfcfcf}
-.agree-box input{margin-right:8px;accent-color:#f5c542}
-.agree-box a{color:#f5c542;text-decoration:underline}
+.agree-box{
+  grid-column:span 3;
+  font-size:14px;
+  color:#ccc
+}
+.agree-box input{accent-color:#f5c542;margin-right:8px}
 
 .submit-btn{
   grid-column:span 3;
-  padding:16px;font-size:18px;font-weight:700;
-  border-radius:50px;border:none;cursor:pointer;
+  padding:16px;
+  font-size:18px;
+  font-weight:800;
+  border-radius:50px;
+  border:none;
+  cursor:pointer;
   background:linear-gradient(135deg,#f5c542,#e0b13a);
   color:#000
 }
@@ -94,41 +107,28 @@ input:focus,select:focus{
 footer{
   background:#0e0e0e;
   border-top:1px solid rgba(245,197,66,.25);
-  padding:50px 20px;color:#bbb
+  padding:40px 20px;
+  text-align:center;
+  font-size:13px;
+  color:#777
 }
-.footer-grid{
-  max-width:1200px;margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:35px
-}
-footer h3,footer h4{color:#f5c542;margin-bottom:12px}
-footer a{color:#bbb;text-decoration:none}
-footer a:hover{text-decoration:underline}
-.footer-bottom{text-align:center;margin-top:40px;font-size:13px;color:#777}
 
 /* ================= MOBILE ================= */
 @media(max-width:768px){
   form{grid-template-columns:1fr}
-  .full,.submit-btn,.agree-box{grid-column:span 1}
+  .full,.agree-box,.submit-btn{grid-column:span 1}
 
   .main-nav{
     position:absolute;
-    top:72px;right:0;width:100%;
+    top:72px;
+    right:0;
+    width:100%;
     background:#0e0e0e;
     flex-direction:column;
     align-items:center;
     gap:16px;
     padding:22px 0;
     display:none
-  }
-  .main-nav a{
-    width:100%;
-    text-align:center;
-    padding:10px 0
-  }
-  .main-nav a.active{
-    background:rgba(245,197,66,.15)
   }
   .main-nav.show{display:flex}
   .menu-toggle{display:block}
@@ -142,11 +142,9 @@ footer a:hover{text-decoration:underline}
   <div class="nav-container">
     <div class="logo">
       <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
-      <span>Rhythm<br>Rise</span>
+      <span>Rhythm Rise</span>
     </div>
-
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
     <nav class="main-nav" id="navMenu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -158,11 +156,61 @@ footer a:hover{text-decoration:underline}
   </div>
 </header>
 
-<!-- ================= FORM CONTENT (UNCHANGED) ================= -->
 <div class="form-wrapper">
   <div class="form-card">
     <h1>Rhythm <span>Rise</span></h1>
     <div class="subtitle">Singing & Dance Competition Registration</div>
 
-    <!-- form remains exactly same -->
-    <!-- (no changes done here) -->
+    <form id="registrationForm">
+      <div class="full"><label>Name</label><input required></div>
+      <div><label>Email</label><input type="email" required></div>
+      <div><label>Mobile</label><input required></div>
+      <div><label>WhatsApp</label><input required></div>
+
+      <div>
+        <label>Age</label>
+        <select required>
+          <option value="">Select</option>
+          <option>5–8</option><option>9–12</option><option>13–16</option>
+          <option>17–20</option><option>21–25</option><option>26+</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Gender</label>
+        <select required>
+          <option value="">Select</option>
+          <option>Male</option><option>Female</option><option>Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Audition City</label>
+        <select required>
+          <option value="">Select</option>
+          <option>Karimnagar</option><option>Hyderabad</option>
+          <option>Warangal</option><option>Vijayawada</option>
+        </select>
+      </div>
+
+      <div class="agree-box">
+        <label><input type="checkbox" required> I agree to Rules & Regulations</label>
+      </div>
+
+      <button class="submit-btn">Submit Registration</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
