@@ -5,16 +5,86 @@
 <title>International Judges | Rhythm Rise</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Meet the international jury of Rhythm Rise – renowned singers, dancers, and music professionals from India, Qatar, UK, USA and beyond.">
+<meta name="description" content="Meet the international jury of Rhythm Rise – renowned singers, dancers, music educators, and industry professionals from India, Qatar, Ireland, USA and beyond.">
 <link rel="canonical" href="https://rhythmrise.in/judges.html">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ================= SCHEMA : ORGANIZATION ================= -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Rhythm Rise",
+  "url":"https://rhythmrise.in",
+  "logo":"https://rhythmrise.in/images/rhythmrise-logo.png"
+}
+</script>
+
+<!-- ================= SCHEMA : BREADCRUMB ================= -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {
+      "@type":"ListItem",
+      "position":1,
+      "name":"Home",
+      "item":"https://rhythmrise.in/"
+    },
+    {
+      "@type":"ListItem",
+      "position":2,
+      "name":"Judges",
+      "item":"https://rhythmrise.in/judges.html"
+    }
+  ]
+}
+</script>
+
+<!-- ================= SCHEMA : JUDGES (PERSON) ================= -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Person",
+      "name":"Priti Vikramnath",
+      "jobTitle":"Hindustani Classical Vocalist & Music Educator",
+      "nationality":"Ireland",
+      "affiliation":{
+        "@type":"Organization",
+        "name":"Rhythm Rise"
+      }
+    },
+    {
+      "@type":"Person",
+      "name":"Mohinder Jalandhary",
+      "jobTitle":"Punjabi Singer & Performer",
+      "nationality":"India"
+    },
+    {
+      "@type":"Person",
+      "name":"Jawed Bajwa",
+      "jobTitle":"Singer & Music Judge",
+      "nationality":"Qatar"
+    },
+    {
+      "@type":"Person",
+      "name":"Geeta Mahalakshmi",
+      "jobTitle":"Vocal & Stage Performance Specialist",
+      "nationality":"USA"
+    }
+  ]
+}
+</script>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#121212;color:#e6e6e6}
 
-/* ================= HEADER ================= */
+/* HEADER */
 .site-header{
   position:fixed;top:0;width:100%;height:72px;
   background:rgba(0,0,0,.95);
@@ -38,7 +108,7 @@ nav a{
 }
 nav a:hover, nav a.active{color:#f5c542}
 
-/* ================= PAGE ================= */
+/* PAGE */
 .page{
   max-width:1200px;
   margin:auto;
@@ -58,7 +128,7 @@ nav a:hover, nav a.active{color:#f5c542}
   color:#ccc
 }
 
-/* ================= JUDGES GRID ================= */
+/* JUDGES GRID */
 .judges-grid{
   margin-top:70px;
   display:grid;
@@ -78,40 +148,25 @@ nav a:hover, nav a.active{color:#f5c542}
   box-shadow:0 25px 50px rgba(0,0,0,.6)
 }
 
-/* PHOTO */
 .judge-photo{
-  width:140px;
-  height:140px;
+  width:140px;height:140px;
   margin:0 auto 20px;
   border-radius:50%;
   padding:5px;
   background:linear-gradient(135deg,#f5c542,#e0b13a)
 }
 .judge-photo img{
-  width:100%;
-  height:100%;
+  width:100%;height:100%;
   object-fit:cover;
   border-radius:50%;
   background:#000
 }
 
-.judge-card h3{
-  font-size:18px;
-  color:#f5c542;
-  margin-bottom:6px
-}
-.judge-card .country{
-  font-size:13px;
-  color:#aaa;
-  margin-bottom:12px
-}
-.judge-card p{
-  font-size:14px;
-  color:#ccc;
-  line-height:1.6
-}
+.judge-card h3{font-size:18px;color:#f5c542;margin-bottom:6px}
+.country{font-size:13px;color:#aaa;margin-bottom:12px}
+.judge-card p{font-size:14px;color:#ccc;line-height:1.6}
 
-/* ================= CTA ================= */
+/* CTA */
 .cta{
   background:#101010;
   padding:80px 25px;
@@ -126,7 +181,7 @@ nav a:hover, nav a.active{color:#f5c542}
   text-decoration:none;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer{
   background:#0e0e0e;
   padding:40px 20px;
@@ -136,7 +191,6 @@ footer{
   color:#777
 }
 
-/* ================= MOBILE ================= */
 @media(max-width:768px){
   .page-title h1{font-size:30px}
 }
@@ -166,14 +220,13 @@ footer{
   <div class="page-title">
     <h1>Our <span>International Jury</span></h1>
     <p>
-      Rhythm Rise is proud to be judged by a distinguished panel of international
-      singers, dancers, music educators, and industry professionals.
+      Rhythm Rise is proud to be evaluated by an elite panel of internationally
+      acclaimed singers, dancers, music educators, and performance experts.
     </p>
   </div>
 
   <div class="judges-grid">
 
-    <!-- JUDGE 1 -->
     <div class="judge-card">
       <div class="judge-photo">
         <img src="images/judges/priti-vikramnath-ireland.jpg" alt="Priti Vikramnath">
@@ -181,56 +234,49 @@ footer{
       <h3>Priti Vikramnath</h3>
       <div class="country">Ireland</div>
       <p>
-        Hindustani Classical Vocalist & Music Educator. Trained at Allahabad University
-        with professional Bollywood training from Saregamapadhanisa Academy, Mumbai.
-      </p>
-      Judge at The Voice of World. Shared stage with Sonu Nigam, Benny Dayal, Vinod Rathod, Irfan and Shaan.
-      Performed at Indian Film Festival Ireland with Javed Jaffrey.
+        Hindustani Classical Vocalist & Music Educator, classically trained at
+        Allahabad University with professional Bollywood training from
+        Saregamapadhanisa Academy, Mumbai. Judge on international platforms and
+        performer alongside Sonu Nigam, Benny Dayal, Vinod Rathod, Irfan, and Shaan.
+        Performed at the Indian Film Festival Ireland with Javed Jaffrey.
       </p>
     </div>
 
-    <!-- JUDGE 2 -->
     <div class="judge-card">
       <div class="judge-photo">
-        <img src="images/judges/mohinder-doha.jpg" alt="Judge India">
+        <img src="images/judges/mohinder-doha.jpg" alt="Mohinder Jalandhary">
       </div>
       <h3>Mohinder Jalandhary</h3>
-      <div class="country">India(Punjab)</div>
+      <div class="country">India (Punjab)</div>
       <p>
-        Mohinder Jalandhary is a prominent Punjabi singer known for his powerful voice and vibrant stage presence.
-        He has released more than 25 music video albums, showcasing his versatility and dedication to Punjabi music. 
-      </p>
-       He has extensive experience in judging international events. Mohinder Jalandhary has performed alongside 
-       several Bollywood celebrities at high-profile events.
+        Prominent Punjabi singer with over 25 music video albums. Known for his
+        powerful vocals and vibrant stage presence, he has judged multiple
+        international competitions and performed alongside Bollywood celebrities.
       </p>
     </div>
 
-    <!-- JUDGE 3 -->
     <div class="judge-card">
       <div class="judge-photo">
-        <img src="images/judges/jawed-bajwa-qatar.jpg" alt="Judge Qatar">
+        <img src="images/judges/jawed-bajwa-qatar.jpg" alt="Jawed Bajwa">
       </div>
       <h3>Jawed Bajwa</h3>
       <div class="country">Qatar</div>
       <p>
-        Jawed Bajwa is a well-known singer from Doha, admired for his soulful renditions of Hindi songs.
-        International performer and cultural ambassador with experience across multiple high-profile talent platforms.
-      </p>
-      He brings classic and contemporary Bollywood music to life with emotion and strong vocal depth.In recognition of 
-      his musical expertise, he also served as a judge for many musical shows. 
+        Renowned Doha-based singer celebrated for soulful Hindi renditions.
+        Cultural ambassador and experienced music judge across several
+        international talent platforms.
       </p>
     </div>
 
-    <!-- JUDGE 4 -->
     <div class="judge-card">
       <div class="judge-photo">
-        <img src="images/judges/geeta.jpg" alt="Judge USA">
+        <img src="images/judges/geeta.jpg" alt="Geeta Mahalakshmi">
       </div>
       <h3>Geeta Mahalakshmi</h3>
       <div class="country">USA</div>
       <p>
-        Stage performance and vocal specialist with years of experience training
-        singers and live performers in US.
+        Vocal and stage performance specialist with extensive experience
+        mentoring singers and live performers across the United States.
       </p>
     </div>
 
