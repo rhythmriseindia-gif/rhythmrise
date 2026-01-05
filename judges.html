@@ -27,55 +27,8 @@
   "@context":"https://schema.org",
   "@type":"BreadcrumbList",
   "itemListElement":[
-    {
-      "@type":"ListItem",
-      "position":1,
-      "name":"Home",
-      "item":"https://rhythmrise.in/"
-    },
-    {
-      "@type":"ListItem",
-      "position":2,
-      "name":"Judges",
-      "item":"https://rhythmrise.in/judges.html"
-    }
-  ]
-}
-</script>
-
-<!-- ================= SCHEMA : JUDGES (PERSON) ================= -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@graph":[
-    {
-      "@type":"Person",
-      "name":"Priti Vikramnath",
-      "jobTitle":"Hindustani Classical Vocalist & Music Educator",
-      "nationality":"Ireland",
-      "affiliation":{
-        "@type":"Organization",
-        "name":"Rhythm Rise"
-      }
-    },
-    {
-      "@type":"Person",
-      "name":"Mohinder Jalandhary",
-      "jobTitle":"Punjabi Singer & Performer",
-      "nationality":"India"
-    },
-    {
-      "@type":"Person",
-      "name":"Jawed Bajwa",
-      "jobTitle":"Singer & Music Judge",
-      "nationality":"Qatar"
-    },
-    {
-      "@type":"Person",
-      "name":"Geeta Mahalakshmi",
-      "jobTitle":"Vocal & Stage Performance Specialist",
-      "nationality":"USA"
-    }
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://rhythmrise.in/"},
+    {"@type":"ListItem","position":2,"name":"Judges","item":"https://rhythmrise.in/judges.html"}
   ]
 }
 </script>
@@ -100,13 +53,21 @@ body{background:#121212;color:#e6e6e6}
 .logo img{height:40px}
 .logo span{font-size:22px;font-weight:800;color:#f5c542}
 
-nav a{
-  margin-left:22px;
+.main-nav{display:flex;gap:22px}
+.main-nav a{
   color:#e6e6e6;
   text-decoration:none;
   font-weight:500;
 }
-nav a:hover, nav a.active{color:#f5c542}
+.main-nav a:hover,
+.main-nav a.active{color:#f5c542}
+
+.menu-toggle{
+  display:none;
+  font-size:26px;
+  color:#f5c542;
+  cursor:pointer;
+}
 
 /* PAGE */
 .page{
@@ -135,19 +96,17 @@ nav a:hover, nav a.active{color:#f5c542}
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:45px
 }
-
 .judge-card{
   background:#181818;
   border-radius:22px;
   padding:35px 25px;
   border:1px solid rgba(245,197,66,.2);
-  transition:transform .3s ease,box-shadow .3s ease
+  transition:.3s
 }
 .judge-card:hover{
   transform:translateY(-8px);
   box-shadow:0 25px 50px rgba(0,0,0,.6)
 }
-
 .judge-photo{
   width:140px;height:140px;
   margin:0 auto 20px;
@@ -161,22 +120,16 @@ nav a:hover, nav a.active{color:#f5c542}
   border-radius:50%;
   background:#000
 }
-
-.judge-card h3{font-size:18px;color:#f5c542;margin-bottom:6px}
+.judge-card h3{color:#f5c542;margin-bottom:6px}
 .country{font-size:13px;color:#aaa;margin-bottom:12px}
 .judge-card p{font-size:14px;color:#ccc;line-height:1.6}
 
 /* CTA */
-.cta{
-  background:#101010;
-  padding:80px 25px;
-  text-align:center
-}
+.cta{background:#101010;padding:80px 25px;text-align:center}
 .btn-primary{
   padding:16px 42px;
   background:linear-gradient(135deg,#f5c542,#e0b13a);
-  color:#000;
-  font-weight:800;
+  color:#000;font-weight:800;
   border-radius:50px;
   text-decoration:none;
 }
@@ -191,8 +144,31 @@ footer{
   color:#777
 }
 
+/* MOBILE */
 @media(max-width:768px){
   .page-title h1{font-size:30px}
+
+  .main-nav{
+    position:absolute;
+    top:72px;right:0;
+    width:100%;
+    background:#0e0e0e;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+    padding:22px 0;
+    display:none
+  }
+  .main-nav a{
+    width:100%;
+    text-align:center;
+    padding:10px 0;
+  }
+  .main-nav a.active{
+    background:rgba(245,197,66,.15);
+  }
+  .main-nav.show{display:flex}
+  .menu-toggle{display:block}
 }
 </style>
 </head>
@@ -205,7 +181,8 @@ footer{
       <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
       <span>Rhythm Rise</span>
     </div>
-    <nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav class="main-nav" id="navMenu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="journey.html">Journey</a>
@@ -220,8 +197,8 @@ footer{
   <div class="page-title">
     <h1>Our <span>International Jury</span></h1>
     <p>
-      Rhythm Rise is proud to be evaluated by an elite panel of internationally
-      acclaimed singers, dancers, music educators, and performance experts.
+      Rhythm Rise is evaluated by a distinguished panel of international
+      singers, dancers, music educators, and performance experts.
     </p>
   </div>
 
@@ -229,54 +206,53 @@ footer{
 
     <div class="judge-card">
       <div class="judge-photo">
-        <img src="images/judges/priti-vikramnath-ireland.jpg" alt="Priti Vikramnath">
+        <img src="images/judges/priti-vikramnath-ireland.jpg" loading="lazy" decoding="async" alt="Priti Vikramnath">
       </div>
       <h3>Priti Vikramnath</h3>
       <div class="country">Ireland</div>
       <p>
-        Hindustani Classical Vocalist & Music Educator, classically trained at
-        Allahabad University with professional Bollywood training from
-        Saregamapadhanisa Academy, Mumbai. Judge on international platforms and
-        performer alongside Sonu Nigam, Benny Dayal, Vinod Rathod, Irfan, and Shaan.
-        Performed at the Indian Film Festival Ireland with Javed Jaffrey.
+        Hindustani Classical Vocalist & Music Educator. Trained at Allahabad University
+        with Bollywood training from Saregamapadhanisa Academy, Mumbai.
+        Judge on international platforms and performer with Sonu Nigam,
+        Benny Dayal, Vinod Rathod, Irfan and Shaan.
       </p>
     </div>
 
     <div class="judge-card">
       <div class="judge-photo">
-        <img src="images/judges/mohinder-doha.jpg" alt="Mohinder Jalandhary">
+        <img src="images/judges/mohinder-doha.jpg" loading="lazy" decoding="async" alt="Mohinder Jalandhary">
       </div>
       <h3>Mohinder Jalandhary</h3>
       <div class="country">India (Punjab)</div>
       <p>
-        Prominent Punjabi singer with over 25 music video albums. Known for his
-        powerful vocals and vibrant stage presence, he has judged multiple
-        international competitions and performed alongside Bollywood celebrities.
+        Prominent Punjabi singer with over 25 music video albums.
+        Known for powerful vocals, international judging experience,
+        and performances alongside Bollywood celebrities.
       </p>
     </div>
 
     <div class="judge-card">
       <div class="judge-photo">
-        <img src="images/judges/jawed-bajwa-qatar.jpg" alt="Jawed Bajwa">
+        <img src="images/judges/jawed-bajwa-qatar.jpg" loading="lazy" decoding="async" alt="Jawed Bajwa">
       </div>
       <h3>Jawed Bajwa</h3>
       <div class="country">Qatar</div>
       <p>
-        Renowned Doha-based singer celebrated for soulful Hindi renditions.
-        Cultural ambassador and experienced music judge across several
+        Doha-based singer admired for soulful Hindi renditions.
+        Cultural ambassador and experienced judge across
         international talent platforms.
       </p>
     </div>
 
     <div class="judge-card">
       <div class="judge-photo">
-        <img src="images/judges/geeta.jpg" alt="Geeta Mahalakshmi">
+        <img src="images/judges/geeta.jpg" loading="lazy" decoding="async" alt="Geeta Mahalakshmi">
       </div>
       <h3>Geeta Mahalakshmi</h3>
       <div class="country">USA</div>
       <p>
-        Vocal and stage performance specialist with extensive experience
-        mentoring singers and live performers across the United States.
+        Vocal and stage performance specialist with extensive
+        experience mentoring singers and live performers in the USA.
       </p>
     </div>
 
@@ -291,6 +267,12 @@ footer{
 <footer>
   © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
 </footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
