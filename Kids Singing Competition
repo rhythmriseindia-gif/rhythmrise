@@ -1,1 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5VYQEK3S2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T5VYQEK3S2');
+  </script>
+
+  <meta charset="UTF-8">
+  <title>Kids Singing Competition | Rhythm Rise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Rhythm Rise Kids Singing Competition provides a safe, encouraging, and professional platform for young singers to showcase talent under expert judges.">
+  <link rel="canonical" href="https://rhythmrise.in/kids-singing-competition.html">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#121212;
+      color:#e6e6e6;
+      line-height:1.7;
+    }
+
+    /* HEADER */
+    .site-header{
+      position:fixed;
+      top:0;
+      width:100%;
+      height:72px;
+      background:rgba(0,0,0,.95);
+      border-bottom:1px solid rgba(245,197,66,.25);
+      z-index:1000;
+    }
+
+    .nav-container{
+      max-width:1200px;
+      height:72px;
+      margin:auto;
+      padding:0 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .logo img{
+      height:40px;
+    }
+
+    .logo span{
+      font-size:22px;
+      font-weight:800;
+      color:#f5c542;
+    }
+
+    .main-nav{
+      display:flex;
+      gap:22px;
+    }
+
+    .main-nav a{
+      color:#e6e6e6;
+      text-decoration:none;
+      font-weight:500;
+    }
+
+    .main-nav a:hover{
+      color:#f5c542;
+    }
+
+    /* PAGE */
+    .page{
+      max-width:1100px;
+      margin:auto;
+      padding:130px 25px 80px;
+    }
+
+    h1{
+      font-size:38px;
+      text-align:center;
+      margin-bottom:20px;
+    }
+
+    h1 span{
+      color:#f5c542;
+    }
+
+    h2{
+      margin-top:40px;
+      margin-bottom:12px;
+      color:#f5c542;
+      font-size:26px;
+    }
+
+    p{
+      color:#dcdcdc;
+      font-size:16px;
+      margin-bottom:12px;
+    }
+
+    ul{
+      margin-left:20px;
+      margin-top:10px;
+    }
+
+    ul li{
+      margin-bottom:8px;
+      color:#dcdcdc;
+    }
+
+    /* CTA */
+    .cta{
+      margin-top:70px;
+      padding:70px 25px;
+      background:#101010;
+      border-radius:18px;
+      text-align:center;
+    }
+
+    .cta h2{
+      font-size:32px;
+      margin-bottom:10px;
+    }
+
+    .btn-primary{
+      display:inline-block;
+      margin:15px 10px 0;
+      padding:15px 42px;
+      background:linear-gradient(135deg,#f5c542,#e0b13a);
+      color:#000;
+      font-weight:800;
+      border-radius:50px;
+      text-decoration:none;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#0e0e0e;
+      border-top:1px solid rgba(245,197,66,.25);
+      padding:40px 20px;
+      text-align:center;
+      margin-top:60px;
+    }
+
+    footer a{
+      color:#bbb;
+      text-decoration:none;
+      font-weight:500;
+    }
+
+    footer a:hover{
+      color:#f5c542;
+      text-decoration:underline;
+    }
+
+    .footer-bottom{
+      margin-top:20px;
+      font-size:13px;
+      color:#777;
+    }
+
+    /* MOBILE */
+    @media(max-width:768px){
+      h1{font-size:30px}
+      h2{font-size:22px}
+    }
+  </style>
+
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
+      <span>Rhythm Rise</span>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="journey.html">Journey</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="judges.html">Judges</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page">
+
+  <h1>Kids <span>Singing Competition</span></h1>
+
+  <p>
+    Rhythm Rise proudly organizes professionally managed kids singing competitions
+    to nurture young talent in a positive, encouraging, and safe environment.
+    Our platform is designed to help children build confidence, musical skills,
+    and stage presence without pressure.
+  </p>
+
+  <h2>Age Groups</h2>
+  <ul>
+    <li>5 – 8 years</li>
+    <li>9 – 12 years</li>
+    <li>13 – 16 years</li>
+  </ul>
+
+  <h2>Focus Areas</h2>
+  <ul>
+    <li>Voice clarity and pitch (sur)</li>
+    <li>Rhythm and timing</li>
+    <li>Expression and confidence</li>
+    <li>Age-appropriate song selection</li>
+  </ul>
+
+  <h2>Why Parents Trust Rhythm Rise</h2>
+  <ul>
+    <li>Child-friendly judging system</li>
+    <li>Encouraging and constructive feedback</li>
+    <li>No favoritism or bias</li>
+    <li>Certificates and recognition for all participants</li>
+  </ul>
+
+  <h2>Languages & Music Styles</h2>
+  <ul>
+    <li>Classical & Semi-Classical</li>
+    <li>Film & Light Music</li>
+    <li>Folk & Regional Songs</li>
+    <li>Devotional & Patriotic Songs</li>
+  </ul>
+
+  <p>
+    Learn more about our platform on the
+    <a href="index.html">Rhythm Rise home page</a>
+    or complete participation through our
+    <a href="register.html">official registration page</a>.
+  </p>
+
+  <section class="cta">
+    <h2>Give Your Child a Confident Stage</h2>
+    <p>
+      Help your child discover their voice and shine on a professional platform.
+    </p>
+    <a href="register.html" class="btn-primary">Register Now</a>
+    <a href="index.html" class="btn-primary">Visit Home</a>
+  </section>
+
+  <p style="margin-top:40px;text-align:center;">
+    Interested in dance competitions too?
+    Explore our
+    <a href="dance-competitions-india.html">Dance Competitions in India</a>
+    and
+    <a href="online-singing-competition.html">Online Singing Competition</a>.
+  </p>
+
+</div>
+
+<footer>
+  <p>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="journey.html">Journey</a> |
+    <a href="gallery.html">Gallery</a> |
+    <a href="judges.html">Judges</a> |
+    <a href="register.html">Register</a>
+  </p>
+
+  <div class="footer-bottom">
+    © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
+  </div>
+</footer>
+
+</body>
+</html>
