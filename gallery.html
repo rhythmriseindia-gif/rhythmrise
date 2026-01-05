@@ -13,7 +13,7 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#121212;color:#e6e6e6;line-height:1.7}
 
-/* ================= HEADER ================= */
+/* HEADER */
 .site-header{
   position:fixed;top:0;width:100%;height:72px;
   background:rgba(0,0,0,.96);
@@ -26,48 +26,23 @@ body{background:#121212;color:#e6e6e6;line-height:1.7}
 }
 .logo{display:flex;align-items:center;gap:10px}
 .logo img{height:42px}
-.logo span{font-size:22px;font-weight:800;color:#f5c542;line-height:1.1}
-
+.logo span{font-size:22px;font-weight:800;color:#f5c542}
 .main-nav{display:flex;gap:26px}
-.main-nav a{
-  text-decoration:none;
-  color:#ccc;
-  font-size:14.5px;
-  font-weight:500
-}
+.main-nav a{color:#ccc;text-decoration:none;font-size:14.5px}
 .main-nav a:hover,.main-nav a.active{color:#f5c542}
 .menu-toggle{display:none;font-size:26px;color:#f5c542;cursor:pointer}
 
-/* ================= PAGE ================= */
-.page{
-  max-width:1200px;
-  margin:auto;
-  padding:130px 25px 90px
-}
+/* PAGE */
+.page{max-width:1200px;margin:auto;padding:130px 25px 90px}
 .page-title{text-align:center;margin-bottom:70px}
 .page-title h1{font-size:38px;font-weight:800}
 .page-title h1 span{color:#f5c542}
-.page-title p{
-  max-width:800px;
-  margin:12px auto 0;
-  font-size:16px;
-  color:#ccc
-}
+.page-title p{max-width:800px;margin:12px auto 0;color:#ccc}
 
-/* ================= EVENTS ================= */
+/* EVENTS */
 .event-section{margin-bottom:90px}
-.event-section h2{
-  font-size:26px;
-  margin-bottom:6px;
-  color:#f5c542;
-  text-align:center
-}
-.event-section p{
-  text-align:center;
-  font-size:14.5px;
-  color:#bdbdbd;
-  margin-bottom:35px
-}
+.event-section h2{text-align:center;color:#f5c542;font-size:26px}
+.event-section p{text-align:center;color:#bdbdbd;margin-bottom:35px}
 
 .gallery-grid{
   display:grid;
@@ -88,10 +63,9 @@ body{background:#121212;color:#e6e6e6;line-height:1.7}
   box-shadow:0 20px 45px rgba(0,0,0,.6)
 }
 
-/* ================= LIGHTBOX ================= */
+/* LIGHTBOX */
 .lightbox{
-  position:fixed;
-  inset:0;
+  position:fixed;inset:0;
   background:rgba(0,0,0,.92);
   display:none;
   align-items:center;
@@ -102,10 +76,9 @@ body{background:#121212;color:#e6e6e6;line-height:1.7}
   max-width:92%;
   max-height:92%;
   border-radius:12px;
-  box-shadow:0 30px 80px rgba(0,0,0,.9)
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer{
   background:#0e0e0e;
   border-top:1px solid rgba(245,197,66,.25);
@@ -115,13 +88,11 @@ footer{
   color:#8e8e8e
 }
 
-/* ================= MOBILE MENU (FINED TUNED) ================= */
+/* MOBILE */
 @media(max-width:768px){
   .main-nav{
     position:absolute;
-    top:72px;
-    right:0;
-    width:100%;
+    top:72px;right:0;width:100%;
     background:#0e0e0e;
     flex-direction:column;
     align-items:center;
@@ -129,12 +100,7 @@ footer{
     padding:26px 0;
     display:none
   }
-  .main-nav a{
-    padding:10px 0;
-    width:100%;
-    text-align:center;
-    font-size:15px;
-  }
+  .main-nav a{padding:10px 0;width:100%;text-align:center}
   .main-nav.show{display:flex}
   .menu-toggle{display:block}
 }
@@ -147,11 +113,9 @@ footer{
   <div class="nav-container">
     <div class="logo">
       <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
-      <span>Rhythm<br>Rise</span>
+      <span>Rhythm Rise</span>
     </div>
-
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
     <nav class="main-nav" id="navMenu">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -165,40 +129,98 @@ footer{
 
 <div class="page">
 
-  <div class="page-title">
-    <h1>Event <span>Gallery</span></h1>
-    <p>A visual glimpse into the platforms, performances, and communities that shaped Rhythm Rise.</p>
-  </div>
+<div class="page-title">
+  <h1>Event <span>Gallery</span></h1>
+  <p>A visual glimpse into the platforms, performances, and communities that shaped Rhythm Rise.</p>
+</div>
 
-  <!-- DOHA MUSIC LOVERS -->
-  <div class="event-section">
-    <h2>Doha Music Lovers</h2>
-    <p>Cultural & music community platform – Doha, Qatar</p>
-    <div class="gallery-grid">
-      <img src="images/gallery/doha-music-lovers-stage-performance.jpg" loading="lazy" decoding="async" alt="Doha Music Lovers stage performance" onclick="openLightbox(this)">
-      <img src="images/gallery/doha-music-lovers-live-concert.jpg" loading="lazy" decoding="async" alt="Doha Music Lovers live concert" onclick="openLightbox(this)">
-      <img src="images/gallery/doha-music-lovers-artists-group.jpg" loading="lazy" decoding="async" alt="Doha Music Lovers artists group" onclick="openLightbox(this)">
-      <img src="images/gallery/doha-music-lovers-audience-view.jpg" loading="lazy" decoding="async" alt="Doha Music Lovers audience view" onclick="openLightbox(this)">
-    </div>
+<!-- DOHA MUSIC LOVERS -->
+<div class="event-section">
+  <h2>Doha Music Lovers</h2>
+  <p>Cultural & music community platform – Doha, Qatar</p>
+  <div class="gallery-grid">
+    <img src="images/gallery/doha-music-lovers-stage-performance.jpg" loading="lazy" decoding="async" alt="Doha Music Lovers stage performance" onclick="openLightbox(this)">
+    <img src="images/gallery/doha-music-lovers-live-concert.jpg" loading="lazy" decoding="async" alt="Doha Music Lovers live concert" onclick="openLightbox(this)">
+    <img src="images/gallery/doha-music-lovers-artists-group.jpg" loading="lazy" decoding="async" alt="Doha Music Lovers artists group" onclick="openLightbox(this)">
+    <img src="images/gallery/doha-music-lovers-audience-view.jpg" loading="lazy" decoding="async" alt="Doha Music Lovers audience view" onclick="openLightbox(this)">
   </div>
+</div>
 
-  <!-- SUPER DANCER S1 -->
-  <div class="event-section">
-    <h2>Super Dancer – Season 1</h2>
-    <p>Flagship dance competition – Doha</p>
-    <div class="gallery-grid">
-      <img src="images/gallery/super-dancer-season1-doha-performance.jpg" loading="lazy" decoding="async" alt="Super Dancer Season 1 performance" onclick="openLightbox(this)">
-      <img src="images/gallery/super-dancer-season1-judges-panel.jpg" loading="lazy" decoding="async" alt="Super Dancer Season 1 judges panel" onclick="openLightbox(this)">
-      <img src="images/gallery/super-dancer-season1-finalists.jpg" loading="lazy" decoding="async" alt="Super Dancer Season 1 finalists" onclick="openLightbox(this)">
-      <img src="images/gallery/super-dancer-season1-winners.jpg" loading="lazy" decoding="async" alt="Super Dancer Season 1 winners" onclick="openLightbox(this)">
-    </div>
+<!-- SUPER DANCER S1 -->
+<div class="event-section">
+  <h2>Super Dancer – Season 1</h2>
+  <p>Flagship dance competition – Doha</p>
+  <div class="gallery-grid">
+    <img src="images/gallery/super-dancer-season1-doha-performance.jpg" loading="lazy" decoding="async" alt="Super Dancer Season 1 performance" onclick="openLightbox(this)">
+    <img src="images/gallery/super-dancer-season1-judges-panel.jpg" loading="lazy" decoding="async" alt="Super Dancer Season 1 judges panel" onclick="openLightbox(this)">
+    <img src="images/gallery/super-dancer-season1-finalists.jpg" loading="lazy" decoding="async" alt="Super Dancer Season 1 finalists" onclick="openLightbox(this)">
+    <img src="images/gallery/super-dancer-season1-winners.jpg" loading="lazy" decoding="async" alt="Super Dancer Season 1 winners" onclick="openLightbox(this)">
   </div>
+</div>
 
-  <!-- (Remaining sections unchanged, all images now lazy-loaded) -->
+<!-- SUPER DANCER S2 -->
+<div class="event-section">
+  <h2>Super Dancer – Season 2</h2>
+  <p>Expanded scale & refined competition</p>
+  <div class="gallery-grid">
+    <img src="images/gallery/super-dancer-season2-doha-stage.jpg" loading="lazy" decoding="async" alt="Super Dancer Season 2 stage" onclick="openLightbox(this)">
+    <img src="images/gallery/super-dancer-season2-competition-moment.jpg" loading="lazy" decoding="async" alt="Super Dancer Season 2 competition" onclick="openLightbox(this)">
+    <img src="images/gallery/super-dancer-season2-judging-session.jpg" loading="lazy" decoding="async" alt="Super Dancer Season 2 judging" onclick="openLightbox(this)">
+    <img src="images/gallery/super-dancer-season2-award-ceremony.jpg" loading="lazy" decoding="async" alt="Super Dancer Season 2 awards" onclick="openLightbox(this)">
+  </div>
+</div>
+
+<!-- SUPER DANCER S3 -->
+<div class="event-section">
+  <h2>Super Dancer – Season 3</h2>
+  <p>Established & recognized dance platform</p>
+  <div class="gallery-grid">
+    <img src="images/gallery/super-dancer-season3-grand-finale.jpg" loading="lazy" decoding="async" alt="Super Dancer Season 3 finale" onclick="openLightbox(this)">
+    <img src="images/gallery/super-dancer-season3-live-performance.jpg" loading="lazy" decoding="async" alt="Super Dancer Season 3 performance" onclick="openLightbox(this)">
+    <img src="images/gallery/super-dancer-season3-winner-announcement.jpg" loading="lazy" decoding="async" alt="Super Dancer Season 3 winners" onclick="openLightbox(this)">
+    <img src="images/gallery/super-dancer-season3-stage-showcase.jpg" loading="lazy" decoding="async" alt="Super Dancer Season 3 stage" onclick="openLightbox(this)">
+  </div>
+</div>
+
+<!-- SUPER SINGER -->
+<div class="event-section">
+  <h2>Super Singer – Doha</h2>
+  <p>Vocal talent platform</p>
+  <div class="gallery-grid">
+    <img src="images/gallery/super-singer-doha-live-performance.jpg" loading="lazy" decoding="async" alt="Super Singer Doha performance" onclick="openLightbox(this)">
+    <img src="images/gallery/super-singer-doha-judges-feedback.jpg" loading="lazy" decoding="async" alt="Super Singer Doha judges" onclick="openLightbox(this)">
+    <img src="images/gallery/super-singer-doha-finalists.jpg" loading="lazy" decoding="async" alt="Super Singer Doha finalists" onclick="openLightbox(this)">
+    <img src="images/gallery/super-singer-doha-winner-moment.jpg" loading="lazy" decoding="async" alt="Super Singer Doha winner" onclick="openLightbox(this)">
+  </div>
+</div>
+
+<!-- VOICE OF WORLD -->
+<div class="event-section">
+  <h2>Voice of World</h2>
+  <p>Global online singing contest</p>
+  <div class="gallery-grid">
+    <img src="images/gallery/voice-of-world-online-contest-banner.jpg" loading="lazy" decoding="async" alt="Voice of World banner" onclick="openLightbox(this)">
+    <img src="images/gallery/voice-of-world-online-participants.jpg" loading="lazy" decoding="async" alt="Voice of World participants" onclick="openLightbox(this)">
+    <img src="images/gallery/voice-of-world-online-judging.jpg" loading="lazy" decoding="async" alt="Voice of World judging" onclick="openLightbox(this)">
+    <img src="images/gallery/voice-of-world-online-winners.jpg" loading="lazy" decoding="async" alt="Voice of World winners" onclick="openLightbox(this)">
+  </div>
+</div>
+
+<!-- CRIC QATAR -->
+<div class="event-section">
+  <h2>Cric Qatar</h2>
+  <p>Community cricket platform</p>
+  <div class="gallery-grid">
+    <img src="images/gallery/cric-qatar-tournament-match.jpg" loading="lazy" decoding="async" alt="Cric Qatar match" onclick="openLightbox(this)">
+    <img src="images/gallery/cric-qatar-team-lineup.jpg" loading="lazy" decoding="async" alt="Cric Qatar team" onclick="openLightbox(this)">
+    <img src="images/gallery/cric-qatar-award-ceremony.jpg" loading="lazy" decoding="async" alt="Cric Qatar awards" onclick="openLightbox(this)">
+    <img src="images/gallery/cric-qatar-community-event.jpg" loading="lazy" decoding="async" alt="Cric Qatar community" onclick="openLightbox(this)">
+  </div>
+</div>
 
 </div>
 
-<footer id="contact">
+<footer>
   © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
 </footer>
 
