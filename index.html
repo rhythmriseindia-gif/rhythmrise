@@ -20,6 +20,74 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+<!-- ================= SCHEMA : ORGANIZATION ================= -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Rhythm Rise",
+  "url":"https://rhythmrise.in",
+  "logo":"https://rhythmrise.in/images/rhythmrise-logo.png"
+}
+</script>
+
+<!-- ================= SCHEMA : MULTIPLE EVENTS ================= -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Event",
+      "name":"Rhythm Rise – Singing Auditions",
+      "description":"Professional singing competition auditions judged by international jury members.",
+      "eventStatus":"https://schema.org/EventScheduled",
+      "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+      "startDate":"2026-02-01",
+      "endDate":"2026-03-31",
+      "location":{
+        "@type":"Place",
+        "name":"Multiple Cities – India",
+        "address":{
+          "@type":"PostalAddress",
+          "addressCountry":"IN"
+        }
+      },
+      "organizer":{
+        "@type":"Organization",
+        "name":"Rhythm Rise",
+        "url":"https://rhythmrise.in"
+      },
+      "image":"https://rhythmrise.in/images/rhythmrise-og.jpg",
+      "url":"https://rhythmrise.in/register.html"
+    },
+    {
+      "@type":"Event",
+      "name":"Rhythm Rise – Dance Auditions",
+      "description":"International dance auditions featuring classical, folk, cinematic and western styles.",
+      "eventStatus":"https://schema.org/EventScheduled",
+      "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+      "startDate":"2026-02-01",
+      "endDate":"2026-03-31",
+      "location":{
+        "@type":"Place",
+        "name":"Multiple Cities – India",
+        "address":{
+          "@type":"PostalAddress",
+          "addressCountry":"IN"
+        }
+      },
+      "organizer":{
+        "@type":"Organization",
+        "name":"Rhythm Rise",
+        "url":"https://rhythmrise.in"
+      },
+      "image":"https://rhythmrise.in/images/rhythmrise-og.jpg",
+      "url":"https://rhythmrise.in/register.html"
+    }
+  ]
+}
+</script>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#121212;color:#e6e6e6}
@@ -41,27 +109,12 @@ body{background:#121212;color:#e6e6e6}
 .logo span{font-size:22px;font-weight:800;color:#f5c542}
 
 /* NAV */
-.main-nav{
-  display:flex;
-  gap:22px;
-}
-.main-nav a{
-  color:#e6e6e6;
-  text-decoration:none;
-  font-weight:500;
-}
-.main-nav a:hover,
-.main-nav a.active{
-  color:#f5c542;
-}
+.main-nav{display:flex;gap:22px}
+.main-nav a{color:#e6e6e6;text-decoration:none;font-weight:500}
+.main-nav a:hover,.main-nav a.active{color:#f5c542}
 
 /* HAMBURGER */
-.menu-toggle{
-  display:none;
-  font-size:28px;
-  color:#f5c542;
-  cursor:pointer;
-}
+.menu-toggle{display:none;font-size:28px;color:#f5c542;cursor:pointer}
 
 /* ================= HERO ================= */
 .hero-video{
@@ -103,56 +156,29 @@ body{background:#121212;color:#e6e6e6}
   margin:auto;
   text-align:center;
 }
-.section-title{
-  font-size:36px;
-  margin-bottom:30px;
-}
+.section-title{font-size:36px;margin-bottom:30px}
 .section-title span{color:#f5c542}
-.section p{
-  max-width:850px;
-  margin:auto;
-  color:#ccc;
-  font-size:16px;
-}
+.section p{max-width:850px;margin:auto;color:#ccc;font-size:16px}
 
 /* ================= FOOTER ================= */
-.cta{
-  background:#101010;
-  padding:80px 25px;
-  text-align:center;
-}
+.cta{background:#101010;padding:80px 25px;text-align:center}
 footer{
   background:#0e0e0e;
   padding:40px 20px;
   border-top:1px solid rgba(245,197,66,.25);
 }
-.footer-bottom{
-  text-align:center;
-  font-size:13px;
-  color:#777;
-}
+.footer-bottom{text-align:center;font-size:13px;color:#777}
 
 /* ================= MOBILE ================= */
 @media(max-width:768px){
-
   .menu-toggle{display:block}
-
   .main-nav{
-    position:absolute;
-    top:72px;
-    right:0;
-    width:100%;
+    position:absolute;top:72px;right:0;width:100%;
     background:#0e0e0e;
-    flex-direction:column;
-    align-items:center;
-    gap:18px;
-    padding:20px 0;
-    display:none;
+    flex-direction:column;align-items:center;
+    gap:18px;padding:20px 0;display:none;
   }
-  .main-nav.show{
-    display:flex;
-  }
-
+  .main-nav.show{display:flex}
   .hero-content h1{font-size:40px}
   .hero-content p{font-size:16px}
 }
@@ -163,14 +189,11 @@ footer{
 
 <header class="site-header">
   <div class="nav-container">
-
     <div class="logo">
       <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
       <span>Rhythm Rise</span>
     </div>
-
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
     <nav class="main-nav" id="navMenu">
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
@@ -179,7 +202,6 @@ footer{
       <a href="judges.html">Judges</a>
       <a href="register.html">Register</a>
     </nav>
-
   </div>
 </header>
 
