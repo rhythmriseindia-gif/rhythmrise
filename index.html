@@ -61,7 +61,12 @@ body{background:#121212;color:#e6e6e6}
 .logo{display:flex;align-items:center;gap:10px}
 .logo img{height:40px}
 .logo span{font-size:22px;font-weight:800;color:#f5c542}
-nav a{margin-left:22px;color:#e6e6e6;text-decoration:none}
+nav a{
+  margin-left:22px;
+  color:#e6e6e6;
+  text-decoration:none;
+  font-weight:500;
+}
 nav a:hover{color:#f5c542}
 
 /* HERO */
@@ -77,7 +82,9 @@ nav a:hover{color:#f5c542}
 }
 .hero-content{
   position:relative;z-index:2;
-  max-width:900px;margin:auto;padding-top:140px;text-align:center;
+  max-width:900px;margin:auto;
+  padding-top:140px;
+  text-align:center;
 }
 .hero-content h1{font-size:64px;font-weight:900}
 .hero-content h1 span{color:#f5c542}
@@ -92,84 +99,46 @@ nav a:hover{color:#f5c542}
 .btn-primary{
   padding:16px 42px;
   background:linear-gradient(135deg,#f5c542,#e0b13a);
-  color:#000;font-weight:800;border-radius:50px;
+  color:#000;font-weight:800;
+  border-radius:50px;
   text-decoration:none;
 }
 
 /* SECTIONS */
-.section{padding:90px 25px;max-width:1200px;margin:auto;text-align:center}
-.section-title{font-size:36px;margin-bottom:40px}
+.section{
+  padding:90px 25px;
+  max-width:1200px;
+  margin:auto;
+  text-align:center;
+}
+.section-title{
+  font-size:36px;
+  margin-bottom:30px;
+}
 .section-title span{color:#f5c542}
-.section p{max-width:850px;margin:auto;color:#ccc;font-size:16px}
-
-/* CATEGORIES */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:35px;
-}
-.card{
-  background:#181818;padding:35px;
-  border-radius:18px;border:1px solid rgba(245,197,66,.2);
-}
-.card h3{color:#f5c542;margin-bottom:10px}
-
-/* JUDGES */
-.judges-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:40px;margin-top:40px;
-}
-.judge-card{
-  background:#181818;padding:30px;
-  border-radius:22px;text-align:center;
-  cursor:pointer;transition:.3s;
-}
-.judge-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 40px rgba(0,0,0,.6);
-}
-.judge-card img{
-  width:140px;height:140px;
-  border-radius:50%;object-fit:cover;
-  border:4px solid #f5c542;
-  margin-bottom:15px;
-}
-.judge-card h4{color:#f5c542}
-.judge-card p{font-size:14px;color:#ccc}
-
-/* MODAL */
-.judge-modal{
-  position:fixed;inset:0;
-  background:rgba(0,0,0,.85);
-  display:none;align-items:center;justify-content:center;
-  z-index:2000;
-}
-.modal-content{
-  background:#111;max-width:520px;
-  padding:40px;border-radius:22px;
-  text-align:center;position:relative;
-}
-.modal-content img{
-  width:160px;height:160px;
-  border-radius:50%;
-  border:4px solid #f5c542;
-  margin-bottom:20px;
-}
-.modal-content h3{color:#f5c542}
-.modal-content h5{color:#ccc;margin-bottom:15px}
-.close{
-  position:absolute;top:15px;right:20px;
-  font-size:28px;color:#f5c542;cursor:pointer;
+.section p{
+  max-width:850px;
+  margin:auto;
+  color:#ccc;
+  font-size:16px;
 }
 
 /* CTA & FOOTER */
-.cta{background:#101010;padding:80px 25px;text-align:center}
+.cta{
+  background:#101010;
+  padding:80px 25px;
+  text-align:center;
+}
 footer{
-  background:#0e0e0e;padding:40px 20px;
+  background:#0e0e0e;
+  padding:40px 20px;
   border-top:1px solid rgba(245,197,66,.25);
 }
-.footer-bottom{text-align:center;font-size:13px;color:#777}
+.footer-bottom{
+  text-align:center;
+  font-size:13px;
+  color:#777;
+}
 
 /* MOBILE */
 @media(max-width:768px){
@@ -184,7 +153,7 @@ footer{
 <header class="site-header">
   <div class="nav-container">
     <div class="logo">
-      <img src="images/rhythmrise-logo.png">
+      <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
       <span>Rhythm Rise</span>
     </div>
     <nav>
@@ -219,18 +188,6 @@ footer{
   </p>
 </section>
 
-<section class="section" id="judges">
-  <h2 class="section-title">Our <span>International Jury</span></h2>
-
-  <div class="judges-grid">
-    <div class="judge-card" onclick="openJudge('priti')">
-      <img src="images/judges/priti-vikramnath-ireland.jpg">
-      <h4>Priti Vikramnath</h4>
-      <p>Ireland</p>
-    </div>
-  </div>
-</section>
-
 <section class="cta">
   <h2>Ready to Take the Stage?</h2><br>
   <a href="register.html" class="btn-primary">Register Today</a>
@@ -242,45 +199,5 @@ footer{
   </div>
 </footer>
 
-<!-- MODAL -->
-<div class="judge-modal" id="judgeModal">
-  <div class="modal-content">
-    <span class="close" onclick="closeJudge()">×</span>
-    <img id="modalImg">
-    <h3 id="modalName"></h3>
-    <h5 id="modalCountry"></h5>
-    <p id="modalBio"></p>
-  </div>
-</div>
-
-<script>
-const judges={
-  priti:{
-    img:"images/judges/priti-vikramnath-ireland.jpg",
-    name:"Priti Vikramnath",
-    country:"Ireland",
-    bio:`Hindustani Classical Vocalist and Music Educator. 
-Classically trained at Allahabad University and professionally trained in Bollywood music from Saregamapadhanisa Academy, Mumbai.
-
-Judge at The Voice of World. 
-Shared stage with Sonu Nigam, Benny Dayal, Vinod Rathod, Irfan and Shaan.
-Performed at Indian Film Festival Ireland with Javed Jaffrey.`
-  }
-};
-function openJudge(id){
-  modalImg.src=judges[id].img;
-  modalName.innerText=judges[id].name;
-  modalCountry.innerText=judges[id].country;
-  modalBio.innerText=judges[id].bio;
-  judgeModal.style.display="flex";
-}
-function closeJudge(){judgeModal.style.display="none";}
-</script>
-
 </body>
 </html>
-
-
-
-
-
