@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <title>Register | Rhythm Rise</title>
@@ -12,7 +11,7 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 body{background:#121212;color:#e6e6e6}
 
-/* ================= HEADER ================= */
+/* HEADER */
 .site-header{
   position:fixed;top:0;width:100%;height:72px;
   background:rgba(0,0,0,.96);
@@ -29,27 +28,12 @@ body{background:#121212;color:#e6e6e6}
 .logo span{font-size:22px;font-weight:800;color:#f5c542}
 
 .main-nav{display:flex;gap:26px}
-.main-nav a{
-  text-decoration:none;
-  color:#ccc;
-  font-size:14.5px;
-  font-weight:500
-}
+.main-nav a{text-decoration:none;color:#ccc;font-size:14.5px;font-weight:500}
 .main-nav a:hover,.main-nav a.active{color:#f5c542}
+.menu-toggle{display:none;font-size:26px;color:#f5c542;cursor:pointer}
 
-.menu-toggle{
-  display:none;
-  font-size:26px;
-  color:#f5c542;
-  cursor:pointer
-}
-
-/* ================= FORM ================= */
-.form-wrapper{
-  max-width:900px;
-  margin:auto;
-  padding:140px 25px 100px
-}
+/* FORM */
+.form-wrapper{max-width:900px;margin:auto;padding:140px 25px 60px}
 .form-card{
   background:#111;
   border-radius:20px;
@@ -61,11 +45,7 @@ h1{text-align:center;font-size:36px;font-weight:800}
 h1 span{color:#f5c542}
 .subtitle{text-align:center;color:#ccc;margin:15px 0 40px}
 
-form{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px
-}
+form{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .full{grid-column:span 3}
 
 label{font-size:13px;color:#bbb;margin-bottom:6px;display:block}
@@ -84,11 +64,7 @@ input:focus,select:focus{
   box-shadow:0 0 0 2px rgba(245,197,66,.25)
 }
 
-.agree-box{
-  grid-column:span 3;
-  font-size:14px;
-  color:#ccc
-}
+.agree-box{grid-column:span 3;font-size:14px;color:#ccc}
 .agree-box input{accent-color:#f5c542;margin-right:8px}
 
 .submit-btn{
@@ -103,7 +79,12 @@ input:focus,select:focus{
   color:#000
 }
 
-/* ================= FOOTER ================= */
+/* SEO LINK */
+.seo-text{text-align:center;margin:40px auto 20px;color:#ccc}
+.seo-text a{color:#f5c542;text-decoration:none;font-weight:600}
+.seo-text a:hover{color:#ffd86a}
+
+/* FOOTER */
 footer{
   background:#0e0e0e;
   border-top:1px solid rgba(245,197,66,.25);
@@ -113,7 +94,7 @@ footer{
   color:#777
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 @media(max-width:768px){
   form{grid-template-columns:1fr}
   .full,.agree-box,.submit-btn{grid-column:span 1}
@@ -141,7 +122,7 @@ footer{
 <header class="site-header">
   <div class="nav-container">
     <div class="logo">
-      <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
+      <img src="images/rhythmrise-logo.png">
       <span>Rhythm Rise</span>
     </div>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -157,67 +138,61 @@ footer{
 </header>
 
 <div class="form-wrapper">
-  <div class="form-card">
-    <h1>Rhythm <span>Rise</span></h1>
-    <div class="subtitle">Singing & Dance Competition Registration</div>
+<div class="form-card">
+<h1>Rhythm <span>Rise</span></h1>
+<div class="subtitle">Singing & Dance Competition Registration</div>
 
-    <form id="registrationForm">
-      <div class="full"><label>Name</label><input required></div>
-      <div><label>Email</label><input type="email" required></div>
-      <div><label>Mobile</label><input required></div>
-      <div><label>WhatsApp</label><input required></div>
+<form>
+<div class="full"><label>Name</label><input required></div>
+<div><label>Email</label><input type="email" required></div>
+<div><label>Mobile</label><input required></div>
+<div><label>WhatsApp</label><input required></div>
 
-      <div>
-        <label>Age</label>
-        <select required>
-          <option value="">Select</option>
-          <option>5–8</option><option>9–12</option><option>13–16</option>
-          <option>17–20</option><option>21–25</option><option>26+</option>
-        </select>
-      </div>
-
-      <div>
-        <label>Gender</label>
-        <select required>
-          <option value="">Select</option>
-          <option>Male</option><option>Female</option><option>Other</option>
-        </select>
-      </div>
-
-      <div>
-        <label>Audition City</label>
-        <select required>
-          <option value="">Select</option>
-          <option>Karimnagar</option><option>Hyderabad</option>
-          <option>Warangal</option><option>Vijayawada</option>
-        </select>
-      </div>
-
-      <div class="agree-box">
-        <label><input type="checkbox" required> I agree to Rules & Regulations</label>
-      </div>
-
-      <button class="submit-btn">Submit Registration</button>
-    </form>
-  </div>
+<div><label>Age</label>
+<select required>
+<option value="">Select</option>
+<option>5–8</option><option>9–12</option><option>13–16</option>
+<option>17–20</option><option>21–25</option><option>26+</option>
+</select>
 </div>
 
-<a href="singing-dance-competitions-india.html">
-Singing & Dance Competitions in India
-</a>
-  </div>
+<div><label>Gender</label>
+<select required>
+<option value="">Select</option>
+<option>Male</option><option>Female</option><option>Other</option>
+</select>
+</div>
+
+<div><label>Audition City</label>
+<select required>
+<option value="">Select</option>
+<option>Karimnagar</option><option>Hyderabad</option>
+<option>Warangal</option><option>Vijayawada</option>
+</select>
+</div>
+
+<div class="agree-box">
+<label><input type="checkbox" required> I agree to Rules & Regulations</label>
+</div>
+
+<button class="submit-btn">Submit Registration</button>
+</form>
+</div>
+</div>
+
+<div class="seo-text">
+<a href="singing-dance-competitions-india.html">Singing & Dance Competitions in India</a>
 </div>
 
 <footer>
-  © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
+© 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
 </footer>
 
 <script>
 function toggleMenu(){
-  document.getElementById("navMenu").classList.toggle("show");
+document.getElementById("navMenu").classList.toggle("show");
 }
 </script>
 
 </body>
 </html>
-
