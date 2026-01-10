@@ -8,18 +8,22 @@
 <meta name="description" content="The journey of Rhythm Rise – from Doha Music Lovers to an international singing and dance talent platform.">
 <link rel="canonical" href="https://rhythmrise.in/journey.html">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#121212;color:#e6e6e6}
+body{
+  background:#121212;
+  color:#e6e6e6;
+  padding-top:72px; /* reserves space for fixed header */
+}
 
 /* HEADER */
 .site-header{
-  position:fixed;top:0;width:100%;height:72px;
-  background:rgba(0,0,0,.95);
+  position:fixed;
+  top:0;left:0;width:100%;
+  height:72px;
+  background:rgba(0,0,0,.97);
   border-bottom:1px solid rgba(245,197,66,.25);
   z-index:1000;
 }
@@ -43,15 +47,14 @@ body{background:#121212;color:#e6e6e6}
 
 .menu-toggle{
   display:none;
-  font-size:26px;
+  font-size:28px;
   color:#f5c542;
   cursor:pointer;
 }
 
 /* HERO */
 .page-hero{
-  padding-top:120px;
-  padding-bottom:70px;
+  padding:80px 20px 60px;
   text-align:center;
   background:linear-gradient(180deg,#111,#0b0b0b);
 }
@@ -70,16 +73,16 @@ body{background:#121212;color:#e6e6e6}
 /* TIMELINE */
 .timeline{
   max-width:1100px;
-  margin:80px auto 40px;
+  margin:70px auto;
   padding:0 20px;
   display:flex;
   flex-direction:column;
-  gap:40px;
+  gap:35px;
 }
 .timeline-card{
   background:#181818;
   border-radius:22px;
-  padding:40px;
+  padding:35px;
   border-left:5px solid #f5c542;
 }
 .timeline-card h3{
@@ -112,39 +115,44 @@ body{background:#121212;color:#e6e6e6}
 
 .legacy-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:40px;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:30px;
 }
 .legacy-card{
   background:#181818;
-  padding:30px 20px;
-  border-radius:20px;
+  padding:25px 15px;
+  border-radius:18px;
   border:1px solid rgba(245,197,66,.2);
 }
 .legacy-card img{
-  width:110px;
-  height:110px;
+  width:90px;
+  height:90px;
   object-fit:contain;
-  margin-bottom:15px;
+  margin-bottom:12px;
 }
 .legacy-card p{
-  font-size:14px;
+  font-size:13px;
   color:#ddd;
 }
 
 /* CTA */
 .cta{
   background:#101010;
-  padding:80px 25px;
+  padding:80px 20px;
   text-align:center;
 }
+.cta h2{margin-bottom:25px}
+
 .btn-primary{
-  padding:16px 42px;
+  display:inline-block;
+  max-width:90%;
+  padding:16px 30px;
   background:linear-gradient(135deg,#f5c542,#e0b13a);
   color:#000;
   font-weight:800;
   border-radius:50px;
   text-decoration:none;
+  text-align:center;
 }
 
 /* FOOTER */
@@ -159,23 +167,25 @@ footer{
   color:#777;
 }
 
-/* MOBILE */
+/* MOBILE MENU FIX */
 @media(max-width:768px){
+
   .page-hero h1{font-size:32px}
-  .timeline-card{padding:28px}
 
   .main-nav{
     position:absolute;
     top:72px;
-    right:0;
+    left:0;
     width:100%;
     background:#0e0e0e;
     flex-direction:column;
     align-items:center;
     gap:18px;
-    padding:20px 0;
+    padding:25px 0;
     display:none;
+    border-bottom:1px solid rgba(245,197,66,.2);
   }
+
   .main-nav.show{display:flex}
   .menu-toggle{display:block}
 }
@@ -217,98 +227,44 @@ footer{
   <div class="timeline-card">
     <h3>Doha Music Lovers</h3>
     <span>Cultural & Music Community Platform – Doha, Qatar</span>
-    <p>
-      Founded by Syed Rafi, Doha Music Lovers became a respected stage for emerging artists,
-      encouraging multicultural participation and high-quality performances.
-    </p>
+    <p>Founded by Syed Rafi, Doha Music Lovers became a respected stage for emerging artists and multicultural talent.</p>
   </div>
 
   <div class="timeline-card">
-    <h3>Super Dancer (Season 1 – 3)</h3>
+    <h3>Super Dancer (Season 1–3)</h3>
     <span>Flagship Dance Competition – Doha</span>
-    <p>
-      A multi-season dance competition that showcased exceptional talent,
-      judged by professionals and supported by strong audience engagement.
-    </p>
+    <p>A multi-season professional dance competition with strong audience and jury credibility.</p>
   </div>
 
   <div class="timeline-card">
     <h3>Super Singer</h3>
-    <span>Vocal Talent Platform – Doha</span>
-    <p>
-      A professional singing platform focused on voice quality,
-      musicality, expression, and stage confidence.
-    </p>
+    <span>Vocal Talent Platform</span>
+    <p>A premium singing contest focused on voice, expression and stage presence.</p>
   </div>
 
   <div class="timeline-card">
     <h3>Voice of World</h3>
-    <span>Global Online Singing Contest</span>
-    <p>
-      Connecting singers across countries through a digital-first
-      international competition format.
-    </p>
-  </div>
-
-  <div class="timeline-card">
-    <h3>Cric Qatar</h3>
-    <span>Community Cricket Platform</span>
-    <p>
-      Organizing structured tournaments that promote sporting excellence
-      and community engagement.
-    </p>
+    <span>International Online Contest</span>
+    <p>Connecting singers globally through a digital-first competition.</p>
   </div>
 
   <div class="timeline-card">
     <h3>Humanity Cares</h3>
-    <span>Non-Profit Charity Organisation</span>
-    <p>
-      A dedicated non-profit charity organisation focused on uplifting the underprivileged
-      through education, welfare, and community support initiatives.
-    </p>
-  </div>
-
-  <div class="timeline-card">
-    <h3>Emote Edition Dance Studios</h3>
-    <span>Nurturing Future Talent</span>
-    <p>
-      Doha Music Lovers partnered with Emote Edition Dance Studios to conduct
-      Super Dancer and Super Singer competitions on a professional platform.
-    </p>
+    <span>Non-Profit Organisation</span>
+    <p>Serving underprivileged communities through welfare and education initiatives.</p>
   </div>
 
   <div class="timeline-card">
     <h3>Rhythm Rise</h3>
-    <span>International Singing & Dance Talent Platform</span>
-    <p>
-      Rhythm Rise brings together singers and dancers from across regions,
-      evaluated by international jury members with transparent judging
-      and professional exposure.
-    </p>
+    <span>International Talent Platform</span>
+    <p>The evolution into a global singing & dance talent brand with transparent judging.</p>
   </div>
 
-</section>
-
-<section class="legacy">
-  <h2>Legacy <span>Platforms</span></h2>
-
-  <div class="legacy-grid">
-    <div class="legacy-card"><img src="images/logos/doha-music-lovers.png"><p>Doha Music Lovers</p></div>
-    <div class="legacy-card"><img src="images/logos/super-dancer-doha.png"><p>Super Dancer – S1</p></div>
-    <div class="legacy-card"><img src="images/logos/super-dancer-season-2-doha.png"><p>Super Dancer – S2</p></div>
-    <div class="legacy-card"><img src="images/logos/super-dancer-season-3-doha.png"><p>Super Dancer – S3</p></div>
-    <div class="legacy-card"><img src="images/logos/super-singer-doha.png"><p>Super Singer</p></div>
-    <div class="legacy-card"><img src="images/logos/voice-of-world-online.png"><p>Voice of World</p></div>
-    <div class="legacy-card"><img src="images/logos/cric-qatar.png"><p>Cric Qatar</p></div>
-    <div class="legacy-card"><img src="images/logos/humanity-cares.png"><p>Humanity Cares</p></div>
-    <div class="legacy-card"><img src="images/logos/emote-edition.png"><p>Emote Edition</p></div>
-    <div class="legacy-card"><img src="images/rhythmrise-logo.png"><p>Rhythm Rise</p></div>
-  </div>
 </section>
 
 <section class="cta">
-  <h2>Be Part of the Next Chapter</h2><br>
-  <a href="register.html" class="btn-primary">Register Now for Rhythm Rise auditions</a>
+  <h2>Be Part of the Next Chapter</h2>
+  <a href="register.html" class="btn-primary">Register for Rhythm Rise Auditions</a>
 </section>
 
 <footer>
@@ -325,4 +281,3 @@ function toggleMenu(){
 
 </body>
 </html>
-
