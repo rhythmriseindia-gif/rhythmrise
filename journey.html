@@ -15,7 +15,7 @@
 body{
   background:#121212;
   color:#e6e6e6;
-  padding-top:72px; /* reserves space for fixed header */
+  padding-top:72px;
 }
 
 /* HEADER */
@@ -23,7 +23,7 @@ body{
   position:fixed;
   top:0;left:0;width:100%;
   height:72px;
-  background:rgba(0,0,0,.97);
+  background:#000;
   border-bottom:1px solid rgba(245,197,66,.25);
   z-index:1000;
 }
@@ -54,12 +54,12 @@ body{
 
 /* HERO */
 .page-hero{
-  padding:80px 20px 60px;
+  padding:70px 20px 60px;
   text-align:center;
   background:linear-gradient(180deg,#111,#0b0b0b);
 }
 .page-hero h1{
-  font-size:44px;
+  font-size:42px;
   font-weight:900;
 }
 .page-hero h1 span{color:#f5c542}
@@ -115,7 +115,7 @@ body{
 
 .legacy-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
   gap:30px;
 }
 .legacy-card{
@@ -152,7 +152,6 @@ body{
   font-weight:800;
   border-radius:50px;
   text-decoration:none;
-  text-align:center;
 }
 
 /* FOOTER */
@@ -167,10 +166,9 @@ footer{
   color:#777;
 }
 
-/* MOBILE MENU FIX */
+/* MOBILE */
 @media(max-width:768px){
-
-  .page-hero h1{font-size:32px}
+  .page-hero h1{font-size:30px}
 
   .main-nav{
     position:absolute;
@@ -185,7 +183,6 @@ footer{
     display:none;
     border-bottom:1px solid rgba(245,197,66,.2);
   }
-
   .main-nav.show{display:flex}
   .menu-toggle{display:block}
 }
@@ -197,7 +194,7 @@ footer{
 <header class="site-header">
   <div class="nav-container">
     <div class="logo">
-      <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
+      <img src="images/rhythmrise-logo.png">
       <span>Rhythm Rise</span>
     </div>
 
@@ -226,40 +223,56 @@ footer{
 
   <div class="timeline-card">
     <h3>Doha Music Lovers</h3>
-    <span>Cultural & Music Community Platform – Doha, Qatar</span>
-    <p>Founded by Syed Rafi, Doha Music Lovers became a respected stage for emerging artists and multicultural talent.</p>
+    <span>Cultural & Music Community Platform – Doha</span>
+    <p>Founded by Syed Rafi, Doha Music Lovers became a respected stage for emerging artists.</p>
   </div>
 
   <div class="timeline-card">
-    <h3>Super Dancer (Season 1–3)</h3>
-    <span>Flagship Dance Competition – Doha</span>
-    <p>A multi-season professional dance competition with strong audience and jury credibility.</p>
+    <h3>Super Dancer (S1–S3)</h3>
+    <span>Flagship Dance Competition</span>
+    <p>A multi-season competition judged by international professionals.</p>
   </div>
 
   <div class="timeline-card">
     <h3>Super Singer</h3>
-    <span>Vocal Talent Platform</span>
-    <p>A premium singing contest focused on voice, expression and stage presence.</p>
+    <span>Professional Singing Platform</span>
+    <p>A premium contest focused on voice and performance.</p>
   </div>
 
   <div class="timeline-card">
     <h3>Voice of World</h3>
-    <span>International Online Contest</span>
-    <p>Connecting singers globally through a digital-first competition.</p>
+    <span>Global Online Contest</span>
+    <p>Connecting singers worldwide through digital competition.</p>
   </div>
 
   <div class="timeline-card">
     <h3>Humanity Cares</h3>
     <span>Non-Profit Organisation</span>
-    <p>Serving underprivileged communities through welfare and education initiatives.</p>
+    <p>Supporting underprivileged communities through welfare initiatives.</p>
   </div>
 
   <div class="timeline-card">
     <h3>Rhythm Rise</h3>
     <span>International Talent Platform</span>
-    <p>The evolution into a global singing & dance talent brand with transparent judging.</p>
+    <p>The evolution into a global singing & dance brand.</p>
   </div>
 
+</section>
+
+<section class="legacy">
+  <h2>Legacy <span>Platforms</span></h2>
+  <div class="legacy-grid">
+    <div class="legacy-card"><img src="images/logos/doha-music-lovers.png"><p>Doha Music Lovers</p></div>
+    <div class="legacy-card"><img src="images/logos/super-dancer-doha.png"><p>Super Dancer S1</p></div>
+    <div class="legacy-card"><img src="images/logos/super-dancer-season-2-doha.png"><p>Super Dancer S2</p></div>
+    <div class="legacy-card"><img src="images/logos/super-dancer-season-3-doha.png"><p>Super Dancer S3</p></div>
+    <div class="legacy-card"><img src="images/logos/super-singer-doha.png"><p>Super Singer</p></div>
+    <div class="legacy-card"><img src="images/logos/voice-of-world-online.png"><p>Voice of World</p></div>
+    <div class="legacy-card"><img src="images/logos/cric-qatar.png"><p>Cric Qatar</p></div>
+    <div class="legacy-card"><img src="images/logos/humanity-cares.png"><p>Humanity Cares</p></div>
+    <div class="legacy-card"><img src="images/logos/emote-edition.png"><p>Emote Edition</p></div>
+    <div class="legacy-card"><img src="images/rhythmrise-logo.png"><p>Rhythm Rise</p></div>
+  </div>
 </section>
 
 <section class="cta">
