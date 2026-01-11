@@ -12,21 +12,11 @@
 body{background:#121212;color:#e6e6e6}
 
 /* HEADER */
-.site-header{
-  position:fixed;top:0;width:100%;height:72px;
-  background:rgba(0,0,0,.96);
-  border-bottom:1px solid rgba(245,197,66,.25);
-  z-index:1000
-}
-.nav-container{
-  max-width:1200px;height:72px;margin:auto;
-  padding:0 20px;
-  display:flex;align-items:center;justify-content:space-between
-}
+.site-header{position:fixed;top:0;width:100%;height:72px;background:#000;border-bottom:1px solid rgba(245,197,66,.25);z-index:1000}
+.nav-container{max-width:1200px;height:72px;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;gap:10px}
 .logo img{height:42px}
 .logo span{font-size:22px;font-weight:800;color:#f5c542}
-
 .main-nav{display:flex;gap:26px}
 .main-nav a{text-decoration:none;color:#ccc;font-size:14.5px;font-weight:500}
 .main-nav a:hover,.main-nav a.active{color:#f5c542}
@@ -34,13 +24,7 @@ body{background:#121212;color:#e6e6e6}
 
 /* FORM */
 .form-wrapper{max-width:900px;margin:auto;padding:140px 25px 60px}
-.form-card{
-  background:#111;
-  border-radius:20px;
-  padding:45px;
-  border:1px solid rgba(245,197,66,.25);
-  box-shadow:0 25px 70px rgba(0,0,0,.7)
-}
+.form-card{background:#111;border-radius:20px;padding:45px;border:1px solid rgba(245,197,66,.25);box-shadow:0 25px 70px rgba(0,0,0,.7)}
 h1{text-align:center;font-size:36px;font-weight:800}
 h1 span{color:#f5c542}
 .subtitle{text-align:center;color:#ccc;margin:15px 0 40px}
@@ -49,72 +33,18 @@ form{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .full{grid-column:span 3}
 
 label{font-size:13px;color:#bbb;margin-bottom:6px;display:block}
-input,select{
-  width:100%;
-  padding:14px;
-  border-radius:10px;
-  border:1px solid #333;
-  background:#1c1c1c;
-  color:#fff;
-  font-size:15px
-}
-input:focus,select:focus{
-  outline:none;
-  border-color:#f5c542;
-  box-shadow:0 0 0 2px rgba(245,197,66,.25)
-}
+input,select{width:100%;padding:14px;border-radius:10px;border:1px solid #333;background:#1c1c1c;color:#fff;font-size:15px}
 
-.agree-box{grid-column:span 3;font-size:14px;color:#ccc}
-.agree-box input{accent-color:#f5c542;margin-right:8px}
-
-.submit-btn{
-  grid-column:span 3;
-  padding:16px;
-  font-size:18px;
-  font-weight:800;
-  border-radius:50px;
-  border:none;
-  cursor:pointer;
-  background:linear-gradient(135deg,#f5c542,#e0b13a);
-  color:#000
-}
-
-/* Hide conditional fields */
 .hidden{display:none}
 
-/* SEO LINK */
-.seo-text{text-align:center;margin:40px auto 20px;color:#ccc}
-.seo-text a{color:#f5c542;text-decoration:none;font-weight:600}
-.seo-text a:hover{color:#ffd86a}
+.submit-btn{grid-column:span 3;padding:16px;font-size:18px;font-weight:800;border-radius:50px;border:none;cursor:pointer;background:linear-gradient(135deg,#f5c542,#e0b13a);color:#000}
 
-/* FOOTER */
-footer{
-  background:#0e0e0e;
-  border-top:1px solid rgba(245,197,66,.25);
-  padding:40px 20px;
-  text-align:center;
-  font-size:13px;
-  color:#777
-}
-
-/* MOBILE */
 @media(max-width:768px){
-  form{grid-template-columns:1fr}
-  .full,.agree-box,.submit-btn{grid-column:span 1}
-  .main-nav{
-    position:absolute;
-    top:72px;
-    right:0;
-    width:100%;
-    background:#0e0e0e;
-    flex-direction:column;
-    align-items:center;
-    gap:16px;
-    padding:22px 0;
-    display:none
-  }
-  .main-nav.show{display:flex}
-  .menu-toggle{display:block}
+form{grid-template-columns:1fr}
+.full,.submit-btn{grid-column:span 1}
+.main-nav{position:absolute;top:72px;width:100%;background:#000;flex-direction:column;display:none}
+.main-nav.show{display:flex}
+.menu-toggle{display:block}
 }
 </style>
 </head>
@@ -145,91 +75,74 @@ footer{
 <h1>Rhythm <span>Rise</span></h1>
 <div class="subtitle">Singing & Dance Competition Registration</div>
 
-<form>
+<form id="rrForm">
 
-<div class="full"><label>Name</label><input required></div>
-<div><label>Email</label><input type="email" required></div>
-<div><label>Mobile</label><input required></div>
-<div><label>WhatsApp</label><input required></div>
+<div class="full"><input name="name" placeholder="Full Name" required></div>
+<div><input type="email" name="email" placeholder="Email" required></div>
+<div><input name="phone" placeholder="Mobile" required></div>
+<div><input name="whatsapp" placeholder="WhatsApp" required></div>
 
-<!-- Category -->
 <div>
-<label>Category</label>
-<select id="category" required onchange="toggleFields()">
-<option value="">Select</option>
-<option value="Singing">Singing</option>
-<option value="Dance">Dance</option>
+<select name="category" id="category" required onchange="toggleFields()">
+<option value="">Select Category</option>
+<option>Singing</option>
+<option>Dance</option>
 </select>
 </div>
 
-<!-- Singing Language -->
 <div id="singingField" class="hidden">
-<label>Singing Language</label>
-<select>
-<option value="">Select</option>
+<select name="language">
+<option value="">Singing Language</option>
 <option>Telugu</option>
 <option>Hindi</option>
 <option>English</option>
 </select>
 </div>
 
-<!-- Dance Style -->
 <div id="danceField" class="hidden">
-<label>Dance Style</label>
-<select>
-<option value="">Select</option>
-<option>Classical Dance</option>
-<option>Semi-Classical Dance</option>
-<option>Folk Dance</option>
-<option>Bollywood – Cinematic</option>
-<option>Western – HipHop</option>
+<select name="dance_style">
+<option value="">Dance Style</option>
+<option>Classical</option>
+<option>Folk</option>
+<option>Bollywood</option>
+<option>Western</option>
+</select>
+</div>
+
+<div id="danceTypeField" class="hidden">
+<select name="dance_type">
+<option value="">Solo or Group</option>
+<option>Solo</option>
+<option>Group</option>
 </select>
 </div>
 
 <div>
-<label>Age</label>
-<select required>
-<option value="">Select</option>
+<select name="age" required>
+<option value="">Age Group</option>
 <option>5–8</option><option>9–12</option><option>13–16</option>
 <option>17–20</option><option>21–25</option><option>26+</option>
 </select>
 </div>
 
 <div>
-<label>Gender</label>
-<select required>
-<option value="">Select</option>
-<option>Male</option><option>Female</option><option>Other</option>
+<select name="city" required>
+<option value="">Audition City</option>
+<option>Hyderabad</option>
+<option>Karimnagar</option>
+<option>Warangal</option>
+<option>Vijayawada</option>
+<option>Vizag</option>
 </select>
-</div>
-
-<div>
-<label>Audition City</label>
-<select required>
-<option value="">Select</option>
-<option>Karimnagar</option><option>Khammam</option>
-<option>Kurnool</option><option>Nizamabad</option>
-<option>Warangal</option><option>Hyderabad</option>
-<option>Vijayawada</option><option>Vizag</option>
-</select>
-</div>
-
-<div class="agree-box">
-<label><input type="checkbox" required> I agree to Rules & Regulations</label>
 </div>
 
 <button class="submit-btn">Submit Registration</button>
 </form>
-</div>
-</div>
 
-<div class="seo-text">
-<a href="singing-dance-competitions-india.html">Singing & Dance Competitions in India</a>
-</div>
+<div id="msg" style="margin-top:20px;text-align:center;color:#f5c542;"></div>
 
-<footer>
-© 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
-</footer>
+</div>
+</div>
 
 <script>
 function toggleMenu(){
@@ -237,13 +150,25 @@ document.getElementById("navMenu").classList.toggle("show");
 }
 
 function toggleFields(){
-  var cat = document.getElementById("category").value;
-  document.getElementById("singingField").classList.toggle("hidden", cat !== "Singing");
-  document.getElementById("danceField").classList.toggle("hidden", cat !== "Dance");
+var cat = document.getElementById("category").value;
+document.getElementById("singingField").style.display = cat==="Singing" ? "block" : "none";
+document.getElementById("danceField").style.display = cat==="Dance" ? "block" : "none";
+document.getElementById("danceTypeField").style.display = cat==="Dance" ? "block" : "none";
 }
+
+document.getElementById("rrForm").addEventListener("submit", function(e){
+e.preventDefault();
+fetch("https://script.google.com/macros/s/AKfycby7AcmLDvYcmXfoHZNxbHOkee59r9Z-DHvI0IX1rQOKg1IEEGJe376aIb_s9Aaygwv1/exec", {
+method:"POST",
+body:new FormData(this)
+})
+.then(r=>r.text())
+.then(d=>{
+document.getElementById("msg").innerHTML="Registration Successful ✔";
+this.reset();
+});
+});
 </script>
 
 </body>
 </html>
-
-
