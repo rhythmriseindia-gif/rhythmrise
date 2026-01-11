@@ -4,66 +4,68 @@
   <!-- Homepage -->
   <url>
     <loc>https://rhythmrise.in/</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
 
-  <!-- Main Pages -->
+  <!-- Core Pages -->
   <url>
     <loc>https://rhythmrise.in/about.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://rhythmrise.in/journey.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
-  </url>
-
-  <url>
-    <loc>https://rhythmrise.in/media.html</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <url>
-    <loc>https://rhythmrise.in/gallery.html</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://rhythmrise.in/judges.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- High Engagement Pages -->
+  <url>
+    <loc>https://rhythmrise.in/register.html</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.99</priority>
   </url>
 
   <url>
-    <loc>https://rhythmrise.in/register.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <loc>https://rhythmrise.in/gallery.html</loc>
+    <lastmod>2026-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
-    <loc>https://rhythmrise.in/rules.html</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.60</priority>
+    <loc>https://rhythmrise.in/media.html</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.97</priority>
   </url>
 
-  <!-- SEO Landing Page -->
+  <!-- Rules & Policies -->
+  <url>
+    <loc>https://rhythmrise.in/rules.html</loc>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- SEO Landing Pages (Google Ranking Engines) -->
   <url>
     <loc>https://rhythmrise.in/singing-dance-competitions-india.html</loc>
-    <lastmod>2026-01-10</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-11</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
 
