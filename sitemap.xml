@@ -1,53 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Homepage -->
   <url>
     <loc>https://rhythmrise.in/</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
 
+  <!-- Main Pages -->
   <url>
     <loc>https://rhythmrise.in/about.html</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2026-01-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://rhythmrise.in/journey.html</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2026-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
+    <loc>https://rhythmrise.in/media.html</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
     <loc>https://rhythmrise.in/gallery.html</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://rhythmrise.in/judges.html</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2026-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://rhythmrise.in/register.html</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2026-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://rhythmrise.in/rules.html</loc>
-    <lastmod>2026-01-05</lastmod>
+    <lastmod>2026-01-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.60</priority>
+  </url>
+
+  <!-- SEO Landing Page -->
+  <url>
+    <loc>https://rhythmrise.in/singing-dance-competitions-india.html</loc>
+    <lastmod>2026-01-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
   </url>
 
 </urlset>
