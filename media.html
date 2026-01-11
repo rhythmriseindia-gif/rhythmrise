@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Media Coverage | Rhythm Rise</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Rhythm Rise media coverage across international and Indian newspapers including Gulf Times, The Peninsula, Tribune News Network, Qatar Tribune and Urdu dailies.">
+<meta name="description" content="Rhythm Rise media coverage across international newspapers including Gulf Times, The Peninsula, Qatar Tribune, Urdu and Indian media.">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -13,15 +13,8 @@
 body{background:#121212;color:#e6e6e6}
 
 /* HEADER */
-.site-header{
-position:fixed;top:0;width:100%;height:72px;
-background:#000;border-bottom:1px solid rgba(245,197,66,.25);
-z-index:1000
-}
-.nav-container{
-max-width:1200px;height:72px;margin:auto;
-padding:0 20px;display:flex;align-items:center;justify-content:space-between
-}
+.site-header{position:fixed;top:0;width:100%;height:72px;background:#000;border-bottom:1px solid rgba(245,197,66,.25);z-index:1000}
+.nav-container{max-width:1200px;height:72px;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;gap:10px}
 .logo img{height:40px}
 .logo span{font-size:22px;font-weight:800;color:#f5c542}
@@ -31,13 +24,10 @@ padding:0 20px;display:flex;align-items:center;justify-content:space-between
 .menu-toggle{display:none;color:#f5c542;font-size:26px}
 
 /* PAGE */
-.page{
-max-width:1200px;margin:auto;
-padding:130px 25px 80px
-}
-.page h1{text-align:center;font-size:44px;margin-bottom:10px}
+.page{max-width:1200px;margin:auto;padding:130px 25px 80px}
+.page h1{text-align:center;font-size:44px}
 .page h1 span{color:#f5c542}
-.page p{text-align:center;color:#ccc;max-width:900px;margin:0 auto 60px}
+.page p{text-align:center;color:#ccc;max-width:900px;margin:10px auto 60px}
 
 /* SECTION */
 .section{margin-bottom:90px}
@@ -45,64 +35,49 @@ padding:130px 25px 80px
 .section p{color:#ccc;margin-bottom:30px}
 
 /* GRID */
-.media-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px
-}
-.media-card{
-background:#181818;
+.media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+.media-grid img{
+width:100%;
+height:240px;
+object-fit:cover;
 border-radius:16px;
-overflow:hidden;
+cursor:pointer;
 border:1px solid rgba(245,197,66,.2);
 transition:.3s
 }
-.media-card:hover{transform:scale(1.03)}
-.media-card img{
-width:100%;
-height:240px;
-object-fit:cover
-}
-.media-info{
-padding:18px
-}
-.media-info h3{color:#f5c542;font-size:15px}
-.media-info span{font-size:13px;color:#aaa}
+.media-grid img:hover{transform:scale(1.03)}
 
 /* STATS */
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:30px;
-margin-top:80px
-}
-.stat{
-background:#181818;
-border:1px solid rgba(245,197,66,.2);
-border-radius:20px;
-padding:40px 20px;
-text-align:center
-}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:30px;margin-top:60px}
+.stat{background:#181818;border:1px solid rgba(245,197,66,.2);border-radius:20px;padding:40px 20px;text-align:center}
 .stat h2{color:#f5c542;font-size:36px}
 .stat p{color:#ccc}
 
-/* FOOTER */
-footer{
-text-align:center;
-padding:40px 20px;
-border-top:1px solid rgba(245,197,66,.25);
-color:#777
+/* LIGHTBOX */
+.lightbox{
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,.95);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:2000
 }
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border:4px solid #f5c542;
+border-radius:12px
+}
+
+/* FOOTER */
+footer{text-align:center;padding:40px 20px;border-top:1px solid rgba(245,197,66,.25);color:#777}
 
 /* MOBILE */
 @media(max-width:768px){
 .menu-toggle{display:block}
-.main-nav{
-display:none;position:absolute;
-top:72px;right:0;width:100%;
-background:#000;flex-direction:column;
-align-items:center;padding:20px
-}
+.main-nav{display:none;position:absolute;top:72px;right:0;width:100%;background:#000;flex-direction:column;align-items:center;padding:20px}
 .main-nav.show{display:flex}
 }
 </style>
@@ -129,108 +104,77 @@ align-items:center;padding:20px
 </header>
 
 <div class="page">
-
 <h1>Rhythm Rise in the <span>Media</span></h1>
-<p>
-A legacy of leadership across culture, music, sports and community —  
-featured in leading newspapers across Qatar and India.
-</p>
+<p>International newspaper coverage of CIA Qatar, Doha Music Lovers, Cric Qatar and Hyderabadis in Qatar under the leadership of Syed Rafi.</p>
 
 <!-- CIA -->
 <div class="section">
 <h2>Central Indian Association (CIA) – Qatar</h2>
-<p>
-Syed Rafi, Vice President of CIA Qatar, has led national celebrations, cultural festivals and international sporting events,
-earning repeated coverage in Qatar’s top English newspapers.
-</p>
-
 <div class="media-grid">
-<div class="media-card"><img src="images/media/gulf-times-29Sept2023-cia.webp"><div class="media-info"><h3>Gulf Times</h3><span>National Sports Day</span></div></div>
-<div class="media-card"><img src="images/media/gulf-times-2022-cia.webp"><div class="media-info"><h3>Gulf Times</h3><span>Community Leadership</span></div></div>
-<div class="media-card"><img src="images/media/qatar-tribune-5april2022-cia.webp"><div class="media-info"><h3>Qatar Tribune</h3><span>Holi Celebration</span></div></div>
-<div class="media-card"><img src="images/media/qatar-tribune-15august2023-cia.webp"><div class="media-info"><h3>Qatar Tribune</h3><span>Independence Day</span></div></div>
-<div class="media-card"><img src="images/media/qatar-tribune-15august2024-cia.webp"><div class="media-info"><h3>Qatar Tribune</h3><span>Patriotic Events</span></div></div>
-<div class="media-card"><img src="images/media/qatar-tribune-15august2025-cia.webp"><div class="media-info"><h3>Qatar Tribune</h3><span>Unity & Culture</span></div></div>
-<div class="media-card"><img src="images/media/qatar-tribune-18AUG2024-CIA.webp"><div class="media-info"><h3>Qatar Tribune</h3><span>Community Festival</span></div></div>
-<div class="media-card"><img src="images/media/qatar-tribune-Dec2023-cia.webp"><div class="media-info"><h3>Qatar Tribune</h3><span>Year End Celebration</span></div></div>
-<div class="media-card"><img src="images/media/qatar-tribune-news-network-cia.webp"><div class="media-info"><h3>Tribune News Network</h3><span>International Chess Event</span></div></div>
+<img src="images/media/gulf-times-29Sept2023-cia.webp">
+<img src="images/media/gulf-times-2022-cia.webp">
+<img src="images/media/qatar-tribune-5april2022-cia.webp">
+<img src="images/media/qatar-tribune-15august2023-cia.webp">
+<img src="images/media/qatar-tribune-15august2024-cia.webp">
+<img src="images/media/qatar-tribune-15august2025-cia.webp">
+<img src="images/media/qatar-tribune-18AUG2024-CIA.webp">
+<img src="images/media/qatar-tribune-Dec2023-cia.webp">
+<img src="images/media/qatar-tribune-news-network-cia.webp">
 </div>
 </div>
 
 <!-- DML -->
 <div class="section">
 <h2>Doha Music Lovers</h2>
-<p>
-Doha Music Lovers is one of Qatar’s most widely covered cultural platforms,
-organising international music and dance competitions including Super Dancer, Super Singer and Voice of World.
-</p>
-
 <div class="media-grid">
-<img src="images/media/peninsula-14.jan.2021.dml.webp">
-<img src="images/media/peninsula-23august2023.dml.webp">
-<img src="images/media/gulf-times-19june2022.dml.webp">
-<img src="images/media/gulf-news-11march2023.dml.webp">
 <img src="images/media/gulf-times-31jan2022.dml.webp">
 <img src="images/media/maa-gulf-11march2023.dml.webp">
 <img src="images/media/maa-gulf-18august2021.dml.webp">
+<img src="images/media/gulf-news-11march2023.dml.webp">
+<img src="images/media/gulf-times-19june2022.dml.webp">
+<img src="images/media/english-news-15august2023.dml.webp">
 <img src="images/media/maa-gulf-20august2023.dml.webp">
 <img src="images/media/nri2nri-10march2023.dml.webp">
 <img src="images/media/nri2nri-21august2023.dml.webp">
-<img src="images/media/peninsula-15aug2023-dml.webp">
+<img src="images/media/peninsula-14.jan.2021.dml.webp">
+<img src="images/media/peninsula-15aug2022-dml.webp">
+<img src="images/media/peninsula-19june2022-dml.webp">
+<img src="images/media/peninsula-23august2023.dml.webp">
 <img src="images/media/qatar-tribune-14jan2021.dml.webp">
 <img src="images/media/qatar-tribune-23august2023.dml.webp">
-<img src="images/media/qatar-tribune-31jan2022.dml.webp">
-<img src="images/media/telugu-news-21august2023.dml.webp">
-<img src="images/media/tribune-19june2022-dml.webp">
-<img src="images/media/tribune-news-august2022.dml.webp">
 </div>
 </div>
 
 <!-- CRIC QATAR -->
 <div class="section">
 <h2>Cric Qatar</h2>
-<p>
-Cric Qatar is one of the largest community cricket leagues in the region with 900+ registered teams and over 15,000 players.
-</p>
-
 <div class="media-grid">
-<div class="media-card"><img src="images/media/gulf-times-23dec2018-cric-qatar.webp"><div class="media-info"><h3>Gulf Times</h3><span>Champions League</span></div></div>
+<img src="images/media/gulf-times-23dec2018-cric-qatar.webp">
 </div>
 </div>
-<!-- HIQ GROUP -->
+
+<!-- HIQ -->
 <div class="section">
-  <h2>Hyderabadis in Qatar (HIQ Group)</h2>
-  <p>
-    Founded and led by <strong>Syed Rafi</strong>, HIQ Group (Hyderabadis in Qatar) is a prominent cultural
-    and community platform uniting the Hyderabadi diaspora in Qatar. Over the years, HIQ has organised
-    heritage celebrations, national day programs, community awards, and social outreach initiatives that
-    preserve Hyderabadi identity while strengthening cross-cultural harmony in Qatar. The organisation’s
-    consistent presence in leading English, Urdu, and regional media reflects its credibility, scale,
-    and impact across community life in the Gulf.
-  </p>
-
-  <div class="media-grid">
-    <div class="media-card"><img src="images/media/gawaah-weekly-7sept2018.hiq.jpg"><div class="media-info"><h3>Gawaah Weekly</h3><span>HIQ Community Feature (Sep 2018)</span></div></div>
-    <div class="media-card"><img src="images/media/gawah-20dec2019.hiq.jpg"><div class="media-info"><h3>Gawaah Weekly</h3><span>HIQ Year-End Event (Dec 2019)</span></div></div>
-    <div class="media-card"><img src="images/media/gulf-times-10dec2018.hiq.jpg"><div class="media-info"><h3>Gulf Times</h3><span>HIQ Cultural Program (Dec 2018)</span></div></div>
-    <div class="media-card"><img src="images/media/gulf-times-18Dec-2017.hiq.jpg"><div class="media-info"><h3>Gulf Times</h3><span>HIQ Community Engagement (Dec 2017)</span></div></div>
-    <div class="media-card"><img src="images/media/gulf-times-26jan2019.hiq.jpg"><div class="media-info"><h3>Gulf Times</h3><span>Republic Day Celebrations (Jan 2019)</span></div></div>
-    <div class="media-card"><img src="images/media/gulf-times-2018.hiq.jpg"><div class="media-info"><h3>Gulf Times</h3><span>HIQ Activities (2018)</span></div></div>
-
-    <div class="media-card"><img src="images/media/hans-news-11dec2019.hiq.jpg"><div class="media-info"><h3>Hans News</h3><span>HIQ Cultural Night (Dec 2019)</span></div></div>
-    <div class="media-card"><img src="images/media/munsif-daily-11dec2018.hiq.jpg"><div class="media-info"><h3>Munsif Daily</h3><span>Community Coverage (Dec 2018)</span></div></div>
-    <div class="media-card"><img src="images/media/rahnuma-e-deccan-11dec2019.hiq.jpg"><div class="media-info"><h3>Rahnuma-e-Deccan</h3><span>HIQ Feature (Dec 2019)</span></div></div>
-    <div class="media-card"><img src="images/media/rahnuma-e-deccan-2018.hiq.webp"><div class="media-info"><h3>Rahnuma-e-Deccan</h3><span>HIQ Coverage (2018)</span></div></div>
-    <div class="media-card"><img src="images/media/sahafi-e-deccan-7october2018.hiq.jpg"><div class="media-info"><h3>Sahafi-e-Deccan</h3><span>Community Story (Oct 2018)</span></div></div>
-
-    <div class="media-card"><img src="images/media/siasat.8october2018.hiq.jpg"><div class="media-info"><h3>Siasat</h3><span>HIQ Activities (Oct 2018)</span></div></div>
-    <div class="media-card"><img src="images/media/siasat-10dec2019.hiq.jpg"><div class="media-info"><h3>Siasat</h3><span>HIQ Annual Event (Dec 2019)</span></div></div>
-    <div class="media-card"><img src="images/media/tribune-26jan2019.hiq.jpg"><div class="media-info"><h3>Tribune</h3><span>Republic Day (Jan 2019)</span></div></div>
-    <div class="media-card"><img src="images/media/tribune-2018.hiq.jpg"><div class="media-info"><h3>Tribune</h3><span>HIQ Coverage (2018)</span></div></div>
-  </div>
+<h2>Hyderabadis in Qatar (HIQ Group)</h2>
+<div class="media-grid">
+<img src="images/media/gawaah-weekly-7sept2018.hiq.webp">
+<img src="images/media/gawah-20dec2019.hiq.webp">
+<img src="images/media/gulf-times-10dec2018.hiq.webp">
+<img src="images/media/gulf-times-18Dec-2017.hiq.webp">
+<img src="images/media/gulf-times-26jan2019.hiq.webp">
+<img src="images/media/gulf-times-2018.hiq.webp">
+<img src="images/media/hans-news-11dec2019.hiq.webp">
+<img src="images/media/munsif-daily-11dec2018.hiq.webp">
+<img src="images/media/rahnuma-e-deccan-11dec2019.hiq.webp">
+<img src="images/media/rahnuma-e-deccan-2018.hiq.webp">
+<img src="images/media/sahafi-e-deccan-7october2018.hiq.webp">
+<img src="images/media/siasat.8october2018.hiq.webp">
+<img src="images/media/siasat-10dec2019.hiq.webp">
+<img src="images/media/tribune-26jan2019.hiq.webp">
+<img src="images/media/tribune-2018.hiq.webp">
+</div>
 </div>
 
-<!-- STATS -->
 <div class="stats">
 <div class="stat"><h2>42+</h2><p>Major Newspaper Features</p></div>
 <div class="stat"><h2>15,000+</h2><p>Community Participants</p></div>
@@ -240,14 +184,22 @@ Cric Qatar is one of the largest community cricket leagues in the region with 90
 
 </div>
 
-<footer>
-© 2026 Rhythm Rise | Media Archive
-</footer>
+<footer>© 2026 Rhythm Rise | Media Archive</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="this.style.display='none'">
+<img id="lightbox-img">
+</div>
 
 <script>
-function toggleMenu(){
-document.getElementById("navMenu").classList.toggle("show");
+function toggleMenu(){document.getElementById("navMenu").classList.toggle("show");}
+
+document.querySelectorAll('.media-grid img').forEach(img=>{
+img.onclick=()=>{
+document.getElementById('lightbox').style.display='flex';
+document.getElementById('lightbox-img').src=img.src;
 }
+});
 </script>
 
 </body>
