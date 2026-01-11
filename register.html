@@ -1,128 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Register | Rhythm Rise</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-
+<title>Rhythm Rise Registration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
-body{background:#121212;color:#fff}
+body{background:#111;color:#fff;font-family:Poppins}
+.form{max-width:900px;margin:120px auto;background:#000;padding:30px;border-radius:20px;border:1px solid #f5c542}
+input,select{width:100%;padding:12px;background:#1a1a1a;border:1px solid #333;color:#fff;border-radius:6px;margin-bottom:12px}
+button{width:100%;padding:15px;background:#f5c542;color:#000;font-weight:800;border:none;border-radius:40px}
 .hidden{display:none}
-
-.form-wrapper{max-width:900px;margin:120px auto;padding:20px}
-.form-card{background:#111;padding:40px;border-radius:20px;border:1px solid #f5c542}
-h1{text-align:center}
-h1 span{color:#f5c542}
-form{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-.full{grid-column:span 2}
-label{font-size:13px;color:#ccc}
-input,select{padding:12px;border-radius:8px;border:1px solid #333;background:#1a1a1a;color:#fff}
-button{grid-column:span 2;padding:15px;background:#f5c542;border:none;border-radius:40px;font-weight:800;font-size:16px}
 </style>
 </head>
 
 <body>
 
-<div class="form-wrapper">
-<div class="form-card">
-<h1>Rhythm <span>Rise</span></h1>
-<p style="text-align:center;color:#ccc">Official Registration</p>
+<div class="form">
+<h2 style="text-align:center">Rhythm Rise – Official Registration</h2>
 
-<form id="regForm">
+<form id="form">
 
-<div class="full"><label>Name</label><input required id="name"></div>
-<div><label>Email</label><input required id="email"></div>
-<div><label>Mobile</label><input required id="mobile"></div>
-<div><label>WhatsApp</label><input required id="whatsapp"></div>
+<input name="name" placeholder="Full Name" required>
+<input name="email" placeholder="Email" required>
+<input name="phone" placeholder="Mobile" required>
+<input name="whatsapp" placeholder="WhatsApp" required>
 
-<div class="full">
-<label>Category</label>
-<select id="category" onchange="toggleFields()" required>
-<option value="">Select</option>
+<select name="age" required>
+<option value="">Age Group</option>
+<option>5–8</option><option>9–12</option><option>13–16</option>
+<option>17–20</option><option>21–25</option><option>26+</option>
+</select>
+
+<select name="gender" required>
+<option value="">Gender</option>
+<option>Male</option><option>Female</option><option>Other</option>
+</select>
+
+<select name="city" required>
+<option value="">City</option>
+<option>Hyderabad</option><option>Karimnagar</option><option>Warangal</option>
+</select>
+
+<select name="category" id="category" required onchange="toggle()">
+<option value="">Category</option>
 <option>Singing</option>
 <option>Dance</option>
 </select>
-</div>
 
-<div id="singingBox" class="hidden full">
-<label>Singing Language</label>
-<select id="singingLang">
-<option value="">Select</option>
-<option>Telugu</option>
-<option>Hindi</option>
-<option>English</option>
+<div id="singing" class="hidden">
+<select name="singingLanguage">
+<option value="">Singing Language</option>
+<option>Telugu</option><option>Hindi</option><option>English</option>
 </select>
 </div>
 
-<div id="danceBox" class="hidden">
-<label>Dance Style</label>
-<select id="danceStyle">
-<option value="">Select</option>
-<option>Classical</option>
-<option>Semi Classical</option>
-<option>Folk</option>
-<option>Bollywood</option>
-<option>Western HipHop</option>
+<div id="dance" class="hidden">
+<select name="danceFormat">
+<option value="">Solo / Group</option>
+<option>Solo</option><option>Group</option>
+</select>
+
+<select name="danceStyle">
+<option value="">Dance Style</option>
+<option>Classical</option><option>Semi Classical</option>
+<option>Folk</option><option>Bollywood</option><option>Western</option>
 </select>
 </div>
 
-<div id="danceTypeBox" class="hidden">
-<label>Solo / Group</label>
-<select id="danceType">
-<option value="">Select</option>
-<option>Solo</option>
-<option>Group</option>
-</select>
-</div>
-
-<div>
-<label>City</label>
-<select id="city">
-<option>Hyderabad</option><option>Karimnagar</option><option>Warangal</option><option>Vijayawada</option>
-</select>
-</div>
-
-<button type="submit">Submit Registration</button>
+<button>Submit Registration</button>
 
 </form>
 </div>
-</div>
 
 <script>
-const scriptURL="https://script.google.com/macros/s/AKfycby7AcmLDvYcmXfoHZNxbHOkee59r9Z-DHvI0IX1rQOKg1IEEGJe376aIb_s9Aaygwv1/exec";
+const url="https://script.google.com/macros/s/AKfycby7AcmLDvYcmXfoHZNxbHOkee59r9Z-DHvI0IX1rQOKg1IEEGJe376aIb_s9Aaygwv1/exec";
 
-function toggleFields(){
-  let c=document.getElementById("category").value;
-  document.getElementById("singingBox").classList.toggle("hidden",c!=="Singing");
-  document.getElementById("danceBox").classList.toggle("hidden",c!=="Dance");
-  document.getElementById("danceTypeBox").classList.toggle("hidden",c!=="Dance");
+function toggle(){
+let c=document.getElementById("category").value;
+document.getElementById("singing").style.display=c=="Singing"?"block":"none";
+document.getElementById("dance").style.display=c=="Dance"?"block":"none";
 }
 
-document.getElementById("regForm").addEventListener("submit",e=>{
+document.getElementById("form").addEventListener("submit",e=>{
 e.preventDefault();
-
-let data={
-name:name.value,
-email:email.value,
-mobile:mobile.value,
-whatsapp:whatsapp.value,
-category:category.value,
-singing:singingLang.value,
-danceStyle:danceStyle.value,
-danceType:danceType.value,
-city:city.value
-};
-
-fetch(scriptURL,{method:"POST",body:JSON.stringify(data)})
-.then(r=>r.text())
-.then(res=>{
- if(res=="DUPLICATE"){
-   alert("You already registered for this category & style.");
- } else {
-   window.location="thankyou.html";
- }
+fetch(url,{method:"POST",body:new FormData(e.target)})
+.then(r=>r.text()).then(res=>{
+alert("Registration successful!");
+window.location="thankyou.html";
 });
 });
 </script>
