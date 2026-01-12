@@ -11,9 +11,40 @@ body{
     font-family:Poppins, Arial, sans-serif;
     margin:0
 }
+
+/* ---------- MENU ---------- */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#000;
+    border-bottom:1px solid #f5c542;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+header h1{
+    color:#f5c542;
+    margin:0;
+    font-size:22px;
+    font-weight:700;
+}
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:600;
+}
+nav a:hover{
+    color:#f5c542;
+}
+
+/* ---------- FORM ---------- */
 .form{
     max-width:900px;
-    margin:120px auto;
+    margin:140px auto 80px;
     background:#000;
     padding:30px;
     border-radius:20px;
@@ -46,11 +77,41 @@ button:disabled{
 .hidden{
     display:none
 }
+
+/* ---------- FOOTER ---------- */
+footer{
+    background:#000;
+    border-top:1px solid #f5c542;
+    text-align:center;
+    padding:25px;
+    color:#aaa;
+}
+footer a{
+    color:#f5c542;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:600;
+}
+footer a:hover{
+    text-decoration:underline;
+}
 </style>
 </head>
 
 <body>
 
+<!-- MENU -->
+<header>
+    <h1>Rhythm Rise</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="register.html">Register</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- FORM -->
 <div class="form">
 <h2 style="text-align:center">Rhythm Rise – Official Registration</h2>
 
@@ -126,6 +187,16 @@ button:disabled{
 </form>
 </div>
 
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Rhythm Rise. All rights reserved.</p>
+    <p>
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms & Conditions</a> |
+        <a href="contact.html">Contact Us</a>
+    </p>
+</footer>
+
 <script>
 const url="https://script.google.com/macros/s/AKfycby7AcmLDvYcmXfoHZNxbHOkee59r9Z-DHvI0IX1rQOKg1IEEGJe376aIb_s9Aaygwv1/exec";
 
@@ -151,11 +222,8 @@ form.addEventListener("submit",function(e){
     .then(r => r.text())
     .then(txt=>{
         if(txt.trim()=="OK"){
-
-            /* 🔑 Store for Thank You page */
             sessionStorage.setItem("rr_name", form.name.value);
             sessionStorage.setItem("rr_whatsapp", form.whatsapp.value);
-
             window.location="thankyou.html";
         } else {
             alert(txt);
