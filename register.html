@@ -100,10 +100,14 @@ form.addEventListener("submit",function(e){
   btn.innerText="Submitting...";
 
   fetch(url,{method:"POST",body:new FormData(form)})
-  .then(r=>r.text())
-  .then(res=>{
-    window.location="thankyou.html";
-  })
+.then(r => r.json())
+.then(res => {
+   if(res.status==="success"){
+      window.location="thankyou.html";
+   } else {
+      throw "failed";
+   }
+})
   .catch(err=>{
     alert("Submission failed. Please try again.");
     btn.disabled=false;
@@ -114,6 +118,7 @@ form.addEventListener("submit",function(e){
 
 </body>
 </html>
+
 
 
 
