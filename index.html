@@ -25,27 +25,14 @@ gtag('config', 'G-T5VYQEK3S2');
 body{background:#121212;color:#e6e6e6}
 
 /* HEADER */
-.site-header{
-  position:fixed;top:0;width:100%;height:72px;
-  background:rgba(0,0,0,.95);
-  border-bottom:1px solid rgba(245,197,66,.25);
-  z-index:1000;
-}
-.nav-container{
-  max-width:1200px;height:72px;margin:auto;
-  padding:0 20px;
-  display:flex;align-items:center;justify-content:space-between;
-}
+.site-header{position:fixed;top:0;width:100%;height:72px;background:rgba(0,0,0,.95);border-bottom:1px solid rgba(245,197,66,.25);z-index:1000}
+.nav-container{max-width:1200px;height:72px;margin:auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;gap:10px}
 .logo img{height:40px}
 .logo span{font-size:22px;font-weight:800;color:#f5c542}
-
-/* NAV */
 .main-nav{display:flex;gap:22px}
 .main-nav a{color:#e6e6e6;text-decoration:none;font-weight:500}
 .main-nav a:hover,.main-nav a.active{color:#f5c542}
-
-/* HAMBURGER */
 .menu-toggle{display:none;font-size:28px;color:#f5c542;cursor:pointer}
 
 /* HERO */
@@ -56,64 +43,65 @@ body{background:#121212;color:#e6e6e6}
 .hero-content h1{font-size:64px;font-weight:900}
 .hero-content h1 span{color:#f5c542}
 .hero-content p{font-size:20px;margin:18px 0;color:#ddd}
-.jury-badge{
-  display:inline-block;margin:20px 0 30px;
-  padding:12px 26px;border-radius:40px;
-  background:rgba(245,197,66,.15);
-  border:1px solid rgba(245,197,66,.4);
-  color:#f5c542;font-size:14px;font-weight:600;
-}
-.btn-primary{
-  padding:16px 42px;
-  background:linear-gradient(135deg,#f5c542,#e0b13a);
-  color:#000;font-weight:800;border-radius:50px;
-  text-decoration:none;
-}
+.jury-badge{display:inline-block;margin:20px 0 30px;padding:12px 26px;border-radius:40px;background:rgba(245,197,66,.15);border:1px solid rgba(245,197,66,.4);color:#f5c542;font-size:14px;font-weight:600}
+.btn-primary{padding:16px 42px;background:linear-gradient(135deg,#f5c542,#e0b13a);color:#000;font-weight:800;border-radius:50px;text-decoration:none}
 
+/* MEDIA COVERAGE */
+.as-seen{background:#0b0b0b;padding:70px 0;text-align:center;border-top:1px solid rgba(245,197,66,.25);border-bottom:1px solid rgba(245,197,66,.25)}
+.as-seen h2{color:#f5c542;font-size:28px;margin-bottom:40px}
+.slider-wrap{overflow:hidden;width:100%}
+.slider-track{display:flex;width:max-content;animation:scroll 60s linear infinite}
+.slider-track img{height:160px;margin:0 40px;object-fit:contain;filter:grayscale(100%);opacity:.85;transition:.3s}
+.slider-track img:hover{filter:none;opacity:1}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.view-media-btn{margin-top:40px}
+.view-media-btn a{display:inline-block;padding:14px 46px;border-radius:50px;background:linear-gradient(135deg,#f5c542,#e0b13a);color:#000;font-weight:800;text-decoration:none}
+
+/* Floating WhatsApp Button */
+.whatsapp-float{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#25D366;
+  color:#fff;
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  text-decoration:none;
+  box-shadow:0 4px 15px rgba(0,0,0,.5);
+  z-index:9999;
+  transition:.3s;
+}
+.whatsapp-float:hover{
+  transform:scale(1.08);
+}
+  
 /* SECTIONS */
 .section{padding:90px 25px;max-width:1200px;margin:auto;text-align:center}
 .section-title{font-size:36px;margin-bottom:30px}
 .section-title span{color:#f5c542}
 .section p{max-width:850px;margin:auto;color:#ccc;font-size:16px}
-
-/* CTA */
 .cta{background:#101010;padding:80px 25px;text-align:center}
 
-/* SEO TEXT */
-.seo-links{
-  text-align:center;
-  padding:40px 20px;
-  max-width:900px;
-  margin:auto;
-  color:#ccc;
-}
-.seo-links a{
-  color:#f5c542;
-  text-decoration:none;
-  font-weight:600;
-}
-.seo-links a:hover{color:#ffd86a}
-
 /* FOOTER */
-footer{
-  background:#0e0e0e;
-  padding:40px 20px;
-  border-top:1px solid rgba(245,197,66,.25);
-}
-.footer-bottom{text-align:center;font-size:13px;color:#777}
+footer{background:#0e0e0e;border-top:1px solid rgba(245,197,66,.25);padding:60px 20px}
+.footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px}
+footer h3,footer h4{color:#f5c542;margin-bottom:12px}
+footer p,footer a{color:#ccc;text-decoration:none;font-size:14px}
+footer a:hover{color:#f5c542}
+.footer-bottom{text-align:center;margin-top:40px;font-size:13px;color:#777}
 
 /* MOBILE */
 @media(max-width:768px){
-  .menu-toggle{display:block}
-  .main-nav{
-    position:absolute;top:72px;right:0;width:100%;
-    background:#0e0e0e;
-    flex-direction:column;align-items:center;
-    gap:18px;padding:20px 0;display:none;
-  }
-  .main-nav.show{display:flex}
-  .hero-content h1{font-size:40px}
-  .hero-content p{font-size:16px}
+.menu-toggle{display:block}
+.main-nav{position:absolute;top:72px;right:0;width:100%;background:#0e0e0e;flex-direction:column;align-items:center;gap:18px;padding:20px 0;display:none}
+.main-nav.show{display:flex}
+.hero-content h1{font-size:40px}
+.slider-track img{height:90px;margin:0 20px}
 }
 </style>
 </head>
@@ -121,71 +109,123 @@ footer{
 <body>
 
 <header class="site-header">
-  <div class="nav-container">
-    <div class="logo">
-      <img src="images/rhythmrise-logo.png">
-      <span>Rhythm Rise</span>
-    </div>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <nav class="main-nav" id="navMenu">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="journey.html">Journey</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="judges.html">Judges</a>
-      <a href="register.html">Register</a>
-      <a href="media.html">Media</a>
-    </nav>
-  </div>
+<div class="nav-container">
+<div class="logo"><img src="images/rhythmrise-logo.png"><span>Rhythm Rise</span></div>
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+<nav class="main-nav" id="navMenu">
+<a href="index.html" class="active">Home</a>
+<a href="about.html">About</a>
+<a href="journey.html">Journey</a>
+<a href="gallery.html">Gallery</a>
+<a href="judges.html">Judges</a>
+<a href="register.html">Register</a>
+<a href="media.html">Media</a>
+</nav>
+</div>
 </header>
 
 <section class="hero-video">
-  <video autoplay muted loop playsinline>
-    <source src="videos/rhythmrise-hero.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>RHYTHM <span>RISE</span></h1>
-    <p>A global singing & dance talent platform empowering performers to rise and shine.</p>
-    <div class="jury-badge">🌍 International Jury | India • Qatar • UK • USA</div>
-    <a href="register.html" class="btn-primary">Register Now</a>
-  </div>
+<video autoplay muted loop playsinline><source src="videos/rhythmrise-hero.mp4"></video>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>RHYTHM <span>RISE</span></h1>
+<p>A global singing & dance talent platform empowering performers to rise and shine.</p>
+<div class="jury-badge">🌍 International Jury | India • Qatar • UK • USA</div>
+<a href="register.html" class="btn-primary">Register Now</a>
+</div>
+</section>
+
+<section class="as-seen">
+<h2>As Seen In</h2>
+<div class="slider-wrap">
+<div class="slider-track">
+<img src="images/media/gulf-times-19june2022.dml.webp">
+<img src="images/media/tribune-4dec2024.dml.webp">
+<img src="images/media/gulf-times-08may2021.vow.webp">
+<img src="images/media/tribune-14sep-2021.vow.jpg">
+<img src="images/media/maa-gulf-11march2023.dml.webp">
+<img src="images/media/peninsula-23august2023.dml.webp">
+<img src="images/media/qatar-tribune-23august2023.dml.webp">
+<img src="images/media/qatar-tribune-4dec2024.dml.webp">
+<img src="images/media/qatar-tribune-18AUG2024-CIA.webp">
+<img src="images/media/qatar-tribune-15august2023-cia.webp">
+<img src="images/media/qatar-tribune-Dec2023-cia.webp">
+<img src="images/media/gulf-times-23dec2018.cq.jpg">
+<img src="images/media/gulf-times-8oct2018.cq.jpg">
+<img src="images/media/gawaah-weekly-7sept2018.hiq.webp">
+<img src="images/media/nnri2nri-30april2023.cq.jpg">
+<img src="images/media/munsif-daily-11dec2018.hiq.webp">
+</div>
+</div>
+<div class="view-media-btn"><a href="media.html">View All Coverage</a></div>
 </section>
 
 <section class="section">
-  <h2 class="section-title">About <span>Rhythm Rise</span></h2>
-  <p>
-    Rhythm Rise is a professional singing and dance competition platform created to identify,
-    nurture, and celebrate genuine talent through transparent judging and global exposure.
-  </p>
+<h2 class="section-title">About <span>Rhythm Rise</span></h2>
+<p>
+Rhythm Rise is a professional singing and dance competition platform created to identify,
+nurture, and celebrate genuine talent through transparent judging and global exposure.
+Backed by international jury members and decades of cultural leadership,
+Rhythm Rise provides performers with credibility, opportunity, and a true stage to rise.
+</p>
+Rhythm Rise is one of India’s fastest growing international singing and dance competition platforms, 
+bringing together talented performers from across the country and connecting them with professional 
+judges from India, Qatar, the UK and the USA.
+</p>
+Our auditions are open to singers and dancers of all styles including classical dance, folk dance, 
+Bollywood dance, hip-hop, western dance, and vocal performances in Telugu, Hindi and English. 
+Rhythm Rise is designed for artists who want real opportunities, professional feedback, and global 
+exposure.
+</p>
+With transparent judging, international jury panels, and city-wide auditions across Hyderabad, Karimnagar, 
+Khammam, Kurnool, Warangal, Nizamabad, Vijayawada, Vizag and other regions, Rhythm Rise is becoming a 
+trusted name for anyone searching for singing auditions, dance competitions, or talent shows in India.
+</p>
 </section>
 
 <section class="cta">
-  <h2>Ready to Take the Stage?</h2><br>
-  <a href="register.html" class="btn-primary">Register Today</a>
+<h2>Ready to Take the Stage?</h2><br>
+<a href="register.html" class="btn-primary">Register Today</a>
 </section>
 
-<div class="seo-links">
-  <p><a href="singing-dance-competitions-india.html">Singing & Dance Competitions in India</a></p>
-  <p>
-    Join India’s most trusted 
-    <a href="register.html">singing and dance competition auditions</a>
-    with international judges.
-  </p>
+<footer>
+<div class="footer-grid">
+<div>
+<h3>Rhythm Rise</h3>
+<p>International singing & dance talent platform with global jury and transparent judging.</p>
 </div>
 
-<footer>
-  <div class="footer-bottom">
-    © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
-  </div>
+<div>
+<h4>Contact</h4>
+<p>📧 contact@rhythmrise.in<br>
+📲 +91 90301 40600<br>
+📍 Upparpally, Rajendra Nagar,<br>Hyderabad, Telangana, India</p>
+</div>
+
+<div>
+<h4>Follow Us</h4>
+<p>
+<a href="https://instagram.com/rhythmriseindia">Instagram</a><br>
+<a href="https://x.com/rhythmriseindia">X (Twitter)</a><br>
+<a href="https://facebook.com/rhythmriseindia">Facebook</a>
+</p>
+</div>
+</div>
+
+<div class="footer-bottom">
+© 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
+</div>
 </footer>
 
 <script>
 function toggleMenu(){
-  document.getElementById("navMenu").classList.toggle("show");
+document.getElementById("navMenu").classList.toggle("show");
 }
 </script>
+<a href="https://wa.me/919030140600?text=Hello%20Rhythm%20Rise%2C%20I%20would%20like%20to%20know%20more%20about%20auditions."
+class="whatsapp-float" target="_blank">💬</a>
 
 </body>
 </html>
+
 

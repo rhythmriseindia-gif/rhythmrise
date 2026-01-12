@@ -2,248 +2,268 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Register | Rhythm Rise</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Rhythm Rise Registration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#121212;color:#e6e6e6}
+*{box-sizing:border-box;}
+body{
+    margin:0;
+    font-family:Poppins, Arial, sans-serif;
+    background:#111;
+    color:#fff;
+}
 
 /* HEADER */
-.site-header{
-  position:fixed;top:0;width:100%;height:72px;
-  background:rgba(0,0,0,.96);
-  border-bottom:1px solid rgba(245,197,66,.25);
-  z-index:1000
+header{
+    background:#000;
+    border-bottom:1px solid #f5c542;
+    padding:15px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:999;
 }
-.nav-container{
-  max-width:1200px;height:72px;margin:auto;
-  padding:0 20px;
-  display:flex;align-items:center;justify-content:space-between
+.logo{
+    color:#f5c542;
+    font-size:22px;
+    font-weight:700;
 }
-.logo{display:flex;align-items:center;gap:10px}
-.logo img{height:42px}
-.logo span{font-size:22px;font-weight:800;color:#f5c542}
+nav{
+    display:flex;
+    gap:20px;
+}
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+}
+nav a:hover{color:#f5c542}
 
-.main-nav{display:flex;gap:26px}
-.main-nav a{text-decoration:none;color:#ccc;font-size:14.5px;font-weight:500}
-.main-nav a:hover,.main-nav a.active{color:#f5c542}
-.menu-toggle{display:none;font-size:26px;color:#f5c542;cursor:pointer}
+/* Mobile menu */
+.menu-btn{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+@media(max-width:768px){
+    nav{
+        display:none;
+        flex-direction:column;
+        background:#000;
+        position:absolute;
+        top:60px;
+        right:0;
+        width:100%;
+        padding:15px;
+        border-top:1px solid #f5c542;
+    }
+    nav a{
+        padding:10px 0;
+        border-bottom:1px solid #222;
+    }
+    .menu-btn{display:block;}
+}
 
 /* FORM */
-.form-wrapper{max-width:900px;margin:auto;padding:140px 25px 60px}
-.form-card{
-  background:#111;
-  border-radius:20px;
-  padding:45px;
-  border:1px solid rgba(245,197,66,.25);
-  box-shadow:0 25px 70px rgba(0,0,0,.7)
+.form{
+    max-width:900px;
+    margin:80px auto;
+    background:#000;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid #f5c542;
 }
-h1{text-align:center;font-size:36px;font-weight:800}
-h1 span{color:#f5c542}
-.subtitle{text-align:center;color:#ccc;margin:15px 0 40px}
+h2{text-align:center}
 
-form{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.full{grid-column:span 3}
-
-label{font-size:13px;color:#bbb;margin-bottom:6px;display:block}
 input,select{
-  width:100%;
-  padding:14px;
-  border-radius:10px;
-  border:1px solid #333;
-  background:#1c1c1c;
-  color:#fff;
-  font-size:15px
-}
-input:focus,select:focus{
-  outline:none;
-  border-color:#f5c542;
-  box-shadow:0 0 0 2px rgba(245,197,66,.25)
+    width:100%;
+    padding:12px;
+    background:#1a1a1a;
+    border:1px solid #333;
+    color:#fff;
+    border-radius:6px;
+    margin-bottom:12px;
 }
 
-.agree-box{grid-column:span 3;font-size:14px;color:#ccc}
-.agree-box input{accent-color:#f5c542;margin-right:8px}
-
-.submit-btn{
-  grid-column:span 3;
-  padding:16px;
-  font-size:18px;
-  font-weight:800;
-  border-radius:50px;
-  border:none;
-  cursor:pointer;
-  background:linear-gradient(135deg,#f5c542,#e0b13a);
-  color:#000
+button{
+    width:100%;
+    padding:15px;
+    background:#f5c542;
+    color:#000;
+    font-weight:800;
+    border:none;
+    border-radius:40px;
+    font-size:16px;
+    cursor:pointer;
 }
+button:disabled{opacity:.6}
 
-/* Hide conditional fields */
 .hidden{display:none}
-
-/* SEO LINK */
-.seo-text{text-align:center;margin:40px auto 20px;color:#ccc}
-.seo-text a{color:#f5c542;text-decoration:none;font-weight:600}
-.seo-text a:hover{color:#ffd86a}
 
 /* FOOTER */
 footer{
-  background:#0e0e0e;
-  border-top:1px solid rgba(245,197,66,.25);
-  padding:40px 20px;
-  text-align:center;
-  font-size:13px;
-  color:#777
+    background:#000;
+    border-top:1px solid #f5c542;
+    padding:20px;
+    text-align:center;
+    color:#aaa;
+}
+footer a{
+    color:#f5c542;
+    text-decoration:none;
+    margin:0 10px;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-  form{grid-template-columns:1fr}
-  .full,.agree-box,.submit-btn{grid-column:span 1}
-  .main-nav{
-    position:absolute;
-    top:72px;
-    right:0;
-    width:100%;
-    background:#0e0e0e;
-    flex-direction:column;
-    align-items:center;
-    gap:16px;
-    padding:22px 0;
-    display:none
-  }
-  .main-nav.show{display:flex}
-  .menu-toggle{display:block}
+/* WHATSAPP FLOATING BUTTON */
+.whatsapp-float{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#25D366;
+  color:#fff;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  text-decoration:none;
+  box-shadow:0 4px 12px rgba(0,0,0,0.4);
+  z-index:9999;
+}
+.whatsapp-float:hover{
+  transform:scale(1.08);
 }
 </style>
 </head>
 
 <body>
 
-<header class="site-header">
-<div class="nav-container">
-<div class="logo">
-<img src="images/rhythmrise-logo.png">
-<span>Rhythm Rise</span>
-</div>
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
-<nav class="main-nav" id="navMenu">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="journey.html">Journey</a>
-<a href="gallery.html">Gallery</a>
-<a href="judges.html">Judges</a>
-<a href="register.html" class="active">Register</a>
-<a href="media.html">Media</a>
-</nav>
-</div>
+<header>
+  <div class="logo">Rhythm Rise</div>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <nav id="menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="register.html">Register</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<div class="form-wrapper">
-<div class="form-card">
-<h1>Rhythm <span>Rise</span></h1>
-<div class="subtitle">Singing & Dance Competition Registration</div>
+<div class="form">
+<h2>Rhythm Rise – Official Registration</h2>
 
-<form>
+<form id="form">
 
-<div class="full"><label>Name</label><input required></div>
-<div><label>Email</label><input type="email" required></div>
-<div><label>Mobile</label><input required></div>
-<div><label>WhatsApp</label><input required></div>
+<input name="name" placeholder="Full Name" required>
+<input name="email" type="email" placeholder="Email" required>
+<input name="phone" placeholder="Mobile" required>
+<input name="whatsapp" placeholder="WhatsApp" required>
 
-<!-- Category -->
-<div>
-<label>Category</label>
-<select id="category" required onchange="toggleFields()">
-<option value="">Select</option>
-<option value="Singing">Singing</option>
-<option value="Dance">Dance</option>
-</select>
-</div>
-
-<!-- Singing Language -->
-<div id="singingField" class="hidden">
-<label>Singing Language</label>
-<select>
-<option value="">Select</option>
-<option>Telugu</option>
-<option>Hindi</option>
-<option>English</option>
-</select>
-</div>
-
-<!-- Dance Style -->
-<div id="danceField" class="hidden">
-<label>Dance Style</label>
-<select>
-<option value="">Select</option>
-<option>Classical Dance</option>
-<option>Semi-Classical Dance</option>
-<option>Folk Dance</option>
-<option>Bollywood – Cinematic</option>
-<option>Western – HipHop</option>
-</select>
-</div>
-
-<div>
-<label>Age</label>
-<select required>
-<option value="">Select</option>
+<select name="age" required>
+<option value="">Age Group</option>
 <option>5–8</option><option>9–12</option><option>13–16</option>
 <option>17–20</option><option>21–25</option><option>26+</option>
 </select>
-</div>
 
-<div>
-<label>Gender</label>
-<select required>
-<option value="">Select</option>
+<select name="gender" required>
+<option value="">Gender</option>
 <option>Male</option><option>Female</option><option>Other</option>
 </select>
-</div>
 
-<div>
-<label>Audition City</label>
-<select required>
-<option value="">Select</option>
-<option>Karimnagar</option><option>Khammam</option>
-<option>Kurnool</option><option>Nizamabad</option>
-<option>Warangal</option><option>Hyderabad</option>
-<option>Vijayawada</option><option>Vizag</option>
+<select name="city" required>
+<option value="">City</option>
+<option>Hyderabad</option><option>Karimnagar</option><option>Warangal</option>
+<option>Khammam</option><option>Nizamabad</option><option>Vijayawada</option><option>Vizag</option>
+</select>
+
+<select name="category" id="category" required onchange="toggleFields()">
+<option value="">Category</option>
+<option value="Singing">Singing</option>
+<option value="Dance">Dance</option>
+</select>
+
+<div id="singing" class="hidden">
+<select name="singingLanguage">
+<option value="">Singing Language</option>
+<option>Telugu</option><option>Hindi</option><option>English</option>
 </select>
 </div>
 
-<div class="agree-box">
-<label><input type="checkbox" required> I agree to Rules & Regulations</label>
+<div id="dance" class="hidden">
+<select name="danceFormat">
+<option value="">Solo / Group</option>
+<option>Solo</option><option>Group</option>
+</select>
+
+<select name="danceStyle">
+<option value="">Dance Style</option>
+<option>Classical</option><option>Semi Classical</option>
+<option>Folk</option><option>Bollywood</option><option>Western</option>
+</select>
 </div>
 
-<button class="submit-btn">Submit Registration</button>
+<button id="submitBtn">Submit Registration</button>
 </form>
-</div>
-</div>
-
-<div class="seo-text">
-<a href="singing-dance-competitions-india.html">Singing & Dance Competitions in India</a>
 </div>
 
 <footer>
-© 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
+© 2026 Rhythm Rise |
+<a href="contact.html">Contact</a> |
+<a href="about.html">About</a>
 </footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/919030140600?text=Hello%20Rhythm%20Rise%2C%20I%20would%20like%20to%20know%20more%20about%20registrations."
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat on WhatsApp">💬</a>
 
 <script>
 function toggleMenu(){
-document.getElementById("navMenu").classList.toggle("show");
+    let m=document.getElementById("menu");
+    m.style.display = (m.style.display=="flex") ? "none" : "flex";
 }
 
 function toggleFields(){
-  var cat = document.getElementById("category").value;
-  document.getElementById("singingField").classList.toggle("hidden", cat !== "Singing");
-  document.getElementById("danceField").classList.toggle("hidden", cat !== "Dance");
+    let c=document.getElementById("category").value;
+    document.getElementById("singing").style.display = c==="Singing"?"block":"none";
+    document.getElementById("dance").style.display = c==="Dance"?"block":"none";
 }
+
+const url="https://script.google.com/macros/s/AKfycby7AcmLDvYcmXfoHZNxbHOkee59r9Z-DHvI0IX1rQOKg1IEEGJe376aIb_s9Aaygwv1/exec";
+const form=document.getElementById("form");
+const btn=document.getElementById("submitBtn");
+
+form.addEventListener("submit",function(e){
+    e.preventDefault();
+    btn.disabled=true;
+    btn.innerText="Submitting...";
+
+    fetch(url,{method:"POST",body:new FormData(form)})
+    .then(r=>r.text())
+    .then(t=>{
+        if(t.trim()=="OK"){
+            sessionStorage.setItem("rr_name",form.name.value);
+            sessionStorage.setItem("rr_whatsapp",form.whatsapp.value);
+            window.location="thankyou.html";
+        }else{
+            alert(t);
+            btn.disabled=false;
+            btn.innerText="Submit Registration";
+        }
+    })
+    .catch(()=>{
+        alert("Network error. Try again.");
+        btn.disabled=false;
+        btn.innerText="Submit Registration";
+    });
+});
 </script>
 
 </body>
 </html>
-
-
