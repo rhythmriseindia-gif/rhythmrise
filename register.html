@@ -5,12 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-body{background:#111;color:#fff;font-family:Poppins;margin:0}
-.form{max-width:900px;margin:120px auto;background:#000;padding:30px;border-radius:20px;border:1px solid #f5c542}
-input,select{width:100%;padding:12px;background:#1a1a1a;border:1px solid #333;color:#fff;border-radius:6px;margin-bottom:12px}
-button{width:100%;padding:15px;background:#f5c542;color:#000;font-weight:800;border:none;border-radius:40px;font-size:16px;cursor:pointer}
-button:disabled{opacity:.6;cursor:not-allowed}
-.hidden{display:none}
+body{
+    background:#111;
+    color:#fff;
+    font-family:Poppins, Arial, sans-serif;
+    margin:0
+}
+.form{
+    max-width:900px;
+    margin:120px auto;
+    background:#000;
+    padding:30px;
+    border-radius:20px;
+    border:1px solid #f5c542
+}
+input,select{
+    width:100%;
+    padding:12px;
+    background:#1a1a1a;
+    border:1px solid #333;
+    color:#fff;
+    border-radius:6px;
+    margin-bottom:12px
+}
+button{
+    width:100%;
+    padding:15px;
+    background:#f5c542;
+    color:#000;
+    font-weight:800;
+    border:none;
+    border-radius:40px;
+    font-size:16px;
+    cursor:pointer
+}
+button:disabled{
+    opacity:.6;
+    cursor:not-allowed
+}
+.hidden{
+    display:none
+}
 </style>
 </head>
 
@@ -27,54 +62,63 @@ button:disabled{opacity:.6;cursor:not-allowed}
 <input name="whatsapp" placeholder="WhatsApp" required>
 
 <select name="age" required>
-<option value="">Age Group</option>
-<option>5–8</option><option>9–12</option><option>13–16</option>
-<option>17–20</option><option>21–25</option><option>26+</option>
+    <option value="">Age Group</option>
+    <option>5–8</option>
+    <option>9–12</option>
+    <option>13–16</option>
+    <option>17–20</option>
+    <option>21–25</option>
+    <option>26+</option>
 </select>
 
 <select name="gender" required>
-<option value="">Gender</option>
-<option>Male</option><option>Female</option><option>Other</option>
+    <option value="">Gender</option>
+    <option>Male</option>
+    <option>Female</option>
+    <option>Other</option>
 </select>
 
 <select name="city" required>
-<option value="">City</option>
-<option>Hyderabad</option>
-<option>Karimnagar</option>
-<option>Warangal</option>
-<option>Khammam</option>
-<option>Nizamabad</option>
-<option>Vijayawada</option>
-<option>Vizag</option>
+    <option value="">City</option>
+    <option>Hyderabad</option>
+    <option>Karimnagar</option>
+    <option>Warangal</option>
+    <option>Khammam</option>
+    <option>Nizamabad</option>
+    <option>Vijayawada</option>
+    <option>Vizag</option>
 </select>
 
 <select name="category" id="category" required onchange="toggle()">
-<option value="">Category</option>
-<option value="Singing">Singing</option>
-<option value="Dance">Dance</option>
+    <option value="">Category</option>
+    <option value="Singing">Singing</option>
+    <option value="Dance">Dance</option>
 </select>
 
 <div id="singing" class="hidden">
-<select name="singingLanguage">
-<option value="">Singing Language</option>
-<option>Telugu</option><option>Hindi</option><option>English</option>
-</select>
+    <select name="singingLanguage">
+        <option value="">Singing Language</option>
+        <option>Telugu</option>
+        <option>Hindi</option>
+        <option>English</option>
+    </select>
 </div>
 
 <div id="dance" class="hidden">
-<select name="danceFormat">
-<option value="">Solo / Group</option>
-<option>Solo</option><option>Group</option>
-</select>
+    <select name="danceFormat">
+        <option value="">Solo / Group</option>
+        <option>Solo</option>
+        <option>Group</option>
+    </select>
 
-<select name="danceStyle">
-<option value="">Dance Style</option>
-<option>Classical</option>
-<option>Semi Classical</option>
-<option>Folk</option>
-<option>Bollywood</option>
-<option>Western</option>
-</select>
+    <select name="danceStyle">
+        <option value="">Dance Style</option>
+        <option>Classical</option>
+        <option>Semi Classical</option>
+        <option>Folk</option>
+        <option>Bollywood</option>
+        <option>Western</option>
+    </select>
 </div>
 
 <button id="submitBtn" type="submit">Submit Registration</button>
@@ -86,48 +130,37 @@ button:disabled{opacity:.6;cursor:not-allowed}
 const url="https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLiyWkHZiMd9d9sn3bREHLLYT2C4QzQ-MImuq8GO48D2UJ18ozCHxDipmyTQaSJyg8V_50heEnmz-iikThpZlTos4LuaTpxQTPEk0oGMTZ0SDn5xPdcb7qkwi_lPQxIi3ge46LS66KWWdeabzv7oHhadS9GNg-Ws8tCNyts7s0gWTua3ToHiZLLLjwvYctHJVEAMZ5H0oNmMvytxIQb77p9wX4PUYcpre3UwnRymSauDJpPss2AfbNDuF9r_s2o1N5DMZKWWSNMPUX6lvZmE97X_kEuJHg&lib=MC0KQb8LX0uPwg70q8GIYjEp7lTnrkX4I";
 
 function toggle(){
-  let c=document.getElementById("category").value;
-  document.getElementById("singing").style.display = c==="Singing"?"block":"none";
-  document.getElementById("dance").style.display = c==="Dance"?"block":"none";
+    let c=document.getElementById("category").value;
+    document.getElementById("singing").style.display = c==="Singing" ? "block" : "none";
+    document.getElementById("dance").style.display = c==="Dance" ? "block" : "none";
 }
 
 const form=document.getElementById("form");
 const btn=document.getElementById("submitBtn");
 
 form.addEventListener("submit",function(e){
-  e.preventDefault();
-  btn.disabled=true;
-  btn.innerText="Submitting...";
+    e.preventDefault();
+    btn.disabled=true;
+    btn.innerText="Submitting...";
 
-  fetch(url,{method:"POST",body:new FormData(form)})
-.then(r => r.text())
-.then(res=>{
-    if(res.trim()=="OK"){
-        window.location="thankyou.html";
-    } else {
-        alert(res);
-    }
-})
-.catch(err=>{
-    alert("Submission failed. Please try again.");
-});
-
-})
-  .catch(err=>{
-    alert("Submission failed. Please try again.");
-    btn.disabled=false;
-    btn.innerText="Submit Registration";
-  });
+    fetch(url,{method:"POST",body:new FormData(form)})
+        .then(r => r.text())
+        .then(res=>{
+            if(res.trim()=="OK"){
+                window.location="thankyou.html";
+            } else {
+                alert(res);
+                btn.disabled=false;
+                btn.innerText="Submit Registration";
+            }
+        })
+        .catch(err=>{
+            alert("Submission failed. Please try again.");
+            btn.disabled=false;
+            btn.innerText="Submit Registration";
+        });
 });
 </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
