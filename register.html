@@ -116,6 +116,28 @@ footer a{
     text-decoration:none;
     margin:0 10px;
 }
+
+/* WHATSAPP FLOATING BUTTON */
+.whatsapp-float{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#25D366;
+  color:#fff;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  text-decoration:none;
+  box-shadow:0 4px 12px rgba(0,0,0,0.4);
+  z-index:9999;
+}
+.whatsapp-float:hover{
+  transform:scale(1.08);
+}
 </style>
 </head>
 
@@ -194,6 +216,12 @@ footer a{
 <a href="contact.html">Contact</a> |
 <a href="about.html">About</a>
 </footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/919030140600?text=Hello%20Rhythm%20Rise%2C%20I%20would%20like%20to%20know%20more%20about%20registrations."
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat on WhatsApp">💬</a>
 
 <script>
 function toggleMenu(){
