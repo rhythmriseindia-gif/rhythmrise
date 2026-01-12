@@ -143,25 +143,28 @@ form.addEventListener("submit",function(e){
     btn.disabled=true;
     btn.innerText="Submitting...";
 
-    fetch(url,{method:"POST",body:new FormData(form)})
-        .then(r => r.text())
-        .then(res=>{
-            if(res.trim()=="OK"){
-                window.location="thankyou.html";
-            } else {
-                alert(res);
-                btn.disabled=false;
-                btn.innerText="Submit Registration";
-            }
-        })
-        .catch(err=>{
-            alert("Submission failed. Please try again.");
+    fetch(url,{
+        method:"POST",
+        body:new FormData(form),
+        redirect:"follow"
+    })
+    .then(r => r.text())
+    .then(txt=>{
+        if(txt.trim()=="OK"){
+            window.location="thankyou.html";
+        } else {
+            alert(txt);
             btn.disabled=false;
             btn.innerText="Submit Registration";
-        });
+        }
+    })
+    .catch(err=>{
+        alert("Network error. Try again.");
+        btn.disabled=false;
+        btn.innerText="Submit Registration";
+    });
 });
 </script>
 
 </body>
 </html>
-
