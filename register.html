@@ -151,6 +151,11 @@ form.addEventListener("submit",function(e){
     .then(r => r.text())
     .then(txt=>{
         if(txt.trim()=="OK"){
+
+            /* 🔑 Store for Thank You page */
+            sessionStorage.setItem("rr_name", form.name.value);
+            sessionStorage.setItem("rr_whatsapp", form.whatsapp.value);
+
             window.location="thankyou.html";
         } else {
             alert(txt);
