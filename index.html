@@ -46,7 +46,7 @@ body{background:#121212;color:#e6e6e6}
 .jury-badge{display:inline-block;margin:20px 0 30px;padding:12px 26px;border-radius:40px;background:rgba(245,197,66,.15);border:1px solid rgba(245,197,66,.4);color:#f5c542;font-size:14px;font-weight:600}
 .btn-primary{padding:16px 42px;background:linear-gradient(135deg,#f5c542,#e0b13a);color:#000;font-weight:800;border-radius:50px;text-decoration:none}
 
-/* AS SEEN */
+/* MEDIA COVERAGE */
 .as-seen{background:#0b0b0b;padding:70px 0;text-align:center;border-top:1px solid rgba(245,197,66,.25);border-bottom:1px solid rgba(245,197,66,.25)}
 .as-seen h2{color:#f5c542;font-size:28px;margin-bottom:40px}
 .slider-wrap{overflow:hidden;width:100%}
@@ -57,6 +57,29 @@ body{background:#121212;color:#e6e6e6}
 .view-media-btn{margin-top:40px}
 .view-media-btn a{display:inline-block;padding:14px 46px;border-radius:50px;background:linear-gradient(135deg,#f5c542,#e0b13a);color:#000;font-weight:800;text-decoration:none}
 
+/* Floating WhatsApp Button */
+.whatsapp-float{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#25D366;
+  color:#fff;
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  text-decoration:none;
+  box-shadow:0 4px 15px rgba(0,0,0,.5);
+  z-index:9999;
+  transition:.3s;
+}
+.whatsapp-float:hover{
+  transform:scale(1.08);
+}
+  
 /* SECTIONS */
 .section{padding:90px 25px;max-width:1200px;margin:auto;text-align:center}
 .section-title{font-size:36px;margin-bottom:30px}
@@ -199,7 +222,10 @@ function toggleMenu(){
 document.getElementById("navMenu").classList.toggle("show");
 }
 </script>
+<a href="https://wa.me/919030140600?text=Hello%20Rhythm%20Rise%2C%20I%20would%20like%20to%20know%20more%20about%20auditions."
+class="whatsapp-float" target="_blank">💬</a>
 
 </body>
 </html>
+
 
