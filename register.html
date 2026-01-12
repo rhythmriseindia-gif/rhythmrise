@@ -1,55 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
 <title>Rhythm Rise Registration</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+*{box-sizing:border-box;}
 body{
+    margin:0;
+    font-family:Poppins, Arial, sans-serif;
     background:#111;
     color:#fff;
-    font-family:Poppins, Arial, sans-serif;
-    margin:0
 }
 
-/* ---------- MENU ---------- */
+/* HEADER */
 header{
-    position:fixed;
-    top:0;
-    width:100%;
     background:#000;
     border-bottom:1px solid #f5c542;
-    padding:15px 40px;
+    padding:15px 25px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    z-index:1000;
+    position:sticky;
+    top:0;
+    z-index:999;
 }
-header h1{
+.logo{
     color:#f5c542;
-    margin:0;
     font-size:22px;
     font-weight:700;
+}
+nav{
+    display:flex;
+    gap:20px;
 }
 nav a{
     color:#fff;
     text-decoration:none;
-    margin-left:25px;
     font-weight:600;
 }
-nav a:hover{
-    color:#f5c542;
+nav a:hover{color:#f5c542}
+
+/* Mobile menu */
+.menu-btn{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+@media(max-width:768px){
+    nav{
+        display:none;
+        flex-direction:column;
+        background:#000;
+        position:absolute;
+        top:60px;
+        right:0;
+        width:100%;
+        padding:15px;
+        border-top:1px solid #f5c542;
+    }
+    nav a{
+        padding:10px 0;
+        border-bottom:1px solid #222;
+    }
+    .menu-btn{display:block;}
 }
 
-/* ---------- FORM ---------- */
+/* FORM */
 .form{
     max-width:900px;
-    margin:140px auto 80px;
+    margin:80px auto;
     background:#000;
     padding:30px;
     border-radius:20px;
-    border:1px solid #f5c542
+    border:1px solid #f5c542;
 }
+h2{text-align:center}
+
 input,select{
     width:100%;
     padding:12px;
@@ -57,8 +85,9 @@ input,select{
     border:1px solid #333;
     color:#fff;
     border-radius:6px;
-    margin-bottom:12px
+    margin-bottom:12px;
 }
+
 button{
     width:100%;
     padding:15px;
@@ -68,52 +97,43 @@ button{
     border:none;
     border-radius:40px;
     font-size:16px;
-    cursor:pointer
+    cursor:pointer;
 }
-button:disabled{
-    opacity:.6;
-    cursor:not-allowed
-}
-.hidden{
-    display:none
-}
+button:disabled{opacity:.6}
 
-/* ---------- FOOTER ---------- */
+.hidden{display:none}
+
+/* FOOTER */
 footer{
     background:#000;
     border-top:1px solid #f5c542;
+    padding:20px;
     text-align:center;
-    padding:25px;
     color:#aaa;
 }
 footer a{
     color:#f5c542;
     text-decoration:none;
-    margin:0 12px;
-    font-weight:600;
-}
-footer a:hover{
-    text-decoration:underline;
+    margin:0 10px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- MENU -->
 <header>
-    <h1>Rhythm Rise</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="register.html">Register</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <div class="logo">Rhythm Rise</div>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <nav id="menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="register.html">Register</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
-<!-- FORM -->
 <div class="form">
-<h2 style="text-align:center">Rhythm Rise – Official Registration</h2>
+<h2>Rhythm Rise – Official Registration</h2>
 
 <form id="form">
 
@@ -123,89 +143,71 @@ footer a:hover{
 <input name="whatsapp" placeholder="WhatsApp" required>
 
 <select name="age" required>
-    <option value="">Age Group</option>
-    <option>5–8</option>
-    <option>9–12</option>
-    <option>13–16</option>
-    <option>17–20</option>
-    <option>21–25</option>
-    <option>26+</option>
+<option value="">Age Group</option>
+<option>5–8</option><option>9–12</option><option>13–16</option>
+<option>17–20</option><option>21–25</option><option>26+</option>
 </select>
 
 <select name="gender" required>
-    <option value="">Gender</option>
-    <option>Male</option>
-    <option>Female</option>
-    <option>Other</option>
+<option value="">Gender</option>
+<option>Male</option><option>Female</option><option>Other</option>
 </select>
 
 <select name="city" required>
-    <option value="">City</option>
-    <option>Hyderabad</option>
-    <option>Karimnagar</option>
-    <option>Warangal</option>
-    <option>Khammam</option>
-    <option>Nizamabad</option>
-    <option>Vijayawada</option>
-    <option>Vizag</option>
+<option value="">City</option>
+<option>Hyderabad</option><option>Karimnagar</option><option>Warangal</option>
+<option>Khammam</option><option>Nizamabad</option><option>Vijayawada</option><option>Vizag</option>
 </select>
 
-<select name="category" id="category" required onchange="toggle()">
-    <option value="">Category</option>
-    <option value="Singing">Singing</option>
-    <option value="Dance">Dance</option>
+<select name="category" id="category" required onchange="toggleFields()">
+<option value="">Category</option>
+<option value="Singing">Singing</option>
+<option value="Dance">Dance</option>
 </select>
 
 <div id="singing" class="hidden">
-    <select name="singingLanguage">
-        <option value="">Singing Language</option>
-        <option>Telugu</option>
-        <option>Hindi</option>
-        <option>English</option>
-    </select>
+<select name="singingLanguage">
+<option value="">Singing Language</option>
+<option>Telugu</option><option>Hindi</option><option>English</option>
+</select>
 </div>
 
 <div id="dance" class="hidden">
-    <select name="danceFormat">
-        <option value="">Solo / Group</option>
-        <option>Solo</option>
-        <option>Group</option>
-    </select>
+<select name="danceFormat">
+<option value="">Solo / Group</option>
+<option>Solo</option><option>Group</option>
+</select>
 
-    <select name="danceStyle">
-        <option value="">Dance Style</option>
-        <option>Classical</option>
-        <option>Semi Classical</option>
-        <option>Folk</option>
-        <option>Bollywood</option>
-        <option>Western</option>
-    </select>
+<select name="danceStyle">
+<option value="">Dance Style</option>
+<option>Classical</option><option>Semi Classical</option>
+<option>Folk</option><option>Bollywood</option><option>Western</option>
+</select>
 </div>
 
-<button id="submitBtn" type="submit">Submit Registration</button>
-
+<button id="submitBtn">Submit Registration</button>
 </form>
 </div>
 
-<!-- FOOTER -->
 <footer>
-    <p>© 2026 Rhythm Rise. All rights reserved.</p>
-    <p>
-        <a href="privacy.html">Privacy Policy</a> |
-        <a href="terms.html">Terms & Conditions</a> |
-        <a href="contact.html">Contact Us</a>
-    </p>
+© 2026 Rhythm Rise |
+<a href="contact.html">Contact</a> |
+<a href="about.html">About</a>
 </footer>
 
 <script>
-const url="https://script.google.com/macros/s/AKfycby7AcmLDvYcmXfoHZNxbHOkee59r9Z-DHvI0IX1rQOKg1IEEGJe376aIb_s9Aaygwv1/exec";
-
-function toggle(){
-    let c=document.getElementById("category").value;
-    document.getElementById("singing").style.display = c==="Singing" ? "block" : "none";
-    document.getElementById("dance").style.display = c==="Dance" ? "block" : "none";
+function toggleMenu(){
+    let m=document.getElementById("menu");
+    m.style.display = (m.style.display=="flex") ? "none" : "flex";
 }
 
+function toggleFields(){
+    let c=document.getElementById("category").value;
+    document.getElementById("singing").style.display = c==="Singing"?"block":"none";
+    document.getElementById("dance").style.display = c==="Dance"?"block":"none";
+}
+
+const url="https://script.google.com/macros/s/AKfycby7AcmLDvYcmXfoHZNxbHOkee59r9Z-DHvI0IX1rQOKg1IEEGJe376aIb_s9Aaygwv1/exec";
 const form=document.getElementById("form");
 const btn=document.getElementById("submitBtn");
 
@@ -214,24 +216,20 @@ form.addEventListener("submit",function(e){
     btn.disabled=true;
     btn.innerText="Submitting...";
 
-    fetch(url,{
-        method:"POST",
-        body:new FormData(form),
-        redirect:"follow"
-    })
-    .then(r => r.text())
-    .then(txt=>{
-        if(txt.trim()=="OK"){
-            sessionStorage.setItem("rr_name", form.name.value);
-            sessionStorage.setItem("rr_whatsapp", form.whatsapp.value);
+    fetch(url,{method:"POST",body:new FormData(form)})
+    .then(r=>r.text())
+    .then(t=>{
+        if(t.trim()=="OK"){
+            sessionStorage.setItem("rr_name",form.name.value);
+            sessionStorage.setItem("rr_whatsapp",form.whatsapp.value);
             window.location="thankyou.html";
-        } else {
-            alert(txt);
+        }else{
+            alert(t);
             btn.disabled=false;
             btn.innerText="Submit Registration";
         }
     })
-    .catch(err=>{
+    .catch(()=>{
         alert("Network error. Try again.");
         btn.disabled=false;
         btn.innerText="Submit Registration";
