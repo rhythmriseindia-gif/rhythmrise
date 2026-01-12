@@ -101,12 +101,17 @@ form.addEventListener("submit",function(e){
 
   fetch(url,{method:"POST",body:new FormData(form)})
 .then(r => r.text())
-.then(res => {
-   if(res.status==="success"){
-      window.location="thankyou.html";
-   } else {
-      throw "failed";
-   }
+.then(res=>{
+    if(res.trim()=="OK"){
+        window.location="thankyou.html";
+    } else {
+        alert(res);
+    }
+})
+.catch(err=>{
+    alert("Submission failed. Please try again.");
+});
+
 })
   .catch(err=>{
     alert("Submission failed. Please try again.");
@@ -118,6 +123,7 @@ form.addEventListener("submit",function(e){
 
 </body>
 </html>
+
 
 
 
