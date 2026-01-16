@@ -1,290 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<h1>Singing & Dance Competition Registration</h1>
+<p>Please fill the form below to register for Rhythm Rise auditions.</p>
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5VYQEK3S2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T5VYQEK3S2');
-  </script>
+<!-- ZOHO FORM START -->
+<div id="crmWebToEntityForm" class="zcwf_lblLeft crmWebToEntityForm" style="background-color:white;color:black;max-width:600px;">
 
-  <meta charset="UTF-8">
-  <title>Singing Competition Registration | Rhythm Rise</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<form id="webform1172475000000432290"
+      action="https://crm.zoho.in/crm/WebToLeadForm"
+      name="WebToLeads1172475000000432290"
+      method="POST"
+      accept-charset="UTF-8"
+      onsubmit="javascript:document.charset='UTF-8'; return checkMandatory1172475000000432290();">
 
-  <meta name="description" content="Register for Rhythm Rise Singing Competition. Open for kids, juniors and adults across India with professional international judging.">
-  <link rel="canonical" href="https://rhythmrise.in/singing-competition-registration.html">
+<input type="hidden" name="xnQsjsdp" value="8ed00bd8c828f89d122320e5d60a77ab75a186e8024e32c59272378086115ff7">
+<input type="hidden" name="zc_gad" value="">
+<input type="hidden" name="xmIwtLD" value="ec7fb6894be20bf17e6dca1d726cde62f9bc74a0b2037c2b88b1a41f32b86f23cb705acee019e3e133ec9a3e49ae2c92">
+<input type="hidden" name="actionType" value="TGVhZHM=">
+<input type="hidden" name="returnURL" value="null">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+.zcwf_lblLeft{width:100%;padding:25px;margin:0 auto;box-sizing:border-box}
+.zcwf_col_lab{width:30%;float:left;margin-top:5px}
+.zcwf_col_fld{width:68%;float:left;margin-top:5px}
+.zcwf_row{margin:15px 0;clear:both}
+.zcwf_col_fld input, .zcwf_col_fld select{width:60%;padding:6px}
+.formsubmit{background:#0279FF;color:#fff;border:none;padding:8px 15px;cursor:pointer}
+@media(max-width:600px){
+  .zcwf_col_lab,.zcwf_col_fld{width:100%;float:none}
+}
+</style>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
+<div class="zcwf_title"><strong>Singer Registration Form</strong></div>
 
-    body{
-      background:#121212;
-      color:#e6e6e6;
-      line-height:1.7;
-    }
-
-    /* HEADER */
-    .site-header{
-      position:fixed;
-      top:0;
-      width:100%;
-      height:72px;
-      background:rgba(0,0,0,.95);
-      border-bottom:1px solid rgba(245,197,66,.25);
-      z-index:1000;
-    }
-
-    .nav-container{
-      max-width:1200px;
-      height:72px;
-      margin:auto;
-      padding:0 20px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-    }
-
-    .logo{
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-
-    .logo img{
-      height:40px;
-    }
-
-    .logo span{
-      font-size:22px;
-      font-weight:800;
-      color:#f5c542;
-    }
-
-    .main-nav{
-      display:flex;
-      gap:22px;
-    }
-
-    .main-nav a{
-      color:#e6e6e6;
-      text-decoration:none;
-      font-weight:500;
-    }
-
-    .main-nav a:hover{
-      color:#f5c542;
-    }
-
-    /* PAGE */
-    .page{
-      max-width:1100px;
-      margin:auto;
-      padding:130px 25px 80px;
-    }
-
-    h1{
-      font-size:38px;
-      text-align:center;
-      margin-bottom:20px;
-    }
-
-    h1 span{
-      color:#f5c542;
-    }
-
-    h2{
-      margin-top:40px;
-      margin-bottom:12px;
-      color:#f5c542;
-      font-size:26px;
-    }
-
-    p{
-      color:#dcdcdc;
-      font-size:16px;
-      margin-bottom:12px;
-    }
-
-    ul{
-      margin-left:20px;
-      margin-top:10px;
-    }
-
-    ul li{
-      margin-bottom:8px;
-      color:#dcdcdc;
-    }
-
-    .note{
-      background:#181818;
-      padding:18px;
-      border-left:4px solid #f5c542;
-      border-radius:10px;
-      margin-top:20px;
-    }
-
-    /* CTA */
-    .cta{
-      margin-top:70px;
-      padding:70px 25px;
-      background:#101010;
-      border-radius:18px;
-      text-align:center;
-    }
-
-    .cta h2{
-      font-size:32px;
-      margin-bottom:10px;
-    }
-
-    .btn-primary{
-      display:inline-block;
-      margin:15px 10px 0;
-      padding:15px 42px;
-      background:linear-gradient(135deg,#f5c542,#e0b13a);
-      color:#000;
-      font-weight:800;
-      border-radius:50px;
-      text-decoration:none;
-    }
-
-    /* FOOTER */
-    footer{
-      background:#0e0e0e;
-      border-top:1px solid rgba(245,197,66,.25);
-      padding:40px 20px;
-      text-align:center;
-      margin-top:60px;
-    }
-
-    footer a{
-      color:#bbb;
-      text-decoration:none;
-      font-weight:500;
-    }
-
-    footer a:hover{
-      color:#f5c542;
-      text-decoration:underline;
-    }
-
-    .footer-bottom{
-      margin-top:20px;
-      font-size:13px;
-      color:#777;
-    }
-
-    /* MOBILE */
-    @media(max-width:768px){
-      h1{font-size:30px}
-      h2{font-size:22px}
-    }
-  </style>
-
-</head>
-
-<body>
-
-<header class="site-header">
-  <div class="nav-container">
-    <div class="logo">
-      <img src="images/rhythmrise-logo.png" alt="Rhythm Rise Logo">
-      <span>Rhythm Rise</span>
-    </div>
-
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="journey.html">Journey</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="judges.html">Judges</a>
-      <a href="register.html">Register</a>
-    </nav>
+<!-- Participant Name -->
+<div class="zcwf_row">
+  <div class="zcwf_col_lab">
+    <label for="Last_Name">Participant Name <span style="color:red">*</span></label>
   </div>
-</header>
-
-<div class="page">
-
-  <h1>Singing Competition <span>Registration</span> – Rhythm Rise</h1>
-
-  <p>
-    Looking to register for a professional singing competition? Rhythm Rise Singing
-    Competition Registration is now open for singers across India.
-  </p>
-
-  <h2>Who Can Register?</h2>
-  <ul>
-    <li>Kids, juniors, and adults</li>
-    <li>Beginners and trained singers</li>
-    <li>Solo participants</li>
-  </ul>
-
-  <h2>Registration Process</h2>
-  <ul>
-    <li>Fill out the online registration form</li>
-    <li>Select your audition city or online mode</li>
-    <li>Choose your singing category</li>
-    <li>Submit and receive confirmation</li>
-  </ul>
-
-  <h2>What You Get</h2>
-  <ul>
-    <li>Opportunity to perform before international judges</li>
-    <li>Transparent and professional evaluation</li>
-    <li>Participation certificates</li>
-    <li>Advancement to next competition rounds</li>
-  </ul>
-
-  <div class="note">
-    <strong>Important Note:</strong><br>
-    Limited slots are available per city to ensure quality evaluation.
+  <div class="zcwf_col_fld">
+    <input type="text" id="Last_Name" name="Last Name" maxlength="80">
   </div>
-
-  <section class="cta">
-    <h2>🎤 Don’t Wait — Voices Deserve a Stage</h2>
-    <p>
-      Complete your singing competition registration and take your first step
-      toward a professional platform.
-    </p>
-
-    <a href="register.html" class="btn-primary">Register Now</a>
-    <a href="index.html" class="btn-primary">Visit Home</a>
-  </section>
-
-  <p style="margin-top:40px;text-align:center;">
-    Interested in dancing too? Explore our
-    <a href="dance-competitions-india.html">Dance Competitions in India</a>
-    and
-    <a href="online-singing-competition.html">Online Singing Competition</a>.
-  </p>
-
 </div>
 
-<footer>
-  <p>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="journey.html">Journey</a> |
-    <a href="gallery.html">Gallery</a> |
-    <a href="judges.html">Judges</a> |
-    <a href="register.html">Register</a>
-  </p>
-
-  <div class="footer-bottom">
-    © 2026 Rhythm Rise | Initiative of Doha Music Lovers Group
+<!-- First Name -->
+<div class="zcwf_row">
+  <div class="zcwf_col_lab">
+    <label for="First_Name">First Name</label>
   </div>
-</footer>
+  <div class="zcwf_col_fld">
+    <input type="text" id="First_Name" name="First Name" maxlength="40">
+  </div>
+</div>
 
-</body>
-</html>
+<!-- Email -->
+<div class="zcwf_row">
+  <div class="zcwf_col_lab">
+    <label for="Email">Email</label>
+  </div>
+  <div class="zcwf_col_fld">
+    <input type="text" id="Email" name="Email" ftype="email">
+  </div>
+</div>
+
+<!-- Mobile -->
+<div class="zcwf_row">
+  <div class="zcwf_col_lab">
+    <label for="Mobile">Mobile</label>
+  </div>
+  <div class="zcwf_col_fld">
+    <input type="text" id="Mobile" name="Mobile">
+  </div>
+</div>
+
+<!-- WhatsApp -->
+<div class="zcwf_row">
+  <div class="zcwf_col_lab">
+    <label for="LEADCF4">WhatsApp <span style="color:red">*</span></label>
+  </div>
+  <div class="zcwf_col_fld">
+    <input type="text" id="LEADCF4" name="LEADCF4">
+  </div>
+</div>
+
+<!-- Category -->
+<div class="zcwf_row">
+  <div class="zcwf_col_lab">
+    <label for="LEADCF1">Category <span style="color:red">*</span></label>
+  </div>
+  <div class="zcwf_col_fld">
+    <select id="LEADCF1" name="LEADCF1">
+      <option value="-None-">-None-</option>
+      <option value="Singing" selected>Singing</option>
+      <option value="Dance">Dance</option>
+    </select>
+  </div>
+</div>
+
+<!-- Age Group -->
+<div class="zcwf_row">
+  <div class="zcwf_col_lab">
+    <label for="LEADCF6">Age Group <span style="color:red">*</span></label>
+  </div>
+  <div class="zcwf_col_fld">
+    <select id="LEADCF6" name="LEADCF6">
+      <option value="-None-">-None-</option>
+      <option>5 - 8 years</option>
+      <option>9 - 12 years</option>
+      <option>13 - 16 years</option>
+      <option>17 - 20 years</option>
+      <option>21 - 25 years</option>
+      <option>26 years +</option>
+    </select>
+  </div>
+</div>
+
+<!-- District -->
+<div class="zcwf_row">
+  <div class="zcwf_col_lab">
+    <label for="LEADCF5">District <span style="color:red">*</span></label>
+  </div>
+  <div class="zcwf_col_fld">
+    <select id="LEADCF5" name="LEADCF5">
+      <option value="-None-">-None-</option>
+      <option>Karimnagar</option>
+      <option>Khammam</option>
+      <option>Warangal</option>
+      <option>Nizamabad</option>
+      <option>Hyderabad</option>
+      <option>Vijayawada</option>
+      <option>Kurnool</option>
+      <option>Vizag</option>
+    </select>
+  </div>
+</div>
+
+<!-- Submit -->
+<div class="zcwf_row">
+  <div class="zcwf_col_lab"></div>
+  <div class="zcwf_col_fld">
+    <input type="submit" class="formsubmit" value="Submit">
+    <input type="reset" value="Reset">
+  </div>
+</div>
+
+<script>
+function checkMandatory1172475000000432290(){
+  var f=['Last Name','LEADCF1','LEADCF4','LEADCF5','LEADCF6'];
+  var l=['Participant Name','Category','WhatsApp','District','Age Group'];
+  for(var i=0;i<f.length;i++){
+    var e=document.forms['WebToLeads1172475000000432290'][f[i]];
+    if(e && (e.value==''||e.value=='-None-')){
+      alert(l[i]+' cannot be empty.');
+      e.focus(); return false;
+    }
+  }
+  return true;
+}
+</script>
+
+</form>
+</div>
+<!-- ZOHO FORM END -->
