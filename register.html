@@ -1,270 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Register for Singing & Dance Competition | Rhythm Rise India</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Singing & Dance Competition Registration | Rhythm Rise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-*{box-sizing:border-box;}
-body{
-    margin:0;
-    font-family:Poppins, Arial, sans-serif;
-    background:#111;
-    color:#fff;
-}
+  <meta name="description" content="Register for Rhythm Rise Singing & Dance Competitions. Open to kids, juniors and adults across India with international judging.">
+  <link rel="canonical" href="https://rhythmrise.in/register.html">
 
-/* HEADER */
-header{
-    background:#000;
-    border-bottom:1px solid #f5c542;
-    padding:15px 25px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:999;
-}
-.logo{
-    color:#f5c542;
-    font-size:22px;
-    font-weight:700;
-}
-nav{
-    display:flex;
-    gap:20px;
-}
-nav a{
-    color:#fff;
-    text-decoration:none;
-    font-weight:600;
-}
-nav a:hover{color:#f5c542}
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-/* Mobile menu */
-.menu-btn{
-    display:none;
-    font-size:26px;
-    cursor:pointer;
-}
-@media(max-width:768px){
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:#121212;color:#eee}
+
+    /* HEADER */
+    header{
+      position:fixed;top:0;width:100%;height:72px;
+      background:#000;border-bottom:1px solid rgba(245,197,66,.3);
+      z-index:1000;
+    }
+    .nav-container{
+      max-width:1200px;margin:auto;height:72px;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:0 20px;
+    }
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo img{height:40px}
+    .logo span{color:#f5c542;font-size:22px;font-weight:800}
+
+    .menu-toggle{
+      display:none;font-size:28px;color:#f5c542;cursor:pointer;
+    }
+
     nav{
-        display:none;
-        flex-direction:column;
-        background:#000;
-        position:absolute;
-        top:60px;
-        right:0;
-        width:100%;
-        padding:15px;
-        border-top:1px solid #f5c542;
+      display:flex;gap:22px;
     }
     nav a{
-        padding:10px 0;
-        border-bottom:1px solid #222;
+      color:#ddd;text-decoration:none;font-weight:500;
     }
-    .menu-btn{display:block;}
-}
+    nav a:hover,nav a.active{color:#f5c542}
 
-/* FORM */
-.form{
-    max-width:900px;
-    margin:80px auto;
-    background:#000;
-    padding:30px;
-    border-radius:20px;
-    border:1px solid #f5c542;
-}
-h2{text-align:center}
+    /* MOBILE NAV */
+    @media(max-width:768px){
+      .menu-toggle{display:block}
+      nav{
+        position:absolute;top:72px;right:0;width:100%;
+        background:#0e0e0e;flex-direction:column;
+        align-items:center;gap:18px;padding:20px 0;
+        display:none;
+      }
+      nav.show{display:flex}
+    }
 
-input,select{
-    width:100%;
-    padding:12px;
-    background:#1a1a1a;
-    border:1px solid #333;
-    color:#fff;
-    border-radius:6px;
-    margin-bottom:12px;
-}
+    /* PAGE */
+    main{
+      max-width:900px;margin:auto;
+      padding:130px 20px 80px;
+    }
+    h1{text-align:center;font-size:38px;margin-bottom:10px}
+    h1 span{color:#f5c542}
+    p.subtitle{
+      text-align:center;color:#bbb;margin-bottom:40px;
+    }
 
-button{
-    width:100%;
-    padding:15px;
-    background:#f5c542;
-    color:#000;
-    font-weight:800;
-    border:none;
-    border-radius:40px;
-    font-size:16px;
-    cursor:pointer;
-}
-button:disabled{opacity:.6}
+    /* ZOHO FORM WRAPPER */
+    .form-wrap{
+      background:#fff;color:#000;
+      border-radius:14px;padding:25px;
+    }
 
-.hidden{display:none}
-
-/* FOOTER */
-footer{
-    background:#000;
-    border-top:1px solid #f5c542;
-    padding:20px;
-    text-align:center;
-    color:#aaa;
-}
-footer a{
-    color:#f5c542;
-    text-decoration:none;
-    margin:0 10px;
-}
-
-/* WHATSAPP FLOATING BUTTON */
-.whatsapp-float{
-  position:fixed;
-  bottom:25px;
-  right:25px;
-  background:#25D366;
-  color:#fff;
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:28px;
-  text-decoration:none;
-  box-shadow:0 4px 12px rgba(0,0,0,0.4);
-  z-index:9999;
-}
-.whatsapp-float:hover{
-  transform:scale(1.08);
-}
-</style>
+    /* FOOTER */
+    footer{
+      background:#0e0e0e;border-top:1px solid rgba(245,197,66,.25);
+      padding:40px 20px;margin-top:80px;
+    }
+    footer p{text-align:center;color:#bbb;font-size:14px}
+    footer a{color:#bbb;text-decoration:none;font-weight:500}
+    footer a:hover{color:#f5c542;text-decoration:underline}
+  </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">Rhythm Rise</div>
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
-  <nav id="menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="register.html">Register</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="images/rhythmrise-logo.png" alt="Rhythm Rise">
+      <span>Rhythm Rise</span>
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="journey.html">Journey</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="judges.html">Judges</a>
+      <a href="register.html" class="active">Register</a>
+    </nav>
+  </div>
 </header>
 
-<div class="form">
-<h2>Rhythm Rise – Official Registration</h2>
+<main>
+  <h1><span>Singing & Dance</span> Competition Registration</h1>
+  <p class="subtitle">Fill the form below to register for Rhythm Rise auditions</p>
 
-<form id="form">
+  <div class="form-wrap">
 
-<input name="name" placeholder="Full Name" required>
-<input name="email" type="email" placeholder="Email" required>
-<input name="phone" placeholder="Mobile" required>
-<input name="whatsapp" placeholder="WhatsApp" required>
+    <!-- ================= ZOHO FORM START ================= -->
+    <!-- PASTE YOUR FULL ZOHO FORM CODE BELOW THIS LINE -->
+    <!-- DO NOT REMOVE hidden inputs, scripts or styles -->
 
-<select name="age" required>
-<option value="">Age Group</option>
-<option>5–8</option><option>9–12</option><option>13–16</option>
-<option>17–20</option><option>21–25</option><option>26+</option>
-</select>
+    <!-- 🔴 IMPORTANT:
+         Paste the ENTIRE Zoho-generated code here exactly as provided
+         (426 lines is NORMAL for Zoho)
+    -->
 
-<select name="gender" required>
-<option value="">Gender</option>
-<option>Male</option><option>Female</option><option>Other</option>
-</select>
+    <!-- ================= ZOHO FORM END ================= -->
 
-<select name="city" required>
-<option value="">City</option>
-<option>Hyderabad</option><option>Karimnagar</option><option>Warangal</option>
-<option>Khammam</option><option>Nizamabad</option><option>Vijayawada</option><option>Vizag</option>
-</select>
-
-<select name="category" id="category" required onchange="toggleFields()">
-<option value="">Category</option>
-<option value="Singing">Singing</option>
-<option value="Dance">Dance</option>
-</select>
-
-<div id="singing" class="hidden">
-<select name="singingLanguage">
-<option value="">Singing Language</option>
-<option>Telugu</option><option>Hindi</option><option>English</option>
-</select>
-</div>
-
-<div id="dance" class="hidden">
-<select name="danceFormat">
-<option value="">Solo / Group</option>
-<option>Solo</option><option>Group</option>
-</select>
-
-<select name="danceStyle">
-<option value="">Dance Style</option>
-<option>Classical</option><option>Semi Classical</option>
-<option>Folk</option><option>Bollywood</option><option>Western</option>
-</select>
-</div>
-
-<button id="submitBtn">Submit Registration</button>
-</form>
-</div>
+  </div>
+</main>
 
 <footer>
-© 2026 Rhythm Rise |
-<a href="contact.html">Contact</a> |
-<a href="about.html">About</a>
+  <p>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="journey.html">Journey</a> |
+    <a href="gallery.html">Gallery</a> |
+    <a href="judges.html">Judges</a> |
+    <a href="register.html">Register</a>
+  </p>
+  <p>© 2026 Rhythm Rise | Initiative of Doha Music Lovers Group</p>
 </footer>
 
-<!-- FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/919030140600?text=Hello%20Rhythm%20Rise%2C%20I%20would%20like%20to%20know%20more%20about%20registrations."
-   class="whatsapp-float"
-   target="_blank"
-   aria-label="Chat on WhatsApp">💬</a>
-
 <script>
-function toggleMenu(){
-    let m=document.getElementById("menu");
-    m.style.display = (m.style.display=="flex") ? "none" : "flex";
-}
-
-function toggleFields(){
-    let c=document.getElementById("category").value;
-    document.getElementById("singing").style.display = c==="Singing"?"block":"none";
-    document.getElementById("dance").style.display = c==="Dance"?"block":"none";
-}
-
-const url="https://script.google.com/macros/s/AKfycby7AcmLDvYcmXfoHZNxbHOkee59r9Z-DHvI0IX1rQOKg1IEEGJe376aIb_s9Aaygwv1/exec";
-const form=document.getElementById("form");
-const btn=document.getElementById("submitBtn");
-
-form.addEventListener("submit",function(e){
-    e.preventDefault();
-    btn.disabled=true;
-    btn.innerText="Submitting...";
-
-    fetch(url,{method:"POST",body:new FormData(form)})
-    .then(r=>r.text())
-    .then(t=>{
-        if(t.trim()=="OK"){
-            sessionStorage.setItem("rr_name",form.name.value);
-            sessionStorage.setItem("rr_whatsapp",form.whatsapp.value);
-            window.location="thankyou.html";
-        }else{
-            alert(t);
-            btn.disabled=false;
-            btn.innerText="Submit Registration";
-        }
-    })
-    .catch(()=>{
-        alert("Network error. Try again.");
-        btn.disabled=false;
-        btn.innerText="Submit Registration";
-    });
-});
+  function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("show");
+  }
 </script>
 
 </body>
 </html>
-
