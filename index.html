@@ -35,7 +35,7 @@ body{background:#121212;color:#e6e6e6}
 .main-nav a:hover,.main-nav a.active{color:#f5c542}
 .menu-toggle{display:none;font-size:28px;color:#f5c542;cursor:pointer}
 
-/* HERO (FIXED – NO CONTENT LOSS) */
+/* HERO */
 .hero-video{
   position:relative;
   height:100vh;
@@ -45,11 +45,48 @@ body{background:#121212;color:#e6e6e6}
   align-items:center;
   justify-content:center;
 }
-.hero-video video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.85))}
+.hero-video video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:1;
+}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.85));
+  z-index:2;
+}
+
+/* HERO FALLBACK */
+.hero-fallback{
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at center,#222,#000);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:1;
+}
+.hero-fallback span{
+  padding:14px 26px;
+  border-radius:30px;
+  background:rgba(0,0,0,.6);
+  color:#f5c542;
+  font-weight:600;
+  animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+  0%{opacity:.6}
+  50%{opacity:1}
+  100%{opacity:.6}
+}
+
 .hero-content{
   position:relative;
-  z-index:2;
+  z-index:3;
   max-width:900px;
   padding:0 20px;
   text-align:center;
@@ -83,14 +120,8 @@ body{background:#121212;color:#e6e6e6}
   border-radius:30px;
   animation:blinkSoft 1.4s infinite;
 }
-.d1{color:#ff4d4d;animation-delay:0s}
-.d2{color:#4dd2ff;animation-delay:.2s}
-.d3{color:#4dff88;animation-delay:.4s}
-.d4{color:#ff66ff;animation-delay:.6s}
-.d5{color:#ffa64d;animation-delay:.8s}
-.d6{color:#66ffff;animation-delay:1s}
-.d7{color:#ffff66;animation-delay:1.2s}
-.d8{color:#b366ff;animation-delay:1.4s}
+.d1{color:#ff4d4d}.d2{color:#4dd2ff}.d3{color:#4dff88}.d4{color:#ff66ff}
+.d5{color:#ffa64d}.d6{color:#66ffff}.d7{color:#ffff66}.d8{color:#b366ff}
 @keyframes blinkSoft{0%{opacity:1}50%{opacity:.35}100%{opacity:1}}
 @keyframes indiaGlow{from{text-shadow:0 0 6px #f5c542}to{text-shadow:0 0 20px #ff9900}}
 
@@ -99,8 +130,7 @@ body{background:#121212;color:#e6e6e6}
 .as-seen h2{color:#f5c542;font-size:28px;margin-bottom:40px}
 .slider-wrap{overflow:hidden;width:100%}
 .slider-track{display:flex;width:max-content;animation:scroll 60s linear infinite}
-.slider-track img{height:160px;margin:0 40px;object-fit:contain;filter:grayscale(100%);opacity:.85;transition:.3s}
-.slider-track img:hover{filter:none;opacity:1}
+.slider-track img{height:160px;margin:0 40px;object-fit:contain;filter:grayscale(100%);opacity:.85}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .view-media-btn{margin-top:40px}
 .view-media-btn a{display:inline-block;padding:14px 46px;border-radius:50px;background:linear-gradient(135deg,#f5c542,#e0b13a);color:#000;font-weight:800;text-decoration:none}
@@ -177,9 +207,12 @@ footer a:hover{color:#f5c542}
 </header>
 
 <section class="hero-video">
-<video autoplay muted loop playsinline>
-<source src="videos/rhythmrise-hero.mp4">
+<div class="hero-fallback" id="heroFallback"><span>Loading Experience…</span></div>
+
+<video muted loop playsinline preload="none" id="heroVideo">
+<source src="videos/rhythmrise-hero.mp4" type="video/mp4">
 </video>
+
 <div class="hero-overlay"></div>
 <div class="hero-content">
 <h1>RHYTHM <span>RISE</span></h1>
@@ -277,6 +310,22 @@ footer a:hover{color:#f5c542}
 function toggleMenu(){
 document.getElementById("navMenu").classList.toggle("show");
 }
+
+/* Core Web Vitals: load video after page render */
+window.addEventListener('load', function(){
+  var video = document.getElementById('heroVideo');
+  var fallback = document.getElementById('heroFallback');
+
+  if (navigator.connection && navigator.connection.saveData) return;
+
+  video.setAttribute('autoplay','');
+  video.load();
+
+  video.addEventListener('canplay', function(){
+    fallback.style.display='none';
+    video.play();
+  });
+});
 </script>
 
 <a href="https://wa.me/919030140600?text=Hello%20Rhythm%20Rise%2C%20I%20would%20like%20to%20know%20more%20about%20auditions."
