@@ -12,8 +12,7 @@ gtag('config', 'G-T5VYQEK3S2');
 
 <head>
 <meta charset="UTF-8">
-<title>Rhythm Rise | India’s Premier Singing & Dance Competition Platform
-</title>
+<title>Rhythm Rise | India’s Premier Singing & Dance Competition Platform</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description" content="Rhythm Rise is a professional singing and dance competition platform connecting talent with international judges from India, Qatar, UK and USA.">
@@ -47,6 +46,58 @@ body{background:#121212;color:#e6e6e6}
 .jury-badge{display:inline-block;margin:20px 0 30px;padding:12px 26px;border-radius:40px;background:rgba(245,197,66,.15);border:1px solid rgba(245,197,66,.4);color:#f5c542;font-size:14px;font-weight:600}
 .btn-primary{padding:16px 42px;background:linear-gradient(135deg,#f5c542,#e0b13a);color:#000;font-weight:800;border-radius:50px;text-decoration:none}
 
+/* ================= INDIA COMING SOON – DISTRICT BLINK ================= */
+.district-section{
+  background:#0b0b0b;
+  padding:70px 20px;
+  text-align:center;
+  border-top:1px solid rgba(245,197,66,.25);
+  border-bottom:1px solid rgba(245,197,66,.25);
+}
+
+.india-blink{
+  font-size:32px;
+  font-weight:900;
+  color:#f5c542;
+  margin-bottom:30px;
+  animation:indiaGlow 1.6s infinite alternate;
+}
+
+.districts{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:16px;
+}
+
+.blink{
+  font-size:20px;
+  font-weight:600;
+  padding:10px 18px;
+  border-radius:30px;
+  animation:blinkSoft 1.4s infinite;
+}
+
+.d1{color:#ff4d4d;animation-delay:0s}
+.d2{color:#4dd2ff;animation-delay:.2s}
+.d3{color:#4dff88;animation-delay:.4s}
+.d4{color:#ff66ff;animation-delay:.6s}
+.d5{color:#ffa64d;animation-delay:.8s}
+.d6{color:#66ffff;animation-delay:1s}
+.d7{color:#ffff66;animation-delay:1.2s}
+.d8{color:#b366ff;animation-delay:1.4s}
+
+@keyframes blinkSoft{
+  0%{opacity:1}
+  50%{opacity:.35}
+  100%{opacity:1}
+}
+
+@keyframes indiaGlow{
+  from{text-shadow:0 0 6px #f5c542}
+  to{text-shadow:0 0 20px #ff9900}
+}
+
 /* MEDIA COVERAGE */
 .as-seen{background:#0b0b0b;padding:70px 0;text-align:center;border-top:1px solid rgba(245,197,66,.25);border-bottom:1px solid rgba(245,197,66,.25)}
 .as-seen h2{color:#f5c542;font-size:28px;margin-bottom:40px}
@@ -76,29 +127,13 @@ body{background:#121212;color:#e6e6e6}
   box-shadow:0 4px 15px rgba(0,0,0,.5);
   z-index:9999;
   transition:.3s;
-}
-.whatsapp-float:hover{
-  transform:scale(1.08);
-}
-  @keyframes whatsappPulse {
-  0%   { box-shadow: 0 0 0 0 rgba(37,211,102,.7); }
-  70%  { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
-  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
-}
-
-.whatsapp-float{
   animation: whatsappPulse 2s infinite;
 }
-@keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-4px); }
-  50% { transform: translateX(4px); }
-  75% { transform: translateX(-4px); }
-  100% { transform: translateX(0); }
-}
-
-.whatsapp-float:hover{
-  animation: shake .4s;
+.whatsapp-float:hover{transform:scale(1.08)}
+@keyframes whatsappPulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}
+  70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
 }
 
 /* SECTIONS */
@@ -123,6 +158,8 @@ footer a:hover{color:#f5c542}
 .main-nav.show{display:flex}
 .hero-content h1{font-size:40px}
 .slider-track img{height:90px;margin:0 20px}
+.india-blink{font-size:24px}
+.blink{font-size:16px}
 }
 </style>
 </head>
@@ -146,13 +183,30 @@ footer a:hover{color:#f5c542}
 </header>
 
 <section class="hero-video">
-<video autoplay muted loop playsinline><source src="videos/rhythmrise-hero.mp4"></video>
+<video autoplay muted loop playsinline>
+<source src="videos/rhythmrise-hero.mp4">
+</video>
 <div class="hero-overlay"></div>
 <div class="hero-content">
 <h1>RHYTHM <span>RISE</span></h1>
 <p>A global singing & dance talent platform empowering performers to rise and shine.</p>
 <div class="jury-badge">🌍 International Jury | India • Qatar • UK • USA</div>
 <a href="register.html" class="btn-primary">Register Now</a>
+</div>
+</section>
+
+<!-- ================= INDIA COMING SOON SECTION ================= -->
+<section class="district-section">
+<h2 class="india-blink">🇮🇳 India, We Are Coming Soon!</h2>
+<div class="districts">
+<span class="blink d1">Hyderabad</span>
+<span class="blink d2">Karimnagar</span>
+<span class="blink d3">Warangal</span>
+<span class="blink d4">Khammam</span>
+<span class="blink d5">Nizamabad</span>
+<span class="blink d6">Vijayawada</span>
+<span class="blink d7">Vizag</span>
+<span class="blink d8">Nalgonda</span>
 </div>
 </section>
 
@@ -189,19 +243,6 @@ nurture, and celebrate genuine talent through transparent judging and global exp
 Backed by international jury members and decades of cultural leadership,
 Rhythm Rise provides performers with credibility, opportunity, and a true stage to rise.
 </p>
-Rhythm Rise is one of India’s fastest growing international singing and dance competition platforms, 
-bringing together talented performers from across the country and connecting them with professional 
-judges from India, Qatar, the UK and the USA.
-</p>
-Our auditions are open to singers and dancers of all styles including classical dance, folk dance, 
-Bollywood dance, hip-hop, western dance, and vocal performances in Telugu, Hindi and English. 
-Rhythm Rise is designed for artists who want real opportunities, professional feedback, and global 
-exposure.
-</p>
-With transparent judging, international jury panels, and city-wide auditions across Hyderabad, Karimnagar, 
-Khammam, Kurnool, Warangal, Nizamabad, Vijayawada, Vizag and other regions, Rhythm Rise is becoming a 
-trusted name for anyone searching for singing auditions, dance competitions, or talent shows in India.
-</p>
 </section>
 
 <section class="cta">
@@ -218,9 +259,12 @@ trusted name for anyone searching for singing auditions, dance competitions, or 
 
 <div>
 <h4>Contact</h4>
-<p>📧 contact@rhythmrise.in<br>
+<p>
+📧 contact@rhythmrise.in<br>
 📲 +91 90301 40600<br>
-📍 Upparpally, Rajendra Nagar,<br>Hyderabad, Telangana, India</p>
+📍 Upparpally, Rajendra Nagar,<br>
+Hyderabad, Telangana, India
+</p>
 </div>
 
 <div>
@@ -243,14 +287,9 @@ function toggleMenu(){
 document.getElementById("navMenu").classList.toggle("show");
 }
 </script>
+
 <a href="https://wa.me/919030140600?text=Hello%20Rhythm%20Rise%2C%20I%20would%20like%20to%20know%20more%20about%20auditions."
 class="whatsapp-float" target="_blank">💬</a>
 
 </body>
 </html>
-
-
-
-
-
-
