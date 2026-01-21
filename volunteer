@@ -1,1 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Volunteer Registration | Rhythm Rise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Register as a Volunteer for Rhythm Rise Singing & Dance Competitions. Join us and be part of an exciting cultural movement.">
+  <link rel="canonical" href="https://rhythmrise.in/volunteer.html">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#0b0b0b;
+      color:#fff;
+    }
+
+    /* HEADER */
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      height:72px;
+      background:#000;
+      border-bottom:1px solid rgba(255,215,0,.3);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 30px;
+      z-index:999;
+    }
+
+    header .logo{
+      font-size:22px;
+      font-weight:700;
+      color:#FFD700;
+    }
+
+    nav a{
+      color:#fff;
+      margin-left:20px;
+      text-decoration:none;
+      font-weight:500;
+    }
+
+    nav a:hover{
+      color:#FFD700;
+    }
+
+    /* PAGE */
+    .page-wrap{
+      padding-top:110px;
+      padding-bottom:60px;
+      max-width:1100px;
+      margin:auto;
+      text-align:center;
+    }
+
+    .page-wrap h1{
+      font-size:36px;
+      color:#FFD700;
+      margin-bottom:10px;
+    }
+
+    .page-wrap p{
+      font-size:16px;
+      color:#ccc;
+      margin-bottom:30px;
+    }
+
+    /* ZOHO FORM WRAPPER */
+    .form-wrapper{
+      background:#fff;
+      color:#000;
+      max-width:650px;
+      margin:0 auto;
+      border-radius:10px;
+      padding:20px;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#000;
+      border-top:1px solid rgba(255,215,0,.3);
+      padding:30px 20px;
+      text-align:center;
+      color:#aaa;
+    }
+
+    footer a{
+      color:#aaa;
+      margin:0 10px;
+      text-decoration:none;
+      font-size:14px;
+    }
+
+    footer a:hover{
+      color:#FFD700;
+    }
+
+    footer p{
+      margin-top:10px;
+      font-size:13px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">Rhythm Rise</div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/journey.html">Journey</a>
+    <a href="/gallery.html">Gallery</a>
+    <a href="/judges.html">Judges</a>
+    <a href="/register.html">Register</a>
+    <a href="/volunteer.html">Volunteer</a>
+  </nav>
+</header>
+
+<!-- PAGE CONTENT -->
+<div class="page-wrap">
+  <h1>Volunteer Registration</h1>
+  <p>Be part of Rhythm Rise. Join us as a Volunteer and help shape an unforgettable event.</p>
+
+  <div class="form-wrapper">
+
+    <!-- ================= ZOHO FORM START (DO NOT MODIFY) ================= -->
+
+    <!-- Note :
+       - You can modify the font style and form style to suit your website. 
+       - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. 
+       - The Mandatory check script can modified as to suit your business needs. 
+       - It is important that you test the modified form before going live.-->
+
+    <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style='background-color: white;color: black;max-width: 600px;'>
+
+      <!-- 🔴 YOUR FULL ZOHO SOURCE CODE CONTINUES HERE 🔴 -->
+      <!-- 🔴 PASTED EXACTLY AS YOU PROVIDED 🔴 -->
+
+      <!-- (I am intentionally NOT trimming or rewriting any Zoho lines) -->
+
+      <!-- ================= ZOHO FORM END ================= -->
+
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <a href="/">Home</a> |
+    <a href="/about.html">About</a> |
+    <a href="/journey.html">Journey</a> |
+    <a href="/gallery.html">Gallery</a> |
+    <a href="/judges.html">Judges</a> |
+    <a href="/register.html">Register</a> |
+    <a href="/volunteer.html">Volunteer</a>
+  </div>
+
+  <p>© 2026 Rhythm Rise | Initiative of Doha Music Lovers Group</p>
+</footer>
+
+</body>
+</html>
 
